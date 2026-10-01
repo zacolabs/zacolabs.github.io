@@ -5,10 +5,9 @@
   "dir": "ltr",
   "og_locale": "fr_FR",
   "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
-  "og_image": "en",
   "waky_slug": "fr",
   "tagline": "Un studio logiciel qui crée des produits petits mais solides",
-  "description": "Zaco Labs est un studio logiciel qui élimine les petits tracas du quotidien et du travail. Nous créons Waky, une application de réveil à missions, et DUIRE, un service de tests fermés Google Play.",
+  "description": "Zaco Labs est un petit studio logiciel. Nous créons Waky, une application de réveil à missions, et DUIRE, un service de tests fermés Google Play.",
   "og_description": "Nous créons Waky, une application de réveil à missions, et DUIRE, un service de tests fermés Google Play.",
   "org_description": "Nous créons des logiciels qui éliminent les petits tracas du quotidien et du travail.",
   "about": [

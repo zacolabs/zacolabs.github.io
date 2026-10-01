@@ -5,10 +5,9 @@
   "dir": "ltr",
   "og_locale": "ru_RU",
   "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
-  "og_image": "en",
   "waky_slug": "ru",
   "tagline": "Студия разработки небольших, но надёжных продуктов",
-  "description": "Zaco Labs — студия разработки, которая избавляет от мелких неудобств в повседневной жизни и работе. Мы делаем Waky — будильник с заданиями — и DUIRE — сервис закрытого тестирования в Google Play.",
+  "description": "Zaco Labs — небольшая студия разработки. Мы делаем Waky — будильник с заданиями — и DUIRE — сервис закрытого тестирования в Google Play.",
   "og_description": "Мы делаем Waky — будильник с заданиями — и DUIRE — сервис закрытого тестирования в Google Play.",
   "org_description": "Мы делаем программы, которые избавляют от мелких неудобств в повседневной жизни и работе.",
   "about": [

@@ -18,7 +18,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
 SITE = "https://zacolabs.github.io"
 WAKY_LANDING = f"{SITE}/waky-landing/introduce"
-OG_IMAGE = f"{WAKY_LANDING}/zacolabs-assets/og-image-{{}}-1200x630.png"
+# 공유 미리보기 그림. 모든 언어가 같이 쓴다. scripts/og-image.html 을 1200x630 으로 찍은 것.
+OG_IMAGE = f"{SITE}/zacolabs-assets/og-image-1200x630.png"
+OG_IMAGE_ALT = "Zaco Labs"
 
 # 언어 순서 — hreflang·언어 메뉴·사이트맵이 모두 이 순서를 따른다. 영어는 주소 접두사 없이 맨 앞(/)에 둔다.
 ORDER = ["ko", "en", "ja", "zh-hans", "zh-hant", "es", "fr", "de", "it", "pt",
@@ -153,7 +155,7 @@ def json_ld(t, code):
         "@type": "Organization",
         "name": "Zaco Labs",
         "url": url(code),
-        "logo": f"{WAKY_LANDING}/zacolabs-assets/logo.png",
+        "logo": f"{SITE}/zacolabs-assets/logo.png",
         "email": "zaco.labs@gmail.com",
         "description": t["org_description"],
         "inLanguage": t["html_lang"],
@@ -231,10 +233,10 @@ def page(langs, code, css):
 <meta property="og:title" content="{e(title)}" />
 <meta property="og:description" content="{e(t["og_description"])}" />
 <meta property="og:url" content="{url(code)}" />
-<meta property="og:image" content="{OG_IMAGE.format(t["og_image"])}" />
+<meta property="og:image" content="{OG_IMAGE}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="{e(title)}" />
+<meta property="og:image:alt" content="{e(OG_IMAGE_ALT)}" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/zacolabs-assets/logo.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/logo.png" />
