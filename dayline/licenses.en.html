@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dayline Open Source Licenses</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(waky-backend src/content/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <p class="langnav"><a href="licenses.ko.html">한국어</a> · <strong>English</strong></p>
+    <p>Dayline uses the following open source software. The rights to each remain with its copyright holder.</p>
+
+    <h2>Android</h2>
+    <div class="lib"><div class="nm">AndroidX Core / Activity / Lifecycle</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Jetpack Compose (UI, Material3, Material Icons)</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">AndroidX Room</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Kotlin Standard Library</div><div class="cp">© JetBrains s.r.o.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Kotlin Coroutines</div><div class="cp">© JetBrains s.r.o.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Maps Compose</div><div class="cp">© Google LLC</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Google Play Services Location</div><div class="cp">© Google LLC</div><div class="lc">Android Software Development Kit License</div></div>
+    <div class="lib"><div class="nm">Maps SDK for Android</div><div class="cp">© Google LLC</div><div class="lc">Google Maps Platform Terms of Service</div></div>
+    <div class="lib"><div class="nm">Google Mobile Ads SDK (AdMob)</div><div class="cp">© Google LLC</div><div class="lc">Android Software Development Kit License</div></div>
+    <div class="lib"><div class="nm">Google User Messaging Platform (UMP)</div><div class="cp">© Google LLC</div><div class="lc">Android Software Development Kit License</div></div>
+    <h2>iOS</h2>
+    <p>The iOS app uses frameworks provided by Apple (SwiftUI, SwiftData, MapKit, Core Location, Core Motion, App Tracking Transparency and others), which are subject to the Apple Inc. SDK License Agreement. Map data is provided by Apple Maps. It also includes the following third-party software.</p>
+    <div class="lib"><div class="nm">Google Mobile Ads SDK (AdMob) / User Messaging Platform</div><div class="cp">© Google LLC</div><div class="lc">Google Mobile Ads SDK License</div></div>
+    <div class="notice">Licensed under the Apache License, Version 2.0 (the "License");
+you may not use these files except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</div>
+
+    <div class="contact">
+        <p>Contact: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+    </div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

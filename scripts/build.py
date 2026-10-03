@@ -5,6 +5,7 @@
 
 i18n/<code>.json 의 문구로 영어는 /index.html, 다른 언어는 /<code>/index.html 을 만들고
 sitemap.xml 을 다시 쓴다. 문구는 JSON 에서, 모양은 style.css 에서만 고친다.
+Dayline 의 약관 · 개인정보 처리방침 · 라이선스 페이지(/dayline/)도 같이 만든다 — dayline_legal.py.
 생성된 HTML 을 직접 고치면 다음 빌드에서 덮어써진다.
 
 언어 목록 · 이름 · 로케일 · Waky 한 줄 소개(h1)는 waky-landing(scripts/landing/i18n)과 맞춘다.
@@ -13,6 +14,8 @@ import datetime
 import html
 import json
 import os
+
+import dayline_legal
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
@@ -400,6 +403,7 @@ def main():
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(sitemap(langs))
     print(f"built {len(ORDER)} pages")
+    print(f"built {dayline_legal.build()} dayline legal pages")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dayline Terms of Service</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+        var LANGS = ["ko", "en"];
+        function norm(v) {
+            v = (v || "").trim().toLowerCase().replace(/_/g, "-").split("-")[0];
+            if (v === "kr") v = "ko";
+            return LANGS.indexOf(v) !== -1 ? v : null;
+        }
+        var wanted = [q.get("lang")].concat(navigator.languages || [navigator.language]);
+        for (var i = 0; i < wanted.length; i++) {
+            var l = norm(wanted[i]);
+            if (!l) continue;
+            if (l !== "en") location.replace("terms." + l + ".html" + (light ? "?theme=light" : ""));
+            break;
+        }
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(waky-backend src/content/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Dayline Terms of Service</h1>
+    <p class="langnav"><a href="terms.ko.html">한국어</a> · <strong>English</strong></p>
+    <p class="meta">Effective date: October 3, 2026</p>
+    <p class="meta">This is a translation provided for convenience. The Korean version governs in the event of any discrepancy.</p>
+
+<h2>Article 1 (Purpose)</h2>
+<p>These Terms set out the basic matters between Zaco Labs ("the Company") and users regarding the use of Dayline and related services ("the Service") provided by the Company, including rights, obligations, responsibilities, conditions of use, and procedures.</p>
+
+<h2>Article 2 (Definitions)</h2>
+<ul>
+    <li>"Service" means the Dayline application provided by the Company and all incidental services such as movement recording, the line and map views, and exporting records.</li>
+    <li>"User" means a person who uses the Service provided by the Company under these Terms.</li>
+    <li>"Records" means information such as paths, distances, and travel modes that the Service creates on the User's device, and the files and images the User creates by exporting or sharing it.</li>
+</ul>
+
+<h2>Article 3 (Effect and Amendment of the Terms)</h2>
+<p>These Terms take effect when they are posted on a Service screen or otherwise announced to Users. The Company may amend these Terms to the extent that it does not violate applicable laws, including the Act on the Regulation of Terms and Conditions. When amending the Terms, the Company will announce the effective date and the reason for the amendment within the Service at least 7 days before the effective date, or at least 30 days before for changes that are unfavourable or material to Users. A User who continues to use the Service without expressly refusing before the effective date is deemed to have agreed to the amended Terms. A User has the right to refuse the amended Terms, and may stop using the Service and terminate the agreement if they do not agree.</p>
+
+<h2>Article 4 (Provision and Modification of the Service)</h2>
+<p>The Company provides the following services.</p>
+<ul>
+    <li>Automatically recording the day's path, distance, and travel modes using the device's location and motion information</li>
+    <li>Showing Records as a line and on a map</li>
+    <li>Looking back at the Records of past days by date</li>
+    <li>Exporting Records as a GPX file or sharing them as an image</li>
+    <li>Other services determined by the Company</li>
+</ul>
+<p>The Company may change all or part of the Service as required for operational or technical reasons.</p>
+
+<h2>Article 5 (Suspension of the Service)</h2>
+<p>The Company may stop providing all or part of the Service where there are substantial operational or technical reasons. In such a case the Company will notify Users before or after the suspension. Because Records are stored on the User's device, Users should export any Records they want to keep beforehand.</p>
+
+<h2>Article 6 (Obligations of the User)</h2>
+<p>A User must not do any of the following.</p>
+<ul>
+    <li>Record another person's movements without their consent, for example by installing the Service on that person's device</li>
+    <li>Operate the app while driving or whenever attention is needed elsewhere</li>
+    <li>Use the Service in a way that violates laws or public order and morals</li>
+    <li>Intentionally interfere with the operation of the Service or impair its stable operation</li>
+    <li>Infringe the intellectual property rights of the Company or a third party</li>
+</ul>
+
+<h2>Article 7 (Rights and Responsibility for Records)</h2>
+<p>Rights to what the Company provides, such as the app and its design, name, and icon, belong to the Company or the legitimate rights holder. Records are stored only on the User's device, and the Company does not access them. The rights to and responsibility for Records rest with the User, who is also responsible for managing Records they export or share.</p>
+
+<h2>Article 8 (Advertising)</h2>
+<p>The Service is provided free of charge, and the app shows ads. The content of an ad, and any service it leads to, is the responsibility of the advertiser.</p>
+
+<h2>Article 9 (Disclaimer)</h2>
+<ol>
+    <li>The Company is not liable for failures in using the Service caused by reasons beyond the Company's control, such as force majeure, reasons attributable to the User, or failures of third-party services (app stores, carriers, map providers, and so on).</li>
+    <li>Paths, distances, and travel modes are estimates from the device's sensors and may differ from what happened. Records are affected by the User's device settings, operating system policies, battery and power-saving state, permission settings, and surroundings such as indoors, underground, and between tall buildings. Users must not rely on Records where accuracy matters, such as surveying, certifying a workout, or as legal evidence. The Company is not liable for any direct, indirect, or consequential damage arising from missing or inaccurate Records, unless caused by the Company's intent or gross negligence.</li>
+    <li>The Service is provided on an "as-is" basis. The Company does not warrant that the Service will be uninterrupted or error-free, or that it is fit for a particular purpose.</li>
+    <li>Automatic recording uses location while the User moves, which uses battery, and maps and ads use mobile data. The resulting battery use and data charges are borne by the User.</li>
+    <li>Records are stored on the User's device. The Company is therefore not liable for data loss caused by deleting the app, changing devices, or errors, and Users should back up their Records themselves by exporting them where needed.</li>
+    <li>If a User loses the device or someone else uses it, Records may be seen. Keeping the device locked and secure is up to the User, and the Company is not liable for resulting damage unless caused by the Company's intent or gross negligence.</li>
+    <li>Because the Service is provided free of charge, the Company bears no monetary liability in connection with the Service unless caused by the Company's intent or gross negligence.</li>
+</ol>
+
+<h2>Article 10 (Governing Law and Jurisdiction)</h2>
+<p>These Terms are governed by and construed in accordance with the laws of the Republic of Korea. In the event of a dispute relating to use of the Service, the competent court is determined under the Civil Procedure Act.</p>
+
+<div class="contact">
+    <p>Contact: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>
