@@ -172,6 +172,17 @@ a.badge:hover { border-color: #6a6a6e; transform: translateY(-2px); }
 .badge-txt small { font-size: 9.5px; letter-spacing: 0.04em; text-transform: uppercase; color: #c7c7cc; }
 .badge-txt strong { font-size: 15px; font-weight: 600; letter-spacing: 0.01em; }
 
+/* 아직 스토어에 나가지 않은 앱: 버튼 자리에 둔다 */
+.soon {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 14px;
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
 footer {
     position: relative;
     z-index: 1;

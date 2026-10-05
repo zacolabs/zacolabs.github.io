@@ -18,6 +18,8 @@
   "waky_title": "Koniec z wyłączaniem budzika i spaniem dalej",
   "waky_body": "Budzik, który wyłącza się dopiero po rozwiązaniu misji, i dźwięk nagrany twoim własnym głosem sprawią, że naprawdę wstaniesz — a potem Waky pomoże ci też w porannych nawykach.",
   "waky_ld": "Budzik wyłączany po rozwiązaniu misji, dźwięki nagrane przez ciebie i poranne nawyki.",
+  "dayline_title": "Twój dzień narysowany jedną linią",
+  "dayline_body": "Dokąd i jak daleko się przemieszczasz, zapisuje się automatycznie każdego dnia, bez przycisku start. Zapis twoich tras zostaje na twoim urządzeniu.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Usługa internetowa · Dla twórców aplikacji",
@@ -25,9 +27,11 @@
   "duire_body": "Spełniamy wymóg testów zamkniętych w Google Play — 12 testerów przez 14 dni — na prawdziwych urządzeniach z Androidem, a każde dzienne uruchomienie zapisujemy w raporcie końcowym.",
   "duire_ld": "Usługa testów zamkniętych w Google Play",
   "web_start": "Zacznij w przeglądarce",
+  "coming_soon": "Wkrótce",
   "learn_more": "Dowiedz się więcej →",
   "logo_alt": "Logo Zaco Labs",
   "waky_icon_alt": "Ikona aplikacji Waky",
+  "dayline_icon_alt": "Ikona aplikacji Dayline",
   "duire_icon_alt": "Ikona DUIRE",
   "rights": "Wszelkie prawa zastrzeżone."
 }

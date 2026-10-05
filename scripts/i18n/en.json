@@ -18,6 +18,8 @@
   "waky_title": "No more switching it off and going back to sleep",
   "waky_body": "An alarm that only stops once you solve a mission and an alarm sound recorded in your own voice make sure you get up — and once you do, it helps you keep your morning habits too.",
   "waky_ld": "An alarm you turn off by solving a mission, alarm sounds you record yourself, and morning habits.",
+  "dayline_title": "Your day, drawn as a line",
+  "dayline_body": "Where you went and how far is recorded automatically every day, with no start button. Your movement record stays on your device.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Web service · For app developers",
@@ -25,9 +27,11 @@
   "duire_body": "We meet Google Play's closed testing requirement of 12 testers for 14 days with real Android devices, and keep every daily run in a final report.",
   "duire_ld": "Google Play closed testing service",
   "web_start": "Get started on the web",
+  "coming_soon": "Coming soon",
   "learn_more": "Learn more →",
   "logo_alt": "Zaco Labs logo",
   "waky_icon_alt": "Waky app icon",
+  "dayline_icon_alt": "Dayline app icon",
   "duire_icon_alt": "DUIRE icon",
   "rights": "All rights reserved."
 }

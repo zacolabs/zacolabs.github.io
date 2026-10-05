@@ -82,6 +82,9 @@ TZ_PREFIX_LANG = {"America/Argentina/": "es"}
 
 PLAY = "https://play.google.com/store/apps/details?id=com.waky.android"
 APPLE = "https://apps.apple.com/app/id6797402938"
+# Dayline 은 아직 스토어에 나가지 않았다. 주소가 생기면 여기에 넣는다 — 둘 다 없으면 카드에 "출시 예정"이 나온다.
+DAYLINE_PLAY = None
+DAYLINE_APPLE = None
 DUIRE_KO = "https://www.duire.kr"
 DUIRE_EN = "https://www.duire.kr/en"  # 두이레는 한국어 · 영어뿐이라 나머지 언어는 영어로 보낸다
 
@@ -120,6 +123,24 @@ def waky_url(t):
 
 def duire_url(code):
     return DUIRE_KO if code == "ko" else DUIRE_EN
+
+
+def store_badges(t, play, apple):
+    """앱 카드 아래의 스토어 버튼. 주소가 있는 스토어만 내고, 하나도 없으면 "출시 예정"을 낸다."""
+    badges = []
+    if play:
+        badges.append(f'''<a class="badge" href="{play}" target="_blank" rel="noopener">
+                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="{PLAY_PATH}"/></svg>
+                        <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
+                    </a>''')
+    if apple:
+        badges.append(f'''<a class="badge" href="{apple}" target="_blank" rel="noopener">
+                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="{APPLE_PATH}"/></svg>
+                        <span class="badge-txt"><small>Download on the</small><strong>App Store</strong></span>
+                    </a>''')
+    if not badges:
+        return f'<span class="soon">{e(t["coming_soon"])}</span>'
+    return "\n                    ".join(badges)
 
 
 def alternates(langs):
@@ -286,14 +307,21 @@ def page(langs, code, css):
                 <p class="card-title">{e(t["waky_title"])}</p>
                 <p class="card-body">{e(t["waky_body"])}</p>
                 <div class="card-actions">
-                    <a class="badge" href="{PLAY}" target="_blank" rel="noopener">
-                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="{PLAY_PATH}"/></svg>
-                        <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
-                    </a>
-                    <a class="badge" href="{APPLE}" target="_blank" rel="noopener">
-                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="{APPLE_PATH}"/></svg>
-                        <span class="badge-txt"><small>Download on the</small><strong>App Store</strong></span>
-                    </a>
+                    {store_badges(t, PLAY, APPLE)}
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-head">
+                    <img class="card-ico" src="/zacolabs-assets/dayline_icon.png" alt="{e(t["dayline_icon_alt"])}" width="52" height="52" />
+                    <div class="card-name">
+                        <h3>Dayline</h3>
+                        <p class="kind">{e(t["waky_kind"])}</p>
+                    </div>
+                </div>
+                <p class="card-title">{e(t["dayline_title"])}</p>
+                <p class="card-body">{e(t["dayline_body"])}</p>
+                <div class="card-actions">
+                    {store_badges(t, DAYLINE_PLAY, DAYLINE_APPLE)}
                 </div>
             </article>
             <article class="card">

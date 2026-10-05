@@ -18,6 +18,8 @@
   "waky_title": "Chega de desligar o alarme e voltar a dormir",
   "waky_body": "Um alarme que só desliga quando você resolve uma missão e um som gravado com a sua própria voz garantem que você acorde — e, depois de levantar, ele ainda ajuda nos seus hábitos matinais.",
   "waky_ld": "Um alarme que desliga ao resolver uma missão, sons gravados por você e hábitos matinais.",
+  "dayline_title": "Seu dia, desenhado em uma linha",
+  "dayline_body": "Por onde você passou e quanto percorreu é registrado automaticamente todos os dias, sem botão de iniciar. Seu registro de deslocamentos fica no seu aparelho.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Serviço web · Para desenvolvedores de apps",
@@ -25,9 +27,11 @@
   "duire_body": "Cumprimos a exigência dos testes fechados do Google Play — 12 testadores por 14 dias — com dispositivos Android reais, e registramos cada execução diária em um relatório final.",
   "duire_ld": "Serviço de testes fechados do Google Play",
   "web_start": "Comece pela web",
+  "coming_soon": "Em breve",
   "learn_more": "Saiba mais →",
   "logo_alt": "Logotipo da Zaco Labs",
   "waky_icon_alt": "Ícone do app Waky",
+  "dayline_icon_alt": "Ícone do app Dayline",
   "duire_icon_alt": "Ícone do DUIRE",
   "rights": "Todos os direitos reservados."
 }

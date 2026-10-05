@@ -18,6 +18,8 @@
   "waky_title": "关掉闹钟又睡回去的早晨，到此为止",
   "waky_body": "必须完成任务才能关闭的闹钟，加上用自己声音录制的铃声，确保把你叫醒；起床之后，还会陪你养成晨间习惯。",
   "waky_ld": "完成任务才能关闭的闹钟、自己录制的铃声，还有晨间习惯。",
+  "dayline_title": "把一天画成一条线",
+  "dayline_body": "去了哪里、走了多远，无需按开始键，每天自动记录。移动记录只保存在你的设备上。",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "网络服务 · 面向应用开发者",
@@ -25,9 +27,11 @@
   "duire_body": "用真实的 Android 设备满足 Google Play 封闭测试“12 名测试者、14 天”的要求，并把每天的运行记录整理成结果报告。",
   "duire_ld": "Google Play 封闭测试代办",
   "web_start": "在网页上开始",
+  "coming_soon": "即将推出",
   "learn_more": "了解更多 →",
   "logo_alt": "Zaco Labs 标志",
   "waky_icon_alt": "Waky 应用图标",
+  "dayline_icon_alt": "Dayline 应用图标",
   "duire_icon_alt": "DUIRE 图标",
   "rights": "保留所有权利。"
 }

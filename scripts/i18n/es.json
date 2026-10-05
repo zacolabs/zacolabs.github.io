@@ -18,6 +18,8 @@
   "waky_title": "Se acabó apagar la alarma y seguir durmiendo",
   "waky_body": "Una alarma que solo se apaga resolviendo una misión y un sonido grabado con tu propia voz te despiertan de verdad; y una vez en pie, también te ayuda con tus hábitos matutinos.",
   "waky_ld": "Una alarma que se apaga resolviendo una misión, sonidos grabados por ti y hábitos matutinos.",
+  "dayline_title": "Tu día, dibujado como una línea",
+  "dayline_body": "Registra automáticamente cada día adónde fuiste y cuánto recorriste, sin botón de inicio. Tu registro de movimientos se queda en tu dispositivo.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Servicio web · Para desarrolladores de apps",
@@ -25,9 +27,11 @@
   "duire_body": "Cumplimos el requisito de las pruebas cerradas de Google Play —12 testers durante 14 días— con dispositivos Android reales, y dejamos cada ejecución diaria en un informe final.",
   "duire_ld": "Servicio de pruebas cerradas de Google Play",
   "web_start": "Empieza en la web",
+  "coming_soon": "Próximamente",
   "learn_more": "Más información →",
   "logo_alt": "Logotipo de Zaco Labs",
   "waky_icon_alt": "Icono de la app Waky",
+  "dayline_icon_alt": "Icono de la app Dayline",
   "duire_icon_alt": "Icono de DUIRE",
   "rights": "Todos los derechos reservados."
 }

@@ -18,6 +18,8 @@
   "waky_title": "Schluss mit Ausschalten und Weiterschlafen",
   "waky_body": "Ein Wecker, der erst nach einer gelösten Mission verstummt, und ein Weckton mit deiner eigenen Stimme sorgen dafür, dass du wirklich aufstehst – danach hilft Waky dir auch bei deinen Morgenroutinen.",
   "waky_ld": "Ein Wecker, der erst nach einer Mission verstummt, selbst aufgenommene Wecktöne und Morgenroutinen.",
+  "dayline_title": "Dein Tag, als Linie gezeichnet",
+  "dayline_body": "Wohin du gegangen bist und wie weit, wird jeden Tag automatisch aufgezeichnet – ganz ohne Startknopf. Deine Bewegungsdaten bleiben auf deinem Gerät.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Webdienst · Für App-Entwickler",
@@ -25,9 +27,11 @@
   "duire_body": "Wir erfüllen die Vorgabe für geschlossene Tests bei Google Play – 12 Tester über 14 Tage – mit echten Android-Geräten und halten jeden täglichen Durchlauf in einem Abschlussbericht fest.",
   "duire_ld": "Service für geschlossene Tests bei Google Play",
   "web_start": "Im Web starten",
+  "coming_soon": "Demnächst verfügbar",
   "learn_more": "Mehr erfahren →",
   "logo_alt": "Logo von Zaco Labs",
   "waky_icon_alt": "App-Symbol von Waky",
+  "dayline_icon_alt": "App-Symbol von Dayline",
   "duire_icon_alt": "Symbol von DUIRE",
   "rights": "Alle Rechte vorbehalten."
 }

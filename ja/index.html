@@ -248,6 +248,17 @@ a.badge:hover { border-color: #6a6a6e; transform: translateY(-2px); }
 .badge-txt small { font-size: 9.5px; letter-spacing: 0.04em; text-transform: uppercase; color: #c7c7cc; }
 .badge-txt strong { font-size: 15px; font-weight: 600; letter-spacing: 0.01em; }
 
+/* 아직 스토어에 나가지 않은 앱: 버튼 자리에 둔다 */
+.soon {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 14px;
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
 footer {
     position: relative;
     z-index: 1;
@@ -431,6 +442,20 @@ footer .row { margin-top: 6px; }
                         <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
                         <span class="badge-txt"><small>Download on the</small><strong>App Store</strong></span>
                     </a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-head">
+                    <img class="card-ico" src="/zacolabs-assets/dayline_icon.png" alt="Daylineアプリのアイコン" width="52" height="52" />
+                    <div class="card-name">
+                        <h3>Dayline</h3>
+                        <p class="kind">モバイルアプリ · iOS · Android</p>
+                    </div>
+                </div>
+                <p class="card-title">一日が線になって残る</p>
+                <p class="card-body">どこをどれだけ移動したかを、スタートボタンなしで毎日自動で描きます。移動の記録は端末の中だけに保存されます。</p>
+                <div class="card-actions">
+                    <span class="soon">近日公開</span>
                 </div>
             </article>
             <article class="card">

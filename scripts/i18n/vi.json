@@ -18,6 +18,8 @@
   "waky_title": "Thôi tắt báo thức rồi ngủ tiếp",
   "waky_body": "Báo thức chỉ tắt khi bạn hoàn thành nhiệm vụ cùng âm báo thu bằng chính giọng của bạn giúp bạn thức dậy thật sự — và sau khi dậy, Waky còn đồng hành cùng thói quen buổi sáng của bạn.",
   "waky_ld": "Báo thức tắt khi hoàn thành nhiệm vụ, âm báo tự ghi âm và thói quen buổi sáng.",
+  "dayline_title": "Một ngày của bạn, vẽ thành một đường",
+  "dayline_body": "Bạn đã đi đâu và đi bao xa đều được ghi lại tự động mỗi ngày, không cần nút bắt đầu. Bản ghi di chuyển chỉ nằm trên thiết bị của bạn.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Dịch vụ web · Dành cho nhà phát triển ứng dụng",
@@ -25,9 +27,11 @@
   "duire_body": "Chúng tôi đáp ứng yêu cầu kiểm thử kín của Google Play — 12 người kiểm thử trong 14 ngày — bằng thiết bị Android thật, và lưu lại mỗi lần chạy hằng ngày trong báo cáo kết quả.",
   "duire_ld": "Dịch vụ kiểm thử kín trên Google Play",
   "web_start": "Bắt đầu trên web",
+  "coming_soon": "Sắp ra mắt",
   "learn_more": "Xem thêm →",
   "logo_alt": "Logo Zaco Labs",
   "waky_icon_alt": "Biểu tượng ứng dụng Waky",
+  "dayline_icon_alt": "Biểu tượng ứng dụng Dayline",
   "duire_icon_alt": "Biểu tượng DUIRE",
   "rights": "Bảo lưu mọi quyền."
 }

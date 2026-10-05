@@ -18,6 +18,8 @@
   "waky_title": "Basta spegnere la sveglia e riaddormentarsi",
   "waky_body": "Una sveglia che si spegne solo risolvendo una missione e una suoneria registrata con la tua voce ti svegliano davvero; e una volta in piedi, ti aiuta anche con le abitudini del mattino.",
   "waky_ld": "Una sveglia che si spegne risolvendo una missione, suonerie registrate da te e abitudini del mattino.",
+  "dayline_title": "La tua giornata, disegnata come una linea",
+  "dayline_body": "Dove sei stato e quanta strada hai fatto: tutto viene registrato automaticamente ogni giorno, senza pulsante di avvio. I tuoi spostamenti restano sul tuo dispositivo.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Servizio web · Per sviluppatori di app",
@@ -25,9 +27,11 @@
   "duire_body": "Soddisfiamo il requisito dei test chiusi di Google Play — 12 tester per 14 giorni — con veri dispositivi Android, e raccogliamo ogni esecuzione giornaliera in un report finale.",
   "duire_ld": "Servizio di test chiusi su Google Play",
   "web_start": "Inizia sul web",
+  "coming_soon": "Prossimamente",
   "learn_more": "Scopri di più →",
   "logo_alt": "Logo di Zaco Labs",
   "waky_icon_alt": "Icona dell'app Waky",
+  "dayline_icon_alt": "Icona dell'app Dayline",
   "duire_icon_alt": "Icona di DUIRE",
   "rights": "Tutti i diritti riservati."
 }

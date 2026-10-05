@@ -18,6 +18,8 @@
   "waky_title": "끄고 다시 자는 아침은 이제 그만",
   "waky_body": "미션을 풀어야 꺼지는 알람과 내 목소리로 녹음한 알람음으로 확실하게 깨우고, 일어난 뒤에는 아침 습관까지 챙겨 줍니다.",
   "waky_ld": "미션을 풀어야 꺼지는 알람, 직접 녹음한 알람음, 아침 습관까지.",
+  "dayline_title": "하루가 선으로 남습니다",
+  "dayline_body": "어디를 얼마나 다녔는지 시작 버튼 없이 매일 자동으로 그려 줍니다. 이동 기록은 기기에만 저장됩니다.",
   "duire_name": "두이레",
   "duire_ld_name": "두이레 (DUIRE)",
   "duire_kind": "웹 서비스 · 앱 개발자용",
@@ -25,9 +27,11 @@
   "duire_body": "구글 플레이 비공개 테스트의 테스터 12명 · 14일 요건을 실제 안드로이드 기기로 채우고, 매일의 실행 기록을 결과보고서로 남깁니다.",
   "duire_ld": "구글 플레이 비공개 테스트 대행",
   "web_start": "웹에서 시작하기",
+  "coming_soon": "출시 예정",
   "learn_more": "자세히 보기 →",
   "logo_alt": "Zaco Labs 로고",
   "waky_icon_alt": "Waky 앱 아이콘",
+  "dayline_icon_alt": "Dayline 앱 아이콘",
   "duire_icon_alt": "두이레 아이콘",
   "rights": "All rights reserved."
 }

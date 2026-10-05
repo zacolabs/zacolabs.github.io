@@ -18,6 +18,8 @@
   "waky_title": "關掉鬧鐘又睡回去的早晨，到此為止",
   "waky_body": "必須完成任務才能關掉的鬧鐘，加上用自己聲音錄製的鈴聲，確實把你叫醒；起床之後，還會陪你養成晨間習慣。",
   "waky_ld": "完成任務才能關掉的鬧鐘、自己錄製的鈴聲，還有晨間習慣。",
+  "dayline_title": "把一天畫成一條線",
+  "dayline_body": "去了哪裡、走了多遠，不必按開始鍵，每天自動記錄。移動紀錄只儲存在你的裝置上。",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "網路服務 · 適用於 App 開發者",
@@ -25,9 +27,11 @@
   "duire_body": "以真實的 Android 裝置滿足 Google Play 封閉測試「12 位測試人員、14 天」的要求，並將每天的執行紀錄整理成結果報告。",
   "duire_ld": "Google Play 封閉測試代辦",
   "web_start": "在網頁上開始",
+  "coming_soon": "即將推出",
   "learn_more": "了解更多 →",
   "logo_alt": "Zaco Labs 標誌",
   "waky_icon_alt": "Waky App 圖示",
+  "dayline_icon_alt": "Dayline App 圖示",
   "duire_icon_alt": "DUIRE 圖示",
   "rights": "保留所有權利。"
 }

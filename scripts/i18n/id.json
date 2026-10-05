@@ -18,6 +18,8 @@
   "waky_title": "Tidak ada lagi mematikan alarm lalu tidur lagi",
   "waky_body": "Alarm yang baru mati setelah kamu menyelesaikan misi dan nada alarm yang direkam dengan suaramu sendiri memastikan kamu benar-benar bangun — setelah itu, Waky juga membantu kebiasaan pagimu.",
   "waky_ld": "Alarm yang mati setelah misi selesai, nada alarm rekaman sendiri, dan kebiasaan pagi.",
+  "dayline_title": "Harimu, tergambar sebagai satu garis",
+  "dayline_body": "Ke mana kamu pergi dan seberapa jauh, tercatat otomatis setiap hari tanpa tombol mulai. Catatan perjalananmu tetap tersimpan di perangkatmu.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Layanan web · Untuk pengembang aplikasi",
@@ -25,9 +27,11 @@
   "duire_body": "Kami memenuhi syarat pengujian tertutup Google Play — 12 penguji selama 14 hari — dengan perangkat Android sungguhan, dan mencatat setiap proses harian dalam laporan akhir.",
   "duire_ld": "Layanan pengujian tertutup Google Play",
   "web_start": "Mulai di web",
+  "coming_soon": "Segera hadir",
   "learn_more": "Selengkapnya →",
   "logo_alt": "Logo Zaco Labs",
   "waky_icon_alt": "Ikon aplikasi Waky",
+  "dayline_icon_alt": "Ikon aplikasi Dayline",
   "duire_icon_alt": "Ikon DUIRE",
   "rights": "Hak cipta dilindungi undang-undang."
 }

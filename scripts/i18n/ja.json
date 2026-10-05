@@ -18,6 +18,8 @@
   "waky_title": "止めてまた寝る朝は、もうおしまい",
   "waky_body": "ミッションを解かないと止まらないアラームと、自分の声で録音したアラーム音で確実に起こし、起きたあとは朝の習慣までサポートします。",
   "waky_ld": "ミッションを解かないと止まらないアラーム、自分で録音したアラーム音、朝の習慣まで。",
+  "dayline_title": "一日が線になって残る",
+  "dayline_body": "どこをどれだけ移動したかを、スタートボタンなしで毎日自動で描きます。移動の記録は端末の中だけに保存されます。",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Webサービス · アプリ開発者向け",
@@ -25,9 +27,11 @@
   "duire_body": "Google Playクローズドテストの「テスター12人・14日間」の要件を実機のAndroid端末で満たし、毎日の実行記録を結果レポートに残します。",
   "duire_ld": "Google Playクローズドテスト代行",
   "web_start": "Webではじめる",
+  "coming_soon": "近日公開",
   "learn_more": "詳しく見る →",
   "logo_alt": "Zaco Labsのロゴ",
   "waky_icon_alt": "Wakyアプリのアイコン",
+  "dayline_icon_alt": "Daylineアプリのアイコン",
   "duire_icon_alt": "DUIREのアイコン",
   "rights": "All rights reserved."
 }

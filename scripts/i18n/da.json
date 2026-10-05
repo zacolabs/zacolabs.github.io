@@ -18,6 +18,8 @@
   "waky_title": "Slut med at slukke og sove videre",
   "waky_body": "En alarm, der først slukker, når du har løst en mission, og en alarmlyd indspillet med din egen stemme sørger for, at du kommer op — og bagefter hjælper Waky dig også med dine morgenvaner.",
   "waky_ld": "En alarm, der slukker efter en mission, alarmlyde du selv indspiller, og morgenvaner.",
+  "dayline_title": "Din dag, tegnet som en linje",
+  "dayline_body": "Hvor du har været, og hvor langt du er kommet, registreres automatisk hver dag – uden startknap. Dine bevægelser bliver på din enhed.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Webtjeneste · Til app-udviklere",
@@ -25,9 +27,11 @@
   "duire_body": "Vi opfylder Google Plays krav til lukket test — 12 testere i 14 dage — med rigtige Android-enheder og samler hver dags kørsel i en slutrapport.",
   "duire_ld": "Tjeneste til lukkede test på Google Play",
   "web_start": "Kom i gang på nettet",
+  "coming_soon": "Kommer snart",
   "learn_more": "Læs mere →",
   "logo_alt": "Zaco Labs-logo",
   "waky_icon_alt": "Waky-appikon",
+  "dayline_icon_alt": "Dayline-appikon",
   "duire_icon_alt": "DUIRE-ikon",
   "rights": "Alle rettigheder forbeholdes."
 }

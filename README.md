@@ -8,6 +8,7 @@
   - 문구는 `scripts/i18n/<언어>.json`, 모양은 `scripts/style.css` 에서 고치고 `python3 scripts/build.py` 를 돌린다. `sitemap.xml` 도 같이 다시 쓴다
   - `/` 로 온 사람의 언어: ① 오른쪽 위 언어 메뉴(두이레와 같은 모양)로 고른 언어(`localStorage` 의 `zacolabs-lang`) ② 없으면 접속 지역 — 정적 호스팅이라 IP 를 볼 수 없어 기기 시간대로 가린다(`build.py` `TZ_LANG`) ③ 모르면 영어. 검색 로봇은 옮기지 않는다
   - Waky 자세히 보기는 그 언어 랜딩으로 건다. 두이레는 한국어 · 영어뿐이라 한국어가 아니면 `duire.kr/en` 으로 보낸다
+  - Dayline 카드는 아직 스토어에 나가지 않아 버튼 자리에 "출시 예정"이 나온다. 스토어 주소가 생기면 `build.py` 의 `DAYLINE_PLAY` · `DAYLINE_APPLE` 에 넣는다 — 넣은 스토어의 버튼만 나온다
 - 서치 콘솔 확인 태그는 맨 앞(영어) 페이지에만 있다
 - `dayline/` — Dayline 의 이용 약관 · 개인정보 처리방침 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
   - 본문은 `scripts/dayline/<문서>.<언어>.html`, 모양은 `scripts/dayline/style.css`. **이 본문이 기준이다** — 앱은 글을 따로 싣지 않고 이 주소를 연다. Waky 의 같은 페이지(`zacolabs-backend` `src/content/waky/legal`)에서 따와 Dayline 에 맞게 고친 것이라, 구조와 모양은 그쪽과 맞춘다
@@ -16,4 +17,5 @@
   - 언어는 Dayline 앱과 같은 한국어 · 영어. 늘릴 때는 `dayline_legal.py` 의 `LANGS` 와 `DOCS`, 본문 파일을 더한다
   - `zacolabs` 조직에 `dayline` 이라는 이름의 저장소로 Pages 를 켜면 이 주소와 겹친다
 - `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
+  - `dayline_icon.png` — Dayline 앱 아이콘 (`dayline-android` `store/play/icon-512.png`)
   - `og-image-1200x630.png` — 공유 미리보기 그림(모든 언어 공용). `scripts/og-image.html` 을 크롬에서 1200×630 으로 찍은 것

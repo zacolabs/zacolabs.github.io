@@ -18,6 +18,8 @@
   "waky_title": "Nooit meer uitzetten en doorslapen",
   "waky_body": "Een wekker die pas stopt als je een missie oplost en een wekgeluid dat je met je eigen stem opneemt, zorgen dat je echt opstaat — en daarna helpt Waky je ook met je ochtendgewoonten.",
   "waky_ld": "Een wekker die stopt na een missie, zelf opgenomen wekgeluiden en ochtendgewoonten.",
+  "dayline_title": "Je dag, getekend als een lijn",
+  "dayline_body": "Waar je bent geweest en hoe ver, wordt elke dag automatisch vastgelegd, zonder startknop. Je verplaatsingen blijven op je toestel.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Webdienst · Voor app-ontwikkelaars",
@@ -25,9 +27,11 @@
   "duire_body": "We voldoen aan de eis voor gesloten tests op Google Play — 12 testers gedurende 14 dagen — met echte Android-toestellen, en leggen elke dagelijkse run vast in een eindrapport.",
   "duire_ld": "Dienst voor gesloten tests op Google Play",
   "web_start": "Begin op het web",
+  "coming_soon": "Binnenkort beschikbaar",
   "learn_more": "Meer informatie →",
   "logo_alt": "Logo van Zaco Labs",
   "waky_icon_alt": "App-icoon van Waky",
+  "dayline_icon_alt": "App-icoon van Dayline",
   "duire_icon_alt": "Icoon van DUIRE",
   "rights": "Alle rechten voorbehouden."
 }

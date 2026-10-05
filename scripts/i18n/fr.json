@@ -18,6 +18,8 @@
   "waky_title": "Fini d'éteindre le réveil pour se rendormir",
   "waky_body": "Une alarme qui ne s'arrête qu'une fois la mission résolue et une sonnerie enregistrée avec votre propre voix vous réveillent pour de bon — et une fois debout, l'app vous aide aussi à tenir vos habitudes du matin.",
   "waky_ld": "Une alarme qui s'arrête en résolvant une mission, des sonneries enregistrées par vous et des habitudes du matin.",
+  "dayline_title": "Votre journée, tracée en une ligne",
+  "dayline_body": "Où vous êtes allé et sur quelle distance : tout est enregistré automatiquement chaque jour, sans bouton de démarrage. Vos déplacements restent sur votre appareil.",
   "duire_name": "DUIRE",
   "duire_ld_name": "DUIRE",
   "duire_kind": "Service web · Pour les développeurs d'apps",
@@ -25,9 +27,11 @@
   "duire_body": "Nous remplissons l'exigence des tests fermés Google Play — 12 testeurs pendant 14 jours — avec de vrais appareils Android, et consignons chaque exécution quotidienne dans un rapport final.",
   "duire_ld": "Service de tests fermés Google Play",
   "web_start": "Commencer sur le web",
+  "coming_soon": "Bientôt disponible",
   "learn_more": "En savoir plus →",
   "logo_alt": "Logo de Zaco Labs",
   "waky_icon_alt": "Icône de l'app Waky",
+  "dayline_icon_alt": "Icône de l'app Dayline",
   "duire_icon_alt": "Icône de DUIRE",
   "rights": "Tous droits réservés."
 }
