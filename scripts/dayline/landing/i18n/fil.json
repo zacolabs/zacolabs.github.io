@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Awtomatikong Tala ng Biyahe at Ruta Araw-araw",
+  "description": "Walang start button. Awtomatikong nagiging linya ang araw mo, lakad man, takbo, bisikleta, o sasakyan. Nasa device mo lang ang tala ng galaw mo. Libre sa iOS at Android.",
+  "og_title": "Dayline — Ang araw mo, iginuhit bilang linya",
+  "og_description": "Kung saan ka pumunta at gaano kalayo, awtomatikong iginuguhit araw-araw. Walang start button.",
+  "app_description": "Awtomatikong tala ng biyahe na iginuguhit ang araw mo bilang linya. Nasa device mo lang ang tala ng galaw mo.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Ang araw mo, iginuhit bilang linya",
+  "lede": "Awtomatikong iginuguhit ng Dayline araw-araw kung saan ka pumunta at gaano kalayo. Walang start button at walang kailangang tandaan: nagsisimula ang pag-record kapag gumalaw ka at natatapos kapag huminto ka.",
+  "note": "iOS · Android · Libre · Walang account",
+  "soon": "Malapit na",
+  "hero_alt": "Taong tumatakbo na may phone sa braso, at nakaguhit sa likuran niya ang dinaanan bilang berde at orange na linya",
+  "features_title": "Ang ipinagkaiba ng Dayline",
+  "features_lede": "Hindi mo kailangang magsikap magtala. Nananatili ang araw mo kung ano talaga ito.",
+  "features": [
+    {
+      "title": "Walang start button",
+      "text": "Dalhin lang ang phone mo gaya ng dati. Napapansin ng Dayline kapag umalis ka, sinusundan ang dinaanan mo, at tinatapos ang biyahe pagdating mo. Gumagana ito kahit nakasara ang app."
+    },
+    {
+      "title": "Paglalakad, pagtakbo, pagbibisikleta, sasakyan",
+      "text": "Inaalam ng Dayline kung paano ka bumibiyahe at kinukulayan ang linya ayon dito. Makikita sa bawat araw ang layo at oras ng bawat paraan."
+    },
+    {
+      "title": "Bawat araw, nakatabi",
+      "text": "Ipinapakita ng History tab ang isang buwan sa isang tingin; buksan ang alinmang araw para makita ang dinaanan at timeline nito. Pinagsasama ng Mapa tab ang nakaraang 7 araw, ngayong buwan, ngayong taon, o lahat ng tala sa iisang mapa."
+    },
+    {
+      "title": "Sa device mo lang",
+      "text": "Walang account at walang sign-in. Ang tala ng galaw mo ay hindi kailanman ipinapadala kahit saan, kahit sa amin. Puwede mo itong burahin lahat kahit kailan."
+    }
+  ],
+  "shot_alt": "Ang screen ng araw sa Dayline: linyang may kulay ayon sa paraan ng pagbiyahe, kasama ang mga layo",
+  "shot_caption": "Ang screen ng araw — ipinapakita ng kulay ng linya kung paano ka bumiyahe.",
+  "day": {
+    "km": "km",
+    "moving": "2 oras 6 min na gumagalaw",
+    "names": ["Lakad", "Takbo", "Bisikleta", "Sasakyan"],
+    "times": ["48 min", "21 min", "32 min", "25 min"]
+  },
+  "story_title": "Kung paano nagiging linya ang isang araw",
+  "story_lede": "Wala kang kailangang gawin. Ituloy mo lang ang araw mo gaya ng dati.",
+  "steps": [
+    {
+      "title": "Paglabas mo, nagsisimula na ang pag-record",
+      "text": "Lakad man o takbo: kapag lumabas ka ng bahay at nagsimulang gumalaw, napapansin ito ng Dayline at sinisimulan nang iguhit ang linya.",
+      "alt": "Taong lumalabas ng bahay na may phone sa bulsa, may berdeng linyang nakaguhit sa likuran niya"
+    },
+    {
+      "title": "Sumakay ka man ng kotse, tuloy pa rin",
+      "text": "Kapag nagmaneho ka, nag-iiba ang kulay ng linya. Maglakad, tumakbo, lumipat sa bisikleta o kotse: iisang linya pa rin ito.",
+      "alt": "Taong nagmamaneho ng kotse, may tuloy-tuloy na berde, orange, at asul na linya sa likuran"
+    },
+    {
+      "title": "Sa gabi, tingnan ang linya mo ngayong araw",
+      "text": "Pagtapos ng araw, nakatabi bilang iisang linya kung saan ka pumunta at gaano kalayo. Tingnan ito bilang linya sa grid, o sa ibabaw ng mapa.",
+      "alt": "Taong nakaupo sa sofa at tinitingnan sa phone ang dinaanan niya ngayong araw"
+    }
+  ],
+  "faq_title": "Mga madalas itanong",
+  "faq_lede": "Kung may iba ka pang tanong, mag-email ka lang sa amin.",
+  "faqs": [
+    {
+      "q": "Kailangan ko bang pumindot ng button kapag magsisimulang mag-ehersisyo?",
+      "a": "Hindi. Walang start button at walang stop button ang Dayline. Nagsisimula ang pag-record kapag nagsimula kang gumalaw at natatapos kapag nanatili ka sa iisang lugar. Dalhin lang ang phone mo gaya ng dati."
+    },
+    {
+      "q": "Nagre-record ba ito kahit nakasara ang app?",
+      "a": "Oo. Hindi mo kailangang buksan ang app. Para dito, kailangang naka-set sa “Always” ang pahintulot sa lokasyon (“Payagan sa lahat ng oras” sa Android), para maiguhit ang dinadaanan mo kahit nakasara ang app."
+    },
+    {
+      "q": "Paano nito natutukoy kung naglalakad, tumatakbo, nagbibisikleta, o nagmamaneho ako?",
+      "a": "Inaalam ng Dayline kung paano ka bumibiyahe at ipinapakita ito sa kulay ng linya. Opsyonal ang pahintulot na Motion & Fitness (Pisikal na aktibidad sa Android); kapag pinayagan, ginagamit ito para matukoy kung naglalakad, tumatakbo, nagbibisikleta, o nakasakay ka."
+    },
+    {
+      "q": "Malakas ba ito sa baterya?",
+      "a": "Ginagamit lang ang lokasyon habang gumagalaw ka. Habang nasa iisang lugar ka, naghihintay lang ang Dayline, kaya ginawa itong tipid sa baterya kahit naka-on buong araw."
+    },
+    {
+      "q": "Ipinapadala ba sa server ang tala ng galaw ko?",
+      "a": "Hindi. Walang account at walang sign-in, at naka-save lang sa device na ito ang tala ng galaw mo. Hindi ito kailanman ipinapadala kahit saan, kahit sa amin, at hindi kailanman ginagamit para sa mga ad o istatistika. Puwede mo itong burahin lahat kahit kailan sa Settings."
+    },
+    {
+      "q": "Saan ko makikita ang mga nakaraang araw?",
+      "a": "Ipinapakita ng History tab ang isang buwan sa isang tingin, na may maliit na linya para sa bawat araw na gumalaw ka. Buksan ang alinmang araw para makita ang dinaanan at timeline nito. Pinagsasama ng Mapa tab ang nakaraang 7 araw, ngayong buwan, ngayong taon, o lahat ng tala sa iisang mapa."
+    },
+    {
+      "q": "May mga goal o badge ba?",
+      "a": "Wala. Walang goal, walang badge, walang streak. Hindi ka binibigyan ng score ng Dayline; itinatabi lang nito ang araw mo kung ano talaga ito."
+    },
+    {
+      "q": "Libre ba ito?",
+      "a": "Oo. Libre ang Dayline at nagpapakita ng isang ad sa ibaba ng tab bar. Puwedeng i-off sa Settings ang mga anonymous na istatistika ng paggamit, gaya ng kung aling mga screen at setting ang ginagamit."
+    },
+    {
+      "q": "Saan ako magpapadala ng tanong o mungkahi?",
+      "a": "Mag-email sa zaco.labs@gmail.com. Ang Zaco Labs, ang gumawa ng Dayline, mismo ang nagbabasa nito."
+    }
+  ],
+  "cta_title": "Gawin ding linya ang araw mo ngayon",
+  "cta_text": "Libreng makukuha ang Dayline sa iOS at Android.",
+  "about_link": "Tungkol sa Zaco Labs"
+}

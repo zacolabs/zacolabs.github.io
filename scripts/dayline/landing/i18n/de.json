@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Automatisches Bewegungstagebuch: dein Tag als Linie",
+  "description": "Kein Startknopf: Dayline zeichnet deinen Tag automatisch auf und erkennt Gehen, Laufen, Radfahren und Fahren. Deine Wege bleiben auf deinem Gerät. Kostenlos für iOS und Android.",
+  "og_title": "Dayline — Dein Tag, als Linie gezeichnet",
+  "og_description": "Wo du warst und wie weit – jeden Tag automatisch gezeichnet. Ganz ohne Startknopf.",
+  "app_description": "Ein automatisches Bewegungstagebuch, das deinen Tag als Linie zeichnet. Deine Aufzeichnungen bleiben auf deinem Gerät.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Dein Tag, als Linie gezeichnet",
+  "lede": "Dayline zeichnet jeden Tag automatisch, wo du warst und wie weit du gekommen bist. Es gibt keinen Startknopf und nichts, woran du denken musst: Die Aufzeichnung beginnt, wenn du losgehst, und endet, wenn du anhältst.",
+  "note": "iOS · Android · Kostenlos · Kein Konto nötig",
+  "soon": "Demnächst",
+  "hero_alt": "Eine Person läuft mit dem Handy am Arm; der Weg hinter ihr ist als grüne und orange Linie gezeichnet",
+  "features_title": "Was Dayline anders macht",
+  "features_lede": "Du musst dich ums Aufzeichnen nicht kümmern. Der Tag bleibt, wie er war.",
+  "features": [
+    {
+      "title": "Kein Startknopf",
+      "text": "Nimm dein Handy mit wie immer. Dayline merkt, wenn du aufbrichst, folgt deinem Weg und schließt die Strecke ab, wenn du ankommst. Das funktioniert auch bei geschlossener App."
+    },
+    {
+      "title": "Gehen, laufen, radeln, fahren",
+      "text": "Dayline unterscheidet Gehen, Laufen, Radfahren und Fahren und zeigt es in der Farbe der Linie. Jeder Tag zeigt Strecke und Zeit für jede Fortbewegungsart."
+    },
+    {
+      "title": "Jeder Tag bleibt",
+      "text": "Der Tab „Verlauf“ zeigt einen Monat auf einen Blick; tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Der Tab „Karte“ legt die letzten 7 Tage, diesen Monat, dieses Jahr oder alle Aufzeichnungen auf eine Karte."
+    },
+    {
+      "title": "Nur auf deinem Gerät",
+      "text": "Es gibt kein Konto und keine Anmeldung. Deine Aufzeichnungen werden nirgendwohin gesendet, auch nicht an uns. Du kannst jederzeit alles löschen."
+    }
+  ],
+  "shot_alt": "Die Tagesansicht von Dayline: eine Linie, je nach Fortbewegungsart anders gefärbt, mit den Strecken",
+  "shot_caption": "Die Tagesansicht – die Farbe der Linie zeigt, wie du unterwegs warst.",
+  "day": {
+    "km": "km",
+    "moving": "2 Std. 6 Min. unterwegs",
+    "names": ["Gehen", "Laufen", "Radfahren", "Fahrzeug"],
+    "times": ["48 Min.", "21 Min.", "32 Min.", "25 Min."]
+  },
+  "story_title": "Wie aus einem Tag eine Linie wird",
+  "story_lede": "Du musst nichts weiter tun. Verbring deinen Tag einfach wie immer.",
+  "steps": [
+    {
+      "title": "Du gehst los, die Aufzeichnung beginnt",
+      "text": "Ob Spaziergang oder Laufrunde: Sobald du das Haus verlässt und dich in Bewegung setzt, merkt Dayline das und beginnt, die Linie zu zeichnen.",
+      "alt": "Eine Person verlässt mit dem Handy in der Tasche das Haus; hinter ihr wird eine grüne Linie gezeichnet"
+    },
+    {
+      "title": "Auch im Auto geht es weiter",
+      "text": "Setzt du dich ans Steuer, wechselt die Linie die Farbe. Ob du gehst, läufst oder aufs Rad oder ins Auto umsteigst: Es bleibt eine durchgehende Linie.",
+      "alt": "Eine Person fährt Auto; hinter ihr zieht sich eine grüne, orange und blaue Linie"
+    },
+    {
+      "title": "Am Abend siehst du deine Linie",
+      "text": "Wenn der Tag vorbei ist, steht in einer einzigen Linie, wo du warst und wie weit du gekommen bist. Du kannst sie als Linie auf einem Raster ansehen oder auf einer Karte.",
+      "alt": "Eine Person sitzt auf dem Sofa und sieht sich auf dem Handy den Weg des Tages an"
+    }
+  ],
+  "faq_title": "Häufige Fragen",
+  "faq_lede": "Wenn du mehr wissen möchtest, schreib uns eine E-Mail.",
+  "faqs": [
+    {
+      "q": "Muss ich einen Knopf drücken, wenn ich mit dem Training beginne?",
+      "a": "Nein. Dayline hat weder einen Startknopf noch einen Stoppknopf. Die Aufzeichnung beginnt, wenn du losgehst, und endet, wenn du an einem Ort bleibst. Nimm einfach dein Handy mit wie immer."
+    },
+    {
+      "q": "Wird auch bei geschlossener App aufgezeichnet?",
+      "a": "Ja. Du musst die App dafür nicht öffnen. Dazu muss der Standortzugriff auf „Immer“ stehen (unter Android „Immer zulassen“), damit dein Weg auch dann gezeichnet werden kann, wenn die App geschlossen ist."
+    },
+    {
+      "q": "Wie unterscheidet Dayline Gehen, Laufen, Radfahren und Autofahren?",
+      "a": "Dayline erkennt von selbst, wie du unterwegs bist, und zeigt es in der Farbe der Linie. Die Berechtigung „Bewegung & Fitness“ (unter Android „Körperliche Aktivität“) ist optional; wenn du sie erteilst, wird sie genutzt, um Gehen, Laufen, Radfahren und Fahren zu unterscheiden."
+    },
+    {
+      "q": "Verbraucht das nicht viel Akku?",
+      "a": "Der Standort wird nur verwendet, während du dich bewegst. Solange du an einem Ort bleibst, wartet Dayline nur. So ist die App darauf ausgelegt, den ganzen Tag mitzulaufen, ohne den Akku stark zu belasten."
+    },
+    {
+      "q": "Werden meine Aufzeichnungen an einen Server gesendet?",
+      "a": "Nein. Es gibt kein Konto und keine Anmeldung, und deine Aufzeichnungen werden nur auf diesem Gerät gespeichert. Sie werden nirgendwohin gesendet, auch nicht an uns, und niemals für Werbung oder Statistiken verwendet. In den Einstellungen kannst du jederzeit alles löschen."
+    },
+    {
+      "q": "Wo sehe ich vergangene Tage?",
+      "a": "Der Tab „Verlauf“ zeigt einen Monat auf einen Blick, mit einer kleinen Linie für jeden Tag, an dem du unterwegs warst. Tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Im Tab „Karte“ siehst du die letzten 7 Tage, diesen Monat, dieses Jahr oder alle Aufzeichnungen auf einer Karte."
+    },
+    {
+      "q": "Gibt es Ziele oder Abzeichen?",
+      "a": "Nein. Es gibt keine Ziele, keine Abzeichen und keine Serien. Dayline bewertet nicht, sondern hält den Tag fest, wie er war."
+    },
+    {
+      "q": "Ist Dayline kostenlos?",
+      "a": "Ja, Dayline ist kostenlos. Unter der Tableiste wird eine Anzeige eingeblendet. Anonyme Nutzungsstatistiken, etwa welche Bildschirme und Einstellungen verwendet werden, lassen sich in den Einstellungen deaktivieren."
+    },
+    {
+      "q": "Wohin kann ich Fragen oder Vorschläge schicken?",
+      "a": "Schreib an zaco.labs@gmail.com. Zaco Labs, das Team hinter Dayline, liest jede Nachricht selbst."
+    }
+  ],
+  "cta_title": "Halte auch den heutigen Tag als Linie fest",
+  "cta_text": "Dayline gibt es kostenlos für iOS und Android.",
+  "about_link": "Über Zaco Labs"
+}

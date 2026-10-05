@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Automatisch logboek van je routes | Je dag als lijn",
+  "description": "Geen startknop: Dayline legt je routes automatisch vast en herkent wandelen, hardlopen, fietsen en rijden. Je bewegingen blijven op je apparaat. Gratis voor iOS en Android.",
+  "og_title": "Dayline — Je dag, getekend als een lijn",
+  "og_description": "Waar je was en hoe ver je ging, elke dag automatisch getekend. Zonder startknop.",
+  "app_description": "Een automatisch logboek dat je dag als een lijn tekent. Je bewegingen blijven op je apparaat.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Je dag, getekend als een lijn",
+  "lede": "Dayline tekent elke dag automatisch waar je was en hoe ver je ging. Er is geen startknop en je hoeft nergens aan te denken: de registratie begint als je beweegt en stopt als je stilstaat.",
+  "note": "iOS · Android · Gratis · Geen account nodig",
+  "soon": "Binnenkort",
+  "hero_alt": "Iemand rent met een telefoon om de arm; de afgelegde weg is erachter getekend als een groene en oranje lijn",
+  "features_title": "Wat Dayline anders maakt",
+  "features_lede": "Je hoeft geen moeite te doen om iets bij te houden. De dag blijft bewaard zoals die was.",
+  "features": [
+    {
+      "title": "Geen startknop",
+      "text": "Neem je telefoon mee zoals altijd. Dayline merkt wanneer je vertrekt, volgt de weg die je neemt en sluit de rit af wanneer je aankomt. Het werkt ook als de app gesloten is."
+    },
+    {
+      "title": "Lopen, rennen, fietsen, rijden",
+      "text": "Dayline onderscheidt wandelen, hardlopen, fietsen en rijden en laat dat zien in de kleur van de lijn. Elke dag toont de afstand en tijd per vervoerswijze."
+    },
+    {
+      "title": "Elke dag bewaard",
+      "text": "Het tabblad Geschiedenis toont een maand in één oogopslag; tik op een dag om de route en tijdlijn te zien. Het tabblad Kaart zet de laatste 7 dagen, deze maand, dit jaar of alles op één kaart."
+    },
+    {
+      "title": "Alleen op je apparaat",
+      "text": "Er is geen account en geen login. Je bewegingen worden nooit ergens naartoe gestuurd, ook niet naar ons. Je kunt ze op elk moment allemaal wissen."
+    }
+  ],
+  "shot_alt": "Het dagscherm van Dayline: een lijn die per vervoerswijze een andere kleur heeft, met de afstanden",
+  "shot_caption": "Het dagscherm – de kleur van de lijn laat zien hoe je reisde.",
+  "day": {
+    "km": "km",
+    "moving": "2 u 6 min onderweg",
+    "names": ["Lopen", "Hardlopen", "Fietsen", "Voertuig"],
+    "times": ["48 min", "21 min", "32 min", "25 min"]
+  },
+  "story_title": "Hoe een dag een lijn wordt",
+  "story_lede": "Je hoeft er niets voor te doen. Ga gewoon je gang.",
+  "steps": [
+    {
+      "title": "Je gaat de deur uit en het begint",
+      "text": "Een wandeling of een rondje hardlopen: zodra je de deur uit gaat en in beweging komt, merkt Dayline dat en begint de lijn te tekenen.",
+      "alt": "Iemand gaat de deur uit met een telefoon in de broekzak; erachter wordt een groene lijn getekend"
+    },
+    {
+      "title": "Ook in de auto loopt de lijn door",
+      "text": "Kruip je achter het stuur, dan verandert de lijn van kleur. Of je nu loopt, rent of overstapt op de fiets of de auto: het blijft één lijn.",
+      "alt": "Iemand rijdt in een auto; erachter loopt een groene, oranje en blauwe lijn"
+    },
+    {
+      "title": "’s Avonds bekijk je de lijn van vandaag",
+      "text": "Als de dag voorbij is, staat in één lijn waar je was en hoe ver je ging. Bekijk die als een lijn op een raster of op een kaart.",
+      "alt": "Iemand zit op de bank en bekijkt op een telefoon de route van vandaag"
+    }
+  ],
+  "faq_title": "Veelgestelde vragen",
+  "faq_lede": "Wil je meer weten? Stuur ons een e-mail.",
+  "faqs": [
+    {
+      "q": "Moet ik op een knop drukken als ik ga sporten?",
+      "a": "Nee. Dayline heeft geen startknop en geen stopknop. De registratie begint als je in beweging komt en stopt als je op één plek blijft. Neem gewoon je telefoon mee zoals altijd."
+    },
+    {
+      "q": "Legt Dayline ook iets vast als de app gesloten is?",
+      "a": "Ja. Je hoeft de app niet te openen. Daarvoor moet de toegang tot je locatie op ‘Altijd’ staan (op Android ‘Altijd toestaan’), zodat je route ook kan worden getekend als de app gesloten is."
+    },
+    {
+      "q": "Hoe onderscheidt Dayline wandelen, hardlopen, fietsen en autorijden?",
+      "a": "Dayline herkent zelf hoe je reist en laat dat zien in de kleur van de lijn. De toestemming ‘Beweging en fitness’ (op Android ‘Fysieke activiteit’) is optioneel; als je die geeft, wordt die gebruikt om wandelen, hardlopen, fietsen en rijden van elkaar te onderscheiden."
+    },
+    {
+      "q": "Loopt mijn batterij er niet snel van leeg?",
+      "a": "Locatie wordt alleen gebruikt terwijl je beweegt. Zolang je op één plek blijft, wacht Dayline alleen maar. Zo is de app gemaakt om de hele dag aan te staan zonder veel van je batterij te vragen."
+    },
+    {
+      "q": "Worden mijn bewegingen naar een server gestuurd?",
+      "a": "Nee. Er is geen account en geen login, en je bewegingen worden alleen op dit apparaat bewaard. Ze worden nooit ergens naartoe gestuurd, ook niet naar ons, en nooit gebruikt voor advertenties of statistieken. In Instellingen kun je ze op elk moment allemaal wissen."
+    },
+    {
+      "q": "Waar zie ik eerdere dagen?",
+      "a": "Het tabblad Geschiedenis toont een maand in één oogopslag, met een klein lijntje voor elke dag dat je bewoog. Tik op een dag om de route en tijdlijn te zien. Op het tabblad Kaart zie je de laatste 7 dagen, deze maand, dit jaar of alles op één kaart."
+    },
+    {
+      "q": "Zijn er doelen of badges?",
+      "a": "Nee. Er zijn geen doelen, geen badges en geen reeksen. Dayline beoordeelt je niet en bewaart alleen de dag zoals die was."
+    },
+    {
+      "q": "Is Dayline gratis?",
+      "a": "Ja, Dayline is gratis. Onder de tabbalk staat één advertentie. Anonieme gebruiksstatistieken, zoals welke schermen en instellingen worden gebruikt, kun je uitzetten in Instellingen."
+    },
+    {
+      "q": "Waar kan ik terecht met vragen of suggesties?",
+      "a": "Mail naar zaco.labs@gmail.com. Zaco Labs, de maker van Dayline, leest elk bericht zelf."
+    }
+  ],
+  "cta_title": "Leg ook vandaag vast als een lijn",
+  "cta_text": "Dayline is gratis beschikbaar voor iOS en Android.",
+  "about_link": "Over Zaco Labs"
+}

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dayline — автоматический дневник маршрутов и перемещений</title>
+<meta name="description" content="Без кнопки «Старт»: ваш день сам становится линией. Dayline различает ходьбу, бег, велосипед и транспорт, а записи хранит только на устройстве. Бесплатно для iOS и Android." />
+<meta name="theme-color" content="#111113" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dayline" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:title" content="Dayline — Ваш день одной линией" />
+<meta property="og:description" content="Где вы были и сколько прошли — рисуется автоматически каждый день. Без кнопки «Старт»." />
+<meta property="og:url" content="https://zacolabs.github.io/dayline/ru/" />
+<meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-ru.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Dayline — Ваш день одной линией" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
+<link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
+<link rel="canonical" href="https://zacolabs.github.io/dayline/ru/" />
+<link rel="alternate" hreflang="ko" href="https://zacolabs.github.io/dayline/ko/" />
+<link rel="alternate" hreflang="en" href="https://zacolabs.github.io/dayline/en/" />
+<link rel="alternate" hreflang="ja" href="https://zacolabs.github.io/dayline/ja/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://zacolabs.github.io/dayline/zh-hans/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://zacolabs.github.io/dayline/zh-hant/" />
+<link rel="alternate" hreflang="es" href="https://zacolabs.github.io/dayline/es/" />
+<link rel="alternate" hreflang="fr" href="https://zacolabs.github.io/dayline/fr/" />
+<link rel="alternate" hreflang="de" href="https://zacolabs.github.io/dayline/de/" />
+<link rel="alternate" hreflang="it" href="https://zacolabs.github.io/dayline/it/" />
+<link rel="alternate" hreflang="pt" href="https://zacolabs.github.io/dayline/pt/" />
+<link rel="alternate" hreflang="nl" href="https://zacolabs.github.io/dayline/nl/" />
+<link rel="alternate" hreflang="da" href="https://zacolabs.github.io/dayline/da/" />
+<link rel="alternate" hreflang="pl" href="https://zacolabs.github.io/dayline/pl/" />
+<link rel="alternate" hreflang="ru" href="https://zacolabs.github.io/dayline/ru/" />
+<link rel="alternate" hreflang="ar" href="https://zacolabs.github.io/dayline/ar/" />
+<link rel="alternate" hreflang="id" href="https://zacolabs.github.io/dayline/id/" />
+<link rel="alternate" hreflang="vi" href="https://zacolabs.github.io/dayline/vi/" />
+<link rel="alternate" hreflang="fil" href="https://zacolabs.github.io/dayline/fil/" />
+<link rel="alternate" hreflang="x-default" href="https://zacolabs.github.io/dayline/en/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Dayline",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "Android, iOS",
+  "description": "Автоматический дневник маршрутов, который рисует ваш день одной линией. Ваши перемещения хранятся только на устройстве.",
+  "url": "https://zacolabs.github.io/dayline/ru/",
+  "inLanguage": "ru",
+  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "downloadUrl": [
+    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zaco Labs",
+    "url": "https://zacolabs.github.io/",
+    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
+    "email": "zaco.labs@gmail.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ru",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Нужно ли нажимать кнопку перед тренировкой?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. В Dayline нет ни кнопки «Старт», ни кнопки «Стоп». Запись начинается, когда вы трогаетесь с места, и завершается, когда вы остаётесь на одном месте. Просто носите телефон с собой, как обычно."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Идёт ли запись, когда приложение закрыто?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Открывать приложение не нужно. Для этого в разрешении на местоположение нужно выбрать «Всегда» (на Android — «Разрешить в любом режиме»): так путь рисуется, даже когда приложение закрыто."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как Dayline различает ходьбу, бег, велосипед и транспорт?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dayline сам определяет, как вы передвигаетесь, и показывает это цветом линии. Разрешение «Движение и фитнес» (на Android — «Физическая активность») необязательно; если его дать, оно помогает различать ходьбу, бег, велосипед и транспорт."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Не будет ли быстро садиться батарея?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Геолокация используется, только пока вы движетесь. Пока вы остаётесь на одном месте, Dayline просто ждёт. Приложение сделано так, чтобы его можно было оставить включённым на весь день."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Отправляются ли мои перемещения на сервер?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Нет ни аккаунта, ни входа, а ваши перемещения хранятся только на этом устройстве. Они никуда не отправляются — даже нам — и никогда не используются для рекламы или статистики. Удалить всё можно в любой момент в настройках."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Где посмотреть прошлые дни?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Вкладка «История» показывает месяц с одного взгляда: маленькая линия для каждого дня, когда вы двигались. Откройте любой день, чтобы увидеть его маршрут и хронологию. Вкладка «Карта» собирает последние 7 дней, этот месяц, этот год или все записи на одной карте."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Есть ли цели или значки?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Нет. Ни целей, ни значков, ни серий. Dayline не ставит оценок, а просто сохраняет день таким, каким он был."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Это бесплатно?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Dayline бесплатен и показывает одно объявление под панелью вкладок. Анонимную статистику использования — например, какие экраны и настройки используются — можно отключить в настройках."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Куда писать с вопросами и предложениями?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Пишите на zaco.labs@gmail.com. Письма читает сама команда Zaco Labs, которая сделала Dayline."
+      }
+    }
+  ]
+}
+</script>
+<script>
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches)
+        document.documentElement.classList.add('anim');
+</script>
+<style>
+    /* 구성은 Waky 랜딩(waky-landing scripts/landing/style.css)과 같고, 색은 Dayline 의 것이다:
+       앱 · 스토어 그림과 같은 어두운 바탕(#111113)에 이동수단의 네 가지 색. */
+    :root {
+        color-scheme:dark;
+        --bg:#111113; --surface:#19191c; --surface-2:#1e1e22;
+        --ink:#f5f5f7; --muted:#b8b8be; --muted-2:#8e8e93; --line:rgba(255,255,255,.1);
+        --walk:#1fe0a2; --run:#ff6a47; --cycle:#8a70ff; --car:#33aaff;
+        --radius:18px;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; background:var(--bg); }
+    body {
+        font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color:var(--ink); line-height:1.7;
+        -webkit-font-smoothing:antialiased; overflow-x:hidden;
+        /* 스토어 그림의 격자 */
+        background:
+            linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 96px 96px,
+            linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 96px 96px,
+            var(--bg);
+    }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; height:auto; display:block; }
+    .wrap { width:100%; max-width:1060px; margin:0 auto; padding:0 24px; }
+
+    /* 헤더 */
+    header.site { border-bottom:1px solid var(--line); background:rgba(17,17,19,.82);
+        backdrop-filter:saturate(180%) blur(10px); -webkit-backdrop-filter:saturate(180%) blur(10px);
+        position:sticky; top:0; z-index:20; }
+    header.site .wrap { display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; letter-spacing:-.02em; }
+    .brand img { width:30px; height:30px; border-radius:8px; border:1px solid var(--line); }
+    .langs { display:flex; flex-wrap:wrap; gap:4px; font-size:13px; }
+    .langs a { padding:5px 10px; border-radius:999px; color:var(--muted-2); }
+    .langs a:hover { background:var(--surface-2); color:var(--ink); }
+    .langs a.on { background:var(--ink); color:var(--bg); }
+
+    /* 헤더 언어 드롭다운 (JS 없이 details 로 동작) */
+    .lang-menu { position:relative; font-size:13px; }
+    .lang-menu summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:6px;
+        padding:6px 12px; border:1px solid var(--line); border-radius:999px;
+        background:var(--surface); color:var(--ink); white-space:nowrap; }
+    .lang-menu summary::-webkit-details-marker { display:none; }
+    .lang-menu summary:hover { background:var(--surface-2); }
+    .lang-menu .globe { width:15px; height:15px; flex:none; }
+    .lang-menu summary::after { content:""; width:6px; height:6px; margin-top:-3px;
+        /* 회전시켜 만든 ⌄ 모양이라 방향과 무관 — RTL 에서 뒤집히면 안 된다 */
+        border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
+        transform:rotate(45deg); }
+    .lang-menu ul { list-style:none; position:absolute; top:calc(100% + 8px); inset-inline-end:0;
+        z-index:30; display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:2px;
+        width:max-content; min-width:250px; max-height:min(70vh, 480px); overflow:auto; padding:6px;
+        background:var(--surface-2); border:1px solid var(--line); border-radius:14px;
+        box-shadow:0 14px 34px rgba(0,0,0,.5); }
+    .lang-menu li a { display:block; padding:7px 10px; border-radius:8px; color:var(--muted); white-space:nowrap; }
+    .lang-menu li a:hover { background:rgba(255,255,255,.07); color:var(--ink); }
+    .lang-menu li a[aria-current] { background:var(--ink); color:var(--bg); }
+
+    /* 히어로 */
+    .hero { display:grid; grid-template-columns:1fr 1.02fr; gap:48px; align-items:center;
+        padding:76px 0 72px; }
+    .eyebrow { font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+        color:var(--walk); margin-bottom:14px; }
+    h1 { font-size:clamp(34px,5.2vw,54px); line-height:1.22; letter-spacing:-.03em; font-weight:800; }
+    .lede { margin-top:20px; font-size:17.5px; color:var(--muted); max-width:34em; }
+    .note { margin-top:16px; font-size:13.5px; color:var(--muted-2); }
+    /* 그림은 앱의 선 보기처럼 흰 격자 카드다. 먹선 그림 위에 색 선(.trail)을 얹는다 — 그림의 색은 이 선뿐이다. */
+    .art { position:relative; background:#fff; overflow:hidden; }
+    .art img { width:100%; }
+    .art .trail { position:absolute; inset:0; width:100%; height:100%; }
+    .hero-art .art { max-width:520px; margin-inline-start:auto; border-radius:28px;
+        box-shadow:0 30px 70px rgba(0,0,0,.45); }
+
+    /* 화면에 들어오면(.in) 선이 구간 순서대로 같은 빠르기로 그려진다. 구간마다 때(--d)와 시간(--t)을 받는다.
+       .anim 은 머리의 스크립트가 켠다 — 없으면 처음부터 다 그려진 채다. */
+    .anim [data-inview] .leg { stroke-dasharray:1 2; stroke-dashoffset:1; opacity:0; }
+    .anim [data-inview] .pin { opacity:0; transform-box:fill-box; transform-origin:center; }
+    .anim .in .leg { animation:line-draw var(--t) var(--d) linear forwards; }
+    .anim .in .pin { animation:line-pop .35s var(--d, 0s) ease-out forwards; }
+    .anim .in .halo { animation:line-halo 2.4s 3s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    @keyframes line-draw { from { stroke-dashoffset:1; opacity:1; } to { stroke-dashoffset:0; opacity:1; } }
+    @keyframes line-pop { from { opacity:0; transform:scale(.3); } to { opacity:1; transform:scale(1); } }
+    @keyframes line-halo { 0%,100% { transform:scale(1); } 50% { transform:scale(1.25); } }
+
+    /* 스토어 배지 */
+    .stores { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+    .badge { direction:ltr; display:inline-flex; align-items:center; gap:11px; padding:11px 20px;
+        border-radius:14px; background:var(--ink); color:var(--bg);
+        transition:transform .15s ease, box-shadow .15s ease; }
+    a.badge:hover { transform:translateY(-2px); box-shadow:0 8px 26px rgba(255,255,255,.14); }
+    .badge-ico { width:22px; height:22px; flex:none; }
+    .badge-txt { display:flex; flex-direction:column; line-height:1.15; text-align:left; }
+    .badge-txt small { font-size:10px; opacity:.72; letter-spacing:.04em; }
+    .badge-txt strong { font-size:15.5px; font-weight:600; letter-spacing:-.01em; }
+    /* 아직 주소가 없는 스토어 */
+    .badge-soon { background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,.22);
+        padding:10px 19px; cursor:default; }
+    .badge-soon .badge-txt small { opacity:1; color:var(--walk); letter-spacing:.02em; }
+
+    /* 섹션 공통 */
+    section { padding:72px 0; }
+    section + section { border-top:1px solid var(--line); }
+    h2 { font-size:clamp(25px,3.4vw,34px); line-height:1.3; letter-spacing:-.025em; font-weight:800; }
+    .section-lede { margin-top:14px; font-size:16.5px; color:var(--muted); max-width:36em; }
+
+    /* 기능 */
+    .feature-wrap { display:grid; grid-template-columns:1.15fr .85fr; gap:52px;
+        align-items:start; margin-top:44px; }
+    .feature-list { list-style:none; display:grid; gap:14px; }
+    .feature-list li { background:var(--surface); border:1px solid var(--line);
+        border-radius:var(--radius); padding:22px 24px; }
+    .feature-list h3 { font-size:17px; font-weight:700; letter-spacing:-.015em;
+        display:flex; align-items:center; gap:10px; }
+    /* 선의 한 토막 — 이동수단의 네 가지 색 */
+    .feature-list h3::before { content:""; width:18px; height:6px; border-radius:3px;
+        background:var(--walk); flex:none; }
+    .feature-list li:nth-child(2) h3::before { background:var(--run); }
+    .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
+    .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
+    /* 뒤 패널의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. 하루 화면은 패널 안에 위아래 36 · 38px 를 두고 놓인다. */
+    .shot { position:relative; padding-top:36px; }
+    .shot::before { content:""; position:absolute; inset:0 -10% 44px -10%;
+        background:var(--surface-2); border:1px solid var(--line); border-radius:32px; z-index:0; }
+    /* 앱의 하루 화면. 크기는 스토어 그림의 카드(가로 900)를 글자 크기 12px = 36 으로 줄인 것이라 em 으로 적는다. */
+    .day { position:relative; z-index:1; width:25em; max-width:100%; margin:0 auto; font-size:12px; line-height:1.2;
+        background:#fff; color:#111113; border-radius:1.78em; padding:1.67em 1.56em 1.56em;
+        box-shadow:0 18px 34px rgba(0,0,0,.5); text-align:start; }
+    .day-total { display:flex; align-items:baseline; gap:.39em; }
+    .day-total b { font-size:3.44em; font-weight:800; letter-spacing:-.04em; line-height:1;
+        font-variant-numeric:tabular-nums; }
+    .day-total span { font-size:1.33em; font-weight:500; color:#6c6c70; }
+    .day-sub { margin-top:.41em; font-size:.94em; font-weight:500; color:#6c6c70; white-space:nowrap; }
+    .day-canvas { display:block; width:100%; height:auto; margin-top:1.22em; }
+    .day-stats { margin-top:1em; background:#f2f2f7; border-radius:1.11em; padding:1.11em 1.22em .5em; }
+    .day-bar { display:flex; gap:.17em; height:.39em; margin-bottom:.6em; }
+    .day-bar i { border-radius:.2em; transform-origin:0 50%; }
+    [dir="rtl"] .day-bar i { transform-origin:100% 50%; }
+    .day-row { display:flex; align-items:center; font-weight:500; padding:.56em 0; }
+    .day-row i { flex:none; width:.56em; height:.56em; border-radius:50%; margin-inline-end:.67em; }
+    .day-row .name { flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .day-row .km { flex:none; width:5.5em; text-align:end; font-weight:600; white-space:nowrap; }
+    .day-row .time { flex:none; width:5.2em; text-align:end; color:#6c6c70; white-space:nowrap; }
+
+    /* 선이 그려지는 동안 막대와 줄이 제 구간에 맞춰 따라 나온다 */
+    .anim .day-bar i { transform:scaleX(0); }
+    .anim .day-row { opacity:0; }
+    .anim .day.in .day-bar i { animation:day-grow var(--t) var(--d) linear forwards; }
+    .anim .day.in .day-row { animation:day-show .4s var(--d) ease-out forwards; }
+    @keyframes day-grow { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+    @keyframes day-show { from { opacity:0; transform:translateY(.4em); } to { opacity:1; transform:none; } }
+    .shot figcaption { position:relative; z-index:1; margin-top:62px; text-align:center;
+        font-size:13px; color:var(--muted-2); }
+
+    /* 3컷 */
+    .steps { list-style:none; counter-reset:step; display:grid;
+        grid-template-columns:repeat(3,1fr); gap:26px; margin-top:44px; }
+    .steps li { background:var(--surface); border:1px solid var(--line);
+        border-radius:var(--radius); text-align:center; overflow:hidden; }
+    .steps .art { aspect-ratio:1/1; }
+    .step-body { padding:20px 22px 26px; }
+    .steps h3 { font-size:16.5px; font-weight:700; letter-spacing:-.015em; }
+    /* 숫자 정렬을 상속 text-align 과 line-height 에 맡기지 않는다 */
+    .steps h3::before { counter-increment:step; content:counter(step);
+        display:flex; align-items:center; justify-content:center; flex:none;
+        width:26px; height:26px; margin:0 auto 10px; border-radius:999px;
+        background:var(--walk); color:#06281c; font-size:13px; font-weight:800;
+        line-height:1; }
+    .steps li:nth-child(2) h3::before { background:var(--car); color:#04243d; }
+    .steps li:nth-child(3) h3::before { background:var(--cycle); color:#fff; }
+    .steps p { margin-top:8px; font-size:14.5px; color:var(--muted); }
+
+    /* FAQ */
+    .faq-list { margin-top:34px; border-top:1px solid var(--line); }
+    .faq-list details { border-bottom:1px solid var(--line); }
+    .faq-list summary { cursor:pointer; list-style:none; padding-block:20px; padding-inline:0 44px;
+        position:relative; font-size:16.5px; font-weight:600; letter-spacing:-.015em; }
+    .faq-list summary::-webkit-details-marker { display:none; }
+    .faq-list summary::after { content:""; position:absolute; inset-inline-end:8px; top:50%;
+        width:10px; height:10px; margin-top:-6px; border-right:2px solid var(--muted-2);
+        border-bottom:2px solid var(--muted-2); transform:rotate(45deg);
+        transition:transform .2s ease; }
+    .faq-list details[open] summary::after { transform:rotate(-135deg); margin-top:-2px; }
+    .faq-list summary:hover { color:var(--walk); }
+    .faq-list .answer { padding-block:0 22px; padding-inline:0 44px; font-size:15.5px; color:var(--muted); }
+
+    /* 하단 CTA */
+    .cta { text-align:center; background:var(--surface-2); border-top:1px solid var(--line); }
+    .cta p { margin-top:14px; font-size:16.5px; color:var(--muted); }
+    .cta .stores { justify-content:center; }
+
+    /* 푸터 */
+    footer.site { padding:44px 0 56px; text-align:center; font-size:13.5px; color:var(--muted-2);
+        border-top:1px solid var(--line); background:var(--bg); }
+    footer.site a { color:var(--muted); text-decoration:underline; text-underline-offset:3px; }
+    footer.site a:hover { color:var(--ink); }
+    footer.site .row + .row { margin-top:8px; }
+    footer.site .langs { justify-content:center; max-width:680px; margin:18px auto 0; }
+    footer.site .langs a { text-decoration:none; }
+    footer.site .langs a.on { color:var(--bg); }
+
+    [dir="rtl"] * { letter-spacing:0 !important; }
+    [dir="rtl"] .eyebrow { text-transform:none; }
+
+    @media (prefers-reduced-motion:reduce) { * { transition:none !important; }
+        html { scroll-behavior:auto; } }
+
+    @media (max-width:900px) {
+        .hero { grid-template-columns:1fr; gap:34px; padding:52px 0 56px; }
+        .hero-art .art { margin:0 auto; max-width:460px; }
+        .feature-wrap { grid-template-columns:1fr; gap:40px; }
+        /* 1단으로 접히면 장식 패널이 화면 밖으로 나가므로 좌우 여백을 없앤다 */
+        .shot::before { left:0; right:0; }
+        .day { font-size:11px; }
+        /* 1단에서는 그림이 과하게 커지므로 가로 배치로 바꾼다 */
+        .steps { grid-template-columns:1fr; gap:14px; }
+        .steps li { display:flex; align-items:center; text-align:start; }
+        .steps .art { width:132px; flex:none; }
+        .steps h3 { display:flex; align-items:center; gap:10px; }
+        .steps h3::before { margin:0; }
+        .step-body { padding:18px 20px; }
+    }
+    @media (max-width:560px) {
+        .wrap { padding:0 18px; }
+        section { padding:54px 0; }
+        .stores { gap:10px; }
+        .steps .art { width:108px; }
+        .step-body { padding:14px 16px; }
+        .badge { flex:1 1 100%; justify-content:center; }
+        .lede { font-size:16.5px; }
+    }
+</style>
+</head>
+<body>
+
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="/dayline/ru/">
+            <img src="/zacolabs-assets/dayline_icon.png" alt="" width="30" height="30" />
+            <span>Dayline</span>
+        </a>
+        <details class="lang-menu">
+            <summary aria-label="Language"><svg class="globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span>Русский</span></summary>
+            <ul>
+                <li><a href="/dayline/ko/" lang="ko" hreflang="ko" data-lang="ko">한국어</a></li>
+                <li><a href="/dayline/en/" lang="en" hreflang="en" data-lang="en">English</a></li>
+                <li><a href="/dayline/ja/" lang="ja" hreflang="ja" data-lang="ja">日本語</a></li>
+                <li><a href="/dayline/zh-hans/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh-hans">简体中文</a></li>
+                <li><a href="/dayline/zh-hant/" lang="zh-Hant" hreflang="zh-Hant" data-lang="zh-hant">繁體中文</a></li>
+                <li><a href="/dayline/es/" lang="es" hreflang="es" data-lang="es">Español</a></li>
+                <li><a href="/dayline/fr/" lang="fr" hreflang="fr" data-lang="fr">Français</a></li>
+                <li><a href="/dayline/de/" lang="de" hreflang="de" data-lang="de">Deutsch</a></li>
+                <li><a href="/dayline/it/" lang="it" hreflang="it" data-lang="it">Italiano</a></li>
+                <li><a href="/dayline/pt/" lang="pt-BR" hreflang="pt" data-lang="pt">Português</a></li>
+                <li><a href="/dayline/nl/" lang="nl" hreflang="nl" data-lang="nl">Nederlands</a></li>
+                <li><a href="/dayline/da/" lang="da" hreflang="da" data-lang="da">Dansk</a></li>
+                <li><a href="/dayline/pl/" lang="pl" hreflang="pl" data-lang="pl">Polski</a></li>
+                <li><a href="/dayline/ru/" lang="ru" hreflang="ru" data-lang="ru" aria-current="page">Русский</a></li>
+                <li><a href="/dayline/ar/" lang="ar" hreflang="ar" data-lang="ar">العربية</a></li>
+                <li><a href="/dayline/id/" lang="id" hreflang="id" data-lang="id">Bahasa Indonesia</a></li>
+                <li><a href="/dayline/vi/" lang="vi" hreflang="vi" data-lang="vi">Tiếng Việt</a></li>
+                <li><a href="/dayline/fil/" lang="fil" hreflang="fil" data-lang="fil">Filipino</a></li>
+            </ul>
+        </details>
+    </div>
+</header>
+
+<main>
+    <div class="wrap">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Zaco Labs</p>
+                <h1>Ваш день одной линией</h1>
+                <p class="lede">Dayline каждый день автоматически рисует, где вы были и сколько прошли. Нет кнопки «Старт», и ни о чём не нужно помнить: запись начинается, когда вы трогаетесь с места, и завершается, когда останавливаетесь.</p>
+                <div class="stores">
+                <a class="badge" href="https://play.google.com/store/apps/details?id=com.zacolabs.dayline" target="_blank" rel="noopener">
+                    <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.208 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.041 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                    <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
+                </a>
+                <span class="badge badge-soon">
+                    <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                    <span class="badge-txt"><small>Скоро</small><strong>App Store</strong></span>
+                </span>
+            </div>
+                <p class="note">iOS · Android · Бесплатно · Без аккаунта</p>
+            </div>
+            <div class="hero-art">
+                <div class="art" data-inview><img src="/dayline/assets/illustration/hero.webp" alt="Человек бежит с телефоном на руке, а пройденный путь тянется за ним зелёной и оранжевой линией" width="1000" height="1000" fetchpriority="high" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:0.87s" d="M115 190 C300 190 370 300 290 400 C215 495 90 510 125 640" fill="none" stroke="#00c97b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.87s;--t:1.03s" d="M125 640 C155 790 270 945 470 945 L760 945" fill="none" stroke="#ff4d26" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="115" cy="190" r="15.8" fill="#ffffff" stroke="#111113" stroke-width="9.8"/><g class="pin" style="--d:1.90s"><circle class="halo" cx="760" cy="945" r="41.2" fill="#007aff" opacity=".18"/><circle cx="760" cy="945" r="17.4" fill="#007aff" stroke="#ffffff" stroke-width="7.1"/></g></svg></div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Чем Dayline отличается от других приложений</h2>
+            <p class="section-lede">Не нужно стараться что-то записывать — день сохраняется таким, каким он был.</p>
+            <div class="feature-wrap">
+                <ul class="feature-list">
+                <li>
+                    <h3>Без кнопки «Старт»</h3>
+                    <p>Носите телефон с собой, как обычно. Dayline замечает, когда вы выходите, следует за вашим маршрутом и завершает поездку, когда вы прибываете. Работает и при закрытом приложении.</p>
+                </li>
+                <li>
+                    <h3>Ходьба, бег, велосипед, транспорт</h3>
+                    <p>Dayline определяет, как вы передвигаетесь, и окрашивает линию в соответствующий цвет. Для каждого дня показаны расстояние и время по каждому способу.</p>
+                </li>
+                <li>
+                    <h3>Каждый день сохраняется</h3>
+                    <p>Вкладка «История» показывает месяц с одного взгляда; откройте любой день, чтобы увидеть его маршрут и хронологию. Вкладка «Карта» собирает последние 7 дней, этот месяц, этот год или все записи на одной карте.</p>
+                </li>
+                <li>
+                    <h3>Только на вашем устройстве</h3>
+                    <p>Нет ни аккаунта, ни входа. Ваши перемещения никуда не отправляются — даже нам. Вы можете в любой момент удалить всё.</p>
+                </li>
+                </ul>
+                <figure class="shot">
+                    <div class="day" role="img" aria-label="Экран дня в Dayline: линия, окрашенная по способу передвижения, и расстояния" data-inview data-draw="2.8">
+                    <div class="day-total"><b data-count="31.9">31,9</b><span>км</span></div>
+                    <div class="day-sub">2 ч 6 мин в движении</div>
+                    <svg class="day-canvas" viewBox="0 0 788 700" aria-hidden="true">
+                        <rect x="1" y="1" width="786" height="698" rx="40" fill="#fff" stroke="rgba(0,0,0,.14)" stroke-width="2"/>
+                        <g stroke="rgba(0,0,0,.08)" stroke-width="2"><path d="M131.3 0V700"/><path d="M262.7 0V700"/><path d="M394.0 0V700"/><path d="M525.3 0V700"/><path d="M656.7 0V700"/><path d="M0 131.3H788"/><path d="M0 262.7H788"/><path d="M0 394.0H788"/><path d="M0 525.3H788"/><path d="M0 656.7H788"/></g>
+                        <path class="leg" pathLength="1" style="--d:0.00s;--t:0.55s" d="M39.0,636.7 C46.6,624.6 64.8,580.6 84.5,563.9 C104.2,547.2 148.2,554.8 157.3,536.6 C166.4,518.4 130.0,475.9 139.1,454.7 C148.2,433.4 184.6,422.8 211.9,409.2" fill="none" stroke="#00c97b" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.55s;--t:0.88s" d="M211.9,409.2 C239.3,395.5 271.1,381.9 303.0,372.8 C334.8,363.7 374.3,371.2 403.1,354.6 C431.9,337.9 456.2,306.0 475.9,272.6 C495.6,239.3 500.2,184.6 521.4,154.3 C542.7,124.0 576.1,105.7 603.4,90.6" fill="none" stroke="#0a8fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:1.43s;--t:0.62s" d="M603.4,90.6 C630.7,75.4 661.0,55.7 685.3,63.3 C709.6,70.9 742.9,107.3 749.0,136.1 C755.1,164.9 739.9,211.9 721.7,236.2 C703.5,260.5 665.6,266.6 639.8,281.7" fill="none" stroke="#6a45ff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:2.05s;--t:0.75s" d="M639.8,281.7 C614.0,296.9 588.2,307.5 566.9,327.2 C545.7,347.0 513.9,374.3 512.3,400.1 C510.8,425.9 535.1,462.3 557.8,482.0 C580.6,501.7 623.1,501.7 648.9,518.4 C674.7,535.1 702.0,571.5 712.6,582.1" fill="none" stroke="#ff4d26" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle class="pin" cx="39.0" cy="636.7" r="14.9" fill="#fff" stroke="#111113" stroke-width="7.2"/>
+                        <circle class="pin" style="--d:2.80s" cx="712.6" cy="582.1" r="14.9" fill="#111113" stroke="#fff" stroke-width="5.9"/>
+                    </svg>
+                    <div class="day-stats">
+                        <div class="day-bar"><i style="flex:3.1;background:#00c97b;--d:0.00s;--t:0.55s"></i><i style="flex:2.8;background:#ff4d26;--d:2.05s;--t:0.75s"></i><i style="flex:7.4;background:#6a45ff;--d:1.43s;--t:0.62s"></i><i style="flex:18.6;background:#0a8fff;--d:0.55s;--t:0.88s"></i></div>
+                        <div class="day-row" style="--d:0.00s;--t:0.55s"><i style="background:#00c97b"></i><span class="name">Ходьба</span><span class="km">3,1 км</span><span class="time">48 мин</span></div>
+                        <div class="day-row" style="--d:2.05s;--t:0.75s"><i style="background:#ff4d26"></i><span class="name">Бег</span><span class="km">2,8 км</span><span class="time">21 мин</span></div>
+                        <div class="day-row" style="--d:1.43s;--t:0.62s"><i style="background:#6a45ff"></i><span class="name">Велосипед</span><span class="km">7,4 км</span><span class="time">32 мин</span></div>
+                        <div class="day-row" style="--d:0.55s;--t:0.88s"><i style="background:#0a8fff"></i><span class="name">Транспорт</span><span class="km">18,6 км</span><span class="time">25 мин</span></div>
+                    </div>
+                </div>
+                    <figcaption>Экран дня — цвет линии показывает, как вы передвигались.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="story">
+            <h2>Как день становится линией</h2>
+            <p class="section-lede">Ничего делать не нужно. Просто проведите день как обычно.</p>
+            <ol class="steps">
+                <li>
+                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-1.webp" alt="Человек выходит из дома с телефоном в кармане, за ним тянется зелёная линия" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:1.20s" d="M300 818 C325 905 385 950 480 950 L645 950" fill="none" stroke="#00c97b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="300" cy="818" r="15.8" fill="#ffffff" stroke="#111113" stroke-width="9.8"/><g class="pin" style="--d:1.20s"><circle class="halo" cx="645" cy="950" r="41.2" fill="#007aff" opacity=".18"/><circle cx="645" cy="950" r="17.4" fill="#007aff" stroke="#ffffff" stroke-width="7.1"/></g></svg></div>
+                    <div class="step-body">
+                        <h3>Вышли из дома — запись началась</h3>
+                        <p>Прогулка или пробежка: как только вы выходите из дома и начинаете двигаться, Dayline это замечает и начинает рисовать линию.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-2.webp" alt="Человек за рулём автомобиля, за ним тянется зелёная, оранжевая и синяя линия" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:0.43s" d="M95 170 C230 170 260 290 190 360" fill="none" stroke="#00c97b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.43s;--t:0.47s" d="M190 360 C120 430 70 540 130 640" fill="none" stroke="#ff4d26" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.90s;--t:1.00s" d="M130 640 C190 760 300 852 430 852 L700 852" fill="none" stroke="#0a8fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="95" cy="170" r="15.8" fill="#ffffff" stroke="#111113" stroke-width="9.8"/><g class="pin" style="--d:1.90s"><circle class="halo" cx="700" cy="852" r="41.2" fill="#007aff" opacity=".18"/><circle cx="700" cy="852" r="17.4" fill="#007aff" stroke="#ffffff" stroke-width="7.1"/></g></svg></div>
+                    <div class="step-body">
+                        <h3>Сели в машину — линия продолжается</h3>
+                        <p>Сядете за руль — цвет линии изменится. Идёте, бежите, пересаживаетесь на велосипед или в машину — линия остаётся одной.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-3.webp" alt="Человек сидит на диване и смотрит в телефоне путь, пройденный за день" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><clipPath id="step-3-cover"><rect x="649" y="190" width="279" height="591" rx="24"/></clipPath><rect x="649" y="190" width="279" height="591" rx="24" fill="#ffffff"/><g clip-path="url(#step-3-cover)" stroke="rgba(0,0,0,.09)" stroke-width="2.5"><path d="M695.5 190v591"/><path d="M742.0 190v591"/><path d="M788.5 190v591"/><path d="M835.0 190v591"/><path d="M881.5 190v591"/><path d="M649 236.5h279"/><path d="M649 283.0h279"/><path d="M649 329.5h279"/><path d="M649 376.0h279"/><path d="M649 422.5h279"/><path d="M649 469.0h279"/><path d="M649 515.5h279"/><path d="M649 562.0h279"/><path d="M649 608.5h279"/><path d="M649 655.0h279"/><path d="M649 701.5h279"/><path d="M649 748.0h279"/></g><rect x="649" y="190" width="279" height="591" rx="24" fill="none" stroke="rgba(0,0,0,.16)" stroke-width="2.5"/><path class="leg" pathLength="1" style="--d:0.00s;--t:0.73s" d="M668 686 C690 650 704 628 700 596 C696 566 716 548 742 540" fill="none" stroke="#00c97b" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.73s;--t:0.80s" d="M742 540 C776 530 806 524 818 494 C830 464 796 432 800 398" fill="none" stroke="#0a8fff" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:1.53s;--t:0.28s" d="M800 398 C804 372 822 362 846 354" fill="none" stroke="#6a45ff" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:1.82s;--t:0.38s" d="M846 354 C876 344 902 326 902 290" fill="none" stroke="#ff4d26" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="668" cy="686" r="12.2" fill="#ffffff" stroke="#111113" stroke-width="7.6"/><circle class="pin" style="--d:2.20s" cx="902" cy="290" r="12.2" fill="#111113" stroke="#ffffff" stroke-width="4.9"/></svg></div>
+                    <div class="step-body">
+                        <h3>Вечером посмотрите на линию дня</h3>
+                        <p>Когда день закончится, всё, где вы были и сколько прошли, останется одной линией. Её можно посмотреть на сетке или на карте.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section id="faq">
+            <h2>Частые вопросы</h2>
+            <p class="section-lede">Остались вопросы — напишите нам на почту.</p>
+            <div class="faq-list">
+                <details>
+                    <summary>Нужно ли нажимать кнопку перед тренировкой?</summary>
+                    <div class="answer">Нет. В Dayline нет ни кнопки «Старт», ни кнопки «Стоп». Запись начинается, когда вы трогаетесь с места, и завершается, когда вы остаётесь на одном месте. Просто носите телефон с собой, как обычно.</div>
+                </details>
+                <details>
+                    <summary>Идёт ли запись, когда приложение закрыто?</summary>
+                    <div class="answer">Да. Открывать приложение не нужно. Для этого в разрешении на местоположение нужно выбрать «Всегда» (на Android — «Разрешить в любом режиме»): так путь рисуется, даже когда приложение закрыто.</div>
+                </details>
+                <details>
+                    <summary>Как Dayline различает ходьбу, бег, велосипед и транспорт?</summary>
+                    <div class="answer">Dayline сам определяет, как вы передвигаетесь, и показывает это цветом линии. Разрешение «Движение и фитнес» (на Android — «Физическая активность») необязательно; если его дать, оно помогает различать ходьбу, бег, велосипед и транспорт.</div>
+                </details>
+                <details>
+                    <summary>Не будет ли быстро садиться батарея?</summary>
+                    <div class="answer">Геолокация используется, только пока вы движетесь. Пока вы остаётесь на одном месте, Dayline просто ждёт. Приложение сделано так, чтобы его можно было оставить включённым на весь день.</div>
+                </details>
+                <details>
+                    <summary>Отправляются ли мои перемещения на сервер?</summary>
+                    <div class="answer">Нет. Нет ни аккаунта, ни входа, а ваши перемещения хранятся только на этом устройстве. Они никуда не отправляются — даже нам — и никогда не используются для рекламы или статистики. Удалить всё можно в любой момент в настройках.</div>
+                </details>
+                <details>
+                    <summary>Где посмотреть прошлые дни?</summary>
+                    <div class="answer">Вкладка «История» показывает месяц с одного взгляда: маленькая линия для каждого дня, когда вы двигались. Откройте любой день, чтобы увидеть его маршрут и хронологию. Вкладка «Карта» собирает последние 7 дней, этот месяц, этот год или все записи на одной карте.</div>
+                </details>
+                <details>
+                    <summary>Есть ли цели или значки?</summary>
+                    <div class="answer">Нет. Ни целей, ни значков, ни серий. Dayline не ставит оценок, а просто сохраняет день таким, каким он был.</div>
+                </details>
+                <details>
+                    <summary>Это бесплатно?</summary>
+                    <div class="answer">Да. Dayline бесплатен и показывает одно объявление под панелью вкладок. Анонимную статистику использования — например, какие экраны и настройки используются — можно отключить в настройках.</div>
+                </details>
+                <details>
+                    <summary>Куда писать с вопросами и предложениями?</summary>
+                    <div class="answer">Пишите на zaco.labs@gmail.com. Письма читает сама команда Zaco Labs, которая сделала Dayline.</div>
+                </details>
+            </div>
+        </section>
+    </div>
+
+    <section class="cta">
+        <div class="wrap">
+            <h2>Сохраните и сегодняшний день одной линией</h2>
+            <p>Dayline можно бесплатно скачать для iOS и Android.</p>
+            <div class="stores">
+                <a class="badge" href="https://play.google.com/store/apps/details?id=com.zacolabs.dayline" target="_blank" rel="noopener">
+                    <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.208 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.041 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
+                    <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
+                </a>
+                <span class="badge badge-soon">
+                    <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+                    <span class="badge-txt"><small>Скоро</small><strong>App Store</strong></span>
+                </span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site">
+    <div class="wrap">
+        <div class="row"><a href="/dayline/privacy.ru.html">Политика конфиденциальности Dayline</a> · <a href="/dayline/terms.ru.html">Условия использования Dayline</a></div>
+        <div class="row"><a href="/">О Zaco Labs</a> · <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></div>
+        <div class="row">© <span id="year">2026</span> Zaco Labs. Все права защищены.</div>
+        <nav class="langs" aria-label="Language"><a href="/dayline/ko/" lang="ko" hreflang="ko" data-lang="ko">한국어</a>
+            <a href="/dayline/en/" lang="en" hreflang="en" data-lang="en">English</a>
+            <a href="/dayline/ja/" lang="ja" hreflang="ja" data-lang="ja">日本語</a>
+            <a href="/dayline/zh-hans/" lang="zh-Hans" hreflang="zh-Hans" data-lang="zh-hans">简体中文</a>
+            <a href="/dayline/zh-hant/" lang="zh-Hant" hreflang="zh-Hant" data-lang="zh-hant">繁體中文</a>
+            <a href="/dayline/es/" lang="es" hreflang="es" data-lang="es">Español</a>
+            <a href="/dayline/fr/" lang="fr" hreflang="fr" data-lang="fr">Français</a>
+            <a href="/dayline/de/" lang="de" hreflang="de" data-lang="de">Deutsch</a>
+            <a href="/dayline/it/" lang="it" hreflang="it" data-lang="it">Italiano</a>
+            <a href="/dayline/pt/" lang="pt-BR" hreflang="pt" data-lang="pt">Português</a>
+            <a href="/dayline/nl/" lang="nl" hreflang="nl" data-lang="nl">Nederlands</a>
+            <a href="/dayline/da/" lang="da" hreflang="da" data-lang="da">Dansk</a>
+            <a href="/dayline/pl/" lang="pl" hreflang="pl" data-lang="pl">Polski</a>
+            <a href="/dayline/ru/" lang="ru" hreflang="ru" data-lang="ru" class="on">Русский</a>
+            <a href="/dayline/ar/" lang="ar" hreflang="ar" data-lang="ar">العربية</a>
+            <a href="/dayline/id/" lang="id" hreflang="id" data-lang="id">Bahasa Indonesia</a>
+            <a href="/dayline/vi/" lang="vi" hreflang="vi" data-lang="vi">Tiếng Việt</a>
+            <a href="/dayline/fil/" lang="fil" hreflang="fil" data-lang="fil">Filipino</a></nav>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+        // 직접 고른 언어는 기억해 두고, 진입 주소(/dayline/)의 자동 이동에서 우선한다.
+        document.querySelectorAll('a[data-lang]').forEach(function (a) {
+            a.addEventListener('click', function () {
+                try { localStorage.setItem('zacolabs-lang', a.getAttribute('data-lang')); } catch (err) {}
+            });
+        });
+        var menu = document.querySelector('.lang-menu');
+        document.addEventListener('click', function (ev) {
+            if (menu.open && !menu.contains(ev.target)) menu.open = false;
+        });
+        document.addEventListener('keydown', function (ev) {
+            if (ev.key === 'Escape') menu.open = false;
+        });
+
+        // 그림과 하루 화면이 화면에 들어오면(.in) 선이 그려진다. 한 번만 한다.
+        if (!document.documentElement.classList.contains('anim')) return;
+        // 하루 화면은 그동안 거리를 0 에서부터 올린다 — 선과 같은 시계(프레임 시각)로 센다
+        var day = document.querySelector('.day'), num = day.querySelector('[data-count]');
+        var end = parseFloat(num.getAttribute('data-count')), shown = num.textContent;
+        var comma = shown.indexOf(',') !== -1, ms = parseFloat(day.getAttribute('data-draw')) * 1000;
+        function write(n) { num.textContent = n.toFixed(1).replace('.', comma ? ',' : '.'); }
+        function count(start, now) {
+            var p = Math.min(1, (now - start) / ms);
+            if (p < 1) { write(end * p); requestAnimationFrame(function (t) { count(start, t); }); }
+            else num.textContent = shown;
+        }
+        write(0);
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                io.unobserve(entry.target);
+                entry.target.classList.add('in');
+                if (entry.target === day) requestAnimationFrame(function (t) { count(t, t); });
+            });
+        }, { threshold: 0.45 });
+        document.querySelectorAll('[data-inview]').forEach(function (el) { io.observe(el); });
+    })();
+</script>
+</body>
+</html>

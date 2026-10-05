@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Nhật ký di chuyển tự động | Vẽ ngày thành một đường",
+  "description": "Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết cách di chuyển, lộ trình chỉ lưu trên thiết bị. Miễn phí cho iOS, Android.",
+  "og_title": "Dayline — Một ngày của bạn, vẽ thành một đường",
+  "og_description": "Bạn đã đi đâu và đi bao xa, được vẽ tự động mỗi ngày. Không có nút bắt đầu.",
+  "app_description": "Ứng dụng tự động ghi lại việc di chuyển trong ngày và vẽ thành một đường. Bản ghi di chuyển chỉ được lưu trên thiết bị.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Một ngày của bạn, vẽ thành một đường",
+  "lede": "Dayline là ứng dụng tự động vẽ lại bạn đã đi đâu và đi bao xa mỗi ngày. Không có nút bắt đầu và không cần nhớ gì cả: việc ghi bắt đầu khi bạn di chuyển và kết thúc khi bạn dừng lại.",
+  "note": "iOS · Android · Miễn phí · Không cần tài khoản",
+  "soon": "Sắp ra mắt",
+  "hero_alt": "Một người đeo điện thoại trên cánh tay đang chạy, con đường đã qua phía sau được vẽ thành đường màu xanh lá và cam",
+  "features_title": "Điểm khác biệt của Dayline",
+  "features_lede": "Bạn không cần cố gắng ghi lại. Một ngày vẫn được lưu giữ đúng như nó đã diễn ra.",
+  "features": [
+    {
+      "title": "Không có nút bắt đầu",
+      "text": "Cứ mang điện thoại theo như thường lệ. Dayline nhận ra khi bạn rời đi, bám theo con đường bạn đi và khép lại chuyến đi khi bạn đến nơi. Vẫn ghi khi đã đóng ứng dụng."
+    },
+    {
+      "title": "Tự nhận biết đi bộ, chạy, đạp xe, đi xe",
+      "text": "Dayline phân biệt đi bộ, chạy bộ, đạp xe và đi xe, rồi tô màu đường đi cho phù hợp. Mỗi ngày đều hiển thị quãng đường và thời gian của từng cách di chuyển."
+    },
+    {
+      "title": "Lưu giữ từng ngày",
+      "text": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn; mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ."
+    },
+    {
+      "title": "Chỉ trên thiết bị của bạn",
+      "text": "Không tài khoản, không đăng nhập. Bản ghi di chuyển không bao giờ được gửi đi đâu, kể cả cho chúng tôi. Bạn có thể xóa tất cả bất cứ lúc nào."
+    }
+  ],
+  "shot_alt": "Màn hình một ngày của Dayline: đường đi được tô màu theo cách di chuyển, kèm quãng đường",
+  "shot_caption": "Màn hình một ngày — màu của đường đi cho biết bạn đã di chuyển bằng cách nào.",
+  "day": {
+    "km": "km",
+    "moving": "Di chuyển 2 giờ 6 phút",
+    "names": ["Đi bộ", "Chạy bộ", "Đạp xe", "Phương tiện"],
+    "times": ["48 phút", "21 phút", "32 phút", "25 phút"]
+  },
+  "story_title": "Một ngày trở thành một đường như thế nào",
+  "story_lede": "Bạn không cần làm gì cả. Cứ sống một ngày như thường lệ.",
+  "steps": [
+    {
+      "title": "Bước ra khỏi nhà là bắt đầu ghi",
+      "text": "Dù đi dạo hay chạy bộ, khi bạn rời nhà và bắt đầu di chuyển, Dayline sẽ nhận ra và bắt đầu vẽ.",
+      "alt": "Một người rời nhà với điện thoại trong túi, phía sau là một đường màu xanh lá được vẽ ra"
+    },
+    {
+      "title": "Lên xe, đường vẫn nối tiếp",
+      "text": "Khi bạn cầm lái, màu của đường đi thay đổi. Đi bộ, chạy, rồi chuyển sang xe đạp hay ô tô, tất cả vẫn nối thành một đường.",
+      "alt": "Một người đang lái ô tô, phía sau là đường màu xanh lá, cam và xanh dương nối tiếp nhau"
+    },
+    {
+      "title": "Buổi tối, xem lại đường của hôm nay",
+      "text": "Khi một ngày khép lại, bạn đã đi đâu và đi bao xa nằm gọn trong một đường. Xem dưới dạng đường nét trên lưới hoặc trên bản đồ.",
+      "alt": "Một người ngồi trên ghế sofa, xem con đường đã đi hôm nay trên điện thoại"
+    }
+  ],
+  "faq_title": "Câu hỏi thường gặp",
+  "faq_lede": "Nếu còn thắc mắc, hãy gửi email cho chúng tôi.",
+  "faqs": [
+    {
+      "q": "Tôi có phải bấm nút khi bắt đầu tập luyện không?",
+      "a": "Không. Dayline không có nút bắt đầu, cũng không có nút dừng. Việc ghi bắt đầu khi bạn di chuyển và kết thúc khi bạn ở yên một chỗ. Chỉ cần mang điện thoại theo như thường lệ."
+    },
+    {
+      "q": "Ứng dụng có ghi khi đã đóng không?",
+      "a": "Có. Bạn không cần mở ứng dụng. Để làm được vậy, quyền truy cập vị trí cần đặt là “Luôn luôn” (trên Android là “Luôn cho phép”), nhờ đó con đường bạn đi vẫn được vẽ khi ứng dụng đã đóng."
+    },
+    {
+      "q": "Dayline phân biệt đi bộ, chạy bộ, đạp xe và lái xe như thế nào?",
+      "a": "Dayline tự nhận biết cách bạn di chuyển và thể hiện bằng màu của đường đi. Quyền “Di chuyển & thể chất” (trên Android là “Hoạt động thể chất”) là tùy chọn; khi được cho phép, quyền này dùng để phân biệt đi bộ, chạy bộ, đạp xe và đi xe."
+    },
+    {
+      "q": "Ứng dụng có tốn pin không?",
+      "a": "Vị trí chỉ được dùng khi bạn đang di chuyển. Khi bạn ở yên một chỗ, Dayline chỉ chờ, nên ứng dụng được thiết kế để ít hao pin ngay cả khi bật suốt cả ngày."
+    },
+    {
+      "q": "Bản ghi di chuyển của tôi có được gửi lên máy chủ không?",
+      "a": "Không. Không tài khoản, không đăng nhập, và bản ghi di chuyển chỉ được lưu trên thiết bị này. Bản ghi không bao giờ được gửi đi đâu, kể cả cho chúng tôi, và cũng không được dùng cho quảng cáo hay thống kê. Bạn có thể xóa tất cả bất cứ lúc nào trong Cài đặt."
+    },
+    {
+      "q": "Tôi xem lại những ngày trước ở đâu?",
+      "a": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ."
+    },
+    {
+      "q": "Có mục tiêu hay huy hiệu không?",
+      "a": "Không. Không mục tiêu, không huy hiệu, không chuỗi ngày. Dayline không chấm điểm, chỉ lưu giữ một ngày đúng như nó đã diễn ra."
+    },
+    {
+      "q": "Ứng dụng có miễn phí không?",
+      "a": "Có, Dayline miễn phí. Ứng dụng hiển thị một quảng cáo bên dưới thanh thẻ. Thống kê sử dụng ẩn danh, chẳng hạn như màn hình và cài đặt nào được dùng, có thể tắt trong Cài đặt."
+    },
+    {
+      "q": "Tôi gửi câu hỏi hoặc góp ý đến đâu?",
+      "a": "Hãy gửi đến zaco.labs@gmail.com. Zaco Labs, nhóm làm ra Dayline, sẽ trực tiếp đọc thư của bạn."
+    }
+  ],
+  "cta_title": "Hãy để hôm nay cũng thành một đường",
+  "cta_text": "Dayline miễn phí trên iOS và Android.",
+  "about_link": "Về Zaco Labs"
+}

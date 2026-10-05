@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Automatyczny dziennik tras | Twój dzień jedną linią",
+  "description": "Bez przycisku Start: Dayline automatycznie zapisuje Twoje trasy i rozpoznaje chód, bieg, rower i pojazd. Zapis tras zostaje na Twoim urządzeniu. Bezpłatnie na iOS i Androida.",
+  "og_title": "Dayline — Twój dzień narysowany jedną linią",
+  "og_description": "Dokąd i jak daleko – rysowane automatycznie każdego dnia. Bez przycisku Start.",
+  "app_description": "Automatyczny dziennik tras, który rysuje Twój dzień jedną linią. Zapis Twoich tras zostaje na urządzeniu.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Twój dzień narysowany jedną linią",
+  "lede": "Dokąd i jak daleko – Dayline rysuje to automatycznie, każdego dnia. Nie ma przycisku Start i nie trzeba o niczym pamiętać: zapis zaczyna się, gdy ruszasz, i kończy, gdy się zatrzymujesz.",
+  "note": "iOS · Android · Bezpłatnie · Bez konta",
+  "soon": "Wkrótce",
+  "hero_alt": "Osoba biegnąca z telefonem na ramieniu; droga za nią narysowana zieloną i pomarańczową linią",
+  "features_title": "Czym Dayline różni się od innych",
+  "features_lede": "Nie musisz się starać, żeby cokolwiek zapisać. Dzień zostaje taki, jaki był.",
+  "features": [
+    {
+      "title": "Bez przycisku Start",
+      "text": "Noś telefon tak jak zawsze. Dayline zauważa, kiedy wychodzisz, podąża Twoją drogą i zamyka trasę, gdy docierasz na miejsce. Działa także przy zamkniętej aplikacji."
+    },
+    {
+      "title": "Pieszo, biegiem, rowerem, autem",
+      "text": "Dayline odróżnia chód, bieg, jazdę rowerem i pojazdem i pokazuje to kolorem linii. Przy każdym dniu widać dystans i czas dla każdego sposobu."
+    },
+    {
+      "title": "Każdy dzień zachowany",
+      "text": "Karta Historia pokazuje miesiąc na jeden rzut oka; dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Karta Mapa zbiera ostatnie 7 dni, ten miesiąc, ten rok lub cały okres na jednej mapie."
+    },
+    {
+      "title": "Tylko na Twoim urządzeniu",
+      "text": "Nie ma konta ani logowania. Zapis Twoich tras nigdy nie jest nigdzie wysyłany, nawet do nas. W każdej chwili możesz usunąć wszystko."
+    }
+  ],
+  "shot_alt": "Ekran dnia w aplikacji Dayline: linia w kolorach zależnych od sposobu przemieszczania się oraz dystanse",
+  "shot_caption": "Ekran dnia – kolor linii pokazuje, jak się przemieszczasz.",
+  "day": {
+    "km": "km",
+    "moving": "2 godz. 6 min w ruchu",
+    "names": ["Pieszo", "Bieg", "Rower", "Pojazd"],
+    "times": ["48 min", "21 min", "32 min", "25 min"]
+  },
+  "story_title": "Jak dzień staje się linią",
+  "story_lede": "Nie trzeba robić nic więcej. Po prostu rób to, co zwykle.",
+  "steps": [
+    {
+      "title": "Wychodzisz i zapis się zaczyna",
+      "text": "Spacer czy bieg – gdy wychodzisz z domu i ruszasz, Dayline to zauważa i zaczyna rysować linię.",
+      "alt": "Osoba wychodząca z domu z telefonem w kieszeni; za nią rysuje się zielona linia"
+    },
+    {
+      "title": "W samochodzie linia biegnie dalej",
+      "text": "Gdy siadasz za kierownicą, linia zmienia kolor. Idziesz, biegniesz, przesiadasz się na rower albo do auta – to wciąż jedna linia.",
+      "alt": "Osoba prowadząca samochód; za nią ciągnie się zielona, pomarańczowa i niebieska linia"
+    },
+    {
+      "title": "Wieczorem oglądasz dzisiejszą linię",
+      "text": "Gdy dzień się kończy, to, dokąd i jak daleko prowadziła Twoja droga, zostaje jako jedna linia. Możesz ją obejrzeć jako linię na siatce albo na mapie.",
+      "alt": "Osoba siedząca na kanapie i oglądająca w telefonie trasę z całego dnia"
+    }
+  ],
+  "faq_title": "Najczęstsze pytania",
+  "faq_lede": "Masz inne pytania? Napisz do nas e-mail.",
+  "faqs": [
+    {
+      "q": "Czy na początku treningu trzeba nacisnąć przycisk?",
+      "a": "Nie. W Dayline nie ma przycisku Start ani Stop. Zapis zaczyna się, gdy ruszasz, i kończy, gdy zostajesz w jednym miejscu. Wystarczy nosić telefon tak jak zawsze."
+    },
+    {
+      "q": "Czy zapis działa przy zamkniętej aplikacji?",
+      "a": "Tak. Nie trzeba otwierać aplikacji. W tym celu dostęp do lokalizacji musi być ustawiony na „Zawsze” (na Androidzie „Zawsze zezwalaj”), aby trasa mogła być rysowana także wtedy, gdy aplikacja jest zamknięta."
+    },
+    {
+      "q": "Jak Dayline odróżnia chód, bieg, jazdę rowerem i samochodem?",
+      "a": "Dayline sama rozpoznaje, jak się przemieszczasz, i pokazuje to kolorem linii. Uprawnienie „Ruch i sprawność” (na Androidzie „Aktywność fizyczna”) jest opcjonalne; jeśli go udzielisz, służy do odróżniania chodu, biegu, jazdy rowerem i pojazdem."
+    },
+    {
+      "q": "Czy aplikacja szybko zużywa baterię?",
+      "a": "Lokalizacja jest używana tylko wtedy, gdy się poruszasz. Gdy pozostajesz w jednym miejscu, Dayline tylko czeka. Dzięki temu może działać przez cały dzień, nie obciążając zbytnio baterii."
+    },
+    {
+      "q": "Czy zapis moich tras jest wysyłany na serwer?",
+      "a": "Nie. Nie ma konta ani logowania, a zapis Twoich tras jest przechowywany wyłącznie na tym urządzeniu. Nigdy nie jest nigdzie wysyłany, nawet do nas, i nie jest wykorzystywany do reklam ani statystyk. W Ustawieniach możesz w każdej chwili usunąć wszystko."
+    },
+    {
+      "q": "Gdzie zobaczę poprzednie dni?",
+      "a": "Karta Historia pokazuje miesiąc na jeden rzut oka, z małą linią dla każdego dnia w ruchu. Dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Na karcie Mapa zobaczysz ostatnie 7 dni, ten miesiąc, ten rok lub cały okres na jednej mapie."
+    },
+    {
+      "q": "Czy są cele albo odznaki?",
+      "a": "Nie. Nie ma celów, odznak ani serii. Dayline niczego nie ocenia – zostawia po prostu dzień taki, jaki był."
+    },
+    {
+      "q": "Czy aplikacja jest bezpłatna?",
+      "a": "Tak, Dayline jest bezpłatna. Pod paskiem kart wyświetla się jedna reklama. Anonimowe statystyki użycia, na przykład to, z których ekranów i ustawień korzystasz, można wyłączyć w Ustawieniach."
+    },
+    {
+      "q": "Dokąd wysyłać pytania i sugestie?",
+      "a": "Napisz na adres zaco.labs@gmail.com. Zaco Labs, twórcy Dayline, sami czytają każdą wiadomość."
+    }
+  ],
+  "cta_title": "Zachowaj także dzisiejszy dzień jako linię",
+  "cta_text": "Dayline jest dostępna bezpłatnie na iOS i Androida.",
+  "about_link": "O Zaco Labs"
+}

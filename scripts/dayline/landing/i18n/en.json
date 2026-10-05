@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Automatic Travel Log | Your day, drawn as a line",
+  "description": "No start button. The day you walked, ran, and drove becomes a line on its own. Dayline tells walking, running, cycling, and driving apart, and your movement record stays on your device. Free on iOS and Android.",
+  "og_title": "Dayline — Your day, drawn as a line",
+  "og_description": "Where you went and how far, drawn automatically every day. No start button.",
+  "app_description": "An automatic travel log that draws your day as a line. Your movement record stays on your device.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Your day, drawn as a line",
+  "lede": "Dayline draws where you went and how far, automatically, every day. There is no start button and nothing to remember: recording starts when you move and ends when you stop.",
+  "note": "iOS · Android · Free · No account needed",
+  "soon": "Coming soon",
+  "hero_alt": "A person running with a phone on their arm, the way behind them drawn as a green and orange line",
+  "features_title": "What makes Dayline different",
+  "features_lede": "You don't have to try to keep a record. The day stays as it was.",
+  "features": [
+    {
+      "title": "No start button",
+      "text": "Carry your phone as you always do. Dayline notices when you leave, follows the way you take, and closes the trip when you arrive. It works with the app closed."
+    },
+    {
+      "title": "Walking, running, cycling, driving",
+      "text": "Dayline works out how you are travelling and colours the line to match. Each day shows the distance and time for every mode."
+    },
+    {
+      "title": "Every day, kept",
+      "text": "The History tab shows a month at a glance; open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map."
+    },
+    {
+      "title": "Stays on your device",
+      "text": "There is no account and no sign-in. Your movement record is never sent anywhere, not even to us. You can delete it all at any time."
+    }
+  ],
+  "shot_alt": "Dayline's day screen: a line coloured by travel mode, with distances",
+  "shot_caption": "The day screen — the colour of the line shows how you travelled.",
+  "day": {
+    "km": "km",
+    "moving": "2h 6m moving",
+    "names": ["Walking", "Running", "Cycling", "Vehicle"],
+    "times": ["48m", "21m", "32m", "25m"]
+  },
+  "story_title": "How a day becomes a line",
+  "story_lede": "There is nothing to do. Just have your day.",
+  "steps": [
+    {
+      "title": "Step out, and it starts",
+      "text": "A walk or a run: once you leave home and start moving, Dayline notices and begins to draw.",
+      "alt": "A person leaving home with a phone in their pocket, a green line drawn behind them"
+    },
+    {
+      "title": "Get in the car, and it carries on",
+      "text": "Take the wheel and the line changes colour. Walk, run, switch to a bike or a car: it stays one line.",
+      "alt": "A person driving a car, with a green, orange, and blue line trailing behind"
+    },
+    {
+      "title": "In the evening, look at your line",
+      "text": "When the day is over, where you went and how far is there as a single line. See it on a clean grid or over a map.",
+      "alt": "A person on a sofa looking at the day's path on their phone"
+    }
+  ],
+  "faq_title": "Frequently asked questions",
+  "faq_lede": "For anything else, send us an email.",
+  "faqs": [
+    {
+      "q": "Do I have to press a button when I start exercising?",
+      "a": "No. Dayline has no start button and no stop button. Recording starts when you begin to move and ends when you stay in one place. Just carry your phone as you always do."
+    },
+    {
+      "q": "Does it record with the app closed?",
+      "a": "Yes. You don't need to open the app. For that, location access has to be set to \"Always\" (\"Allow all the time\" on Android), so the path can be drawn even while the app is closed."
+    },
+    {
+      "q": "How does it tell walking, running, cycling, and driving apart?",
+      "a": "Dayline works out how you are travelling and shows it in the colour of the line. The motion (physical activity) permission is optional; when allowed, it is used to tell walking, running, cycling, and driving apart."
+    },
+    {
+      "q": "Will it drain my battery?",
+      "a": "Location is used only while you are moving. While you stay in one place, Dayline waits, so it is built to be left on all day."
+    },
+    {
+      "q": "Is my movement record sent to a server?",
+      "a": "No. There is no account and no sign-in, and your movement record is stored only on your device. It is never sent anywhere, not even to us, and is never used for ads or statistics. You can delete it all at any time in Settings."
+    },
+    {
+      "q": "Where do I see past days?",
+      "a": "The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map."
+    },
+    {
+      "q": "Are there goals or badges?",
+      "a": "No. There are no goals, no badges, and no streaks. Dayline doesn't score you; it keeps the day as it was."
+    },
+    {
+      "q": "Is it free?",
+      "a": "Yes. Dayline is free and shows one ad below the tab bar. Anonymous usage statistics, such as which screens and settings are used, can be turned off in Settings."
+    },
+    {
+      "q": "Where do I send questions or suggestions?",
+      "a": "Write to zaco.labs@gmail.com. Zaco Labs, the makers of Dayline, read every message."
+    }
+  ],
+  "cta_title": "Leave today as a line",
+  "cta_text": "Dayline is free on iOS and Android.",
+  "about_link": "About Zaco Labs"
+}

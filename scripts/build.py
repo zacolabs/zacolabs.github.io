@@ -6,6 +6,7 @@
 i18n/<code>.json 의 문구로 영어는 /index.html, 다른 언어는 /<code>/index.html 을 만들고
 sitemap.xml 을 다시 쓴다. 문구는 JSON 에서, 모양은 style.css 에서만 고친다.
 Dayline 의 약관 · 개인정보 처리방침 · 라이선스 페이지(/dayline/)도 같이 만든다 — dayline_legal.py.
+Dayline 랜딩(/dayline/<언어>/)도 같이 만든다 — dayline_landing.py.
 생성된 HTML 을 직접 고치면 다음 빌드에서 덮어써진다.
 
 언어 목록 · 이름 · 로케일 · Waky 한 줄 소개(h1)는 waky-landing(scripts/landing/i18n)과 맞춘다.
@@ -15,6 +16,7 @@ import html
 import json
 import os
 
+import dayline_landing
 import dayline_legal
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -317,6 +319,7 @@ def page(langs, code, css):
                         <h3>Dayline</h3>
                         <p class="kind">{e(t["waky_kind"])}</p>
                     </div>
+                    <a class="card-more" href="{dayline_landing.landing_path(code)}" target="_blank" rel="noopener">{e(t["learn_more"])}</a>
                 </div>
                 <p class="card-title">{e(t["dayline_title"])}</p>
                 <p class="card-body">{e(t["dayline_body"])}</p>
@@ -407,6 +410,7 @@ def sitemap(langs):
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {urls}
+{dayline_landing.sitemap_urls(today)}
 </urlset>
 '''
 
@@ -432,6 +436,7 @@ def main():
         f.write(sitemap(langs))
     print(f"built {len(ORDER)} pages")
     print(f"built {dayline_legal.build()} dayline legal pages")
+    print(f"built {dayline_landing.build()} dayline landing pages")
 
 
 if __name__ == "__main__":

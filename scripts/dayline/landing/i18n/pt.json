@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Diário automático de trajetos e deslocamentos",
+  "description": "Sem botão de iniciar: seu dia a pé, correndo ou de carro vira uma linha. Um registro automático de trajetos que fica no seu aparelho. Grátis para iOS e Android.",
+  "og_title": "Dayline — Seu dia, desenhado em uma linha",
+  "og_description": "Aonde você foi e quanto percorreu, desenhado automaticamente todos os dias. Sem botão de iniciar.",
+  "app_description": "Um diário de trajetos automático que desenha o seu dia em uma linha. Seu registro de deslocamentos fica no seu aparelho.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Seu dia, desenhado em uma linha",
+  "lede": "O Dayline desenha aonde você foi e quanto percorreu, automaticamente, todos os dias. Não há botão de iniciar nem nada para lembrar: o registro começa quando você se move e termina quando você para.",
+  "note": "iOS · Android · Grátis · Sem conta",
+  "soon": "Em breve",
+  "hero_alt": "Uma pessoa correndo com o celular no braço; atrás dela, o caminho percorrido aparece desenhado como uma linha verde e laranja",
+  "features_title": "O que o Dayline tem de diferente",
+  "features_lede": "Você não precisa se esforçar para registrar nada. O dia fica como ele foi.",
+  "features": [
+    {
+      "title": "Sem botão de iniciar",
+      "text": "Leve o celular como sempre. O Dayline percebe quando você sai, acompanha o caminho que você faz e encerra o trajeto quando você chega. Funciona com o app fechado."
+    },
+    {
+      "title": "A pé, correndo, de bike, de carro",
+      "text": "O Dayline identifica como você está se deslocando e colore a linha de acordo. Cada dia mostra a distância e o tempo de cada modo."
+    },
+    {
+      "title": "Todos os dias, guardados",
+      "text": "A aba Histórico mostra um mês em um relance; abra qualquer dia para ver o trajeto e a linha do tempo. A aba Mapa reúne uma semana, um mês, um ano ou tudo em um só mapa."
+    },
+    {
+      "title": "Só no seu aparelho",
+      "text": "Não há conta nem login. Seu registro de deslocamentos nunca é enviado a lugar nenhum, nem para nós. Você pode apagar tudo quando quiser."
+    }
+  ],
+  "shot_alt": "A tela do dia do Dayline: uma linha colorida de acordo com o modo de deslocamento, com as distâncias",
+  "shot_caption": "A tela do dia: a cor da linha mostra como você se deslocou.",
+  "day": {
+    "km": "km",
+    "moving": "2 h 6 min em movimento",
+    "names": ["Caminhada", "Corrida", "Bicicleta", "Veículo"],
+    "times": ["48 min", "21 min", "32 min", "25 min"]
+  },
+  "story_title": "Como um dia vira uma linha",
+  "story_lede": "Não há nada a fazer. É só viver o seu dia como sempre.",
+  "steps": [
+    {
+      "title": "Você sai, e o registro começa",
+      "text": "Seja uma caminhada ou uma corrida: assim que você sai de casa e começa a se mover, o Dayline percebe e começa a desenhar a linha.",
+      "alt": "Uma pessoa saindo de casa com o celular no bolso, com uma linha verde desenhada atrás dela"
+    },
+    {
+      "title": "De carro, a linha continua",
+      "text": "Quando você pega o volante, a linha muda de cor. Caminhe, corra, troque para a bicicleta ou o carro: continua sendo uma linha só.",
+      "alt": "Uma pessoa dirigindo um carro, seguida por uma linha verde, laranja e azul"
+    },
+    {
+      "title": "À noite, veja a linha de hoje",
+      "text": "Quando o dia termina, aonde você foi e quanto percorreu fica em uma única linha. Dá para ver sobre uma grade ou sobre um mapa.",
+      "alt": "Uma pessoa sentada no sofá vendo no celular o trajeto do dia"
+    }
+  ],
+  "faq_title": "Perguntas frequentes",
+  "faq_lede": "Se tiver mais dúvidas, escreva para a gente por e-mail.",
+  "faqs": [
+    {
+      "q": "Preciso apertar um botão quando começo a me exercitar?",
+      "a": "Não. O Dayline não tem botão de iniciar nem de parar. O registro começa quando você começa a se mover e termina quando você fica em um lugar. É só levar o celular como sempre."
+    },
+    {
+      "q": "Ele registra com o app fechado?",
+      "a": "Sim. Você não precisa abrir o app. Para isso, o acesso à localização precisa estar em “Sempre” (“Permitir o tempo todo” no Android), para que o trajeto seja desenhado mesmo com o app fechado."
+    },
+    {
+      "q": "Como ele diferencia caminhada, corrida, bicicleta e carro?",
+      "a": "O Dayline identifica como você está se deslocando e mostra isso na cor da linha. A permissão “Movimento e Preparo Físico” (“Atividade física” no Android) é opcional; quando concedida, ela é usada para diferenciar caminhada, corrida, bicicleta e veículo."
+    },
+    {
+      "q": "Gasta muita bateria?",
+      "a": "A localização só é usada enquanto você está em movimento. Enquanto você fica em um lugar, o Dayline espera; ele foi feito para ficar ligado o dia todo."
+    },
+    {
+      "q": "Meu registro de deslocamentos é enviado para algum servidor?",
+      "a": "Não. Não há conta nem login, e seu registro de deslocamentos fica guardado apenas neste aparelho. Ele nunca é enviado a lugar nenhum, nem para nós, e nunca é usado para anúncios ou estatísticas. Você pode apagar tudo quando quiser em Ajustes."
+    },
+    {
+      "q": "Onde vejo os dias anteriores?",
+      "a": "A aba Histórico mostra um mês em um relance, com uma pequena linha para cada dia em que você se moveu. Abra qualquer dia para ver o trajeto e a linha do tempo. A aba Mapa reúne uma semana, um mês, um ano ou tudo em um só mapa."
+    },
+    {
+      "q": "Tem metas ou medalhas?",
+      "a": "Não. Sem metas, sem medalhas, sem sequências. O Dayline não avalia você; ele guarda o dia como ele foi."
+    },
+    {
+      "q": "É gratuito?",
+      "a": "Sim. O Dayline é gratuito e mostra um anúncio abaixo da barra de abas. As estatísticas de uso anônimas, como quais telas e ajustes são usados, podem ser desativadas em Ajustes."
+    },
+    {
+      "q": "Para onde envio dúvidas ou sugestões?",
+      "a": "Escreva para zaco.labs@gmail.com. A Zaco Labs, que faz o Dayline, lê todas as mensagens."
+    }
+  ],
+  "cta_title": "Guarde também o dia de hoje em uma linha",
+  "cta_text": "O Dayline é gratuito para iOS e Android.",
+  "about_link": "Sobre a Zaco Labs"
+}

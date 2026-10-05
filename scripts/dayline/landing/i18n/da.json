@@ -1,0 +1,104 @@
+{
+  "currency": "USD",
+  "title": "Dayline — Automatisk rutelog | Din dag som en linje",
+  "description": "Ingen startknap: Dayline registrerer automatisk dine ruter og skelner mellem gang, løb, cykling og kørsel. Dine bevægelser bliver på din enhed. Gratis til iOS og Android.",
+  "og_title": "Dayline — Din dag, tegnet som en linje",
+  "og_description": "Hvor du var, og hvor langt du kom – tegnet automatisk hver dag. Uden startknap.",
+  "app_description": "En automatisk rutelog, der tegner din dag som en linje. Dine bevægelser bliver på din enhed.",
+  "eyebrow": "Zaco Labs",
+  "h1": "Din dag, tegnet som en linje",
+  "lede": "Dayline tegner automatisk hver dag, hvor du var, og hvor langt du kom. Der er ingen startknap og intet at huske: registreringen starter, når du bevæger dig, og slutter, når du stopper.",
+  "note": "iOS · Android · Gratis · Kræver ingen konto",
+  "soon": "Kommer snart",
+  "hero_alt": "En person løber med telefonen på armen, og vejen bag personen er tegnet som en grøn og orange linje",
+  "features_title": "Det gør Dayline anderledes",
+  "features_lede": "Du behøver ikke gøre noget for at holde styr på dagen. Den bliver gemt, som den var.",
+  "features": [
+    {
+      "title": "Ingen startknap",
+      "text": "Tag telefonen med, som du plejer. Dayline opdager, når du tager afsted, følger den vej, du tager, og afslutter turen, når du er fremme. Det virker, selv om appen er lukket."
+    },
+    {
+      "title": "Gå, løb, cykl, kør",
+      "text": "Dayline skelner mellem gang, løb, cykling og kørsel og viser det med linjens farve. Hver dag viser distance og tid for hver transportform."
+    },
+    {
+      "title": "Hver dag gemt",
+      "text": "Fanen Historik viser en måned i ét blik; tryk på en dag for at se dens rute og tidslinje. Fanen Kort samler de seneste 7 dage, denne måned, i år eller det hele på ét kort."
+    },
+    {
+      "title": "Kun på din enhed",
+      "text": "Der er ingen konto og intet login. Dine bevægelser sendes aldrig nogen steder hen, heller ikke til os. Du kan når som helst slette det hele."
+    }
+  ],
+  "shot_alt": "Dagsskærmen i Dayline: en linje med forskellig farve for hver transportform og distancerne",
+  "shot_caption": "Dagsskærmen – linjens farve viser, hvordan du kom frem.",
+  "day": {
+    "km": "km",
+    "moving": "2 t 6 min i bevægelse",
+    "names": ["Gang", "Løb", "Cykling", "Køretøj"],
+    "times": ["48 min", "21 min", "32 min", "25 min"]
+  },
+  "story_title": "Sådan bliver en dag til en linje",
+  "story_lede": "Du skal ikke gøre noget særligt. Gør bare, som du plejer.",
+  "steps": [
+    {
+      "title": "Du går ud ad døren, og registreringen starter",
+      "text": "Om det er en gåtur eller en løbetur: Når du går hjemmefra og begynder at bevæge dig, opdager Dayline det og begynder at tegne linjen.",
+      "alt": "En person går hjemmefra med telefonen i lommen, og bag personen tegnes en grøn linje"
+    },
+    {
+      "title": "Linjen fortsætter, også i bilen",
+      "text": "Sætter du dig bag rattet, skifter linjen farve. Om du går, løber eller skifter til cykel eller bil: Det bliver ved med at være én linje.",
+      "alt": "En person kører bil, og bagved fortsætter en grøn, orange og blå linje"
+    },
+    {
+      "title": "Om aftenen ser du dagens linje",
+      "text": "Når dagen er slut, står det hele som én linje: hvor du var, og hvor langt du kom. Se den som en linje på et gitter eller oven på et kort.",
+      "alt": "En person sidder i sofaen og ser dagens rute på telefonen"
+    }
+  ],
+  "faq_title": "Ofte stillede spørgsmål",
+  "faq_lede": "Har du flere spørgsmål, så send os en mail.",
+  "faqs": [
+    {
+      "q": "Skal jeg trykke på en knap, når jeg begynder at træne?",
+      "a": "Nej. Dayline har hverken startknap eller stopknap. Registreringen starter, når du begynder at bevæge dig, og slutter, når du bliver ét sted. Tag bare telefonen med, som du plejer."
+    },
+    {
+      "q": "Registrerer Dayline, selv om appen er lukket?",
+      "a": "Ja. Du behøver ikke åbne appen. Det kræver, at adgangen til lokalitet står til “Altid” (“Tillad altid” på Android), så din rute også kan tegnes, mens appen er lukket."
+    },
+    {
+      "q": "Hvordan skelner Dayline mellem gang, løb, cykling og kørsel?",
+      "a": "Dayline finder selv ud af, hvordan du rejser, og viser det med linjens farve. Tilladelsen “Bevægelse og fitness” (“Fysisk aktivitet” på Android) er valgfri; giver du den, bruges den til at skelne mellem gang, løb, cykling og kørsel."
+    },
+    {
+      "q": "Bruger appen ikke meget batteri?",
+      "a": "Lokalitet bruges kun, mens du bevæger dig. Mens du bliver ét sted, venter Dayline bare. Appen er lavet, så den kan være slået til hele dagen uden at belaste batteriet ret meget."
+    },
+    {
+      "q": "Bliver mine bevægelser sendt til en server?",
+      "a": "Nej. Der er ingen konto og intet login, og dine bevægelser gemmes kun på denne enhed. De sendes aldrig nogen steder hen, heller ikke til os, og bruges aldrig til annoncer eller statistik. Du kan når som helst slette det hele i Indstillinger."
+    },
+    {
+      "q": "Hvor ser jeg tidligere dage?",
+      "a": "Fanen Historik viser en måned i ét blik med en lille linje for hver dag, du har bevæget dig. Tryk på en dag for at se dens rute og tidslinje. På fanen Kort kan du se de seneste 7 dage, denne måned, i år eller det hele samlet på ét kort."
+    },
+    {
+      "q": "Er der mål eller badges?",
+      "a": "Nej. Der er ingen mål, ingen badges og ingen streaks. Dayline bedømmer dig ikke, men gemmer bare dagen, som den var."
+    },
+    {
+      "q": "Er Dayline gratis?",
+      "a": "Ja, Dayline er gratis. Der vises én annonce under fanelinjen. Anonym brugsstatistik, f.eks. hvilke skærme og indstillinger der bruges, kan slås fra i Indstillinger."
+    },
+    {
+      "q": "Hvor sender jeg spørgsmål eller forslag?",
+      "a": "Skriv til zaco.labs@gmail.com. Zaco Labs, som står bag Dayline, læser selv alle henvendelser."
+    }
+  ],
+  "cta_title": "Gem også dagen i dag som en linje",
+  "cta_text": "Dayline er gratis til iOS og Android.",
+  "about_link": "Om Zaco Labs"
+}
