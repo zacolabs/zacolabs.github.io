@@ -9,8 +9,8 @@
   - `/` 로 온 사람의 언어: ① 오른쪽 위 언어 메뉴(두이레와 같은 모양)로 고른 언어(`localStorage` 의 `zacolabs-lang`) ② 없으면 접속 지역 — 정적 호스팅이라 IP 를 볼 수 없어 기기 시간대로 가린다(`build.py` `TZ_LANG`) ③ 모르면 영어. 검색 로봇은 옮기지 않는다
   - Waky 자세히 보기는 그 언어 랜딩으로 건다. 두이레는 한국어 · 영어뿐이라 한국어가 아니면 `duire.kr/en` 으로 보낸다
 - 서치 콘솔 확인 태그는 맨 앞(영어) 페이지에만 있다
-- `dayline/` — Dayline 의 이용약관 · 개인정보 처리방침 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
-  - 본문은 `scripts/dayline/<문서>.<언어>.html`, 모양은 `scripts/dayline/style.css`. **이 본문이 기준이다** — 앱은 글을 따로 싣지 않고 이 주소를 연다. Waky 의 같은 페이지(`waky-backend` `src/content/legal`)에서 따와 Dayline 에 맞게 고친 것이라, 구조와 모양은 그쪽과 맞춘다
+- `dayline/` — Dayline 의 이용 약관 · 개인정보 처리방침 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
+  - 본문은 `scripts/dayline/<문서>.<언어>.html`, 모양은 `scripts/dayline/style.css`. **이 본문이 기준이다** — 앱은 글을 따로 싣지 않고 이 주소를 연다. Waky 의 같은 페이지(`zacolabs-backend` `src/content/waky/legal`)에서 따와 Dayline 에 맞게 고친 것이라, 구조와 모양은 그쪽과 맞춘다
   - 주소도 Waky 와 같다: `/dayline/privacy.html?lang=ko&theme=light` (`terms` · `licenses` 도 같다). `?lang=` → 브라우저 언어 → 영어 순으로 언어를 정하고, `theme` 이 없으면 다크다. 언어를 고정한 주소는 `/dayline/privacy.ko.html` · `privacy.en.html`
   - Waky 는 서버가 `?lang=` · `?theme=` 을 읽지만 여기는 정적 호스팅이라 페이지 안의 스크립트가 읽는다
   - 언어는 Dayline 앱과 같은 한국어 · 영어. 늘릴 때는 `dayline_legal.py` 의 `LANGS` 와 `DOCS`, 본문 파일을 더한다

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dayline 이용약관 · 개인정보 처리방침 · 오픈소스 라이선스 페이지 생성기. build.py 가 같이 돌린다.
+"""Dayline 이용 약관 · 개인정보 처리방침 · 오픈소스 라이선스 페이지 생성기. build.py 가 같이 돌린다.
 
     python3 scripts/dayline_legal.py     (이 페이지들만 다시 만들 때)
 
@@ -9,7 +9,7 @@ dayline/<문서>.<언어>.html 의 본문을 dayline/style.css 와 함께 감싸
     /dayline/<문서>.<언어>.html   언어 고정
     /dayline/<문서>.html          언어 자동: ?lang= → 브라우저 언어 → 영어
 
-모양과 주소 규칙은 Waky 의 같은 페이지(waky-backend src/content/legal, /api/<문서>.html)를 따른다.
+모양과 주소 규칙은 Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal, /api/<문서>.html)를 따른다.
 Waky 는 서버가 ?lang= · ?theme= 을 읽지만 여기는 정적 호스팅이라 페이지 안의 스크립트가 읽는다.
 """
 import html
@@ -28,7 +28,7 @@ DEFAULT = "en"
 # 문서와 언어별 제목. 라이선스는 Waky 처럼 본문 머리(h1) 없이 목록부터 시작한다.
 DOCS = {
     "privacy": {"ko": "Dayline 개인정보 처리방침", "en": "Dayline Privacy Policy"},
-    "terms": {"ko": "Dayline 이용약관", "en": "Dayline Terms of Service"},
+    "terms": {"ko": "Dayline 이용 약관", "en": "Dayline Terms of Service"},
     "licenses": {"ko": "Dayline 오픈소스 라이선스", "en": "Dayline Open Source Licenses"},
 }
 NO_HEADING = {"licenses"}

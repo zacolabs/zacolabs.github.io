@@ -13,7 +13,7 @@
 </script>
 <style>
 /*
-  Waky 의 같은 페이지(waky-backend src/content/legal)와 같은 모양이다.
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
 
   밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
 
@@ -82,33 +82,32 @@ a { color: var(--link); text-decoration: none; }
 <p>Zaco Labs ("the Company") values your privacy and complies with applicable laws, including the Personal Information Protection Act of Korea. This Privacy Policy explains how your personal information is collected, used, stored, and destroyed within the Dayline service ("the Service") provided by the Company. This policy applies to both the iOS and Android apps.</p>
 
 <h2>1. Personal Information We Collect</h2>
-<p>The Company provides the Service without an account sign-up process, and the app does not ask you to enter information that directly identifies you, such as your name or phone number. The Company neither collects nor receives your movement record. The following information is collected in the course of providing the Service:</p>
+<p>The Company provides the Service without an account sign-up process, and the app does not ask you to enter information that directly identifies you, such as your name or phone number. We collect the following to provide the Service:</p>
 <ul>
-    <li>Anonymous device identifier (userKey): an identifier the app creates by one-way transforming device and app-installation information (a device identifier on Android, the app purchase transaction identifier on iOS). It does not identify you by name, contact details, or the like.</li>
-    <li>App launch information: device model, operating system and its version, app version, the language chosen in the app, the region (country) code set on the device, and when the app was first and last opened. It is sent to the Company's server together with the anonymous device identifier when you open the app.</li>
-    <li>Usage statistics and crash diagnostics: screen navigation and feature usage, setting values (such as view mode, theme, and language), whether permissions were allowed, device model, OS version, app version, approximate region, and the record taken at the moment an error occurs (see Section 14)</li>
+    <li>Anonymous device identifier (userKey): an identifier the app creates by one-way transformation of device and installation information (a device identifier on Android, an app purchase transaction identifier on iOS), or a randomly generated value where that is unavailable. It does not identify you by name, contact details, or the like. So that the same identifier can be used after the app is reinstalled, it is kept in the device's Keychain on iOS and in Google Play services Block Store on Android.</li>
+    <li>Device and app information: operating system type and version, device model, app version, app language, country (the region setting of your device, not location information), and the dates and times of first and most recent use</li>
     <li>Advertising identifier (behavioral information): IDFA on iOS and the Advertising ID (ADID) on Android (see Section 3)</li>
-    <li>Device information needed to serve ads: device model, OS version, app version, your IP address and the approximate region derived from it, and which ads were seen or tapped. The advertising SDK included in the app sends this directly to Google. (see Section 3)</li>
+    <li>Information Google collects in the course of serving ads: your IP address and the approximate region derived from it, which ads were seen or tapped, and the like (see Section 3)</li>
+    <li>Usage statistics and app crash diagnostics: screen navigation and feature usage records, app setting values, whether permissions are allowed, device model, OS version, app version, and the records captured when an error occurs (see Section 10)</li>
     <li>When you contact us: the email address you send from and the content of your inquiry</li>
 </ul>
-<p>The following information is stored only on your device and is not transmitted to the Company or to third parties.</p>
+<p>The following information is stored only on your device and is not transmitted to the Company's servers.</p>
 <ul>
     <li>Movement record: location (coordinates) and time, the path you travel, distance and duration, places where you stayed, and how you travelled (walking, running, cycling, driving)</li>
-    <li>Motion and activity information from your device (including steps), used to tell travel modes apart</li>
+    <li>Motion and activity information from your device, used to tell travel modes apart</li>
 </ul>
-<p>Nothing sent to the Company's server or to analytics tools contains your movement record: no location, path, distance, or duration.</p>
 
 <h2>2. Purposes of Collection and Use</h2>
 <ul>
     <li>Recording and showing your day's path, distance, and travel modes (processed only on the device)</li>
-    <li>Understanding how the Service is used through the anonymous identifier, providing app settings, and notifying you of required updates</li>
-    <li>Improving the Service through usage statistics and diagnosing app errors</li>
+    <li>Managing Service usage via the anonymous identifier, and providing app settings such as whether ads are shown and required-update notices</li>
     <li>Providing personalized advertising, measuring ad performance, and preventing ad fraud</li>
+    <li>Improving the Service, performing statistics and analysis, and fixing app errors</li>
     <li>Responding to customer inquiries</li>
 </ul>
 
 <h2>3. Collection and Use of Advertising Identifiers (Behavioral Information)</h2>
-<p>To provide the Service free of charge, the Company uses a third-party advertising platform, and an advertising identifier may be collected in this process. Your movement record is not used for ads, and the app does not pass it to the advertising platform.</p>
+<p>To provide personalized advertising and improve the Service, the Company uses a third-party advertising platform, and an advertising identifier may be collected in this process. The app does not pass your movement record to the advertising platform.</p>
 <ol>
     <li>Behavioral information collected
         <ul>
@@ -133,23 +132,23 @@ a { color: var(--link); text-decoration: none; }
         <ul>
             <li>iOS: Decline the tracking request shown when you first launch the app, or go to Settings &gt; Privacy &amp; Security &gt; Tracking and turn off "Allow Apps to Request to Track" or turn off tracking for the specific app.</li>
             <li>Android: Go to Settings &gt; Google &gt; Ads and select "Delete advertising ID" or "Opt out of Ads Personalization".</li>
-            <li>Users in regions where consent is required for advertising, such as the European Economic Area (EEA) and the United Kingdom, can make a choice on the consent screen shown when the app is first launched, and can change it at any time from <strong>Settings &gt; Ad privacy</strong> in the app.</li>
+            <li>Users in regions where consent is required for advertising, such as the European Economic Area (EEA) and the United Kingdom, can make a choice on the consent screen shown when the app is first launched. In the iOS app you can change it at any time from <strong>Settings &gt; Ad privacy</strong>.</li>
         </ul>
     </li>
 </ol>
 
 <h2>4. Processing of Location Information and Your Movement Record</h2>
 <ul>
-    <li>Location and motion information is used only to create your movement record. It is processed on the device and stored only on the device, and is not transmitted to the Company's servers or to third parties.</li>
+    <li>Location and motion information is used only to create your movement record. It is processed on the device and stored only on the device. It is not transmitted to the Company's servers and is not included in usage statistics.</li>
+    <li>The Home Screen widget is drawn from the records stored on the device and does not send them off the device.</li>
     <li>On screens that show a map, the map provider (Apple Maps on iOS, Google Maps on Android) downloads map data for the area on screen from its own servers. The map provider's data processing is subject to the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
     <li>Exporting a GPX file and sharing an image happen only when you choose to, and go only where you send them.</li>
 </ul>
 
 <h2>5. Retention and Use Period</h2>
-<p>The Company does not hold your movement record. Information stored only on the device (Section 1) stays on the device until you delete it. You can remove everything with <strong>Settings &gt; Delete all records</strong> in the app, and deleting the app removes it from the device as well. Because the Company does not hold your records, it cannot delete or restore them for you.</p>
-<p>The anonymous device identifier and app launch information are retained while you use the Service and are destroyed without delay when you request their deletion. Because the Company cannot tell that you have deleted the app, please request deletion of the information remaining on the server in the manner described in Section 9.</p>
-<p>The email address and inquiry content received through a customer inquiry are destroyed without delay once the inquiry has been handled. However, where retention is required under applicable laws, they are retained for the applicable period.</p>
-<p>The retention period of information collected by Google, such as the advertising identifier, usage statistics, and crash diagnostics, follows Google's data retention policy.</p>
+<p>The Company retains personal information while you use the Service, and destroys it without delay once the purpose of collection and use has been achieved or you request deletion. Deleting the app alone does not let the Company know, so if you want the information remaining on our servers deleted, please request it as described in Section 9. However, where retention is required under applicable laws, information is retained for the period those laws prescribe.</p>
+<p>Information stored only on the device (Section 1) stays on the device until you delete it. You can remove everything with <strong>Settings &gt; Delete all records</strong> in the app, and deleting the app removes it from the device as well. Because the Company does not hold your movement record, it cannot delete or restore it for you.</p>
+<p>The retention period of information collected by Google follows Google's data retention policy.</p>
 
 <h2>6. Provision to Third Parties</h2>
 <p>The Company does not provide your personal information to third parties beyond the scope specified in this policy, except where required under the provisions of law or where an investigative agency so requests for investigative purposes in accordance with the procedures and methods prescribed by law.</p>
@@ -159,39 +158,42 @@ a { color: var(--link); text-decoration: none; }
 <ul>
     <li>Vercel Inc.: server operation (server location: Seoul, Republic of Korea)</li>
     <li>Supabase Inc.: database operation (server location: Seoul, Republic of Korea)</li>
-    <li>Google LLC: personalized advertising and ad consent management (Google AdMob, Google User Messaging Platform), usage statistics analysis (Google Firebase Analytics), and app error diagnostics (Google Firebase Crashlytics)</li>
+    <li>Google LLC: personalized advertising and ad consent management (Google AdMob, Google User Messaging Platform), usage statistics analysis (Google Firebase Analytics), app crash diagnostics (Google Firebase Crashlytics), and keeping the anonymous device identifier (Android, Google Play services Block Store)</li>
 </ul>
 
 <h2>8. Transfer of Personal Information Abroad</h2>
-<p>The Company transfers personal information abroad as follows for usage statistics analysis, app error diagnostics, and advertising.</p>
+<p>The Company transfers personal information abroad as follows for usage statistics analysis, app crash diagnostics, and advertising.</p>
 <ul>
     <li>Recipient: Google LLC (contact: <a href="https://support.google.com/policies/contact/general_privacy_form">Google privacy inquiries</a>)</li>
     <li>Destination countries: the United States and other countries where Google operates data centers</li>
-    <li>Items transferred: advertising identifier, usage statistics, crash diagnostics, device model, OS version, app version, IP address, and ad impression and click records</li>
-    <li>Timing and method of transfer: sent over the network from time to time through the SDK included in the app while you use it</li>
-    <li>Purposes of use and retention period: the purposes in Sections 3 and 14, for the period under Google's data retention policy</li>
-    <li>How to refuse and its effect: you can refuse the transfer of the advertising identifier for personalized advertising and of usage statistics through the settings in Sections 3 and 14. Even if you refuse, the information needed to show non-personalized ads is transmitted while you use the app. Crash diagnostics are needed to provide the app reliably and are transmitted while you use the app.</li>
+    <li>Items transferred: advertising identifier, IP address, ad impression and click records, usage statistics, app crash diagnostics, device model, OS version, and app version</li>
+    <li>Timing and method of transfer: sent over the network from time to time through the SDKs included in the app while you use it</li>
+    <li>Purposes of use and retention period: the purposes in Sections 3 and 10, for the period under Google's data retention policy</li>
+    <li>How to refuse and its effect: you can refuse the transfer of the advertising identifier for personalized advertising and of usage statistics through the settings in Sections 3 and 10. The information needed to show non-personalized ads and app crash diagnostics are transmitted while you use the app.</li>
 </ul>
 
 <h2>9. Your Rights and How to Exercise Them</h2>
-<p>You may request access to, correction of, deletion of, or suspension of the processing of your personal information at any time. Your movement record exists only on your device, so you can view it directly in the app, export it with <strong>Settings &gt; Export records (GPX)</strong>, or delete it with <strong>Settings &gt; Delete all records</strong>. For any other request, including access to or deletion of the anonymous device identifier and app launch information held on the Company's server, email the address in Section 13 and the Company will take action without delay in accordance with applicable laws. Because the Company cannot identify you by name or contact details, it may ask for information needed to find the device concerned, such as its model and roughly when the app was first opened.</p>
+<p>You may request access to, correction of, deletion of, or suspension of the processing of your personal information at any time. Email the address in Section 13 and the Company will take action without delay in accordance with applicable laws. Because the Company holds no information that directly identifies you, such as your name or contact details, it may ask for the information needed to confirm the device concerned in order to handle your request.</p>
+<p>Your movement record exists only on your device, so you can view it directly in the app, export it with <strong>Settings &gt; Export records (GPX)</strong>, or delete it with <strong>Settings &gt; Delete all records</strong>.</p>
 
-<h2>10. Destruction of Personal Information</h2>
-<p>Information in electronic file form is permanently deleted using a method that prevents recovery or reproduction, and information printed on paper is shredded or incinerated.</p>
+<h2>10. Collection of Usage Statistics via Analytics Tools</h2>
+<p>To improve Service quality, the Company uses Google Firebase Analytics to collect usage statistics. The information collected concerns usage behavior, such as screen navigation, feature use, app setting values (language, theme, view mode, and the like), whether permissions such as location and motion are allowed, whether the widget is in use, app/device version, and approximate region. It does not include your movement record, such as location (coordinates), the path you travel, or distance and duration, or information that directly identifies you, such as your name or contact details. An identifier that tells installations apart is sent with usage statistics (the anonymous device identifier on iOS, a separate random identifier made for statistics on Android). You can turn usage-statistics collection on or off at any time from <strong>Settings &gt; Send usage statistics</strong> in the app.</p>
+<p>The Company also uses Google Firebase Crashlytics to fix unexpected shutdowns of the app. This collects the device model, OS version, app version, and the records captured when an error occurs; it does not include your movement record. These diagnostics are collected regardless of the usage-statistics setting.</p>
+<p>Google's data processing is subject to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> policy.</p>
 
 <h2>11. App Permissions</h2>
 <p>The app uses device permissions for the features below. Even if you do not allow an optional permission, you can use the Service apart from that feature.</p>
 <ul>
     <li>Location (required): used to record the path you travel. Recording without opening the app needs "Always".</li>
     <li>Motion &amp; Fitness (iOS) / Physical activity (Android) (optional): used to tell walking, running, cycling, and driving apart.</li>
-    <li>Notifications (Android, optional): used to show that recording is in progress while your movement is being recorded.</li>
+    <li>Notifications (Android, optional): used to show the notification that says recording is in progress while your movement is being recorded. No other notifications are sent.</li>
     <li>Add to Photos (iOS, optional): used only when you save the picture of a day to your photo library. The app does not read your photos.</li>
     <li>Allow app tracking (iOS, optional): used for personalized advertising.</li>
 </ul>
 <p>You can change or withdraw permissions at any time in your device's Settings.</p>
 
 <h2>12. Measures to Ensure Security</h2>
-<p>The Company does not keep your movement record on any server. Records are stored on your device and protected by the device's own security features, such as the device lock. For the anonymous device identifier and app launch information kept on the server, and for information received through customer inquiries, the Company implements administrative and technical protective measures, including encryption in transit and access-rights management.</p>
+<p>The Company implements administrative and technical protective measures, including access-rights management, encryption of transmission sections, and access control, for the safe processing of personal information. Your movement record is not kept on the Company's servers; it is stored on your device and protected by the device's own security features, such as the device lock.</p>
 
 <h2>13. Privacy Officer</h2>
 <p>The Company designates a Privacy Officer as follows to take overall responsibility for personal information processing and to handle user complaints and remedy damages.</p>
@@ -200,10 +202,12 @@ a { color: var(--link); text-decoration: none; }
     <li>Email: <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
 </ul>
 
-<h2>14. Usage Statistics and Crash Diagnostics through Analytics Tools</h2>
-<p>To improve the quality of the Service, the Company uses Google Firebase Analytics to collect usage statistics. The information collected concerns how the Service is used, such as screen navigation, feature usage, setting values (such as view mode, theme, and language), whether permissions were allowed, app and device versions, and approximate region. It does not include information that directly identifies you, such as your name or contact details, or your movement record: no location, path, distance, or duration. You can turn the collection of usage statistics on or off at any time with <strong>Settings &gt; Send usage statistics</strong> in the app.</p>
-<p>The Company also uses Google Firebase Crashlytics to fix problems that make the app close unexpectedly. It collects the device model, OS version, app version, and the record taken at the moment an error occurs; your movement record is not included. This diagnostic information is collected regardless of the usage statistics setting.</p>
-<p>Google's data processing is subject to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>.</p>
+<h2>14. Third-Party Services and Your Own Responsibilities</h2>
+<ul>
+    <li>Services run by third parties, such as websites or apps reached through an ad and the map providers, are subject to the privacy policies of their operators, and the Company is not responsible for the processing of personal information that takes place in those services.</li>
+    <li>Once a file or image you export or share has been delivered to where you sent it, the Company cannot manage it; its use and handling from then on are the responsibility of you and the recipient.</li>
+    <li>Because your movement record is stored on your device, managing the device, including its lock settings and guarding against loss or theft, is up to you. The Company is not responsible where records are exposed through loss or theft of the device, use by another person, or the like, without intent or negligence on the Company's part.</li>
+</ul>
 
 <h2>15. Changes to This Privacy Policy</h2>
 <p>This Privacy Policy may be revised in accordance with changes in laws and Service policies. Any changes will be announced within the Service or on this page.</p>
