@@ -33,10 +33,10 @@ DEFAULT = "en"  # x-default
 STORAGE_KEY = "zacolabs-lang"
 
 # Play 는 패키지 이름으로 주소가 정해진다. App Store 는 번들 ID 로는 주소를 만들 수 없고
-# App Store Connect 의 Apple ID(숫자)가 있어야 한다 — 생기면 APPLE_ID 에 넣는다. 없으면 버튼이 "출시 예정"으로 나온다.
+# App Store Connect 의 Apple ID(앱 정보 → 일반 정보의 숫자)가 있어야 한다. None 이면 버튼이 "출시 예정"으로 나온다.
 PACKAGE = "com.zacolabs.dayline"
 PLAY = f"https://play.google.com/store/apps/details?id={PACKAGE}"
-APPLE_ID = None  # 예: "6797402938"
+APPLE_ID = "6818821647"
 APPLE = f"https://apps.apple.com/app/id{APPLE_ID}" if APPLE_ID else None
 
 PLAY_PATH = "M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.208 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.041 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"

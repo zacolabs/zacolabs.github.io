@@ -84,9 +84,10 @@ TZ_PREFIX_LANG = {"America/Argentina/": "es"}
 
 PLAY = "https://play.google.com/store/apps/details?id=com.waky.android"
 APPLE = "https://apps.apple.com/app/id6797402938"
-# Dayline 은 아직 스토어에 나가지 않았다. 주소가 생기면 여기에 넣는다 — 둘 다 없으면 카드에 "출시 예정"이 나온다.
-DAYLINE_PLAY = None
-DAYLINE_APPLE = None
+# Dayline 의 스토어 주소는 랜딩과 같이 쓴다 (dayline_landing.py). 주소가 있는 스토어의 버튼만 나온다 —
+# App Store 는 Apple ID 가 생길 때까지 없다. 둘 다 없으면 카드에 "출시 예정"이 나온다.
+DAYLINE_PLAY = dayline_landing.PLAY
+DAYLINE_APPLE = dayline_landing.APPLE
 DUIRE_KO = "https://www.duire.kr"
 DUIRE_EN = "https://www.duire.kr/en"  # 두이레는 한국어 · 영어뿐이라 나머지 언어는 영어로 보낸다
 
