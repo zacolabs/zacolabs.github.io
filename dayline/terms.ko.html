@@ -63,6 +63,8 @@ ol li { margin-bottom: 8px; }
 .langnav strong { color: var(--fg); font-weight: 600; }
 .contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
 a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
 
 /* 오픈소스 라이선스 */
 .lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
@@ -71,12 +73,14 @@ a { color: var(--link); text-decoration: none; }
 .lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
 .lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
 .notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
 </style>
 </head>
 <body>
 <div class="container">
     <h1>Dayline 이용 약관</h1>
-    <p class="langnav"><strong>한국어</strong> · <a href="terms.en.html">English</a></p>
+    <p class="langnav"><strong>한국어</strong> · <a href="terms.en.html">English</a> · <a href="terms.ja.html">日本語</a> · <a href="terms.zh-hans.html">简体中文</a> · <a href="terms.zh-hant.html">繁體中文</a> · <a href="terms.es.html">Español</a> · <a href="terms.fil.html">Filipino</a> · <a href="terms.nl.html">Nederlands</a> · <a href="terms.da.html">Dansk</a> · <a href="terms.de.html">Deutsch</a> · <a href="terms.ru.html">Русский</a> · <a href="terms.ar.html">العربية</a> · <a href="terms.it.html">Italiano</a> · <a href="terms.id.html">Bahasa Indonesia</a> · <a href="terms.pt.html">Português</a> · <a href="terms.pl.html">Polski</a> · <a href="terms.fr.html">Français</a> · <a href="terms.vi.html">Tiếng Việt</a></p>
     <p class="meta">시행일: 2026년 10월 5일</p>
 
 <h2>제1조 (목적)</h2>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Patakaran sa Privacy ng Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Patakaran sa Privacy ng Dayline</h1>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <a href="privacy.en.html">English</a> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <a href="privacy.zh-hant.html">繁體中文</a> · <a href="privacy.es.html">Español</a> · <strong>Filipino</strong> · <a href="privacy.nl.html">Nederlands</a> · <a href="privacy.da.html">Dansk</a> · <a href="privacy.de.html">Deutsch</a> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <a href="privacy.pl.html">Polski</a> · <a href="privacy.fr.html">Français</a> · <a href="privacy.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Petsa ng bisa: Oktubre 5, 2026</p>
+
+<p>Pinahahalagahan ng Zaco Labs (ang "Kompanya") ang privacy ng mga gumagamit at sinusunod nito ang naaangkop na batas, kabilang ang Personal Information Protection Act ng Korea. Ipinapaliwanag ng Patakaran sa Privacy na ito kung paano kinokolekta, ginagamit, iniimbak at sinisira ang personal na impormasyon ng mga gumagamit sa serbisyong Dayline (ang "Serbisyo") na ibinibigay ng Kompanya. Nalalapat ang patakarang ito sa parehong iOS at Android na app.</p>
+
+<h2>1. Personal na Impormasyong Kinokolekta Namin</h2>
+<p>Ibinibigay ng Kompanya ang Serbisyo nang walang proseso ng pag-sign up, at hindi humihingi ang app ng impormasyong tuwirang nagpapakilala sa iyo, gaya ng pangalan o numero ng telepono. Kinokolekta namin ang sumusunod na impormasyon upang maibigay ang Serbisyo.</p>
+<ul>
+    <li>Anonimong identifier ng device (userKey): identifier na nililikha ng app sa pamamagitan ng one-way na pag-convert ng impormasyon ng device at ng pag-install ng app (sa Android, ang identifier ng device; sa iOS, ang identifier ng transaksyon ng pagbili ng app); kung hindi ito makuha, gumagamit ang app ng value na random na nilikha. Hindi ka nito nakikilala ayon sa pangalan, contact information o katulad nito. Upang magamit ang parehong identifier kahit muling i-install ang app, iniingatan ang identifier na ito sa Keychain ng device sa iOS at sa Google Play services Block Store sa Android.</li>
+    <li>Impormasyon ng device at app: uri at bersiyon ng operating system, modelo ng device, bersiyon ng app, wika ng app, bansa (ang regional setting ng device, hindi impormasyon ng lokasyon), at petsa at oras ng una at pinakahuling paggamit</li>
+    <li>Advertising identifier (impormasyon ng pag-uugali): IDFA sa iOS at Advertising ID (ADID) sa Android (para sa detalye, tingnan ang Seksiyon 3)</li>
+    <li>Impormasyong kinokolekta ng Google sa proseso ng pagbibigay ng ads: IP address at ang tinatayang rehiyong hinango mula rito, talaan ng mga ad na nakita o pinindot, at iba pa (para sa detalye, tingnan ang Seksiyon 3)</li>
+    <li>Istatistika ng paggamit at diagnostics ng error ng app: talaan ng paglipat sa pagitan ng mga screen at ng paggamit ng mga feature, mga value ng setting ng app, kung pinapayagan ang mga pahintulot, modelo ng device, bersiyon ng operating system, bersiyon ng app, at ang talaang nakuha nang mangyari ang error (para sa detalye, tingnan ang Seksiyon 10)</li>
+    <li>Kapag nakikipag-ugnayan sa customer support: ang email address na ginamit mo at ang nilalaman ng iyong mensahe</li>
+</ul>
+<p>Ang sumusunod na impormasyon ay naka-imbak lamang sa iyong device at hindi ipinapadala sa mga server ng Kompanya.</p>
+<ul>
+    <li>Record ng paglalakbay: lokasyon (mga coordinate) at oras, rutang dinaanan, layo at tagal ng paglalakbay, mga lugar na tinigilan, at paraan ng paglalakbay (paglalakad, pagtakbo, pagbibisikleta, sasakyan)</li>
+    <li>Impormasyon ng galaw at aktibidad ng device na ginagamit upang matukoy ang paraan ng paglalakbay</li>
+</ul>
+
+<h2>2. Mga Layunin ng Pagkolekta at Paggamit</h2>
+<ul>
+    <li>Pagtatala at pagpapakita ng ruta, layo at paraan ng paglalakbay sa bawat araw (pinoproseso lamang sa loob ng device)</li>
+    <li>Pamamahala sa paggamit ng Serbisyo gamit ang anonimong identifier, at pagbibigay ng mga setting ng app gaya ng kung ipapakita ang ads at ng abiso tungkol sa kinakailangang update</li>
+    <li>Pagbibigay ng personalisadong advertising, pagsukat ng performance ng ad at pagpigil sa ad fraud</li>
+    <li>Pagpapabuti ng Serbisyo, istatistika at pagsusuri, at pag-aayos ng mga error ng app</li>
+    <li>Pagtugon sa mga katanungan ng customer</li>
+</ul>
+
+<h2>3. Pagkolekta at Paggamit ng Advertising Identifier (Impormasyon ng Pag-uugali)</h2>
+<p>Upang makapagbigay ng personalisadong advertising at mapabuti ang Serbisyo, gumagamit ang Kompanya ng advertising platform ng ikatlong partido, at maaaring makolekta ang isang advertising identifier sa prosesong ito. Hindi ipinapasa ng app ang record ng paglalakbay sa advertising platform.</p>
+<ol>
+    <li>Impormasyon ng pag-uugaling kinokolekta
+        <ul>
+            <li>iOS: IDFA (Identifier for Advertisers)</li>
+            <li>Android: Advertising ID (ADID, Google Advertising ID)</li>
+        </ul>
+    </li>
+    <li>Mga layunin ng pagkolekta at paggamit
+        <ul>
+            <li>Pagbibigay ng personalisadong (naka-target) na advertising batay sa interes</li>
+            <li>Pagsusuri ng performance ng impression at click at pagpigil sa ad fraud (invalid traffic)</li>
+        </ul>
+    </li>
+    <li>Paraan ng pagkolekta at serbisyo ng ikatlong partido
+        <ul>
+            <li>Awtomatikong kinokolekta at ipinapadala sa pamamagitan ng mobile advertising SDK na kasama sa app.</li>
+            <li>Serbisyo: Google AdMob (Google LLC). Ang pagproseso ng data ng Google ay saklaw ng <a href="https://policies.google.com/privacy">Patakaran sa Privacy ng Google</a>.</li>
+        </ul>
+    </li>
+    <li>Ang iyong karapatang tumanggi at kung paano ito gawin<br />
+        Maaari mong tanggihan ang pagkolekta ng mga identifier para sa personalisadong advertising sa mga sumusunod na paraan. Kahit tumanggi ka, maaari pa ring lumabas ang hindi personalisadong (pangkalahatang) mga ad.
+        <ul>
+            <li>iOS: Tanggihan ang kahilingan sa pagsubaybay na lumalabas sa unang pagbukas ng app, o pumunta sa Mga Setting &gt; Privacy at Seguridad &gt; Pagsubaybay at i-off ang "Payagan ang mga App na Humiling na Subaybayan" o i-off ang pagsubaybay para sa partikular na app.</li>
+            <li>Android: Pumunta sa Mga Setting &gt; Google &gt; Mga Ad at piliin ang "Delete advertising ID" o "Opt out of Ads Personalization".</li>
+            <li>Ang mga gumagamit sa mga rehiyong nangangailangan ng pahintulot para sa ads, gaya ng European Economic Area (EEA) at United Kingdom, ay maaaring pumili sa consent screen na lumalabas sa unang pagbukas ng app. Sa iOS app, maaari itong baguhin anumang oras sa menu na <strong>Settings &gt; Privacy sa mga ad</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>4. Pagproseso ng Impormasyon ng Lokasyon at ng Record ng Paglalakbay</h2>
+<ul>
+    <li>Ang impormasyon ng lokasyon at galaw ay ginagamit lamang sa paglikha ng record ng paglalakbay; pinoproseso ito sa loob ng device at sa device lamang iniimbak. Hindi ito ipinapadala sa mga server ng Kompanya at hindi rin ito kasama sa istatistika ng paggamit.</li>
+    <li>Ang widget sa Home Screen ay iginuguhit mula sa mga record na naka-imbak sa device, at hindi nito ipinapadala ang mga record palabas ng device.</li>
+    <li>Sa mga screen na nagpapakita ng mapa, kinukuha ng map provider (Apple Maps sa iOS, Google Maps sa Android) mula sa sarili nitong mga server ang data ng mapa para sa lugar na nakikita sa screen. Ang pagproseso ng data ng map provider ay saklaw ng <a href="https://www.apple.com/legal/privacy/">Patakaran sa Privacy ng Apple</a> at ng <a href="https://policies.google.com/privacy">Patakaran sa Privacy ng Google</a>.</li>
+    <li>Ang pag-export ng GPX file at ang pagbabahagi ng larawan ay nangyayari lamang kapag ikaw mismo ang pumili nito, at ipinapadala lamang ang mga ito sa tatanggap na pinili mo.</li>
+</ul>
+
+<h2>5. Panahon ng Pag-iimbak at Paggamit</h2>
+<p>Iniingatan ng Kompanya ang personal na impormasyon habang ginagamit mo ang Serbisyo, at sinisira ito nang walang pagkaantala kapag natupad na ang layunin ng pagkolekta at paggamit o kapag humiling ka ng pagbura. Hindi malalaman ng Kompanya kung binura mo lang ang app, kaya kung nais mong mabura ang impormasyong natitira sa server, mangyaring humiling sa paraang nakasaad sa Seksiyon 9. Gayunpaman, kung kailangan itong itago ayon sa naaangkop na batas, iniingatan ito sa panahong itinakda ng batas na iyon.</p>
+<p>Ang impormasyong naka-imbak lamang sa device (Seksiyon 1) ay nananatili sa device hanggang sa burahin mo ito. Mabubura mo ang lahat sa pamamagitan ng <strong>Settings &gt; I-delete ang lahat ng record</strong> sa app, at kapag binura ang app ay nabubura rin ito sa device. Dahil wala sa Kompanya ang record ng paglalakbay, hindi nito ito mabubura o maibabalik para sa iyo.</p>
+<p>Ang panahon ng pag-iimbak ng impormasyong kinokolekta ng Google ay sumusunod sa patakaran ng Google sa pag-iimbak ng data.</p>
+
+<h2>6. Pagbibigay sa mga Ikatlong Partido</h2>
+<p>Hindi ibinibigay ng Kompanya ang iyong personal na impormasyon sa mga ikatlong partido lampas sa saklaw na nakasaad sa patakarang ito, maliban kung hinihingi ito ng batas o kung hinihiling ito ng isang ahensiya ng imbestigasyon para sa layunin ng imbestigasyon ayon sa mga proseso at paraang itinakda ng batas.</p>
+
+<h2>7. Pagkakatiwala ng Pagproseso ng Personal na Impormasyon</h2>
+<p>Upang maayos na maibigay ang Serbisyo, ipinagkakatiwala ng Kompanya ang pagproseso ng personal na impormasyon gaya ng sumusunod.</p>
+<ul>
+    <li>Vercel Inc.: pagpapatakbo ng server (lokasyon ng server: Seoul, Republika ng Korea)</li>
+    <li>Supabase Inc.: pagpapatakbo ng database (lokasyon ng server: Seoul, Republika ng Korea)</li>
+    <li>Google LLC: pagbibigay ng personalisadong advertising at pamamahala ng pahintulot sa ads (Google AdMob, Google User Messaging Platform), pagsusuri ng istatistika ng paggamit (Google Firebase Analytics), diagnostics ng error ng app (Google Firebase Crashlytics), at pag-iingat ng anonimong identifier ng device (Android, Google Play services Block Store)</li>
+</ul>
+
+<h2>8. Paglilipat ng Personal na Impormasyon sa Ibang Bansa</h2>
+<p>Para sa pagsusuri ng istatistika ng paggamit, diagnostics ng error ng app at pagbibigay ng ads, inililipat ng Kompanya ang personal na impormasyon sa ibang bansa gaya ng sumusunod.</p>
+<ul>
+    <li>Tatanggap: Google LLC (contact: <a href="https://support.google.com/policies/contact/general_privacy_form">form ng Google para sa mga tanong tungkol sa privacy</a>)</li>
+    <li>Bansang pinaglilipatan: Estados Unidos at iba pang bansa kung saan may data center ang Google</li>
+    <li>Impormasyong inililipat: advertising identifier, IP address, talaan ng impression at click ng ad, istatistika ng paggamit, diagnostics ng error ng app, modelo ng device, bersiyon ng operating system at bersiyon ng app</li>
+    <li>Oras at paraan ng paglilipat: ipinapadala sa network paminsan-minsan habang ginagamit ang app, sa pamamagitan ng mga SDK na kasama sa app</li>
+    <li>Layunin ng paggamit at panahon ng pag-iimbak: ang mga layuning nakasaad sa Seksiyon 3 at 10, sa panahong itinakda ng patakaran ng Google sa pag-iimbak ng data</li>
+    <li>Paraan ng pagtanggi at epekto nito: maaari mong tanggihan ang paglilipat ng advertising identifier para sa personalisadong advertising at ng istatistika ng paggamit sa pamamagitan ng mga setting na nakasaad sa Seksiyon 3 at 10. Ang impormasyong kailangan upang maipakita ang hindi personalisadong mga ad at ang diagnostics ng error ng app ay ipinapadala habang ginagamit mo ang app.</li>
+</ul>
+
+<h2>9. Ang Iyong mga Karapatan at Kung Paano Ito Gamitin</h2>
+<p>Maaari kang humiling anumang oras na makita, iwasto, burahin o ihinto ang pagproseso ng iyong personal na impormasyon. Kapag humiling ka sa email na nakasaad sa Seksiyon 13, kikilos ang Kompanya nang walang pagkaantala alinsunod sa naaangkop na batas. Dahil walang hawak ang Kompanya na impormasyong tuwirang nagpapakilala sa iyo, gaya ng pangalan o contact information, maaari nitong hingin ang impormasyong kailangan upang matukoy ang kaukulang device para maproseso ang iyong kahilingan.</p>
+<p>Ang record ng paglalakbay ay nasa iyong device lamang, kaya maaari mo itong tingnan nang direkta sa app, i-export gamit ang <strong>Settings &gt; I-export ang mga record (GPX)</strong>, o burahin gamit ang <strong>Settings &gt; I-delete ang lahat ng record</strong>.</p>
+
+<h2>10. Pagkolekta ng Istatistika ng Paggamit sa Pamamagitan ng mga Analytics Tool</h2>
+<p>Upang mapabuti ang kalidad ng Serbisyo, gumagamit ang Kompanya ng Google Firebase Analytics upang kumolekta ng istatistika ng paggamit. Ang impormasyong kinokolekta ay tungkol sa paraan ng paggamit sa Serbisyo, gaya ng paglipat sa pagitan ng mga screen, paggamit ng mga feature, mga value ng setting ng app (wika, tema, paraan ng pagtingin at iba pa), kung pinapayagan ang mga pahintulot gaya ng lokasyon at galaw, kung ginagamit ang widget, bersiyon ng app at device, at tinatayang rehiyon. Hindi kinokolekta ang record ng paglalakbay, gaya ng lokasyon (mga coordinate), rutang dinaanan, o layo at tagal ng paglalakbay, at ang impormasyong tuwirang nagpapakilala sa iyo, gaya ng pangalan o contact information. Kasama ng istatistika ng paggamit na ipinapadala ang isang identifier para makilala ang bawat pag-install (sa iOS, ang anonimong identifier ng device; sa Android, isang random na identifier na hiwalay na nilikha para sa istatistika). Maaari mong i-on o i-off anumang oras ang pagkolekta ng istatistika ng paggamit sa menu ng app na <strong>Settings &gt; Mga istatistika ng paggamit</strong>.</p>
+<p>Gumagamit din ang Kompanya ng Google Firebase Crashlytics upang ayusin ang mga di-inaasahang pagsasara ng app. Kinokolekta nito ang modelo ng device, bersiyon ng operating system, bersiyon ng app at ang talaang nakuha nang mangyari ang error; hindi kasama rito ang record ng paglalakbay. Kinokolekta ang diagnostics na ito anuman ang setting ng istatistika ng paggamit.</p>
+<p>Ang pagproseso ng data ng Google ay saklaw ng <a href="https://policies.google.com/privacy">Patakaran sa Privacy ng Google</a> at ng <a href="https://firebase.google.com/support/privacy">Patakaran sa Privacy ng Firebase</a>.</p>
+
+<h2>11. Mga Pahintulot ng App</h2>
+<p>Ginagamit ng app ang mga sumusunod na pahintulot ng device para sa mga feature sa ibaba. Kahit hindi mo payagan ang mga opsyonal na pahintulot, magagamit mo pa rin ang Serbisyo maliban sa mga kaukulang feature.</p>
+<ul>
+    <li>Lokasyon (kailangan): ginagamit upang itala ang rutang dinaanan mo. Kailangan ang pahintulot na "Palagi" (Always) upang makapagtala kahit hindi binubuksan ang app.</li>
+    <li>Motion &amp; Fitness (iOS) / Pisikal na aktibidad (Android) (opsyonal): ginagamit upang matukoy kung paglalakad, pagtakbo, pagbibisikleta o pagsakay sa sasakyan ang paglalakbay.</li>
+    <li>Notification (Android, opsyonal): ginagamit upang ipakita ang notification na nagsasabing kasalukuyang nagtatala habang itinatala ang iyong paglalakbay. Walang ibang notification na ipinapadala.</li>
+    <li>Pagdaragdag ng larawan sa Photos (iOS, opsyonal): ginagamit lamang kapag sine-save sa photo library ang larawang naglalaman ng iyong araw. Hindi binabasa ng app ang iyong mga larawan.</li>
+    <li>Pahintulot sa pagsubaybay ng app (iOS, opsyonal): ginagamit para sa personalisadong advertising.</li>
+</ul>
+<p>Maaari mong baguhin o bawiin ang mga pahintulot anumang oras sa [Mga Setting] ng iyong device.</p>
+
+<h2>12. Mga Hakbang para sa Seguridad</h2>
+<p>Nagpapatupad ang Kompanya ng administratibo at teknikal na mga hakbang sa proteksiyon, kabilang ang pamamahala sa karapatan ng pag-access, pag-encrypt ng mga seksiyon ng transmisyon, at kontrol sa pag-access, para sa ligtas na pagproseso ng personal na impormasyon. Hindi iniingatan sa mga server ng Kompanya ang record ng paglalakbay; naka-imbak ito sa loob ng iyong device at pinoprotektahan ng mga security feature ng device, gaya ng lock ng device.</p>
+
+<h2>13. Opisyal sa Proteksiyon ng Personal na Impormasyon</h2>
+<p>Nagtatalaga ang Kompanya, gaya ng sumusunod, ng Opisyal sa Proteksiyon ng Personal na Impormasyon na may pangkalahatang pananagutan sa pagproseso ng personal na impormasyon at sa paghawak ng mga reklamo ng gumagamit at pagremedyo ng pinsala.</p>
+<ul>
+    <li>Tungkulin: Opisyal sa Proteksiyon ng Personal na Impormasyon ng Zaco Labs</li>
+    <li>Email: <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
+</ul>
+
+<h2>14. Mga Serbisyo ng Ikatlong Partido at ang Pananagutan ng Gumagamit sa Pamamahala</h2>
+<ul>
+    <li>Sa mga serbisyong pinatatakbo ng ikatlong partido, gaya ng mga website o app na napuntahan sa pamamagitan ng ad at ng mga map provider, ang patakaran sa privacy ng kaukulang operator ang nalalapat, at hindi mananagot ang Kompanya sa pagproseso ng personal na impormasyong nagaganap sa mga serbisyong iyon.</li>
+    <li>Ang mga file at larawang in-export o ibinahagi mo ay hindi na mapapamahalaan ng Kompanya kapag naipadala na sa tatanggap na pinili mo; ang paggamit at pamamahala sa mga ito pagkatapos noon ay pananagutan mo at ng tumanggap.</li>
+    <li>Dahil naka-imbak sa iyong device ang record ng paglalakbay, ikaw ang dapat mamahala sa device, kabilang ang setting ng lock nito at ang pag-iingat laban sa pagkawala o pagnanakaw. Hindi mananagot ang Kompanya kung malantad ang mga record dahil sa pagkawala o pagnanakaw ng device, paggamit ng ibang tao, o katulad nito, nang walang sadyang gawa o kapabayaan ng Kompanya.</li>
+</ul>
+
+<h2>15. Mga Pagbabago sa Patakaran sa Privacy na Ito</h2>
+<p>Maaaring baguhin ang Patakaran sa Privacy na ito alinsunod sa mga pagbabago sa batas at sa mga patakaran ng Serbisyo. Iaanunsyo ang anumang pagbabago sa loob ng Serbisyo o sa pahinang ito.</p>
+
+<div class="contact">
+    <p>Contact: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

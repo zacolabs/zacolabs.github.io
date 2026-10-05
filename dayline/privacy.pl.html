@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Polityka prywatności Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Polityka prywatności Dayline</h1>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <a href="privacy.en.html">English</a> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <a href="privacy.zh-hant.html">繁體中文</a> · <a href="privacy.es.html">Español</a> · <a href="privacy.fil.html">Filipino</a> · <a href="privacy.nl.html">Nederlands</a> · <a href="privacy.da.html">Dansk</a> · <a href="privacy.de.html">Deutsch</a> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <strong>Polski</strong> · <a href="privacy.fr.html">Français</a> · <a href="privacy.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Data wejścia w życie: 5 października 2026</p>
+
+<p>Zaco Labs („Spółka”) ceni Twoją prywatność i przestrzega obowiązujących przepisów, w tym koreańskiej ustawy o ochronie danych osobowych. Niniejsza Polityka prywatności wyjaśnia, w jaki sposób Twoje dane osobowe są zbierane, wykorzystywane, przechowywane i usuwane w ramach świadczonej przez Spółkę usługi Dayline („Usługa”). Polityka ma zastosowanie zarówno do aplikacji na iOS, jak i na Androida.</p>
+
+<h2>1. Zbierane dane osobowe</h2>
+<p>Spółka świadczy Usługę bez rejestracji i nie prosi w aplikacji o dane, które bezpośrednio Cię identyfikują, takie jak imię i nazwisko czy numer telefonu. Na potrzeby świadczenia Usługi zbieramy następujące informacje.</p>
+<ul>
+    <li>Anonimowy identyfikator urządzenia (userKey): identyfikator tworzony przez aplikację w wyniku jednokierunkowego przekształcenia danych urządzenia i instalacji (w Androidzie wartości identyfikującej urządzenie, w iOS identyfikatora transakcji zakupu aplikacji) albo wartość wygenerowana losowo, jeżeli danych tych nie można uzyskać. Nie pozwala on ustalić Twojej tożsamości na podstawie imienia i nazwiska, danych kontaktowych itp. Aby po ponownej instalacji aplikacji można było używać tego samego identyfikatora, jest on przechowywany w pęku kluczy urządzenia w iOS oraz w Google Play services Block Store w Androidzie.</li>
+    <li>Informacje o urządzeniu i aplikacji: rodzaj i wersja systemu operacyjnego, model urządzenia, wersja aplikacji, język aplikacji, kraj (ustawienie regionu urządzenia, a nie dane o lokalizacji) oraz data i godzina pierwszego i ostatniego użycia</li>
+    <li>Identyfikator reklamowy (informacje o zachowaniu): IDFA w iOS oraz identyfikator wyświetlania reklam (ADID) w Androidzie (szczegóły w punkcie 3)</li>
+    <li>Informacje zbierane przez Google w związku z wyświetlaniem reklam: adres IP i ustalony na jego podstawie przybliżony region, zapisy wyświetlonych lub klikniętych reklam itp. (szczegóły w punkcie 3)</li>
+    <li>Statystyki użycia oraz dane diagnostyczne dotyczące błędów aplikacji: zapisy przechodzenia między ekranami i korzystania z funkcji, wartości ustawień aplikacji, informacja o udzieleniu uprawnień, model urządzenia, wersja systemu operacyjnego, wersja aplikacji oraz informacje zapisane w chwili wystąpienia błędu (szczegóły w punkcie 10)</li>
+    <li>Przy zapytaniach do obsługi klienta: adres e-mail, z którego piszesz, i treść zapytania</li>
+</ul>
+<p>Następujące informacje są przechowywane wyłącznie na Twoim urządzeniu i nie są przesyłane na serwery Spółki.</p>
+<ul>
+    <li>Zapisy przemieszczania się: lokalizacja (współrzędne) i czas, pokonywana trasa, odległość i czas przemieszczania się, miejsca postoju oraz sposób poruszania się (chód, bieg, rower, pojazd)</li>
+    <li>Informacje o ruchu i aktywności z urządzenia, wykorzystywane do rozróżniania sposobów poruszania się</li>
+</ul>
+
+<h2>2. Cele zbierania i wykorzystywania</h2>
+<ul>
+    <li>Zapisywanie i wyświetlanie dziennej trasy, odległości i sposobów poruszania się (przetwarzanie odbywa się wyłącznie na urządzeniu)</li>
+    <li>Zarządzanie korzystaniem z Usługi za pomocą anonimowego identyfikatora oraz udostępnianie ustawień aplikacji, takich jak wyświetlanie lub niewyświetlanie reklam i informacje o wymaganych aktualizacjach</li>
+    <li>Wyświetlanie reklam spersonalizowanych, pomiar skuteczności reklam i zapobieganie oszustwom reklamowym</li>
+    <li>Doskonalenie Usługi, statystyki i analizy oraz usuwanie błędów aplikacji</li>
+    <li>Odpowiadanie na zapytania klientów</li>
+</ul>
+
+<h2>3. Zbieranie i wykorzystywanie identyfikatorów reklamowych (informacje o zachowaniu)</h2>
+<p>W celu wyświetlania reklam spersonalizowanych i doskonalenia Usługi Spółka korzysta z zewnętrznej platformy reklamowej; w tym procesie może być zbierany identyfikator reklamowy. Aplikacja nie przekazuje platformie reklamowej Twoich zapisów przemieszczania się.</p>
+<ol>
+    <li>Zbierane informacje o zachowaniu
+        <ul>
+            <li>iOS: IDFA (Identifier for Advertisers)</li>
+            <li>Android: identyfikator wyświetlania reklam (ADID, Google Advertising ID)</li>
+        </ul>
+    </li>
+    <li>Cele zbierania i wykorzystywania
+        <ul>
+            <li>Wyświetlanie spersonalizowanych (ukierunkowanych) reklam opartych na zainteresowaniach</li>
+            <li>Analiza skuteczności wyświetleń i kliknięć oraz zapobieganie oszustwom reklamowym (nieprawidłowy ruch)</li>
+        </ul>
+    </li>
+    <li>Sposób zbierania i usługa zewnętrzna
+        <ul>
+            <li>Zbierane i przesyłane automatycznie przez mobilny pakiet SDK reklam zawarty w aplikacji.</li>
+            <li>Usługa: Google AdMob (Google LLC). Przetwarzanie danych przez Google podlega <a href="https://policies.google.com/privacy">Polityce prywatności Google</a>.</li>
+        </ul>
+    </li>
+    <li>Twoje prawo sprzeciwu i sposób jego wykonania<br />
+        Zbieranie identyfikatorów na potrzeby reklam spersonalizowanych możesz odrzucić w poniższy sposób. Nawet po wyrażeniu sprzeciwu mogą być nadal wyświetlane reklamy niespersonalizowane (ogólne).
+        <ul>
+            <li>iOS: odrzuć prośbę o śledzenie wyświetlaną przy pierwszym uruchomieniu aplikacji albo przejdź do Ustawienia &gt; Prywatność i ochrona &gt; Śledzenie i wyłącz „Zezwalaj aplikacjom na prośby o śledzenie” lub śledzenie dla danej aplikacji.</li>
+            <li>Android: przejdź do Ustawienia &gt; Google &gt; Reklamy i wybierz „Usuń identyfikator wyświetlania reklam” lub „Wyłącz personalizację reklam”.</li>
+            <li>Użytkownicy w regionach, w których wymagana jest zgoda na reklamy, takich jak Europejski Obszar Gospodarczy (EOG) i Wielka Brytania, mogą dokonać wyboru na ekranie zgody wyświetlanym przy pierwszym uruchomieniu aplikacji. W aplikacji na iOS wybór ten można w każdej chwili zmienić w menu <strong>Ustawienia &gt; Prywatność reklam</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>4. Przetwarzanie danych o lokalizacji i zapisów przemieszczania się</h2>
+<ul>
+    <li>Dane o lokalizacji i ruchu są wykorzystywane wyłącznie do tworzenia zapisów przemieszczania się. Są przetwarzane na urządzeniu i przechowywane wyłącznie na urządzeniu. Nie są przesyłane na serwery Spółki i nie wchodzą w skład statystyk użycia.</li>
+    <li>Widżet ekranu głównego jest rysowany na podstawie zapisów przechowywanych na urządzeniu i nie wysyła ich poza urządzenie.</li>
+    <li>Na ekranach wyświetlających mapę dostawca map (Mapy Apple w iOS, Mapy Google w Androidzie) pobiera ze swoich serwerów dane mapy dla obszaru widocznego na ekranie. Przetwarzanie danych przez dostawcę map podlega <a href="https://www.apple.com/legal/privacy/">Polityce prywatności Apple</a> oraz <a href="https://policies.google.com/privacy">Polityce prywatności Google</a>.</li>
+    <li>Eksport pliku GPX i udostępnienie obrazu następują wyłącznie wtedy, gdy samodzielnie je wybierzesz, a dane trafiają tylko do wskazanego przez Ciebie odbiorcy.</li>
+</ul>
+
+<h2>5. Okres przechowywania i wykorzystywania</h2>
+<p>Spółka przechowuje dane osobowe przez cały czas korzystania przez Ciebie z Usługi i niezwłocznie je usuwa, gdy cel ich zbierania i wykorzystywania zostanie osiągnięty lub gdy zażądasz ich usunięcia. Samo usunięcie aplikacji nie informuje o tym Spółki, dlatego jeśli chcesz usunąć informacje pozostałe na serwerze, złóż prośbę w sposób opisany w punkcie 9. Jeżeli jednak obowiązujące przepisy wymagają przechowywania, informacje są przechowywane przez okres określony w tych przepisach.</p>
+<p>Informacje przechowywane wyłącznie na urządzeniu (punkt 1) pozostają na urządzeniu, dopóki ich nie usuniesz. Wszystkie możesz usunąć za pomocą opcji <strong>Ustawienia &gt; Usuń wszystkie zapisy</strong> w aplikacji, a usunięcie aplikacji powoduje również ich usunięcie z urządzenia. Spółka nie posiada Twoich zapisów przemieszczania się, dlatego nie może ich za Ciebie usunąć ani przywrócić.</p>
+<p>Okres przechowywania informacji zbieranych przez Google wynika z zasad przechowywania danych Google.</p>
+
+<h2>6. Udostępnianie osobom trzecim</h2>
+<p>Spółka nie udostępnia Twoich danych osobowych osobom trzecim poza zakresem określonym w niniejszej polityce, z wyjątkiem przypadków wymaganych przepisami prawa lub gdy organ prowadzący postępowanie zwróci się o to na potrzeby postępowania, zgodnie z procedurami i sposobami przewidzianymi przez prawo.</p>
+
+<h2>7. Powierzenie przetwarzania danych osobowych</h2>
+<p>Aby zapewnić sprawne świadczenie Usługi, Spółka powierzyła przetwarzanie danych osobowych w następujący sposób.</p>
+<ul>
+    <li>Vercel Inc.: obsługa serwerów (lokalizacja serwerów: Seul, Republika Korei)</li>
+    <li>Supabase Inc.: obsługa bazy danych (lokalizacja serwerów: Seul, Republika Korei)</li>
+    <li>Google LLC: reklamy spersonalizowane i zarządzanie zgodami na reklamy (Google AdMob, Google User Messaging Platform), analiza statystyk użycia (Google Firebase Analytics), diagnostyka błędów aplikacji (Google Firebase Crashlytics), przechowywanie anonimowego identyfikatora urządzenia (Android, Google Play services Block Store)</li>
+</ul>
+
+<h2>8. Przekazywanie danych osobowych za granicę</h2>
+<p>W celu analizy statystyk użycia, diagnostyki błędów aplikacji i wyświetlania reklam Spółka przekazuje dane osobowe za granicę w następujący sposób.</p>
+<ul>
+    <li>Odbiorca: Google LLC (kontakt: <a href="https://support.google.com/policies/contact/general_privacy_form">zapytania dotyczące prywatności w Google</a>)</li>
+    <li>Kraje docelowe: Stany Zjednoczone i inne kraje, w których Google prowadzi centra danych</li>
+    <li>Przekazywane dane: identyfikator reklamowy, adres IP, zapisy wyświetleń i kliknięć reklam, statystyki użycia, dane diagnostyczne dotyczące błędów aplikacji, model urządzenia, wersja systemu operacyjnego i wersja aplikacji</li>
+    <li>Czas i sposób przekazywania: na bieżąco podczas korzystania z aplikacji, przez sieć, za pośrednictwem pakietów SDK zawartych w aplikacji</li>
+    <li>Cel wykorzystania i okres przechowywania: cele określone w punktach 3 i 10; przechowywanie przez okres wynikający z zasad przechowywania danych Google</li>
+    <li>Sposób sprzeciwu i jego skutki: za pomocą ustawień opisanych w punktach 3 i 10 możesz odmówić przekazywania identyfikatora reklamowego na potrzeby reklam spersonalizowanych oraz statystyk użycia. Informacje niezbędne do wyświetlania reklam niespersonalizowanych oraz dane diagnostyczne dotyczące błędów aplikacji są przekazywane podczas korzystania z aplikacji.</li>
+</ul>
+
+<h2>9. Twoje prawa i sposób ich wykonywania</h2>
+<p>W każdej chwili możesz zażądać dostępu do swoich danych osobowych, ich sprostowania lub usunięcia albo ograniczenia przetwarzania. Jeżeli wyślesz żądanie na adres e-mail podany w punkcie 13, Spółka podejmie działania niezwłocznie, zgodnie z obowiązującymi przepisami. Spółka nie posiada informacji bezpośrednio Cię identyfikujących, takich jak imię i nazwisko czy dane kontaktowe, dlatego w celu rozpatrzenia żądania może poprosić o informacje niezbędne do ustalenia, o które urządzenie chodzi.</p>
+<p>Zapisy przemieszczania się znajdują się wyłącznie na Twoim urządzeniu, dlatego możesz je przeglądać bezpośrednio w aplikacji, wyeksportować za pomocą opcji <strong>Ustawienia &gt; Eksportuj zapisy (GPX)</strong> lub usunąć za pomocą opcji <strong>Ustawienia &gt; Usuń wszystkie zapisy</strong>.</p>
+
+<h2>10. Zbieranie statystyk użycia za pomocą narzędzi analitycznych</h2>
+<p>W celu poprawy jakości Usługi Spółka korzysta z Google Firebase Analytics do zbierania statystyk użycia. Zbierane informacje dotyczą sposobu korzystania z Usługi, takiego jak przechodzenie między ekranami, korzystanie z funkcji, wartości ustawień aplikacji (język, motyw, tryb widoku itp.), informacja o udzieleniu uprawnień, takich jak lokalizacja i ruch, informacja o korzystaniu z widżetu, wersja aplikacji i urządzenia oraz przybliżony region. Nie są zbierane zapisy przemieszczania się, takie jak lokalizacja (współrzędne), trasa czy odległość i czas przemieszczania się, ani informacje bezpośrednio Cię identyfikujące, takie jak imię i nazwisko czy dane kontaktowe. Wraz ze statystykami użycia przesyłany jest identyfikator służący do rozróżniania instalacji (w iOS anonimowy identyfikator urządzenia, w Androidzie odrębny losowy identyfikator utworzony na potrzeby statystyk). Zbieranie statystyk użycia możesz w każdej chwili włączyć lub wyłączyć w menu aplikacji <strong>Ustawienia &gt; Statystyki użycia</strong>.</p>
+<p>Spółka korzysta również z Google Firebase Crashlytics, aby naprawiać nieoczekiwane zamknięcia aplikacji. Zbierane są przy tym model urządzenia, wersja systemu operacyjnego, wersja aplikacji oraz informacje zapisane w chwili wystąpienia błędu; nie obejmują one zapisów przemieszczania się. Te dane diagnostyczne są zbierane niezależnie od ustawienia statystyk użycia.</p>
+<p>Przetwarzanie danych przez Google podlega <a href="https://policies.google.com/privacy">Polityce prywatności Google</a> oraz zasadom <a href="https://firebase.google.com/support/privacy">Prywatność i bezpieczeństwo Firebase</a>.</p>
+
+<h2>11. Uprawnienia aplikacji</h2>
+<p>Aplikacja korzysta z uprawnień dostępu do urządzenia na potrzeby poniższych funkcji. Nawet bez udzielenia uprawnień opcjonalnych możesz korzystać z Usługi poza daną funkcją.</p>
+<ul>
+    <li>Lokalizacja (wymagane): do zapisywania pokonywanej trasy. Aby zapis działał bez otwierania aplikacji, potrzebna jest opcja „Zawsze”.</li>
+    <li>Ruch i sprawność (iOS) / Aktywność fizyczna (Android) (opcjonalne): do rozróżniania chodu, biegu, jazdy na rowerze i jazdy pojazdem.</li>
+    <li>Powiadomienia (Android, opcjonalne): do wyświetlania powiadomienia informującego, że trwa zapis, w czasie gdy zapisywane jest Twoje przemieszczanie się. Inne powiadomienia nie są wysyłane.</li>
+    <li>Dodawanie zdjęć (iOS, opcjonalne): wyłącznie do zapisywania obrazu dnia w bibliotece zdjęć. Aplikacja nie odczytuje Twoich zdjęć.</li>
+    <li>Zezwolenie na śledzenie w aplikacji (iOS, opcjonalne): na potrzeby reklam spersonalizowanych.</li>
+</ul>
+<p>Uprawnienia możesz w każdej chwili zmienić lub cofnąć w ustawieniach urządzenia.</p>
+
+<h2>12. Środki zapewniające bezpieczeństwo</h2>
+<p>Spółka stosuje organizacyjne i techniczne środki ochrony, w tym zarządzanie uprawnieniami dostępu, szyfrowanie odcinków transmisji oraz kontrolę dostępu, aby zapewnić bezpieczne przetwarzanie danych osobowych. Zapisy przemieszczania się nie są przechowywane na serwerach Spółki; są zapisane na Twoim urządzeniu i chronione jego własnymi funkcjami zabezpieczeń, takimi jak blokada urządzenia.</p>
+
+<h2>13. Osoba odpowiedzialna za ochronę danych</h2>
+<p>Spółka wyznacza osobę odpowiedzialną za ochronę danych, która ponosi ogólną odpowiedzialność za przetwarzanie danych osobowych oraz rozpatruje skargi użytkowników i naprawia szkody.</p>
+<ul>
+    <li>Funkcja: osoba odpowiedzialna za ochronę danych w Zaco Labs</li>
+    <li>E-mail: <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
+</ul>
+
+<h2>14. Usługi podmiotów trzecich i Twoja odpowiedzialność za zarządzanie danymi</h2>
+<ul>
+    <li>Usługi prowadzone przez podmioty trzecie, takie jak strony internetowe lub aplikacje, do których prowadzi reklama, oraz usługi dostawców map, podlegają politykom prywatności ich operatorów, a Spółka nie ponosi odpowiedzialności za przetwarzanie danych osobowych odbywające się w tych usługach.</li>
+    <li>Po dostarczeniu wyeksportowanego lub udostępnionego przez Ciebie pliku albo obrazu do wskazanego przez Ciebie odbiorcy Spółka nie może już nim zarządzać; za dalsze korzystanie z niego i zarządzanie nim odpowiadasz Ty i odbiorca.</li>
+    <li>Zapisy przemieszczania się są przechowywane na Twoim urządzeniu, dlatego dbanie o urządzenie, w tym o ustawienia blokady oraz zabezpieczenie przed zgubieniem i kradzieżą, należy do Ciebie. Spółka nie ponosi odpowiedzialności, jeżeli zapisy zostaną ujawnione wskutek zgubienia lub kradzieży urządzenia, korzystania z niego przez inną osobę itp., bez winy umyślnej lub niedbalstwa Spółki.</li>
+</ul>
+
+<h2>15. Zmiany niniejszej Polityki prywatności</h2>
+<p>Niniejsza Polityka prywatności może być zmieniana wraz ze zmianami przepisów i zasad Usługi. O wszelkich zmianach poinformujemy w Usłudze lub na tej stronie.</p>
+
+<div class="contact">
+    <p>Kontakt: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

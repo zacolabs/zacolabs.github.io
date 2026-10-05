@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Datenschutzerklärung von Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Datenschutzerklärung von Dayline</h1>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <a href="privacy.en.html">English</a> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <a href="privacy.zh-hant.html">繁體中文</a> · <a href="privacy.es.html">Español</a> · <a href="privacy.fil.html">Filipino</a> · <a href="privacy.nl.html">Nederlands</a> · <a href="privacy.da.html">Dansk</a> · <strong>Deutsch</strong> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <a href="privacy.pl.html">Polski</a> · <a href="privacy.fr.html">Français</a> · <a href="privacy.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Gültig ab: 5. Oktober 2026</p>
+
+<p>Zaco Labs („das Unternehmen“) nimmt Ihre Privatsphäre ernst und beachtet das geltende Recht, einschließlich des koreanischen Gesetzes zum Schutz personenbezogener Daten. Diese Datenschutzerklärung erläutert, wie Ihre personenbezogenen Daten im vom Unternehmen bereitgestellten Dienst Dayline („der Dienst“) erhoben, verwendet, gespeichert und vernichtet werden. Sie gilt für die iOS- und die Android-App gleichermaßen.</p>
+
+<h2>1. Erhobene personenbezogene Daten</h2>
+<p>Das Unternehmen stellt den Dienst ohne Registrierung bereit und fragt in der App keine Daten ab, die Sie unmittelbar identifizieren, etwa Ihren Namen oder Ihre Telefonnummer. Zur Bereitstellung des Dienstes erheben wir die folgenden Daten.</p>
+<ul>
+    <li>Anonyme Gerätekennung (userKey): eine Kennung, die die App durch Einwegumwandlung von Geräte- bzw. Installationsdaten erzeugt (unter Android ein Gerätekennwert, unter iOS die Transaktionskennung des App-Kaufs); stehen diese nicht zur Verfügung, wird ein zufällig erzeugter Wert verwendet. Sie ordnet Sie nicht über Ihren Namen, Ihre Kontaktdaten oder Ähnliches einer bestimmten Person zu. Damit nach einer Neuinstallation der App dieselbe Kennung verwendet werden kann, wird sie unter iOS im Schlüsselbund des Geräts und unter Android in Google Play services Block Store aufbewahrt.</li>
+    <li>Geräte- und App-Daten: Art und Version des Betriebssystems, Gerätemodell, App-Version, App-Sprache, Land (die Regionseinstellung des Geräts, keine Standortdaten) sowie Zeitpunkt der ersten und der letzten Nutzung</li>
+    <li>Werbekennung (Verhaltensdaten): IDFA unter iOS und die Werbe-ID (ADID) unter Android (Einzelheiten in Abschnitt 3)</li>
+    <li>Daten, die Google bei der Bereitstellung von Werbung erhebt: die IP-Adresse und die daraus abgeleitete ungefähre Region, Aufzeichnungen darüber, welche Anzeigen angesehen oder angetippt wurden, und dergleichen (Einzelheiten in Abschnitt 3)</li>
+    <li>Nutzungsstatistiken und Absturzdiagnosedaten der App: Aufzeichnungen über die Navigation zwischen Bildschirmen und die Nutzung von Funktionen, Werte der App-Einstellungen, ob Berechtigungen erteilt sind, Gerätemodell, Betriebssystemversion, App-Version und die beim Auftreten eines Fehlers aufgezeichneten Daten (Einzelheiten in Abschnitt 10)</li>
+    <li>Bei Kundenanfragen: die E-Mail-Adresse, von der Sie schreiben, und der Inhalt Ihrer Anfrage</li>
+</ul>
+<p>Die folgenden Daten werden ausschließlich auf Ihrem Gerät gespeichert und nicht an die Server des Unternehmens übermittelt.</p>
+<ul>
+    <li>Bewegungsaufzeichnungen: Standort (Koordinaten) und Zeitpunkt, zurückgelegter Weg, Distanz und Dauer, Aufenthaltsorte sowie Fortbewegungsart (Gehen, Laufen, Radfahren, Fahrzeug)</li>
+    <li>Bewegungs- und Aktivitätsdaten des Geräts, die zur Unterscheidung der Fortbewegungsarten verwendet werden</li>
+</ul>
+
+<h2>2. Zwecke der Erhebung und Verwendung</h2>
+<ul>
+    <li>Aufzeichnung und Anzeige des Weges, der Distanz und der Fortbewegungsarten eines Tages (Verarbeitung ausschließlich auf dem Gerät)</li>
+    <li>Verwaltung der Dienstnutzung über die anonyme Kennung sowie Bereitstellung von App-Einstellungen, etwa zur Anzeige von Werbung und zu Hinweisen auf erforderliche Updates</li>
+    <li>Bereitstellung personalisierter Werbung, Messung der Werbeleistung und Verhinderung von Werbebetrug</li>
+    <li>Verbesserung des Dienstes, statistische Auswertungen und Behebung von App-Fehlern</li>
+    <li>Beantwortung von Kundenanfragen</li>
+</ul>
+
+<h2>3. Erhebung und Verwendung von Werbekennungen (Verhaltensdaten)</h2>
+<p>Zur Bereitstellung personalisierter Werbung und zur Verbesserung des Dienstes nutzt das Unternehmen eine Werbeplattform eines Drittanbieters; dabei kann eine Werbekennung erhoben werden. Die App gibt Ihre Bewegungsaufzeichnungen nicht an die Werbeplattform weiter.</p>
+<ol>
+    <li>Erhobene Verhaltensdaten
+        <ul>
+            <li>iOS: IDFA (Identifier for Advertisers)</li>
+            <li>Android: Werbe-ID (ADID, Google Advertising ID)</li>
+        </ul>
+    </li>
+    <li>Zwecke der Erhebung und Verwendung
+        <ul>
+            <li>Bereitstellung interessenbezogener personalisierter (zielgerichteter) Werbung</li>
+            <li>Auswertung von Einblendungen und Klicks sowie Verhinderung von Werbebetrug (ungültiger Traffic)</li>
+        </ul>
+    </li>
+    <li>Erhebungsweg und Drittanbieterdienst
+        <ul>
+            <li>Erhebung und Übermittlung erfolgen automatisch über das in der App enthaltene mobile Werbe-SDK.</li>
+            <li>Dienst: Google AdMob (Google LLC). Die Datenverarbeitung durch Google richtet sich nach der <a href="https://policies.google.com/privacy">Google-Datenschutzerklärung</a>.</li>
+        </ul>
+    </li>
+    <li>Ihr Widerspruchsrecht und dessen Ausübung<br />
+        Sie können die Erhebung von Kennungen für personalisierte Werbung auf die folgenden Weisen ablehnen. Auch bei Widerspruch können weiterhin nicht personalisierte (allgemeine) Anzeigen erscheinen.
+        <ul>
+            <li>iOS: Lehnen Sie die beim ersten Start der App angezeigte Tracking-Anfrage ab oder gehen Sie zu Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Tracking und deaktivieren Sie „Apps erlauben, Tracking anzufragen“ oder das Tracking für die betreffende App.</li>
+            <li>Android: Gehen Sie zu Einstellungen &gt; Google &gt; Werbung und wählen Sie „Werbe-ID löschen“ oder „Personalisierte Werbung deaktivieren“.</li>
+            <li>Nutzer in Regionen, in denen eine Einwilligung in Werbung erforderlich ist, etwa im Europäischen Wirtschaftsraum (EWR) und im Vereinigten Königreich, können ihre Wahl auf dem Einwilligungsbildschirm treffen, der beim ersten Start der App erscheint. In der iOS-App können Sie diese Wahl jederzeit unter <strong>Einstellungen &gt; Datenschutz bei Werbung</strong> ändern.</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>4. Verarbeitung von Standortdaten und Bewegungsaufzeichnungen</h2>
+<ul>
+    <li>Standort- und Bewegungsdaten werden ausschließlich zur Erstellung Ihrer Bewegungsaufzeichnungen verwendet; sie werden auf dem Gerät verarbeitet und nur auf dem Gerät gespeichert. Sie werden nicht an die Server des Unternehmens übermittelt und sind auch nicht in den Nutzungsstatistiken enthalten.</li>
+    <li>Das Widget auf dem Home-Bildschirm wird aus den auf dem Gerät gespeicherten Aufzeichnungen erzeugt und überträgt die Aufzeichnungen nicht vom Gerät nach außen.</li>
+    <li>Auf Bildschirmen, die eine Karte anzeigen, ruft der Kartenanbieter (unter iOS Apple Karten, unter Android Google Maps) die Kartendaten für den angezeigten Bereich von seinen eigenen Servern ab. Die Datenverarbeitung durch den Kartenanbieter richtet sich nach der <a href="https://www.apple.com/legal/privacy/">Apple-Datenschutzrichtlinie</a> und der <a href="https://policies.google.com/privacy">Google-Datenschutzerklärung</a>.</li>
+    <li>Der Export einer GPX-Datei und das Teilen eines Bildes erfolgen nur, wenn Sie dies selbst auswählen, und die Daten gelangen ausschließlich an das von Ihnen gewählte Ziel.</li>
+</ul>
+
+<h2>5. Aufbewahrungs- und Nutzungsdauer</h2>
+<p>Das Unternehmen bewahrt personenbezogene Daten auf, solange Sie den Dienst nutzen, und vernichtet sie unverzüglich, sobald der Zweck der Erhebung und Verwendung erreicht ist oder Sie die Löschung verlangen. Allein durch das Löschen der App erfährt das Unternehmen davon nicht; wenn Sie die Löschung der auf dem Server verbliebenen Daten wünschen, beantragen Sie diese bitte auf dem in Abschnitt 9 beschriebenen Weg. Ist eine Aufbewahrung nach geltendem Recht vorgeschrieben, werden die Daten jedoch für die dort festgelegte Dauer aufbewahrt.</p>
+<p>Ausschließlich auf dem Gerät gespeicherte Daten (Abschnitt 1) verbleiben auf dem Gerät, bis Sie sie löschen. Mit <strong>Einstellungen &gt; Alle Aufzeichnungen löschen</strong> in der App können Sie alles löschen; beim Löschen der App werden die Daten zusammen mit ihr vom Gerät gelöscht. Da das Unternehmen nicht über Ihre Bewegungsaufzeichnungen verfügt, kann es diese weder für Sie löschen noch wiederherstellen.</p>
+<p>Die Aufbewahrungsdauer der von Google erhobenen Daten richtet sich nach den Datenaufbewahrungsrichtlinien von Google.</p>
+
+<h2>6. Weitergabe an Dritte</h2>
+<p>Das Unternehmen gibt Ihre personenbezogenen Daten über den in dieser Erklärung festgelegten Rahmen hinaus nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben oder eine Ermittlungsbehörde verlangt dies zu Ermittlungszwecken nach den gesetzlich vorgesehenen Verfahren und Methoden.</p>
+
+<h2>7. Auftragsverarbeitung personenbezogener Daten</h2>
+<p>Zur reibungslosen Bereitstellung des Dienstes hat das Unternehmen die Verarbeitung personenbezogener Daten wie folgt übertragen.</p>
+<ul>
+    <li>Vercel Inc.: Serverbetrieb (Serverstandort: Seoul, Republik Korea)</li>
+    <li>Supabase Inc.: Datenbankbetrieb (Serverstandort: Seoul, Republik Korea)</li>
+    <li>Google LLC: personalisierte Werbung und Verwaltung der Werbe-Einwilligung (Google AdMob, Google User Messaging Platform), Auswertung von Nutzungsstatistiken (Google Firebase Analytics), Absturzdiagnose der App (Google Firebase Crashlytics) sowie Aufbewahrung der anonymen Gerätekennung (Android, Google Play services Block Store)</li>
+</ul>
+
+<h2>8. Übermittlung personenbezogener Daten ins Ausland</h2>
+<p>Zur Auswertung von Nutzungsstatistiken, zur Absturzdiagnose der App und zur Bereitstellung von Werbung übermittelt das Unternehmen personenbezogene Daten wie folgt ins Ausland.</p>
+<ul>
+    <li>Empfänger: Google LLC (Kontakt: <a href="https://support.google.com/policies/contact/general_privacy_form">Datenschutzanfrage an Google</a>)</li>
+    <li>Empfängerländer: die Vereinigten Staaten und weitere Länder, in denen Google Rechenzentren betreibt</li>
+    <li>Übermittelte Daten: Werbekennung, IP-Adresse, Aufzeichnungen über Einblendungen und Klicks von Anzeigen, Nutzungsstatistiken, Absturzdiagnosedaten der App, Gerätemodell, Betriebssystemversion und App-Version</li>
+    <li>Zeitpunkt und Art der Übermittlung: laufend während der Nutzung der App über das Netzwerk mittels der in der App enthaltenen SDKs</li>
+    <li>Verwendungszweck und Aufbewahrungsdauer: die in den Abschnitten 3 und 10 genannten Zwecke; Aufbewahrung für die in den Datenaufbewahrungsrichtlinien von Google vorgesehene Dauer</li>
+    <li>Widerspruch und dessen Folgen: Über die in den Abschnitten 3 und 10 beschriebenen Einstellungen können Sie die Übermittlung der Werbekennung für personalisierte Werbung und der Nutzungsstatistiken ablehnen. Die für die Anzeige nicht personalisierter Werbung erforderlichen Daten und die Absturzdiagnosedaten der App werden während der Nutzung der App übermittelt.</li>
+</ul>
+
+<h2>9. Ihre Rechte und deren Ausübung</h2>
+<p>Sie können jederzeit Auskunft über Ihre personenbezogenen Daten, deren Berichtigung oder Löschung oder die Einschränkung ihrer Verarbeitung verlangen. Wenn Sie Ihr Anliegen an die in Abschnitt 13 genannte E-Mail-Adresse senden, wird das Unternehmen nach geltendem Recht unverzüglich tätig. Da das Unternehmen über keine Daten verfügt, die Sie unmittelbar identifizieren, etwa Ihren Namen oder Ihre Kontaktdaten, kann es zur Bearbeitung Ihres Anliegens die Angaben erfragen, die zur Feststellung des betreffenden Geräts erforderlich sind.</p>
+<p>Ihre Bewegungsaufzeichnungen befinden sich ausschließlich auf Ihrem Gerät; Sie können sie daher unmittelbar in der App einsehen, mit <strong>Einstellungen &gt; Aufzeichnungen exportieren (GPX)</strong> exportieren oder mit <strong>Einstellungen &gt; Alle Aufzeichnungen löschen</strong> löschen.</p>
+
+<h2>10. Erhebung von Nutzungsstatistiken mit Analysewerkzeugen</h2>
+<p>Zur Verbesserung der Qualität des Dienstes nutzt das Unternehmen Google Firebase Analytics, um Nutzungsstatistiken zu erheben. Die erhobenen Daten betreffen das Nutzungsverhalten, etwa die Navigation zwischen Bildschirmen, die Nutzung von Funktionen, Werte der App-Einstellungen (Sprache, Design, Ansicht und dergleichen), ob Berechtigungen wie Standort und Bewegung erteilt sind, ob das Widget verwendet wird, App- und Geräteversion sowie die ungefähre Region. Bewegungsaufzeichnungen wie Standort (Koordinaten), zurückgelegter Weg, Distanz und Dauer sowie Daten, die Sie unmittelbar identifizieren, etwa Ihr Name oder Ihre Kontaktdaten, werden nicht erhoben. Zusammen mit den Nutzungsstatistiken wird eine Kennung zur Unterscheidung von Installationen übermittelt (unter iOS die anonyme Gerätekennung, unter Android eine eigens für die Statistik erzeugte zufällige Kennung). Sie können die Erhebung von Nutzungsstatistiken jederzeit unter <strong>Einstellungen &gt; Nutzungsstatistiken</strong> in der App ein- oder ausschalten.</p>
+<p>Das Unternehmen nutzt außerdem Google Firebase Crashlytics, um unerwartete Abstürze der App zu beheben. Dabei werden Gerätemodell, Betriebssystemversion, App-Version und die beim Auftreten eines Fehlers aufgezeichneten Daten erhoben; Bewegungsaufzeichnungen sind nicht enthalten. Diese Diagnosedaten werden unabhängig von der Einstellung für Nutzungsstatistiken erhoben.</p>
+<p>Die Datenverarbeitung durch Google richtet sich nach der <a href="https://policies.google.com/privacy">Google-Datenschutzerklärung</a> und den Bestimmungen zu <a href="https://firebase.google.com/support/privacy">Datenschutz und Sicherheit bei Firebase</a>.</p>
+
+<h2>11. App-Berechtigungen</h2>
+<p>Die App nutzt für die folgenden Funktionen Zugriffsberechtigungen auf dem Gerät. Auch ohne optionale Berechtigungen können Sie den Dienst abgesehen von der jeweiligen Funktion nutzen.</p>
+<ul>
+    <li>Standort (erforderlich): um den zurückgelegten Weg aufzuzeichnen. Für die Aufzeichnung, ohne die App zu öffnen, ist „Immer“ erforderlich.</li>
+    <li>Bewegung &amp; Fitness (iOS) / Körperliche Aktivität (Android) (optional): um Gehen, Laufen, Radfahren und Fahrten im Fahrzeug zu unterscheiden.</li>
+    <li>Benachrichtigungen (Android, optional): um während der Aufzeichnung Ihrer Bewegung die Benachrichtigung anzuzeigen, dass eine Aufzeichnung läuft. Weitere Benachrichtigungen werden nicht gesendet.</li>
+    <li>Fotos hinzufügen (iOS, optional): wird nur verwendet, wenn Sie das Bild eines Tages in Ihrer Fotomediathek sichern. Die App liest Ihre Fotos nicht.</li>
+    <li>App-Tracking (iOS, optional): für personalisierte Werbung.</li>
+</ul>
+<p>Sie können Berechtigungen jederzeit in den Einstellungen Ihres Geräts ändern oder widerrufen.</p>
+
+<h2>12. Maßnahmen zur Gewährleistung der Sicherheit</h2>
+<p>Das Unternehmen setzt für die sichere Verarbeitung personenbezogener Daten organisatorische und technische Schutzmaßnahmen ein, darunter die Verwaltung von Zugriffsrechten, die Verschlüsselung der Übertragungswege und Zugangskontrollen. Ihre Bewegungsaufzeichnungen werden nicht auf den Servern des Unternehmens aufbewahrt; sie sind auf Ihrem Gerät gespeichert und werden durch die Sicherheitsfunktionen des Geräts, etwa die Gerätesperre, geschützt.</p>
+
+<h2>13. Datenschutzbeauftragter</h2>
+<p>Das Unternehmen benennt einen Datenschutzbeauftragten, der die Gesamtverantwortung für die Verarbeitung personenbezogener Daten trägt sowie Beschwerden von Nutzern bearbeitet und Schäden behebt.</p>
+<ul>
+    <li>Funktion: Datenschutzbeauftragter von Zaco Labs</li>
+    <li>E-Mail: <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
+</ul>
+
+<h2>14. Dienste Dritter und Ihre eigene Verantwortung</h2>
+<ul>
+    <li>Für Dienste, die von Dritten betrieben werden, etwa über eine Anzeige aufgerufene Websites oder Apps sowie die Kartenanbieter, gelten die Datenschutzerklärungen der jeweiligen Betreiber; das Unternehmen ist für die Verarbeitung personenbezogener Daten in diesen Diensten nicht verantwortlich.</li>
+    <li>Dateien und Bilder, die Sie exportiert oder geteilt haben, kann das Unternehmen nicht mehr verwalten, sobald sie an das von Ihnen gewählte Ziel gelangt sind; für ihre anschließende Verwendung und Verwaltung sind Sie und der Empfänger verantwortlich.</li>
+    <li>Da Ihre Bewegungsaufzeichnungen auf Ihrem Gerät gespeichert werden, obliegt Ihnen die Verwaltung des Geräts, einschließlich der Sperreinstellungen und des Schutzes vor Verlust und Diebstahl. Werden Aufzeichnungen ohne Vorsatz oder Fahrlässigkeit des Unternehmens durch Verlust oder Diebstahl des Geräts, die Nutzung durch andere Personen oder dergleichen für andere einsehbar, ist das Unternehmen hierfür nicht verantwortlich.</li>
+</ul>
+
+<h2>15. Änderungen dieser Datenschutzerklärung</h2>
+<p>Diese Datenschutzerklärung kann aufgrund von Änderungen der Gesetzeslage und der Richtlinien des Dienstes überarbeitet werden. Änderungen werden innerhalb des Dienstes oder auf dieser Seite bekannt gegeben.</p>
+
+<div class="contact">
+    <p>Kontakt: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

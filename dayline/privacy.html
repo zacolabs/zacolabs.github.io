@@ -9,10 +9,17 @@
         var q = new URLSearchParams(location.search);
         var light = (q.get("theme") || "").toLowerCase() === "light";
         if (light) document.documentElement.setAttribute("data-theme", "light");
-        var LANGS = ["ko", "en"];
+        var LANGS = ["ko", "en", "ja", "zh-hans", "zh-hant", "es", "fil", "nl", "da", "de", "ru", "ar", "it", "id", "pt", "pl", "fr", "vi"];
+        var OLD = { kr: "ko", jp: "ja", "in": "id", tl: "fil" };
         function norm(v) {
-            v = (v || "").trim().toLowerCase().replace(/_/g, "-").split("-")[0];
-            if (v === "kr") v = "ko";
+            v = (v || "").trim().toLowerCase().replace(/_/g, "-");
+            if (v === "zh" || v.indexOf("zh-") === 0) {
+                if (v.indexOf("hant") !== -1) return "zh-hant";
+                if (v.indexOf("hans") !== -1) return "zh-hans";
+                return /-(tw|hk|mo)$/.test(v) ? "zh-hant" : "zh-hans";
+            }
+            v = v.split("-")[0];
+            v = OLD[v] || v;
             return LANGS.indexOf(v) !== -1 ? v : null;
         }
         var wanted = [q.get("lang")].concat(navigator.languages || [navigator.language]);
@@ -76,6 +83,8 @@ ol li { margin-bottom: 8px; }
 .langnav strong { color: var(--fg); font-weight: 600; }
 .contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
 a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
 
 /* 오픈소스 라이선스 */
 .lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
@@ -84,12 +93,14 @@ a { color: var(--link); text-decoration: none; }
 .lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
 .lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
 .notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
 </style>
 </head>
 <body>
 <div class="container">
     <h1>Dayline Privacy Policy</h1>
-    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <strong>English</strong></p>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <strong>English</strong> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <a href="privacy.zh-hant.html">繁體中文</a> · <a href="privacy.es.html">Español</a> · <a href="privacy.fil.html">Filipino</a> · <a href="privacy.nl.html">Nederlands</a> · <a href="privacy.da.html">Dansk</a> · <a href="privacy.de.html">Deutsch</a> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <a href="privacy.pl.html">Polski</a> · <a href="privacy.fr.html">Français</a> · <a href="privacy.vi.html">Tiếng Việt</a></p>
     <p class="meta">Effective date: October 5, 2026</p>
 
 <p>Zaco Labs ("the Company") values your privacy and complies with applicable laws, including the Personal Information Protection Act of Korea. This Privacy Policy explains how your personal information is collected, used, stored, and destroyed within the Dayline service ("the Service") provided by the Company. This policy applies to both the iOS and Android apps.</p>
@@ -190,7 +201,7 @@ a { color: var(--link); text-decoration: none; }
 <p>Your movement record exists only on your device, so you can view it directly in the app, export it with <strong>Settings &gt; Export records (GPX)</strong>, or delete it with <strong>Settings &gt; Delete all records</strong>.</p>
 
 <h2>10. Collection of Usage Statistics via Analytics Tools</h2>
-<p>To improve Service quality, the Company uses Google Firebase Analytics to collect usage statistics. The information collected concerns usage behavior, such as screen navigation, feature use, app setting values (language, theme, view mode, and the like), whether permissions such as location and motion are allowed, whether the widget is in use, app/device version, and approximate region. It does not include your movement record, such as location (coordinates), the path you travel, or distance and duration, or information that directly identifies you, such as your name or contact details. An identifier that tells installations apart is sent with usage statistics (the anonymous device identifier on iOS, a separate random identifier made for statistics on Android). You can turn usage-statistics collection on or off at any time from <strong>Settings &gt; Send usage statistics</strong> in the app.</p>
+<p>To improve Service quality, the Company uses Google Firebase Analytics to collect usage statistics. The information collected concerns usage behavior, such as screen navigation, feature use, app setting values (language, theme, view mode, and the like), whether permissions such as location and motion are allowed, whether the widget is in use, app/device version, and approximate region. It does not include your movement record, such as location (coordinates), the path you travel, or distance and duration, or information that directly identifies you, such as your name or contact details. An identifier that tells installations apart is sent with usage statistics (the anonymous device identifier on iOS, a separate random identifier made for statistics on Android). You can turn usage-statistics collection on or off at any time from <strong>Settings &gt; Usage statistics</strong> in the app.</p>
 <p>The Company also uses Google Firebase Crashlytics to fix unexpected shutdowns of the app. This collects the device model, OS version, app version, and the records captured when an error occurs; it does not include your movement record. These diagnostics are collected regardless of the usage-statistics setting.</p>
 <p>Google's data processing is subject to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> policy.</p>
 

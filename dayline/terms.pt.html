@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Termos de Uso do Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Termos de Uso do Dayline</h1>
+    <p class="langnav"><a href="terms.ko.html">한국어</a> · <a href="terms.en.html">English</a> · <a href="terms.ja.html">日本語</a> · <a href="terms.zh-hans.html">简体中文</a> · <a href="terms.zh-hant.html">繁體中文</a> · <a href="terms.es.html">Español</a> · <a href="terms.fil.html">Filipino</a> · <a href="terms.nl.html">Nederlands</a> · <a href="terms.da.html">Dansk</a> · <a href="terms.de.html">Deutsch</a> · <a href="terms.ru.html">Русский</a> · <a href="terms.ar.html">العربية</a> · <a href="terms.it.html">Italiano</a> · <a href="terms.id.html">Bahasa Indonesia</a> · <strong>Português</strong> · <a href="terms.pl.html">Polski</a> · <a href="terms.fr.html">Français</a> · <a href="terms.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Data de vigência: 5 de outubro de 2026</p>
+    <p class="meta">Esta é uma tradução fornecida por conveniência. Em caso de divergência, prevalece a versão em coreano.</p>
+
+<h2>Artigo 1 (Finalidade)</h2>
+<p>Estes Termos estabelecem os pontos básicos entre a Zaco Labs ("a Empresa") e os usuários quanto ao uso do Dayline e dos serviços relacionados ("o Serviço") fornecidos pela Empresa, incluindo direitos, obrigações, responsabilidades, condições de uso e procedimentos.</p>
+
+<h2>Artigo 2 (Definições)</h2>
+<ul>
+    <li>"Serviço" significa o aplicativo Dayline fornecido pela Empresa e todos os serviços acessórios, como o registro de deslocamentos, as visualizações em linha e em mapa, o widget da Tela de Início e a exportação de registros.</li>
+    <li>"Usuário" significa a pessoa que utiliza o Serviço fornecido pela Empresa nos termos destes Termos.</li>
+    <li>"Registros" significa as informações, como caminho, distância e meio de deslocamento, que o Serviço cria no aparelho do Usuário, bem como os arquivos e as imagens que o Usuário cria ao exportá-las ou compartilhá-las.</li>
+</ul>
+
+<h2>Artigo 3 (Vigência e alteração dos Termos)</h2>
+<p>Estes Termos entram em vigor quando publicados em uma tela do Serviço ou de outra forma comunicados aos Usuários. A Empresa pode alterar estes Termos desde que não viole a legislação aplicável, incluindo a Lei de Regulamentação de Termos e Condições. Ao alterar os Termos, a Empresa anunciará dentro do Serviço, antes da data de vigência, essa data e o motivo da alteração, e anunciará com antecedência suficiente as alterações desfavoráveis ou substanciais para os Usuários. Considera-se que o Usuário que continuar a utilizar o Serviço sem manifestar recusa expressa antes da data de vigência concordou com os Termos alterados. O Usuário tem o direito de recusar os Termos alterados e, caso não concorde, pode deixar de usar o Serviço e rescindir o contrato.</p>
+
+<h2>Artigo 4 (Prestação e alteração do Serviço)</h2>
+<p>A Empresa presta os seguintes serviços.</p>
+<ul>
+    <li>Registro automático do caminho, da distância e dos meios de deslocamento do dia, usando as informações de localização e de movimento do aparelho</li>
+    <li>Exibição dos Registros como uma linha e em um mapa</li>
+    <li>Consulta, por data, dos Registros de dias anteriores</li>
+    <li>Exibição dos Registros de hoje em um widget da Tela de Início</li>
+    <li>Exportação dos Registros como arquivo GPX ou compartilhamento como imagem</li>
+    <li>Outros serviços definidos pela Empresa</li>
+</ul>
+<p>A Empresa pode alterar todo ou parte do Serviço quando exigido por motivos operacionais ou técnicos.</p>
+
+<h2>Artigo 5 (Suspensão e atualização do Serviço)</h2>
+<ol>
+    <li>A Empresa pode interromper, de forma temporária ou permanente, a prestação de todo ou parte do Serviço em caso de manutenção, substituição ou falha de equipamentos de informação e comunicação, perda de comunicação ou outros motivos operacionais ou técnicos relevantes. Nesse caso, a Empresa avisará os Usuários antes ou depois da suspensão.</li>
+    <li>Para manter a qualidade e a segurança do Serviço, a Empresa pode exigir que o aplicativo seja atualizado para a versão mais recente, e o uso do aplicativo pode ficar restrito até que a atualização seja feita.</li>
+    <li>Como os Registros ficam armazenados no aparelho do Usuário, solicita-se que o Usuário guarde com antecedência, por meio da exportação, os Registros de que precisar.</li>
+</ol>
+
+<h2>Artigo 6 (Obrigações do Usuário)</h2>
+<p>O Usuário não deve praticar nenhum dos atos a seguir.</p>
+<ul>
+    <li>Registrar ou rastrear a localização ou os deslocamentos de outra pessoa sem o consentimento dela, por exemplo instalando o Serviço no aparelho dessa pessoa</li>
+    <li>Operar o aplicativo enquanto dirige ou em situações que exijam atenção</li>
+    <li>Usar o Serviço em descumprimento de restrição em locais onde o registro de localização ou o uso de aparelhos eletrônicos seja restrito por lei ou pelas regras do local</li>
+    <li>Usar o Serviço para praticar atos contrários à lei ou à ordem pública e aos bons costumes</li>
+    <li>Adulterar o Serviço ou submetê-lo a engenharia reversa, interferir intencionalmente na sua operação ou prejudicar seu funcionamento estável</li>
+    <li>Violar os direitos de propriedade intelectual da Empresa ou de terceiros</li>
+</ul>
+
+<h2>Artigo 7 (Direitos e responsabilidade sobre os Registros)</h2>
+<p>Os direitos sobre o que a Empresa fornece, como o aplicativo e seu design, nome e ícone, pertencem à Empresa ou ao legítimo titular. Os Registros ficam armazenados apenas no aparelho do Usuário, e a Empresa não os acessa. Os direitos e a responsabilidade sobre os Registros são do próprio Usuário, que também é responsável pela gestão dos Registros que exportar ou compartilhar.</p>
+
+<h2>Artigo 8 (Publicidade)</h2>
+<p>O Serviço é fornecido gratuitamente, e anúncios são exibidos no aplicativo. A Empresa pode alterar a exibição ou não de anúncios, bem como sua posição e seu formato. O conteúdo dos anúncios e os serviços acessados por meio deles são de responsabilidade do respectivo anunciante, e a Empresa não participa de transações ou litígios entre o Usuário e o anunciante.</p>
+
+<h2>Artigo 9 (Serviços de terceiros)</h2>
+<p>O Serviço utiliza serviços fornecidos por terceiros, como mapas (Mapas da Apple, Google Maps), publicidade (Google AdMob) e lojas de aplicativos. O conteúdo, a exatidão e a disponibilidade desses serviços são definidos pelos respectivos fornecedores, e aplicam-se os termos e as políticas desses fornecedores.</p>
+
+<h2>Artigo 10 (Isenção de responsabilidade)</h2>
+<ol>
+    <li>A Empresa não responde por falhas no uso do Serviço causadas por motivos alheios ao seu controle, como caso fortuito ou força maior, motivos imputáveis ao Usuário ou falhas ou mudanças de política de serviços de terceiros (lojas de aplicativos, operadoras, fabricantes de sistemas operacionais e de aparelhos, provedores de mapas, de publicidade e de servidores, e afins).</li>
+    <li>O Serviço é fornecido "no estado em que se encontra". A Empresa não garante que o Serviço será ininterrupto ou livre de erros, nem que seja adequado a uma finalidade específica.</li>
+    <li>O caminho, a distância, a duração e o meio de deslocamento são valores estimados pelos sensores do aparelho e podem diferir da realidade. O Usuário não deve usar os Registros para fins que exijam exatidão, como topografia, navegação, comprovação de atividade física, comprovação de frequência ao trabalho ou de viagens a trabalho ou prova jurídica, e a Empresa não responde por quaisquer danos diretos, indiretos ou consequentes decorrentes de omissões ou imprecisões nos Registros, salvo dolo ou culpa grave da Empresa.</li>
+    <li>O registro automático é afetado pelas configurações do aparelho do Usuário, pelas configurações de permissões, pelas políticas do sistema operacional, pelo estado da bateria e da economia de energia, pelo encerramento forçado do aplicativo, pela reinicialização do aparelho e pelo ambiente ao redor, como ambientes internos, subterrâneos ou entre prédios altos; por isso, o registro pode não ser iniciado ou ser interrompido no meio. A Empresa não garante que todos os deslocamentos sejam registrados sem omissões.</li>
+    <li>O Serviço não é uma ferramenta para segurança ou situações de emergência. O Usuário não deve depender do Serviço para finalidades que exijam a confirmação de uma localização, como resgate, proteção ou vigilância.</li>
+    <li>O Usuário não deve operar o aplicativo enquanto dirige nem enquanto se desloca sem prestar atenção ao redor, e a Empresa não responde por acidentes, lesões e afins ocorridos durante o uso do Serviço, salvo dolo ou culpa grave da Empresa.</li>
+    <li>A distância, a duração, o meio de deslocamento e demais dados exibidos nos Registros não constituem aconselhamento sobre saúde, medicina ou exercícios físicos, e o Usuário não deve usá-los como base para decisões dessa natureza.</li>
+    <li>O registro automático usa o recurso de localização durante os deslocamentos e, por isso, consome bateria; os mapas, os anúncios e afins usam conexão de dados. O consumo de bateria e as tarifas de comunicação daí decorrentes ficam por conta do Usuário.</li>
+    <li>Os Registros ficam armazenados no aparelho do Usuário e a Empresa não os guarda; por isso, a Empresa não pode recuperar Registros perdidos por exclusão do aplicativo, troca de aparelho, redefinição do aparelho, erros ou causas semelhantes. A Empresa não responde por essa perda de dados, e o Usuário deve fazer backup por conta própria, por meio da exportação, quando necessário.</li>
+    <li>Se o Usuário perder o aparelho ou outra pessoa o utilizar, os Registros podem ser expostos. O bloqueio e a segurança do aparelho são de responsabilidade do Usuário, e a Empresa não responde pelos danos daí decorrentes, salvo dolo ou culpa grave da Empresa.</li>
+    <li>Depois que os Registros exportados ou compartilhados pelo Usuário são entregues ao destino escolhido pelo Usuário, a Empresa não tem como gerenciá-los, e a Empresa não responde por danos decorrentes de seu uso, vazamento ou redistribuição posteriores.</li>
+    <li>Os mapas e os nomes de lugares, as vias, as imagens de satélite e demais elementos exibidos sobre eles são fornecidos pelo provedor de mapas, e a Empresa não garante sua exatidão nem sua atualidade.</li>
+    <li>A Empresa não tem obrigação de intervir em litígios surgidos, por intermédio do Serviço, entre Usuários ou entre um Usuário e terceiros, e não é responsável por indenizar os danos daí decorrentes, salvo dolo ou culpa grave da Empresa.</li>
+    <li>Como o Serviço é fornecido gratuitamente, a Empresa não assume responsabilidade pecuniária em relação ao Serviço, inclusive por sua alteração ou interrupção, salvo dolo ou culpa grave da Empresa.</li>
+    <li>Nada neste Artigo limita ou exclui a responsabilidade da Empresa que, nos termos da legislação aplicável, não possa ser limitada ou excluída.</li>
+</ol>
+
+<h2>Artigo 11 (Responsabilidade do Usuário por indenização)</h2>
+<p>Caso a Empresa sofra danos porque o Usuário violou estes Termos ou a legislação aplicável, o Usuário deverá indenizar a Empresa por esses danos. Caso a Empresa receba de terceiros um pedido de indenização ou outra contestação em razão de violação cometida pelo Usuário, o Usuário deverá, sob sua própria responsabilidade e às suas custas, manter a Empresa isenta de responsabilidade.</p>
+
+<h2>Artigo 12 (Lei aplicável e foro)</h2>
+<p>Estes Termos são regidos e interpretados conforme as leis da República da Coreia. Em caso de litígio relacionado ao uso do Serviço, o foro competente é determinado conforme o Código de Processo Civil.</p>
+
+<div class="contact">
+    <p>Contato: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

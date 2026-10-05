@@ -63,6 +63,8 @@ ol li { margin-bottom: 8px; }
 .langnav strong { color: var(--fg); font-weight: 600; }
 .contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
 a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
 
 /* 오픈소스 라이선스 */
 .lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
@@ -71,11 +73,13 @@ a { color: var(--link); text-decoration: none; }
 .lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
 .lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
 .notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
 </style>
 </head>
 <body>
 <div class="container">
-    <p class="langnav"><a href="licenses.ko.html">한국어</a> · <strong>English</strong></p>
+    <p class="langnav"><a href="licenses.ko.html">한국어</a> · <strong>English</strong> · <a href="licenses.ja.html">日本語</a> · <a href="licenses.zh-hans.html">简体中文</a> · <a href="licenses.zh-hant.html">繁體中文</a> · <a href="licenses.es.html">Español</a> · <a href="licenses.fil.html">Filipino</a> · <a href="licenses.nl.html">Nederlands</a> · <a href="licenses.da.html">Dansk</a> · <a href="licenses.de.html">Deutsch</a> · <a href="licenses.ru.html">Русский</a> · <a href="licenses.ar.html">العربية</a> · <a href="licenses.it.html">Italiano</a> · <a href="licenses.id.html">Bahasa Indonesia</a> · <a href="licenses.pt.html">Português</a> · <a href="licenses.pl.html">Polski</a> · <a href="licenses.fr.html">Français</a> · <a href="licenses.vi.html">Tiếng Việt</a></p>
     <p>Dayline uses the following open source software. The rights to each remain with its copyright holder.</p>
 
     <h2>Android</h2>

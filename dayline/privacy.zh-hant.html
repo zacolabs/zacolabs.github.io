@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dayline 隱私權政策</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Dayline 隱私權政策</h1>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <a href="privacy.en.html">English</a> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <strong>繁體中文</strong> · <a href="privacy.es.html">Español</a> · <a href="privacy.fil.html">Filipino</a> · <a href="privacy.nl.html">Nederlands</a> · <a href="privacy.da.html">Dansk</a> · <a href="privacy.de.html">Deutsch</a> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <a href="privacy.pl.html">Polski</a> · <a href="privacy.fr.html">Français</a> · <a href="privacy.vi.html">Tiếng Việt</a></p>
+    <p class="meta">生效日期：2026年10月5日</p>
+
+<p>Zaco Labs（以下稱「本公司」）重視使用者之個人資料，並遵守《個人資料保護法》等相關法令。本隱私權政策說明使用者之個人資料於本公司提供之 Dayline 服務（以下稱「本服務」）中如何被蒐集、使用、保管與銷毀。本政策同時適用於 iOS 與 Android 應用程式。</p>
+
+<h2>1. 蒐集之個人資料項目</h2>
+<p>本公司未設註冊程序即提供本服務，不會於應用程式中要求使用者輸入姓名、電話號碼等可直接識別個人之資料。為提供本服務，蒐集下列資料。</p>
+<ul>
+    <li>匿名裝置識別碼（userKey）：應用程式將裝置及應用程式安裝資訊（Android 為裝置識別值，iOS 為應用程式購買交易識別值）經單向轉換所產生之識別碼；無法取得上述資訊時，則使用隨機產生之值。不會以姓名、聯絡方式等特定使用者身分。為使重新安裝應用程式後仍可使用同一識別碼，iOS 將此識別碼保存於裝置之鑰匙圈，Android 則保存於 Google Play services Block Store。</li>
+    <li>裝置與應用程式資訊：作業系統種類與版本、裝置型號、應用程式版本、應用程式語言、國家（裝置之地區設定值，並非位置資訊）、首次及最近使用時間</li>
+    <li>廣告識別碼（行為資料）：iOS 之 IDFA 與 Android 之廣告 ID（ADID）（參見第 3 項）</li>
+    <li>提供廣告過程中由 Google 蒐集之資料：IP 位址及據此推測之概略地區、觀看或點按廣告之紀錄等（參見第 3 項）</li>
+    <li>使用統計與應用程式錯誤診斷資料：畫面切換與功能使用紀錄、應用程式設定值、權限是否已允許、裝置型號、作業系統版本、應用程式版本、發生錯誤時之紀錄（參見第 10 項）</li>
+    <li>客戶詢問時：使用者寄件所用之電子郵件地址與詢問內容</li>
+</ul>
+<p>下列資料僅儲存於使用者裝置中，不會傳輸至本公司伺服器。</p>
+<ul>
+    <li>移動紀錄：位置（座標）與時間、移動路線、移動距離與時間長度、停留地點、移動方式（步行、跑步、自行車、車輛）</li>
+    <li>用於分辨移動方式之裝置動作與活動資料</li>
+</ul>
+
+<h2>2. 蒐集與使用目的</h2>
+<ul>
+    <li>記錄並顯示一天之移動路線、距離與移動方式（僅於裝置內處理）</li>
+    <li>透過匿名識別碼管理服務使用情形，並提供是否顯示廣告、必要更新通知等應用程式設定</li>
+    <li>提供個人化廣告、衡量廣告成效並防止廣告詐欺</li>
+    <li>改善本服務、進行統計分析並修正應用程式錯誤</li>
+    <li>回應客戶詢問</li>
+</ul>
+
+<h2>3. 廣告識別碼（行為資料）之蒐集與使用</h2>
+<p>為提供個人化廣告並改善本服務，本公司使用第三方廣告平台，於此過程中可能蒐集廣告識別碼。應用程式不會將移動紀錄傳送予廣告平台。</p>
+<ol>
+    <li>蒐集之行為資料
+        <ul>
+            <li>iOS：IDFA（Identifier for Advertisers）</li>
+            <li>Android：廣告 ID（ADID，Google Advertising ID）</li>
+        </ul>
+    </li>
+    <li>蒐集與使用目的
+        <ul>
+            <li>提供基於興趣之個人化（指定目標）廣告</li>
+            <li>分析廣告曝光與點擊成效並防止廣告詐欺（無效流量）</li>
+        </ul>
+    </li>
+    <li>蒐集方式與第三方服務
+        <ul>
+            <li>透過應用程式內建之行動廣告 SDK 自動蒐集並傳輸。</li>
+            <li>服務：Google AdMob（Google LLC）。Google 之資料處理適用 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>。</li>
+        </ul>
+    </li>
+    <li>使用者之拒絕權及其行使方式<br />
+        使用者得以下列方式拒絕蒐集用於個人化廣告之識別碼。即使拒絕，仍可能顯示非個人化（一般）廣告。
+        <ul>
+            <li>iOS：於首次啟動應用程式時拒絕追蹤要求，或前往 設定 &gt; 隱私權與安全性 &gt; 追蹤，關閉「允許 App 要求追蹤」或關閉特定應用程式之追蹤。</li>
+            <li>Android：前往 設定 &gt; Google &gt; 廣告，選擇「刪除廣告 ID」或「關閉廣告個人化功能」。</li>
+            <li>歐洲經濟區（EEA）、英國等需取得廣告同意之地區的使用者，得於首次啟動應用程式時顯示之同意畫面中選擇。於 iOS 應用程式中，得隨時於<strong>設定 &gt; 廣告隱私權</strong>選單中變更。</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>4. 位置資訊與移動紀錄之處理</h2>
+<ul>
+    <li>位置與動作資訊僅用於產生移動紀錄，於裝置內處理並僅儲存於裝置中。不會傳輸至本公司伺服器，亦不包含於使用統計中。</li>
+    <li>主畫面小工具係依儲存於裝置中之紀錄繪製，不會將紀錄傳送至裝置之外。</li>
+    <li>於顯示地圖之畫面中，地圖提供者（iOS 為 Apple 地圖，Android 為 Google 地圖）會自地圖提供者之伺服器取得畫面所示區域之地圖資料。地圖提供者之資料處理適用 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>與 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>。</li>
+    <li>GPX 檔案之匯出與圖片之分享，僅於使用者親自選擇時進行，且僅傳送至使用者所選之對象。</li>
+</ul>
+
+<h2>5. 保存與使用期間</h2>
+<p>本公司於使用者使用本服務期間保存個人資料，並於蒐集與使用目的達成或使用者要求刪除時不遲延地銷毀。僅刪除應用程式，本公司無從得知，如欲刪除伺服器上留存之資料，請依第 9 項所述方式提出要求。惟相關法令要求保存者，於該法令所定期間內保存。</p>
+<p>僅儲存於裝置中之資料（第 1 項），於使用者刪除前將留存於裝置中。得透過應用程式之<strong>設定 &gt; 刪除所有紀錄</strong>全部刪除，刪除應用程式時亦將一併自裝置刪除。本公司未持有移動紀錄，故無法代為刪除或復原。</p>
+<p>Google 所蒐集資料之保存期間依 Google 之資料保留政策。</p>
+
+<h2>6. 提供予第三人</h2>
+<p>除法令另有規定，或偵查機關依法定程序與方式因偵查目的提出要求之情形外，本公司不會於本政策所定範圍外將使用者之個人資料提供予第三人。</p>
+
+<h2>7. 個人資料處理之委外</h2>
+<p>為順利提供本服務，本公司將下列個人資料處理業務委外處理：</p>
+<ul>
+    <li>Vercel Inc.：伺服器營運（伺服器位置：大韓民國首爾）</li>
+    <li>Supabase Inc.：資料庫營運（伺服器位置：大韓民國首爾）</li>
+    <li>Google LLC：提供個人化廣告及管理廣告同意（Google AdMob、Google User Messaging Platform）、使用統計分析（Google Firebase Analytics）、應用程式錯誤診斷（Google Firebase Crashlytics）、保管匿名裝置識別碼（Android，Google Play services Block Store）</li>
+</ul>
+
+<h2>8. 個人資料之跨境傳輸</h2>
+<p>為進行使用統計分析、應用程式錯誤診斷及提供廣告，本公司依下列方式將個人資料傳輸至境外。</p>
+<ul>
+    <li>接收者：Google LLC（聯絡方式：<a href="https://support.google.com/policies/contact/general_privacy_form">Google 隱私權詢問</a>）</li>
+    <li>傳輸國家：美國等 Google 營運資料中心之國家</li>
+    <li>傳輸項目：廣告識別碼、IP 位址、廣告曝光與點擊紀錄、使用統計、應用程式錯誤診斷資料、裝置型號、作業系統版本、應用程式版本</li>
+    <li>傳輸時間與方式：使用應用程式時，透過應用程式內建之 SDK 經網路隨時傳送</li>
+    <li>使用目的與保存期間：第 3 項與第 10 項所述目的；保存期間依 Google 之資料保留政策</li>
+    <li>拒絕方式及效果：得透過第 3 項與第 10 項所述設定，拒絕傳輸用於個人化廣告之廣告識別碼以及使用統計。顯示非個人化廣告所需之資料與應用程式錯誤診斷資料，於使用應用程式期間將會傳送。</li>
+</ul>
+
+<h2>9. 使用者之權利及其行使方式</h2>
+<p>使用者得隨時要求查閱、更正、刪除其個人資料或停止處理。以第 13 項所載電子郵件提出要求後，本公司將依相關法令不遲延地處理。本公司未持有姓名、聯絡方式等可直接識別使用者之資料，故為處理要求，得請使用者提供確認該裝置所需之資訊。</p>
+<p>移動紀錄僅存在於使用者裝置中，故得於應用程式中直接查閱，並得透過<strong>設定 &gt; 匯出紀錄（GPX）</strong>匯出，或透過<strong>設定 &gt; 刪除所有紀錄</strong>刪除。</p>
+
+<h2>10. 透過分析工具蒐集使用統計</h2>
+<p>為提升服務品質，本公司使用 Google Firebase Analytics 蒐集使用統計。所蒐集之資料為畫面切換、功能使用、應用程式設定值（語言、主題、檢視模式等）、位置與動作等權限是否已允許、是否使用小工具、應用程式／裝置版本、概略地區等使用行為相關資料。不蒐集位置（座標）、移動路線、移動距離與時間長度等移動紀錄，亦不蒐集姓名、聯絡方式等可直接識別個人之資料。用以區分各次安裝之識別碼（iOS 為匿名裝置識別碼，Android 為專為統計另行產生之隨機識別碼）將隨使用統計一併傳送。使用者得隨時於應用程式之<strong>設定 &gt; 使用統計</strong>選單中開啟或關閉使用統計之蒐集。</p>
+<p>此外，為修正應用程式非預期關閉之問題，本公司使用 Google Firebase Crashlytics。此時將蒐集裝置型號、作業系統版本、應用程式版本及發生錯誤時之紀錄，不包含移動紀錄。此診斷資料之蒐集與使用統計設定無關。</p>
+<p>Google 之資料處理適用 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>與 <a href="https://firebase.google.com/support/privacy">Firebase 隱私權與安全性</a>政策。</p>
+
+<h2>11. 應用程式存取權限</h2>
+<p>應用程式為下列功能使用裝置存取權限。選擇性權限即使不允許，仍可使用該功能以外之服務。</p>
+<ul>
+    <li>位置（必要）：用於記錄使用者走過之路線。如欲於未開啟應用程式時亦進行記錄，需選擇「永遠」（iOS）或「一律允許」（Android）。</li>
+    <li>運動與健身（iOS）／體能活動（Android）（選擇性）：用於分辨步行、跑步、騎自行車與車輛移動。</li>
+    <li>通知（Android，選擇性）：用於在記錄移動期間顯示告知正在記錄之通知。不會傳送其他通知。</li>
+    <li>加入照片（iOS，選擇性）：僅於將呈現一天之圖片儲存至照片圖庫時使用。應用程式不會讀取照片。</li>
+    <li>允許 App 追蹤（iOS，選擇性）：用於個人化廣告。</li>
+</ul>
+<p>存取權限得隨時於裝置之「設定」中變更或撤回。</p>
+
+<h2>12. 安全維護措施</h2>
+<p>為安全處理個人資料，本公司實施存取權限管理、傳輸區段加密、存取控制等管理與技術保護措施。移動紀錄不保存於本公司伺服器，而係儲存於使用者裝置中，並由裝置鎖定等裝置安全功能加以保護。</p>
+
+<h2>13. 個人資料保護負責人</h2>
+<p>本公司指定下列個人資料保護負責人，總理個人資料處理事務，並處理使用者申訴與損害救濟。</p>
+<ul>
+    <li>職務：Zaco Labs 個人資料保護負責人</li>
+    <li>電子郵件：<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
+</ul>
+
+<h2>14. 第三方服務與使用者之管理責任</h2>
+<ul>
+    <li>經由廣告前往之網站或應用程式、地圖提供者等由第三方營運之服務，適用該業者之隱私權政策，本公司對於該等服務中所為之個人資料處理不負責任。</li>
+    <li>使用者匯出或分享之檔案與圖片，於傳送至使用者所選對象後，本公司即無法管理，其後之使用與管理由使用者及接收者負責。</li>
+    <li>移動紀錄儲存於使用者裝置中，故裝置之鎖定設定、防止遺失或遭竊等裝置管理應由使用者為之。非因本公司之故意或過失，而因裝置遺失、遭竊、他人使用等致紀錄外洩者，本公司不負責任。</li>
+</ul>
+
+<h2>15. 本隱私權政策之變更</h2>
+<p>本隱私權政策得因法令及服務政策之變動而修訂。如有變更，將於本服務內或本頁面公告。</p>
+
+<div class="contact">
+    <p>聯絡： Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

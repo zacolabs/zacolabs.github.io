@@ -1,0 +1,182 @@
+{
+  "ko": {
+    "privacy": "Dayline 개인정보 처리방침",
+    "terms": "Dayline 이용 약관",
+    "licenses": "Dayline 오픈소스 라이선스",
+    "licenses_intro": "Dayline 은 다음의 오픈소스 소프트웨어를 사용합니다. 각 소프트웨어의 권리는 해당 저작권자에게 있습니다.",
+    "licenses_ios": "iOS 앱은 Apple 이 제공하는 프레임워크(SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency 등)를 사용하며, 해당 프레임워크는 Apple Inc. 의 소프트웨어 사용권 계약(SDK License Agreement)에 따릅니다. 지도 데이터는 Apple 지도가 제공합니다. 그 밖에 다음 제3자 소프트웨어를 포함합니다.",
+    "licenses_fonts": "글꼴",
+    "licenses_fonts_intro": "앱에 다음 글꼴을 포함합니다.",
+    "licenses_contact": "문의: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "en": {
+    "privacy": "Dayline Privacy Policy",
+    "terms": "Dayline Terms of Service",
+    "licenses": "Dayline Open Source Licenses",
+    "licenses_intro": "Dayline uses the following open source software. The rights to each remain with its copyright holder.",
+    "licenses_ios": "The iOS app uses frameworks provided by Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency and others), which are subject to the Apple Inc. SDK License Agreement. Map data is provided by Apple Maps. It also includes the following third-party software.",
+    "licenses_fonts": "Fonts",
+    "licenses_fonts_intro": "The apps bundle the following font.",
+    "licenses_contact": "Contact: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "ja": {
+    "privacy": "Dayline プライバシーポリシー",
+    "terms": "Dayline 利用規約",
+    "licenses": "Dayline オープンソースライセンス",
+    "licenses_intro": "Dayline は次のオープンソースソフトウェアを使用しています。各ソフトウェアの権利は当該著作権者に帰属します。",
+    "licenses_ios": "iOS アプリは Apple が提供するフレームワーク(SwiftUI、SwiftData、WidgetKit、MapKit、Core Location、Core Motion、StoreKit、CryptoKit、WebKit、App Tracking Transparency など)を使用しており、これらは Apple Inc. のソフトウェア使用許諾契約(SDK License Agreement)に従います。地図データは Apple マップが提供します。そのほか、次の第三者ソフトウェアを含みます。",
+    "licenses_fonts": "フォント",
+    "licenses_fonts_intro": "アプリに次のフォントを同梱しています。",
+    "licenses_contact": "お問い合わせ: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "zh-hans": {
+    "privacy": "Dayline 隐私政策",
+    "terms": "Dayline 使用条款",
+    "licenses": "Dayline 开源许可",
+    "licenses_intro": "Dayline 使用下列开源软件。各软件的权利归其著作权人所有。",
+    "licenses_ios": "iOS 应用使用 Apple 提供的框架（SwiftUI、SwiftData、WidgetKit、MapKit、Core Location、Core Motion、StoreKit、CryptoKit、WebKit、App Tracking Transparency 等），这些框架适用 Apple Inc. 的软件许可协议（SDK License Agreement）。地图数据由 Apple 地图提供。此外还包含下列第三方软件。",
+    "licenses_fonts": "字体",
+    "licenses_fonts_intro": "应用中包含下列字体。",
+    "licenses_contact": "咨询： Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "zh-hant": {
+    "privacy": "Dayline 隱私權政策",
+    "terms": "Dayline 使用條款",
+    "licenses": "Dayline 開放原始碼授權",
+    "licenses_intro": "Dayline 使用下列開放原始碼軟體。各軟體之權利歸其著作權人所有。",
+    "licenses_ios": "iOS 應用程式使用 Apple 提供之框架（SwiftUI、SwiftData、WidgetKit、MapKit、Core Location、Core Motion、StoreKit、CryptoKit、WebKit、App Tracking Transparency 等），該等框架適用 Apple Inc. 之軟體授權合約（SDK License Agreement）。地圖資料由 Apple 地圖提供。此外尚包含下列第三方軟體。",
+    "licenses_fonts": "字型",
+    "licenses_fonts_intro": "應用程式中包含下列字型。",
+    "licenses_contact": "聯絡： Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "es": {
+    "privacy": "Política de privacidad de Dayline",
+    "terms": "Condiciones de uso de Dayline",
+    "licenses": "Licencias de código abierto de Dayline",
+    "licenses_intro": "Dayline utiliza el siguiente software de código abierto. Los derechos de cada uno corresponden a su titular.",
+    "licenses_ios": "La aplicación de iOS utiliza marcos de trabajo facilitados por Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency y otros), sujetos al Acuerdo de licencia del SDK de Apple Inc. Los datos de los mapas los proporciona Apple Maps. También incluye el siguiente software de terceros.",
+    "licenses_fonts": "Tipografías",
+    "licenses_fonts_intro": "Las aplicaciones incluyen la siguiente tipografía.",
+    "licenses_contact": "Contacto: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "fil": {
+    "privacy": "Patakaran sa Privacy ng Dayline",
+    "terms": "Mga Tuntunin ng Paggamit ng Dayline",
+    "licenses": "Mga Open Source License ng Dayline",
+    "licenses_intro": "Gumagamit ang Dayline ng mga sumusunod na open source software. Ang mga karapatan sa bawat isa ay nananatili sa may hawak ng copyright nito.",
+    "licenses_ios": "Gumagamit ang iOS app ng mga framework na ibinibigay ng Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency at iba pa), na saklaw ng SDK License Agreement ng Apple Inc. Ang data ng mapa ay ibinibigay ng Apple Maps. Kasama rin dito ang mga sumusunod na software ng ikatlong partido.",
+    "licenses_fonts": "Mga Font",
+    "licenses_fonts_intro": "Kasama sa mga app ang sumusunod na font.",
+    "licenses_contact": "Contact: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "nl": {
+    "privacy": "Privacybeleid van Dayline",
+    "terms": "Gebruiksvoorwaarden van Dayline",
+    "licenses": "Opensourcelicenties van Dayline",
+    "licenses_intro": "Dayline gebruikt de volgende opensourcesoftware. De rechten daarop blijven bij de betreffende rechthebbende.",
+    "licenses_ios": "De iOS-app gebruikt frameworks van Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency en andere), die vallen onder de SDK-licentieovereenkomst van Apple Inc. De kaartgegevens worden geleverd door Apple Kaarten. Daarnaast bevat de app de volgende software van derden.",
+    "licenses_fonts": "Lettertypen",
+    "licenses_fonts_intro": "De apps bevatten het volgende lettertype.",
+    "licenses_contact": "Contact: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "da": {
+    "privacy": "Privatlivspolitik for Dayline",
+    "terms": "Vilkår for brug af Dayline",
+    "licenses": "Open source-licenser for Dayline",
+    "licenses_intro": "Dayline bruger følgende open source-software. Rettighederne til hver af dem tilhører den pågældende rettighedshaver.",
+    "licenses_ios": "iOS-appen bruger frameworks fra Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency m.fl.), som er omfattet af Apple Inc.'s SDK-licensaftale. Kortdata leveres af Apple Kort. Den indeholder desuden følgende tredjepartssoftware.",
+    "licenses_fonts": "Skrifttyper",
+    "licenses_fonts_intro": "Apperne indeholder følgende skrifttype.",
+    "licenses_contact": "Kontakt: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "de": {
+    "privacy": "Datenschutzerklärung von Dayline",
+    "terms": "Nutzungsbedingungen von Dayline",
+    "licenses": "Open-Source-Lizenzen von Dayline",
+    "licenses_intro": "Dayline verwendet die folgende Open-Source-Software. Die Rechte daran verbleiben beim jeweiligen Rechteinhaber.",
+    "licenses_ios": "Die iOS-App verwendet von Apple bereitgestellte Frameworks (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency und weitere), die dem SDK-Lizenzvertrag von Apple Inc. unterliegen. Die Kartendaten werden von Apple Karten bereitgestellt. Zusätzlich enthält sie die folgende Software von Dritten.",
+    "licenses_fonts": "Schriften",
+    "licenses_fonts_intro": "Die Apps enthalten die folgende Schrift.",
+    "licenses_contact": "Kontakt: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "ru": {
+    "privacy": "Политика конфиденциальности Dayline",
+    "terms": "Условия использования Dayline",
+    "licenses": "Лицензии открытого ПО Dayline",
+    "licenses_intro": "Dayline использует следующее программное обеспечение с открытым исходным кодом. Права на каждое из них принадлежат соответствующему правообладателю.",
+    "licenses_ios": "Приложение для iOS использует фреймворки, предоставляемые Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency и другие), на которые распространяется лицензионное соглашение Apple Inc. на SDK. Картографические данные предоставляет сервис «Карты Apple». Кроме того, оно включает следующее стороннее программное обеспечение.",
+    "licenses_fonts": "Шрифты",
+    "licenses_fonts_intro": "В приложения включён следующий шрифт.",
+    "licenses_contact": "Контакты: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "ar": {
+    "privacy": "سياسة خصوصية Dayline",
+    "terms": "شروط استخدام Dayline",
+    "licenses": "تراخيص المصادر المفتوحة في Dayline",
+    "licenses_intro": "يستخدم Dayline البرمجيات مفتوحة المصدر التالية، وتظل حقوق كل منها لمالك حقوق النشر الخاص به.",
+    "licenses_ios": "يستخدم تطبيق iOS أُطر عمل تقدمها Apple (SwiftUI، SwiftData، WidgetKit، MapKit، Core Location، Core Motion، StoreKit، CryptoKit، WebKit، App Tracking Transparency وغيرها)، وهي تخضع لاتفاقية ترخيص SDK من Apple Inc. وبيانات الخرائط تقدمها «خرائط Apple». كما يتضمن البرمجيات التالية من أطراف ثالثة.",
+    "licenses_fonts": "الخطوط",
+    "licenses_fonts_intro": "يتضمن التطبيقان الخط التالي.",
+    "licenses_contact": "للتواصل: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "it": {
+    "privacy": "Informativa sulla privacy di Dayline",
+    "terms": "Condizioni d'uso di Dayline",
+    "licenses": "Licenze open source di Dayline",
+    "licenses_intro": "Dayline utilizza il seguente software open source. I diritti su ciascuno restano ai rispettivi titolari.",
+    "licenses_ios": "L'app iOS utilizza framework forniti da Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency e altri), soggetti al contratto di licenza SDK di Apple Inc. I dati delle mappe sono forniti da Mappe di Apple. Include inoltre il seguente software di terze parti.",
+    "licenses_fonts": "Caratteri",
+    "licenses_fonts_intro": "Le app includono il seguente carattere.",
+    "licenses_contact": "Contatti: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "id": {
+    "privacy": "Kebijakan Privasi Dayline",
+    "terms": "Ketentuan Penggunaan Dayline",
+    "licenses": "Lisensi Sumber Terbuka Dayline",
+    "licenses_intro": "Dayline menggunakan perangkat lunak sumber terbuka berikut. Hak atas masing-masing tetap berada pada pemegang hak ciptanya.",
+    "licenses_ios": "Aplikasi iOS menggunakan framework yang disediakan Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency, dan lainnya) yang tunduk pada Perjanjian Lisensi SDK Apple Inc. Data peta disediakan oleh Apple Maps. Aplikasi ini juga menyertakan perangkat lunak pihak ketiga berikut.",
+    "licenses_fonts": "Fon",
+    "licenses_fonts_intro": "Aplikasi menyertakan fon berikut.",
+    "licenses_contact": "Kontak: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "pt": {
+    "privacy": "Política de Privacidade do Dayline",
+    "terms": "Termos de Uso do Dayline",
+    "licenses": "Licenças de código aberto do Dayline",
+    "licenses_intro": "O Dayline usa os seguintes softwares de código aberto. Os direitos de cada um permanecem com seu titular.",
+    "licenses_ios": "O aplicativo iOS usa frameworks fornecidos pela Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency e outros), sujeitos ao Contrato de Licença do SDK da Apple Inc. Os dados de mapa são fornecidos pelo Apple Maps. Também inclui os seguintes softwares de terceiros.",
+    "licenses_fonts": "Fontes",
+    "licenses_fonts_intro": "Os aplicativos incluem a seguinte fonte.",
+    "licenses_contact": "Contato: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "pl": {
+    "privacy": "Polityka prywatności Dayline",
+    "terms": "Regulamin Dayline",
+    "licenses": "Licencje open source Dayline",
+    "licenses_intro": "Dayline korzysta z poniższego oprogramowania open source. Prawa do każdego z nich pozostają przy właścicielu praw autorskich.",
+    "licenses_ios": "Aplikacja na iOS korzysta z frameworków udostępnianych przez Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency i inne), które podlegają umowie licencyjnej SDK firmy Apple Inc. Dane map dostarcza usługa Mapy Apple. Zawiera także poniższe oprogramowanie podmiotów trzecich.",
+    "licenses_fonts": "Kroje pisma",
+    "licenses_fonts_intro": "Aplikacje zawierają poniższy krój pisma.",
+    "licenses_contact": "Kontakt: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "fr": {
+    "privacy": "Politique de confidentialité de Dayline",
+    "terms": "Conditions d'utilisation de Dayline",
+    "licenses": "Licences open source de Dayline",
+    "licenses_intro": "Dayline utilise les logiciels open source suivants. Les droits sur chacun d'eux appartiennent à leur titulaire.",
+    "licenses_ios": "L'application iOS utilise des frameworks fournis par Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency et d'autres), soumis au contrat de licence du SDK d'Apple Inc. Les données cartographiques sont fournies par Apple Plans. Elle inclut également les logiciels tiers suivants.",
+    "licenses_fonts": "Polices",
+    "licenses_fonts_intro": "Les applications intègrent la police suivante.",
+    "licenses_contact": "Contact : Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  },
+  "vi": {
+    "privacy": "Chính sách quyền riêng tư của Dayline",
+    "terms": "Điều khoản sử dụng Dayline",
+    "licenses": "Giấy phép nguồn mở của Dayline",
+    "licenses_intro": "Dayline sử dụng các phần mềm nguồn mở sau. Quyền đối với từng phần mềm thuộc về chủ sở hữu bản quyền tương ứng.",
+    "licenses_ios": "Ứng dụng iOS sử dụng các framework do Apple cung cấp (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency và những framework khác), tuân theo Thỏa thuận cấp phép SDK của Apple Inc. Dữ liệu bản đồ do Apple Maps cung cấp. Ứng dụng cũng bao gồm các phần mềm bên thứ ba sau.",
+    "licenses_fonts": "Phông chữ",
+    "licenses_fonts_intro": "Ứng dụng có kèm phông chữ sau.",
+    "licenses_contact": "Liên hệ: Zaco Labs (<a href=\"mailto:zaco.labs@gmail.com\">zaco.labs@gmail.com</a>)"
+  }
+}

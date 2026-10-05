@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gebruiksvoorwaarden van Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Gebruiksvoorwaarden van Dayline</h1>
+    <p class="langnav"><a href="terms.ko.html">한국어</a> · <a href="terms.en.html">English</a> · <a href="terms.ja.html">日本語</a> · <a href="terms.zh-hans.html">简体中文</a> · <a href="terms.zh-hant.html">繁體中文</a> · <a href="terms.es.html">Español</a> · <a href="terms.fil.html">Filipino</a> · <strong>Nederlands</strong> · <a href="terms.da.html">Dansk</a> · <a href="terms.de.html">Deutsch</a> · <a href="terms.ru.html">Русский</a> · <a href="terms.ar.html">العربية</a> · <a href="terms.it.html">Italiano</a> · <a href="terms.id.html">Bahasa Indonesia</a> · <a href="terms.pt.html">Português</a> · <a href="terms.pl.html">Polski</a> · <a href="terms.fr.html">Français</a> · <a href="terms.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Ingangsdatum: 5 oktober 2026</p>
+    <p class="meta">Dit is een vertaling die voor het gemak wordt aangeboden. Bij verschillen is de Koreaanse versie doorslaggevend.</p>
+
+<h2>Artikel 1 (Doel)</h2>
+<p>Deze Voorwaarden regelen de basispunten tussen Zaco Labs ("het Bedrijf") en gebruikers met betrekking tot het gebruik van Dayline en de bijbehorende diensten ("de Dienst"), waaronder rechten, verplichtingen, verantwoordelijkheden, gebruiksvoorwaarden en procedures.</p>
+
+<h2>Artikel 2 (Definities)</h2>
+<ul>
+    <li>"Dienst" betekent de door het Bedrijf aangeboden app Dayline en alle aanvullende diensten, zoals het opnemen van verplaatsingen, de lijn- en de kaartweergave, de widget op het beginscherm en het exporteren van opnamen.</li>
+    <li>"Gebruiker" betekent een persoon die de door het Bedrijf aangeboden Dienst gebruikt op grond van deze Voorwaarden.</li>
+    <li>"Opnamen" betekent de gegevens zoals route, afstand en vervoerswijze die de Dienst op het apparaat van de Gebruiker aanmaakt, en de bestanden en afbeeldingen die de Gebruiker maakt door deze te exporteren of te delen.</li>
+</ul>
+
+<h2>Artikel 3 (Werking en wijziging van de Voorwaarden)</h2>
+<p>Deze Voorwaarden treden in werking zodra zij op een scherm van de Dienst worden geplaatst of anderszins aan Gebruikers worden bekendgemaakt. Het Bedrijf kan deze Voorwaarden wijzigen voor zover het daarmee niet in strijd handelt met de toepasselijke wetgeving, waaronder de wet op de regulering van algemene voorwaarden. Bij een wijziging kondigt het Bedrijf de ingangsdatum en de reden van de wijziging vóór de ingangsdatum binnen de Dienst aan; wijzigingen die voor Gebruikers ongunstig of ingrijpend zijn, kondigt het ruim van tevoren aan. Een Gebruiker die de Dienst blijft gebruiken zonder vóór de ingangsdatum van de gewijzigde Voorwaarden uitdrukkelijk bezwaar te maken, wordt geacht met de gewijzigde Voorwaarden te hebben ingestemd. Een Gebruiker heeft het recht de gewijzigde Voorwaarden te weigeren en kan bij niet-instemming het gebruik van de Dienst staken en de overeenkomst beëindigen.</p>
+
+<h2>Artikel 4 (Levering en wijziging van de Dienst)</h2>
+<p>Het Bedrijf levert de volgende diensten.</p>
+<ul>
+    <li>De route, de afstand en de vervoerswijzen van een dag automatisch opnemen aan de hand van de locatie- en bewegingsgegevens van het apparaat</li>
+    <li>Opnamen tonen als lijn en op de kaart</li>
+    <li>Opnamen van eerdere dagen per datum terugkijken</li>
+    <li>De Opnamen van vandaag tonen in een widget op het beginscherm</li>
+    <li>Opnamen exporteren als GPX-bestand of delen als afbeelding</li>
+    <li>Overige door het Bedrijf bepaalde diensten</li>
+</ul>
+<p>Het Bedrijf kan de Dienst geheel of gedeeltelijk wijzigen wanneer operationele of technische redenen dat vereisen.</p>
+
+<h2>Artikel 5 (Opschorting van de Dienst en updates)</h2>
+<ol>
+    <li>Het Bedrijf kan de levering van de Dienst geheel of gedeeltelijk tijdelijk opschorten of definitief beëindigen bij onderhoud, vervanging of storing van informatie- en communicatieapparatuur, bij wegvallen van de verbinding of om andere zwaarwegende operationele of technische redenen. In dat geval stelt het Bedrijf de Gebruikers vooraf of achteraf op de hoogte.</li>
+    <li>Om de kwaliteit en de veiligheid van de Dienst te waarborgen, kan het Bedrijf verlangen dat de app naar de nieuwste versie wordt bijgewerkt; totdat de app is bijgewerkt, kan het gebruik ervan beperkt zijn.</li>
+    <li>Omdat Opnamen op het apparaat van de Gebruiker worden opgeslagen, wordt Gebruikers verzocht de Opnamen die zij nodig hebben vooraf via exporteren te bewaren.</li>
+</ol>
+
+<h2>Artikel 6 (Verplichtingen van de Gebruiker)</h2>
+<p>Een Gebruiker mag het volgende niet doen.</p>
+<ul>
+    <li>De locatie of de verplaatsingen van een ander zonder diens toestemming opnemen of volgen, bijvoorbeeld door de Dienst op het apparaat van die persoon te installeren</li>
+    <li>De app bedienen tijdens het rijden of in situaties die aandacht vereisen</li>
+    <li>De Dienst in strijd met een beperking gebruiken op plaatsen waar het opnemen van de locatie of het gebruik van elektronische apparaten bij wet of door de regels van die plaats is beperkt</li>
+    <li>De Dienst gebruiken voor handelingen die in strijd zijn met de wet of met de openbare orde en de goede zeden</li>
+    <li>De Dienst manipuleren of reverse-engineeren, opzettelijk de werking van de Dienst verstoren of de stabiele werking ervan schaden</li>
+    <li>Inbreuk maken op de intellectuele-eigendomsrechten van het Bedrijf of van derden</li>
+</ul>
+
+<h2>Artikel 7 (Rechten op en verantwoordelijkheid voor Opnamen)</h2>
+<p>De rechten op wat het Bedrijf aanbiedt, zoals de app en het ontwerp, de naam en het pictogram ervan, berusten bij het Bedrijf of bij de rechtmatige rechthebbende. Opnamen worden alleen op het apparaat van de Gebruiker opgeslagen en het Bedrijf heeft er geen toegang toe. De rechten op en de verantwoordelijkheid voor Opnamen liggen bij de Gebruiker zelf, en ook het beheer van geëxporteerde of gedeelde Opnamen is de verantwoordelijkheid van de Gebruiker.</p>
+
+<h2>Artikel 8 (Advertenties)</h2>
+<p>De Dienst wordt gratis aangeboden en in de app worden advertenties getoond. Het Bedrijf kan wijzigen of advertenties worden geplaatst en waar en in welke vorm. Voor de inhoud van een advertentie en voor diensten waar een advertentie naartoe leidt, is de betreffende adverteerder verantwoordelijk; het Bedrijf is niet betrokken bij transacties of geschillen tussen een Gebruiker en een adverteerder.</p>
+
+<h2>Artikel 9 (Diensten van derden)</h2>
+<p>De Dienst maakt gebruik van diensten die door derden worden aangeboden, zoals kaarten (Apple Kaarten, Google Maps), advertenties (Google AdMob) en appwinkels. De inhoud, de nauwkeurigheid en de beschikbaarheid van die diensten worden bepaald door de betreffende aanbieder, en de voorwaarden en het beleid van die aanbieder zijn van toepassing.</p>
+
+<h2>Artikel 10 (Uitsluiting van aansprakelijkheid)</h2>
+<ol>
+    <li>Het Bedrijf is niet aansprakelijk voor storingen bij het gebruik van de Dienst die worden veroorzaakt door omstandigheden buiten zijn macht, zoals overmacht, oorzaken die aan de Gebruiker zijn toe te rekenen of storingen of beleidswijzigingen van diensten van derden (appwinkels, providers, fabrikanten van besturingssystemen en apparaten, aanbieders van kaarten, advertenties en servers en dergelijke).</li>
+    <li>De Dienst wordt geleverd "as is". Het Bedrijf garandeert niet dat de Dienst ononderbroken of foutloos werkt, noch dat deze geschikt is voor een bepaald doel.</li>
+    <li>De route, de afstand, de duur en de vervoerswijze zijn waarden die op basis van de sensoren van het apparaat zijn geschat en kunnen afwijken van de werkelijkheid. Gebruikers mogen Opnamen niet gebruiken voor doeleinden waarbij nauwkeurigheid vereist is, zoals landmeting, navigatie, het aantonen van sportprestaties, het bewijzen van aanwezigheid op het werk of van zakenreizen, of als juridisch bewijs. Het Bedrijf is niet aansprakelijk voor directe, indirecte of gevolgschade door ontbrekende of onnauwkeurige Opnamen, tenzij er sprake is van opzet of grove nalatigheid van het Bedrijf.</li>
+    <li>Automatisch opnemen wordt beïnvloed door de apparaatinstellingen van de Gebruiker, de instellingen voor machtigingen, het beleid van het besturingssysteem, de accu- en energiebesparingsstatus, het geforceerd afsluiten van de app, het opnieuw opstarten van het apparaat en de omgeving, zoals binnen, ondergronds of tussen hoge gebouwen. Daardoor kan het gebeuren dat een opname niet begint of halverwege wordt onderbroken. Het Bedrijf garandeert niet dat elke verplaatsing zonder hiaten wordt opgenomen.</li>
+    <li>De Dienst is geen hulpmiddel voor veiligheid of noodsituaties. Gebruikers mogen niet op de Dienst vertrouwen voor doeleinden waarvoor de locatie moet worden vastgesteld, zoals redding, bescherming of toezicht.</li>
+    <li>Gebruikers mogen de app niet bedienen tijdens het rijden, of onderweg zonder op hun omgeving te letten. Het Bedrijf is niet aansprakelijk voor ongevallen, letsel en dergelijke die zich tijdens het gebruik van de Dienst voordoen, tenzij er sprake is van opzet of grove nalatigheid van het Bedrijf.</li>
+    <li>De afstanden, tijden, vervoerswijzen en dergelijke die in Opnamen worden getoond, vormen geen advies over gezondheid, medische zaken of sport, en Gebruikers mogen ze niet als basis voor dergelijke beslissingen gebruiken.</li>
+    <li>Automatisch opnemen gebruikt onderweg de locatiefunctie en verbruikt daardoor accu, en kaarten, advertenties en dergelijke gebruiken een dataverbinding. Het daaruit voortvloeiende accuverbruik en de datakosten komen voor rekening van de Gebruiker.</li>
+    <li>Opnamen worden op het apparaat van de Gebruiker opgeslagen en het Bedrijf bewaart ze niet; het Bedrijf kan Opnamen die verloren zijn gegaan door het verwijderen van de app, het wisselen van apparaat, het terugzetten van het apparaat naar de fabrieksinstellingen, fouten of dergelijke daarom niet herstellen. Het Bedrijf is niet aansprakelijk voor dergelijk gegevensverlies, en Gebruikers moeten waar nodig zelf een back-up maken door te exporteren.</li>
+    <li>Als het apparaat zoekraakt of door een ander wordt gebruikt, kunnen Opnamen voor anderen zichtbaar worden. De vergrendeling en de beveiliging van het apparaat zijn aan de Gebruiker, en het Bedrijf is niet aansprakelijk voor de daaruit voortvloeiende schade, tenzij er sprake is van opzet of grove nalatigheid van het Bedrijf.</li>
+    <li>Opnamen die een Gebruiker heeft geëxporteerd of gedeeld, kan het Bedrijf niet meer beheren zodra ze bij de door de Gebruiker gekozen bestemming zijn afgeleverd, en het Bedrijf is niet aansprakelijk voor schade door het gebruik, het uitlekken of de verdere verspreiding daarna.</li>
+    <li>Kaarten en de daarop getoonde plaatsnamen, wegen, satellietbeelden en dergelijke worden geleverd door de kaartaanbieder; het Bedrijf garandeert niet dat deze juist of actueel zijn.</li>
+    <li>Het Bedrijf is niet verplicht in te grijpen in geschillen die via de Dienst ontstaan tussen Gebruikers onderling of tussen een Gebruiker en een derde, en is niet gehouden de daaruit voortvloeiende schade te vergoeden, tenzij er sprake is van opzet of grove nalatigheid van het Bedrijf.</li>
+    <li>Omdat de Dienst gratis wordt aangeboden, draagt het Bedrijf in verband met de Dienst, met inbegrip van de wijziging of stopzetting ervan, geen financiële aansprakelijkheid, tenzij er sprake is van opzet of grove nalatigheid van het Bedrijf.</li>
+    <li>Niets in dit artikel beperkt of sluit aansprakelijkheid van het Bedrijf uit die op grond van de toepasselijke wetgeving niet kan worden beperkt of uitgesloten.</li>
+</ol>
+
+<h2>Artikel 11 (Aansprakelijkheid van de Gebruiker)</h2>
+<p>Lijdt het Bedrijf schade doordat een Gebruiker deze Voorwaarden of de toepasselijke wetgeving heeft geschonden, dan moet de Gebruiker die schade aan het Bedrijf vergoeden. Krijgt het Bedrijf door een schending van de Gebruiker te maken met een schadeclaim of een ander bezwaar van een derde, dan moet de Gebruiker het Bedrijf op eigen verantwoordelijkheid en op eigen kosten vrijwaren.</p>
+
+<h2>Artikel 12 (Toepasselijk recht en bevoegde rechter)</h2>
+<p>Deze Voorwaarden worden beheerst door en uitgelegd naar het recht van de Republiek Korea. Bij een geschil over het gebruik van de Dienst wordt de bevoegde rechter bepaald op grond van het Wetboek van Burgerlijke Rechtsvordering.</p>
+
+<div class="contact">
+    <p>Contact: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

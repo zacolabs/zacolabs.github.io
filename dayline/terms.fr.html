@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conditions d&#x27;utilisation de Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Conditions d&#x27;utilisation de Dayline</h1>
+    <p class="langnav"><a href="terms.ko.html">한국어</a> · <a href="terms.en.html">English</a> · <a href="terms.ja.html">日本語</a> · <a href="terms.zh-hans.html">简体中文</a> · <a href="terms.zh-hant.html">繁體中文</a> · <a href="terms.es.html">Español</a> · <a href="terms.fil.html">Filipino</a> · <a href="terms.nl.html">Nederlands</a> · <a href="terms.da.html">Dansk</a> · <a href="terms.de.html">Deutsch</a> · <a href="terms.ru.html">Русский</a> · <a href="terms.ar.html">العربية</a> · <a href="terms.it.html">Italiano</a> · <a href="terms.id.html">Bahasa Indonesia</a> · <a href="terms.pt.html">Português</a> · <a href="terms.pl.html">Polski</a> · <strong>Français</strong> · <a href="terms.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Date d'entrée en vigueur : 5 octobre 2026</p>
+    <p class="meta">Cette traduction est fournie à titre de commodité. En cas de divergence, la version coréenne prévaut.</p>
+
+<h2>Article 1 (Objet)</h2>
+<p>Les présentes Conditions définissent les éléments essentiels entre Zaco Labs (« la Société ») et les utilisateurs concernant l'utilisation de Dayline et des services associés (« le Service ») fournis par la Société, notamment les droits, obligations, responsabilités, conditions d'utilisation et procédures.</p>
+
+<h2>Article 2 (Définitions)</h2>
+<ul>
+    <li>« Service » désigne l'application Dayline fournie par la Société ainsi que tous les services accessoires, tels que l'enregistrement des déplacements, les vues Ligne et Carte, le widget de l'écran d'accueil et l'exportation de l'historique.</li>
+    <li>« Utilisateur » désigne la personne qui utilise le Service fourni par la Société conformément aux présentes Conditions.</li>
+    <li>« Historique » désigne les informations, telles que les parcours, les distances et les modes de déplacement, que le Service crée sur l'appareil de l'Utilisateur, ainsi que les fichiers et images que l'Utilisateur crée en exportant ou en partageant ces informations.</li>
+</ul>
+
+<h2>Article 3 (Effet et modification des Conditions)</h2>
+<p>Les présentes Conditions prennent effet lorsqu'elles sont publiées sur un écran du Service ou portées d'une autre manière à la connaissance des Utilisateurs. La Société peut modifier les présentes Conditions dans la mesure où elle ne contrevient pas à la législation applicable, notamment la loi sur la réglementation des conditions générales. En cas de modification, la Société annonce au sein du Service, avant la date d'entrée en vigueur, cette date et le motif de la modification ; les changements défavorables ou substantiels pour les Utilisateurs sont annoncés à l'avance, moyennant un délai suffisant. L'Utilisateur qui continue d'utiliser le Service sans refus exprès avant la date d'entrée en vigueur des Conditions modifiées est réputé les avoir acceptées. L'Utilisateur a le droit de refuser les Conditions modifiées et peut, s'il ne les accepte pas, cesser d'utiliser le Service et résilier le contrat.</p>
+
+<h2>Article 4 (Fourniture et modification du Service)</h2>
+<p>La Société fournit les services suivants.</p>
+<ul>
+    <li>Enregistrement automatique du parcours, de la distance et des modes de déplacement de la journée à partir des informations de localisation et de mouvement de l'appareil</li>
+    <li>Affichage de l'Historique sous forme de ligne et sur une carte</li>
+    <li>Consultation, date par date, de l'Historique des jours passés</li>
+    <li>Affichage de l'Historique du jour dans un widget de l'écran d'accueil</li>
+    <li>Exportation de l'Historique sous forme de fichier GPX ou partage sous forme d'image</li>
+    <li>Tout autre service déterminé par la Société</li>
+</ul>
+<p>La Société peut modifier tout ou partie du Service lorsque des raisons opérationnelles ou techniques l'exigent.</p>
+
+<h2>Article 5 (Interruption et mises à jour du Service)</h2>
+<ol>
+    <li>La Société peut interrompre temporairement ou définitivement la fourniture de tout ou partie du Service en cas de maintenance, de remplacement ou de panne des équipements d'information et de communication, de perte de communication ou pour tout autre motif opérationnel ou technique important. Dans ce cas, la Société en informe les Utilisateurs avant ou après l'interruption.</li>
+    <li>Afin de maintenir la qualité et la sécurité du Service, la Société peut exiger la mise à jour de l'application vers la dernière version ; l'utilisation de l'application peut être restreinte tant que la mise à jour n'a pas été effectuée.</li>
+    <li>L'Historique étant stocké sur l'appareil de l'Utilisateur, celui-ci est invité à conserver au préalable, en les exportant, les éléments de l'Historique dont il a besoin.</li>
+</ol>
+
+<h2>Article 6 (Obligations de l'Utilisateur)</h2>
+<p>L'Utilisateur doit s'abstenir de tout acte suivant.</p>
+<ul>
+    <li>Enregistrer ou suivre la position ou les déplacements d'une autre personne sans son consentement, par exemple en installant le Service sur l'appareil de cette personne</li>
+    <li>Manipuler l'application en conduisant ou dans toute situation exigeant de l'attention</li>
+    <li>Utiliser le Service en violation d'une restriction, dans un lieu où l'enregistrement de la position ou l'usage d'appareils électroniques est restreint par la loi ou par le règlement du lieu</li>
+    <li>Utiliser le Service pour accomplir des actes contraires à la loi, à l'ordre public ou aux bonnes mœurs</li>
+    <li>Altérer le Service ou en pratiquer l'ingénierie inverse, entraver intentionnellement son fonctionnement ou nuire à sa stabilité</li>
+    <li>Porter atteinte aux droits de propriété intellectuelle de la Société ou d'un tiers</li>
+</ul>
+
+<h2>Article 7 (Droits et responsabilité relatifs à l'Historique)</h2>
+<p>Les droits sur ce que fournit la Société, tels que l'application, son design, son nom et son icône, appartiennent à la Société ou à leur titulaire légitime. L'Historique est stocké uniquement sur l'appareil de l'Utilisateur et la Société n'y accède pas. Les droits et la responsabilité relatifs à l'Historique incombent à l'Utilisateur lui-même, de même que la responsabilité de la gestion de l'Historique qu'il exporte ou partage.</p>
+
+<h2>Article 8 (Publicité)</h2>
+<p>Le Service est fourni gratuitement et des annonces sont affichées dans l'application. La Société peut modifier la diffusion ou non des annonces, ainsi que leur emplacement et leur forme. Le contenu des annonces et les services auxquels elles conduisent relèvent de la responsabilité de l'annonceur concerné ; la Société n'intervient pas dans les transactions ou litiges entre l'Utilisateur et l'annonceur.</p>
+
+<h2>Article 9 (Services tiers)</h2>
+<p>Le Service fait appel à des services fournis par des tiers, tels que les cartes (Plans d'Apple, Google Maps), la publicité (Google AdMob) et les boutiques d'applications. Le contenu, l'exactitude et la disponibilité de ces services sont déterminés par leurs fournisseurs, dont les conditions et politiques s'appliquent.</p>
+
+<h2>Article 10 (Limitation de responsabilité)</h2>
+<ol>
+    <li>La Société n'est pas responsable des défaillances d'utilisation du Service dues à des causes échappant à son contrôle, telles que la force majeure, des causes imputables à l'Utilisateur ou des défaillances ou changements de politique de services tiers (boutiques d'applications, opérateurs, fabricants de systèmes d'exploitation et d'appareils, fournisseurs de cartes, de publicité et de serveurs, etc.).</li>
+    <li>Le Service est fourni « en l'état ». La Société ne garantit pas que le Service fonctionnera sans interruption ni erreur, ni qu'il conviendra à un usage particulier.</li>
+    <li>Les parcours, distances, durées et modes de déplacement sont des valeurs estimées à partir des capteurs de l'appareil et peuvent différer de la réalité. L'Utilisateur ne doit pas utiliser l'Historique à des fins exigeant de l'exactitude, telles que l'arpentage, le guidage d'itinéraire, la certification d'une activité sportive, la justification de présence au travail ou de déplacements professionnels, ou la preuve en justice. La Société n'est pas responsable des dommages directs, indirects ou consécutifs résultant de lacunes ou d'inexactitudes de l'Historique, sauf en cas de faute intentionnelle ou de faute lourde de sa part.</li>
+    <li>L'enregistrement automatique dépend des réglages de l'appareil de l'Utilisateur, des réglages d'autorisations, des politiques du système d'exploitation, de l'état de la batterie et de l'économie d'énergie, de la fermeture forcée de l'application, du redémarrage de l'appareil et de l'environnement, par exemple en intérieur, en sous-sol ou entre des immeubles de grande hauteur. De ce fait, l'enregistrement peut ne pas démarrer ou s'interrompre en cours de route. La Société ne garantit pas que tous les déplacements sont enregistrés sans omission.</li>
+    <li>Le Service n'est pas un outil de sécurité ni d'urgence. L'Utilisateur ne doit pas s'en remettre au Service à des fins nécessitant de connaître une position, telles que le secours, la protection ou la surveillance.</li>
+    <li>L'Utilisateur ne doit pas manipuler l'application en conduisant, ni en se déplaçant sans prêter attention à ce qui l'entoure. La Société n'est pas responsable des accidents, blessures ou autres événements survenus pendant l'utilisation du Service, sauf en cas de faute intentionnelle ou de faute lourde de sa part.</li>
+    <li>Les distances, durées, modes de déplacement et autres éléments figurant dans l'Historique ne constituent pas des conseils en matière de santé, de médecine ou d'exercice physique, et l'Utilisateur ne doit pas en faire le fondement de telles décisions.</li>
+    <li>L'enregistrement automatique utilise la fonction de localisation pendant les déplacements et consomme donc de la batterie ; les cartes, les annonces et autres éléments utilisent la connexion de données. La consommation de batterie et les frais de communication qui en résultent sont à la charge de l'Utilisateur.</li>
+    <li>L'Historique étant stocké sur l'appareil de l'Utilisateur et la Société ne le conservant pas, la Société ne peut pas restaurer l'Historique disparu à la suite de la suppression de l'application, d'un changement d'appareil, d'une réinitialisation de l'appareil, d'une erreur ou d'une cause similaire. La Société n'est pas responsable de cette perte de données ; il appartient à l'Utilisateur de sauvegarder lui-même son Historique en l'exportant lorsque cela est nécessaire.</li>
+    <li>En cas de perte de l'appareil ou d'utilisation de celui-ci par une autre personne, l'Historique peut être exposé. Le verrouillage et la sécurité de l'appareil relèvent de l'Utilisateur, et la Société n'est pas responsable des dommages qui en résultent, sauf en cas de faute intentionnelle ou de faute lourde de sa part.</li>
+    <li>Une fois transmis au destinataire choisi par l'Utilisateur, l'Historique que celui-ci exporte ou partage échappe à la gestion de la Société, et la Société n'est pas responsable des dommages résultant de son utilisation, de sa fuite ou de sa rediffusion ultérieures.</li>
+    <li>Les cartes, ainsi que les noms de lieux, routes, images satellite et autres éléments qui y sont affichés, sont fournis par le fournisseur de cartes ; la Société n'en garantit ni l'exactitude ni l'actualité.</li>
+    <li>La Société n'est pas tenue d'intervenir dans les litiges survenus par l'intermédiaire du Service entre Utilisateurs ou entre un Utilisateur et un tiers, et n'est pas tenue de réparer les dommages qui en résultent, sauf en cas de faute intentionnelle ou de faute lourde de sa part.</li>
+    <li>Le Service étant fourni gratuitement, la Société n'assume aucune responsabilité pécuniaire en lien avec le Service, y compris sa modification ou son interruption, sauf faute intentionnelle ou faute lourde de sa part.</li>
+    <li>Aucune disposition du présent article ne limite ni n'exclut la responsabilité de la Société lorsque celle-ci ne peut être limitée ou exclue en vertu de la législation applicable.</li>
+</ol>
+
+<h2>Article 11 (Obligation d'indemnisation de l'Utilisateur)</h2>
+<p>Lorsque la Société subit un dommage du fait de la violation par l'Utilisateur des présentes Conditions ou de la législation applicable, l'Utilisateur doit réparer ce dommage. Lorsque la Société fait l'objet, de la part d'un tiers, d'une demande de dommages-intérêts ou de toute autre contestation en raison d'une violation commise par l'Utilisateur, celui-ci doit garantir la Société et la dégager de toute responsabilité, sous sa propre responsabilité et à ses frais.</p>
+
+<h2>Article 12 (Droit applicable et juridiction compétente)</h2>
+<p>Les présentes Conditions sont régies et interprétées conformément au droit de la République de Corée. En cas de litige relatif à l'utilisation du Service, la juridiction compétente est déterminée selon le code de procédure civile.</p>
+
+<div class="contact">
+    <p>Contact : Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

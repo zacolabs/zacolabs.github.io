@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chính sách quyền riêng tư của Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Chính sách quyền riêng tư của Dayline</h1>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <a href="privacy.en.html">English</a> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <a href="privacy.zh-hant.html">繁體中文</a> · <a href="privacy.es.html">Español</a> · <a href="privacy.fil.html">Filipino</a> · <a href="privacy.nl.html">Nederlands</a> · <a href="privacy.da.html">Dansk</a> · <a href="privacy.de.html">Deutsch</a> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <a href="privacy.pl.html">Polski</a> · <a href="privacy.fr.html">Français</a> · <strong>Tiếng Việt</strong></p>
+    <p class="meta">Ngày hiệu lực: 5 tháng 10 năm 2026</p>
+
+<p>Zaco Labs ("Công ty") coi trọng thông tin cá nhân của bạn và tuân thủ pháp luật hiện hành, bao gồm Luật Bảo vệ thông tin cá nhân của Hàn Quốc. Chính sách quyền riêng tư này giải thích cách thông tin cá nhân của bạn được thu thập, sử dụng, lưu giữ và hủy trong dịch vụ Dayline ("Dịch vụ") do Công ty cung cấp. Chính sách này áp dụng cho cả ứng dụng iOS và Android.</p>
+
+<h2>1. Thông tin cá nhân chúng tôi thu thập</h2>
+<p>Công ty cung cấp Dịch vụ mà không có thủ tục đăng ký tài khoản, và ứng dụng không yêu cầu bạn nhập thông tin nhận dạng trực tiếp bạn, như họ tên hay số điện thoại. Chúng tôi thu thập những thông tin sau để cung cấp Dịch vụ:</p>
+<ul>
+    <li>Mã định danh thiết bị ẩn danh (userKey): mã định danh do ứng dụng tạo ra bằng cách chuyển đổi một chiều thông tin thiết bị và thông tin cài đặt ứng dụng (trên Android là giá trị định danh thiết bị, trên iOS là giá trị định danh giao dịch mua ứng dụng), hoặc một giá trị được tạo ngẫu nhiên nếu không lấy được thông tin đó. Mã này không xác định bạn qua họ tên, thông tin liên hệ hay thông tin tương tự. Để vẫn dùng được cùng một mã định danh sau khi cài đặt lại ứng dụng, mã này được lưu trong Chuỗi khóa (Keychain) của thiết bị trên iOS và trong Google Play services Block Store trên Android.</li>
+    <li>Thông tin thiết bị và ứng dụng: loại và phiên bản hệ điều hành, kiểu máy, phiên bản ứng dụng, ngôn ngữ ứng dụng, quốc gia (giá trị thiết lập khu vực của thiết bị, không phải thông tin vị trí), thời điểm sử dụng lần đầu và gần nhất</li>
+    <li>Mã định danh quảng cáo (thông tin hành vi): IDFA trên iOS và Advertising ID (ADID) trên Android (xem Mục 3)</li>
+    <li>Thông tin Google thu thập trong quá trình cung cấp quảng cáo: địa chỉ IP và khu vực gần đúng được suy ra từ địa chỉ đó, bản ghi về việc bạn đã xem hoặc nhấn vào quảng cáo, v.v. (xem Mục 3)</li>
+    <li>Thống kê sử dụng và dữ liệu chẩn đoán lỗi của ứng dụng: bản ghi chuyển màn hình và sử dụng tính năng, giá trị thiết lập của ứng dụng, việc các quyền có được cấp hay không, kiểu máy, phiên bản hệ điều hành, phiên bản ứng dụng và bản ghi tại thời điểm xảy ra lỗi (xem Mục 10)</li>
+    <li>Khi bạn liên hệ với chúng tôi: địa chỉ email bạn dùng để gửi và nội dung câu hỏi</li>
+</ul>
+<p>Những thông tin sau chỉ được lưu trên thiết bị của bạn và không được truyền về máy chủ của Công ty.</p>
+<ul>
+    <li>Nhật ký di chuyển: vị trí (tọa độ) và thời gian, lộ trình di chuyển, quãng đường và thời gian di chuyển, những nơi bạn dừng chân và cách di chuyển (đi bộ, chạy bộ, đạp xe, đi xe)</li>
+    <li>Thông tin về chuyển động và hoạt động của thiết bị, dùng để phân biệt các cách di chuyển</li>
+</ul>
+
+<h2>2. Mục đích thu thập và sử dụng</h2>
+<ul>
+    <li>Ghi lại và hiển thị lộ trình, quãng đường và cách di chuyển trong ngày của bạn (chỉ được xử lý trên thiết bị)</li>
+    <li>Quản lý tình hình sử dụng Dịch vụ thông qua mã định danh ẩn danh, và cung cấp thiết lập ứng dụng như việc có hiển thị quảng cáo hay không và thông báo về bản cập nhật bắt buộc</li>
+    <li>Cung cấp quảng cáo cá nhân hóa, đo lường hiệu quả quảng cáo và ngăn chặn gian lận quảng cáo</li>
+    <li>Cải thiện Dịch vụ, thống kê và phân tích, sửa lỗi ứng dụng</li>
+    <li>Phản hồi các câu hỏi của khách hàng</li>
+</ul>
+
+<h2>3. Thu thập và sử dụng mã định danh quảng cáo (thông tin hành vi)</h2>
+<p>Để cung cấp quảng cáo cá nhân hóa và cải thiện Dịch vụ, Công ty sử dụng nền tảng quảng cáo của bên thứ ba, và trong quá trình này mã định danh quảng cáo có thể được thu thập. Ứng dụng không chuyển nhật ký di chuyển của bạn cho nền tảng quảng cáo.</p>
+<ol>
+    <li>Thông tin hành vi được thu thập
+        <ul>
+            <li>iOS: IDFA (Identifier for Advertisers)</li>
+            <li>Android: Advertising ID (ADID, Google Advertising ID)</li>
+        </ul>
+    </li>
+    <li>Mục đích thu thập và sử dụng
+        <ul>
+            <li>Cung cấp quảng cáo cá nhân hóa (nhắm mục tiêu) dựa trên sở thích</li>
+            <li>Phân tích hiệu quả lượt hiển thị và lượt nhấp, ngăn chặn gian lận quảng cáo (lưu lượng không hợp lệ)</li>
+        </ul>
+    </li>
+    <li>Cách thức thu thập và dịch vụ của bên thứ ba
+        <ul>
+            <li>Được thu thập và truyền đi tự động thông qua SDK quảng cáo di động tích hợp trong ứng dụng.</li>
+            <li>Dịch vụ: Google AdMob (Google LLC). Việc xử lý dữ liệu của Google tuân theo <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>.</li>
+        </ul>
+    </li>
+    <li>Quyền từ chối của bạn và cách thực hiện<br />
+        Bạn có thể từ chối việc thu thập mã định danh cho quảng cáo cá nhân hóa bằng những cách sau. Ngay cả khi bạn từ chối, quảng cáo không cá nhân hóa (quảng cáo chung) vẫn có thể được hiển thị.
+        <ul>
+            <li>iOS: Từ chối yêu cầu theo dõi hiển thị khi mở ứng dụng lần đầu, hoặc vào Cài đặt &gt; Quyền riêng tư và bảo mật &gt; Theo dõi rồi tắt "Cho phép ứng dụng yêu cầu theo dõi" hoặc tắt theo dõi đối với ứng dụng cụ thể.</li>
+            <li>Android: Vào Cài đặt &gt; Google &gt; Quảng cáo rồi chọn "Xóa ID quảng cáo" hoặc "Chọn không sử dụng tính năng cá nhân hóa quảng cáo".</li>
+            <li>Người dùng ở những khu vực cần có sự đồng ý đối với quảng cáo, như Khu vực Kinh tế Châu Âu (EEA) và Vương quốc Anh, có thể lựa chọn trên màn hình xin đồng ý hiển thị khi mở ứng dụng lần đầu. Trong ứng dụng iOS, bạn có thể thay đổi bất kỳ lúc nào tại mục <strong>Cài đặt &gt; Quyền riêng tư về quảng cáo</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>4. Xử lý thông tin vị trí và nhật ký di chuyển</h2>
+<ul>
+    <li>Thông tin vị trí và chuyển động chỉ được dùng để tạo nhật ký di chuyển; thông tin này được xử lý trên thiết bị và chỉ được lưu trên thiết bị. Thông tin này không được truyền về máy chủ của Công ty và cũng không được đưa vào thống kê sử dụng.</li>
+    <li>Tiện ích trên màn hình chính được vẽ từ nhật ký lưu trên thiết bị và không gửi nhật ký ra ngoài thiết bị.</li>
+    <li>Trên các màn hình hiển thị bản đồ, nhà cung cấp bản đồ (Apple Maps trên iOS, Google Maps trên Android) tải dữ liệu bản đồ của khu vực đang hiển thị trên màn hình từ máy chủ của nhà cung cấp bản đồ. Việc xử lý dữ liệu của nhà cung cấp bản đồ tuân theo <a href="https://www.apple.com/legal/privacy/">Chính sách quyền riêng tư của Apple</a> và <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>.</li>
+    <li>Việc xuất tệp GPX và chia sẻ hình ảnh chỉ diễn ra khi chính bạn lựa chọn, và chỉ được chuyển đến nơi nhận do bạn chọn.</li>
+</ul>
+
+<h2>5. Thời hạn lưu giữ và sử dụng</h2>
+<p>Công ty lưu giữ thông tin cá nhân trong thời gian bạn sử dụng Dịch vụ và hủy không chậm trễ khi mục đích thu thập và sử dụng đã đạt được hoặc khi bạn yêu cầu xóa. Chỉ xóa ứng dụng thì Công ty không thể biết được, vì vậy nếu bạn muốn xóa thông tin còn lại trên máy chủ, vui lòng yêu cầu theo cách nêu tại Mục 9. Tuy nhiên, khi pháp luật hiện hành yêu cầu lưu giữ, thông tin được lưu giữ trong thời hạn do pháp luật đó quy định.</p>
+<p>Thông tin chỉ lưu trên thiết bị (Mục 1) được giữ trên thiết bị cho đến khi bạn xóa. Bạn có thể xóa toàn bộ bằng <strong>Cài đặt &gt; Xóa toàn bộ nhật ký</strong> trong ứng dụng, và khi bạn xóa ứng dụng thì thông tin này cũng bị xóa khỏi thiết bị. Vì Công ty không nắm giữ nhật ký di chuyển của bạn nên không thể xóa hay khôi phục thay cho bạn.</p>
+<p>Thời hạn lưu giữ thông tin do Google thu thập tuân theo chính sách lưu giữ dữ liệu của Google.</p>
+
+<h2>6. Cung cấp cho bên thứ ba</h2>
+<p>Công ty không cung cấp thông tin cá nhân của bạn cho bên thứ ba ngoài phạm vi nêu trong chính sách này, trừ trường hợp pháp luật yêu cầu hoặc cơ quan điều tra yêu cầu phục vụ mục đích điều tra theo trình tự và phương thức do pháp luật quy định.</p>
+
+<h2>7. Ủy thác xử lý thông tin cá nhân</h2>
+<p>Để cung cấp Dịch vụ một cách thông suốt, Công ty ủy thác các công việc xử lý thông tin cá nhân như sau:</p>
+<ul>
+    <li>Vercel Inc.: vận hành máy chủ (vị trí máy chủ: Seoul, Đại Hàn Dân Quốc)</li>
+    <li>Supabase Inc.: vận hành cơ sở dữ liệu (vị trí máy chủ: Seoul, Đại Hàn Dân Quốc)</li>
+    <li>Google LLC: cung cấp quảng cáo cá nhân hóa và quản lý sự đồng ý về quảng cáo (Google AdMob, Google User Messaging Platform), phân tích thống kê sử dụng (Google Firebase Analytics), chẩn đoán lỗi ứng dụng (Google Firebase Crashlytics), lưu giữ mã định danh thiết bị ẩn danh (Android, Google Play services Block Store)</li>
+</ul>
+
+<h2>8. Chuyển thông tin cá nhân ra nước ngoài</h2>
+<p>Công ty chuyển thông tin cá nhân ra nước ngoài như sau để phân tích thống kê sử dụng, chẩn đoán lỗi ứng dụng và cung cấp quảng cáo.</p>
+<ul>
+    <li>Bên nhận: Google LLC (liên hệ: <a href="https://support.google.com/policies/contact/general_privacy_form">Liên hệ về quyền riêng tư của Google</a>)</li>
+    <li>Quốc gia nhận: Hoa Kỳ và các quốc gia khác nơi Google vận hành trung tâm dữ liệu</li>
+    <li>Hạng mục được chuyển: mã định danh quảng cáo, địa chỉ IP, bản ghi lượt hiển thị và lượt nhấp quảng cáo, thống kê sử dụng, dữ liệu chẩn đoán lỗi của ứng dụng, kiểu máy, phiên bản hệ điều hành, phiên bản ứng dụng</li>
+    <li>Thời điểm và cách thức chuyển: được gửi qua mạng vào nhiều thời điểm khi bạn sử dụng ứng dụng, thông qua các SDK tích hợp trong ứng dụng</li>
+    <li>Mục đích sử dụng và thời hạn lưu giữ: các mục đích nêu tại Mục 3 và Mục 10, trong thời hạn theo chính sách lưu giữ dữ liệu của Google</li>
+    <li>Cách từ chối và hệ quả: bạn có thể từ chối việc chuyển mã định danh quảng cáo dùng cho quảng cáo cá nhân hóa và việc chuyển thống kê sử dụng bằng các thiết lập nêu tại Mục 3 và Mục 10. Thông tin cần thiết để hiển thị quảng cáo không cá nhân hóa và dữ liệu chẩn đoán lỗi ứng dụng vẫn được gửi trong thời gian bạn sử dụng ứng dụng.</li>
+</ul>
+
+<h2>9. Quyền của bạn và cách thực hiện</h2>
+<p>Bạn có thể yêu cầu truy cập, chỉnh sửa, xóa thông tin cá nhân của mình hoặc ngừng xử lý thông tin đó vào bất kỳ lúc nào. Khi bạn gửi yêu cầu đến địa chỉ email nêu tại Mục 13, Công ty sẽ xử lý không chậm trễ theo pháp luật hiện hành. Vì Công ty không nắm giữ thông tin nhận dạng trực tiếp bạn, như họ tên hay thông tin liên hệ, nên để xử lý yêu cầu, Công ty có thể đề nghị bạn cung cấp thông tin cần thiết để xác định thiết bị liên quan.</p>
+<p>Nhật ký di chuyển chỉ có trên thiết bị của bạn, vì vậy bạn có thể xem trực tiếp trong ứng dụng, xuất bằng <strong>Cài đặt &gt; Xuất nhật ký (GPX)</strong> hoặc xóa bằng <strong>Cài đặt &gt; Xóa toàn bộ nhật ký</strong>.</p>
+
+<h2>10. Thu thập thống kê sử dụng qua công cụ phân tích</h2>
+<p>Để nâng cao chất lượng Dịch vụ, Công ty sử dụng Google Firebase Analytics nhằm thu thập thống kê sử dụng. Thông tin thu thập liên quan đến hành vi sử dụng Dịch vụ, như việc chuyển màn hình, sử dụng tính năng, giá trị thiết lập của ứng dụng (ngôn ngữ, giao diện, chế độ xem, v.v.), việc các quyền như vị trí và chuyển động có được cấp hay không, việc có sử dụng tiện ích hay không, phiên bản ứng dụng và thiết bị, và khu vực gần đúng. Công ty không thu thập nhật ký di chuyển, như vị trí (tọa độ), lộ trình di chuyển, quãng đường và thời gian di chuyển, cũng như thông tin nhận dạng trực tiếp bạn, như họ tên hay thông tin liên hệ. Thống kê sử dụng được gửi kèm một mã định danh để phân biệt các lượt cài đặt (trên iOS là mã định danh thiết bị ẩn danh, trên Android là một mã định danh ngẫu nhiên được tạo riêng cho mục đích thống kê). Bạn có thể bật hoặc tắt việc thu thập thống kê sử dụng bất kỳ lúc nào tại mục <strong>Cài đặt &gt; Thống kê sử dụng</strong> trong ứng dụng.</p>
+<p>Công ty cũng sử dụng Google Firebase Crashlytics để khắc phục tình trạng ứng dụng đóng ngoài ý muốn. Khi đó, kiểu máy, phiên bản hệ điều hành, phiên bản ứng dụng và bản ghi tại thời điểm xảy ra lỗi được thu thập; nhật ký di chuyển không được bao gồm. Dữ liệu chẩn đoán này được thu thập bất kể thiết lập thống kê sử dụng.</p>
+<p>Việc xử lý dữ liệu của Google tuân theo <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a> và chính sách <a href="https://firebase.google.com/support/privacy">Quyền riêng tư và bảo mật của Firebase</a>.</p>
+
+<h2>11. Quyền truy cập của ứng dụng</h2>
+<p>Ứng dụng sử dụng quyền truy cập thiết bị cho các tính năng dưới đây. Ngay cả khi không cấp các quyền tùy chọn, bạn vẫn có thể sử dụng Dịch vụ ngoài tính năng tương ứng.</p>
+<ul>
+    <li>Vị trí (bắt buộc): dùng để ghi lại đường bạn đã đi. Để ghi cả khi không mở ứng dụng, cần chọn "Luôn cho phép".</li>
+    <li>Di chuyển &amp; thể chất (iOS) / Hoạt động thể chất (Android) (tùy chọn): dùng để phân biệt việc di chuyển bằng cách đi bộ, chạy bộ, đạp xe và đi xe.</li>
+    <li>Thông báo (Android, tùy chọn): dùng để hiển thị thông báo cho biết ứng dụng đang ghi trong khi việc di chuyển của bạn được ghi lại. Ứng dụng không gửi thông báo nào khác.</li>
+    <li>Thêm ảnh (iOS, tùy chọn): chỉ dùng khi bạn lưu hình ảnh về một ngày vào thư viện ảnh. Ứng dụng không đọc ảnh của bạn.</li>
+    <li>Cho phép ứng dụng theo dõi (iOS, tùy chọn): dùng cho quảng cáo cá nhân hóa.</li>
+</ul>
+<p>Bạn có thể thay đổi hoặc thu hồi quyền truy cập bất kỳ lúc nào trong phần Cài đặt của thiết bị.</p>
+
+<h2>12. Biện pháp bảo đảm an toàn</h2>
+<p>Công ty áp dụng các biện pháp bảo vệ về quản lý và kỹ thuật, bao gồm quản lý quyền truy cập, mã hóa đoạn truyền và kiểm soát truy cập, nhằm xử lý an toàn thông tin cá nhân. Nhật ký di chuyển không được lưu giữ trên máy chủ của Công ty; nhật ký được lưu trên thiết bị của bạn và được bảo vệ bằng các tính năng bảo mật của thiết bị, như khóa thiết bị.</p>
+
+<h2>13. Người phụ trách bảo vệ thông tin cá nhân</h2>
+<p>Công ty chỉ định Người phụ trách bảo vệ thông tin cá nhân như sau, chịu trách nhiệm chung về việc xử lý thông tin cá nhân, tiếp nhận khiếu nại của người dùng và khắc phục thiệt hại.</p>
+<ul>
+    <li>Chức trách: Người phụ trách bảo vệ thông tin cá nhân của Zaco Labs</li>
+    <li>Email: <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
+</ul>
+
+<h2>14. Dịch vụ của bên thứ ba và trách nhiệm quản lý của bạn</h2>
+<ul>
+    <li>Các dịch vụ do bên thứ ba vận hành, như trang web hoặc ứng dụng mà bạn chuyển đến thông qua quảng cáo và nhà cung cấp bản đồ, chịu sự điều chỉnh của chính sách quyền riêng tư của đơn vị vận hành tương ứng, và Công ty không chịu trách nhiệm về việc xử lý thông tin cá nhân diễn ra trong các dịch vụ đó.</li>
+    <li>Sau khi tệp và hình ảnh do bạn xuất hoặc chia sẻ đã được chuyển đến nơi nhận do bạn chọn, Công ty không thể quản lý chúng; việc sử dụng và quản lý sau đó thuộc trách nhiệm của bạn và bên nhận.</li>
+    <li>Vì nhật ký di chuyển được lưu trên thiết bị của bạn, bạn phải tự quản lý thiết bị, bao gồm thiết lập khóa thiết bị và phòng tránh mất mát, trộm cắp. Công ty không chịu trách nhiệm trong trường hợp nhật ký bị lộ do thiết bị bị mất, bị trộm, bị người khác sử dụng hoặc nguyên nhân tương tự mà không do lỗi cố ý hoặc lỗi vô ý của Công ty.</li>
+</ul>
+
+<h2>15. Thay đổi Chính sách quyền riêng tư này</h2>
+<p>Chính sách quyền riêng tư này có thể được sửa đổi theo thay đổi của pháp luật và chính sách Dịch vụ. Mọi thay đổi sẽ được thông báo trong Dịch vụ hoặc trên trang này.</p>
+
+<div class="contact">
+    <p>Liên hệ: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

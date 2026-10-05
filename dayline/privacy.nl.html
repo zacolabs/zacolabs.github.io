@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacybeleid van Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Privacybeleid van Dayline</h1>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <a href="privacy.en.html">English</a> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <a href="privacy.zh-hant.html">繁體中文</a> · <a href="privacy.es.html">Español</a> · <a href="privacy.fil.html">Filipino</a> · <strong>Nederlands</strong> · <a href="privacy.da.html">Dansk</a> · <a href="privacy.de.html">Deutsch</a> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <a href="privacy.pl.html">Polski</a> · <a href="privacy.fr.html">Français</a> · <a href="privacy.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Ingangsdatum: 5 oktober 2026</p>
+
+<p>Zaco Labs ("het Bedrijf") hecht waarde aan uw privacy en houdt zich aan de toepasselijke wetgeving, waaronder de Koreaanse wet op de bescherming van persoonsgegevens. Dit Privacybeleid legt uit hoe uw persoonsgegevens binnen de door het Bedrijf aangeboden dienst Dayline ("de Dienst") worden verzameld, gebruikt, bewaard en vernietigd. Dit beleid geldt voor zowel de iOS- als de Android-app.</p>
+
+<h2>1. Persoonsgegevens die wij verzamelen</h2>
+<p>Het Bedrijf levert de Dienst zonder registratie en vraagt in de app geen gegevens waarmee u rechtstreeks kunt worden geïdentificeerd, zoals uw naam of telefoonnummer. Om de Dienst te leveren, verzamelen wij de volgende gegevens.</p>
+<ul>
+    <li>Anonieme apparaatidentificatie (userKey): een identificatie die de app aanmaakt door apparaat- en installatiegegevens eenrichtingsgewijs om te zetten (op Android een apparaatidentificatiewaarde, op iOS de transactie-identificatie van de app-aankoop); zijn die niet beschikbaar, dan wordt een willekeurig aangemaakte waarde gebruikt. Via deze identificatie wordt u niet aan de hand van uw naam, contactgegevens of iets dergelijks als persoon aangewezen. Om na een herinstallatie van de app dezelfde identificatie te kunnen gebruiken, wordt deze op iOS in de sleutelhanger van het apparaat bewaard en op Android in Google Play services Block Store.</li>
+    <li>Apparaat- en appgegevens: type en versie van het besturingssysteem, apparaatmodel, appversie, apptaal, land (de regio-instelling van het apparaat, geen locatiegegevens) en het tijdstip van het eerste en het meest recente gebruik</li>
+    <li>Advertentie-identificatie (gedragsinformatie): IDFA op iOS en de advertentie-ID (ADID) op Android (zie punt 3)</li>
+    <li>Gegevens die Google verzamelt bij het leveren van advertenties: het IP-adres en de daaruit afgeleide regio bij benadering, gegevens over welke advertenties zijn bekeken of aangetikt, en dergelijke (zie punt 3)</li>
+    <li>Gebruiksstatistieken en diagnosegegevens over appfouten: gegevens over navigatie tussen schermen en het gebruik van functies, waarden van app-instellingen, of toegangsrechten zijn toegestaan, apparaatmodel, versie van het besturingssysteem, appversie en de gegevens die op het moment van een fout worden vastgelegd (zie punt 10)</li>
+    <li>Bij vragen aan de klantenservice: het e-mailadres waarmee u schrijft en de inhoud van uw vraag</li>
+</ul>
+<p>De volgende gegevens worden uitsluitend op uw apparaat opgeslagen en niet naar de servers van het Bedrijf verzonden.</p>
+<ul>
+    <li>Opnamen van uw verplaatsingen: locatie (coördinaten) en tijdstip, de afgelegde route, afstand en duur, plekken waar u hebt verbleven en de vervoerswijze (wandelen, hardlopen, fietsen, voertuig)</li>
+    <li>Bewegings- en activiteitsgegevens van het apparaat, die worden gebruikt om vervoerswijzen van elkaar te onderscheiden</li>
+</ul>
+
+<h2>2. Doeleinden van verzameling en gebruik</h2>
+<ul>
+    <li>De route, de afstand en de vervoerswijzen van een dag opnemen en tonen (uitsluitend op het apparaat verwerkt)</li>
+    <li>Het gebruik van de Dienst beheren via de anonieme identificatie en app-instellingen bieden, zoals of advertenties worden getoond en meldingen over verplichte updates</li>
+    <li>Gepersonaliseerde advertenties leveren, advertentieprestaties meten en advertentiefraude voorkomen</li>
+    <li>De Dienst verbeteren, statistieken en analyses uitvoeren en appfouten verhelpen</li>
+    <li>Klantvragen beantwoorden</li>
+</ul>
+
+<h2>3. Verzameling en gebruik van advertentie-identificaties (gedragsinformatie)</h2>
+<p>Om gepersonaliseerde advertenties te leveren en de Dienst te verbeteren, maakt het Bedrijf gebruik van een advertentieplatform van derden; daarbij kan een advertentie-identificatie worden verzameld. De app geeft de opnamen van uw verplaatsingen niet door aan het advertentieplatform.</p>
+<ol>
+    <li>Verzamelde gedragsinformatie
+        <ul>
+            <li>iOS: IDFA (Identifier for Advertisers)</li>
+            <li>Android: advertentie-ID (ADID, Google Advertising ID)</li>
+        </ul>
+    </li>
+    <li>Doeleinden van verzameling en gebruik
+        <ul>
+            <li>Gepersonaliseerde (gerichte) advertenties op basis van interesses leveren</li>
+            <li>Prestaties van vertoningen en klikken analyseren en advertentiefraude (ongeldig verkeer) voorkomen</li>
+        </ul>
+    </li>
+    <li>Wijze van verzameling en dienst van derden
+        <ul>
+            <li>Wordt automatisch verzameld en verzonden via de mobiele advertentie-SDK in de app.</li>
+            <li>Dienst: Google AdMob (Google LLC). De gegevensverwerking door Google valt onder het <a href="https://policies.google.com/privacy">Privacybeleid van Google</a>.</li>
+        </ul>
+    </li>
+    <li>Uw recht van bezwaar en de uitoefening daarvan<br />
+        U kunt de verzameling van identificaties voor gepersonaliseerde advertenties op de volgende manieren weigeren. Ook na bezwaar kunnen niet-gepersonaliseerde (algemene) advertenties worden getoond.
+        <ul>
+            <li>iOS: weiger het trackingverzoek dat bij de eerste start van de app verschijnt, of ga naar Instellingen &gt; Privacy en beveiliging &gt; Tracking en zet "Sta apps toe om tracking te vragen" uit, of schakel tracking voor die specifieke app uit.</li>
+            <li>Android: ga naar Instellingen &gt; Google &gt; Advertenties en kies "Advertentie-ID verwijderen" of "Advertentiepersonalisatie uitschakelen".</li>
+            <li>Gebruikers in regio's waar toestemming voor advertenties vereist is, zoals de Europese Economische Ruimte (EER) en het Verenigd Koninkrijk, kunnen hun keuze maken op het toestemmingsscherm dat bij de eerste start van de app verschijnt. In de iOS-app kunt u die keuze op elk moment wijzigen via <strong>Instellingen &gt; Advertentieprivacy</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>4. Verwerking van locatiegegevens en opnamen van uw verplaatsingen</h2>
+<ul>
+    <li>Locatie- en bewegingsgegevens worden uitsluitend gebruikt om de opnamen van uw verplaatsingen te maken; ze worden op het apparaat verwerkt en alleen op het apparaat opgeslagen. Ze worden niet naar de servers van het Bedrijf verzonden en maken ook geen deel uit van de gebruiksstatistieken.</li>
+    <li>De widget op het beginscherm wordt getekend op basis van de opnamen die op het apparaat zijn opgeslagen en stuurt de opnamen niet buiten het apparaat.</li>
+    <li>Op schermen waarop een kaart wordt getoond, haalt de kaartaanbieder (Apple Kaarten op iOS, Google Maps op Android) de kaartgegevens voor het getoonde gebied op van zijn eigen servers. De gegevensverwerking door de kaartaanbieder valt onder het <a href="https://www.apple.com/legal/privacy/">Privacybeleid van Apple</a> en het <a href="https://policies.google.com/privacy">Privacybeleid van Google</a>.</li>
+    <li>Het exporteren van een GPX-bestand en het delen van een afbeelding gebeuren alleen wanneer u daar zelf voor kiest, en de gegevens gaan uitsluitend naar de bestemming die u kiest.</li>
+</ul>
+
+<h2>5. Bewaar- en gebruiksduur</h2>
+<p>Het Bedrijf bewaart persoonsgegevens zolang u de Dienst gebruikt en vernietigt ze onverwijld zodra het doel van de verzameling en het gebruik is bereikt of u om verwijdering verzoekt. Alleen door de app te verwijderen weet het Bedrijf dat niet; wilt u dat de gegevens die op de server zijn achtergebleven worden verwijderd, dien dan een verzoek in op de wijze die in punt 9 is beschreven. Waar bewaring op grond van de toepasselijke wetgeving verplicht is, worden de gegevens echter bewaard gedurende de termijn die die wetgeving voorschrijft.</p>
+<p>Gegevens die alleen op het apparaat worden opgeslagen (punt 1), blijven op het apparaat staan totdat u ze verwijdert. Met <strong>Instellingen &gt; Alle opnamen verwijderen</strong> in de app kunt u alles verwijderen, en wanneer u de app verwijdert, worden ze samen met de app van het apparaat verwijderd. Omdat het Bedrijf niet over de opnamen van uw verplaatsingen beschikt, kan het deze niet voor u verwijderen of herstellen.</p>
+<p>De bewaartermijn van de door Google verzamelde gegevens volgt het gegevensbewaarbeleid van Google.</p>
+
+<h2>6. Verstrekking aan derden</h2>
+<p>Het Bedrijf verstrekt uw persoonsgegevens niet aan derden buiten het in dit beleid omschreven kader, behalve wanneer dat wettelijk verplicht is of wanneer een opsporingsinstantie daarom verzoekt ten behoeve van een onderzoek, volgens de bij wet voorgeschreven procedures en methoden.</p>
+
+<h2>7. Uitbesteding van de verwerking van persoonsgegevens</h2>
+<p>Voor een soepele levering van de Dienst heeft het Bedrijf de verwerking van persoonsgegevens als volgt uitbesteed.</p>
+<ul>
+    <li>Vercel Inc.: serverbeheer (serverlocatie: Seoul, Zuid-Korea)</li>
+    <li>Supabase Inc.: databasebeheer (serverlocatie: Seoul, Zuid-Korea)</li>
+    <li>Google LLC: gepersonaliseerde advertenties en beheer van advertentietoestemming (Google AdMob, Google User Messaging Platform), analyse van gebruiksstatistieken (Google Firebase Analytics), diagnose van appfouten (Google Firebase Crashlytics) en bewaring van de anonieme apparaatidentificatie (Android, Google Play services Block Store)</li>
+</ul>
+
+<h2>8. Doorgifte van persoonsgegevens naar het buitenland</h2>
+<p>Voor de analyse van gebruiksstatistieken, de diagnose van appfouten en het leveren van advertenties geeft het Bedrijf persoonsgegevens als volgt door naar het buitenland.</p>
+<ul>
+    <li>Ontvanger: Google LLC (contact: <a href="https://support.google.com/policies/contact/general_privacy_form">privacyvragen aan Google</a>)</li>
+    <li>Landen van bestemming: de Verenigde Staten en andere landen waar Google datacenters exploiteert</li>
+    <li>Doorgegeven gegevens: advertentie-identificatie, IP-adres, gegevens over vertoningen van en klikken op advertenties, gebruiksstatistieken, diagnosegegevens over appfouten, apparaatmodel, versie van het besturingssysteem en appversie</li>
+    <li>Tijdstip en wijze van doorgifte: doorlopend tijdens het gebruik van de app, via het netwerk door de SDK's in de app</li>
+    <li>Gebruiksdoel en bewaartermijn: de doeleinden uit punt 3 en punt 10; bewaring gedurende de termijn volgens het gegevensbewaarbeleid van Google</li>
+    <li>Weigeren en de gevolgen daarvan: met de instellingen uit punt 3 en punt 10 kunt u de doorgifte van de advertentie-identificatie voor gepersonaliseerde advertenties en van de gebruiksstatistieken weigeren. De gegevens die nodig zijn om niet-gepersonaliseerde advertenties te tonen en de diagnosegegevens over appfouten worden doorgegeven zolang u de app gebruikt.</li>
+</ul>
+
+<h2>9. Uw rechten en de uitoefening daarvan</h2>
+<p>U kunt op elk moment verzoeken om inzage in, correctie of verwijdering van uw persoonsgegevens of om beperking van de verwerking. Stuurt u uw verzoek naar het e-mailadres in punt 13, dan handelt het Bedrijf onverwijld overeenkomstig de toepasselijke wetgeving. Omdat het Bedrijf geen gegevens bezit waarmee u rechtstreeks kunt worden geïdentificeerd, zoals uw naam of contactgegevens, kan het voor de afhandeling van uw verzoek vragen om de gegevens die nodig zijn om het betreffende apparaat vast te stellen.</p>
+<p>De opnamen van uw verplaatsingen staan alleen op uw apparaat; u kunt ze dus rechtstreeks in de app bekijken, exporteren met <strong>Instellingen &gt; Opnamen exporteren (GPX)</strong> of verwijderen met <strong>Instellingen &gt; Alle opnamen verwijderen</strong>.</p>
+
+<h2>10. Verzameling van gebruiksstatistieken met analysehulpmiddelen</h2>
+<p>Om de kwaliteit van de Dienst te verbeteren, gebruikt het Bedrijf Google Firebase Analytics om gebruiksstatistieken te verzamelen. De verzamelde informatie betreft gebruiksgedrag, zoals navigatie tussen schermen, gebruik van functies, waarden van app-instellingen (taal, thema, weergavemodus en dergelijke), of toegangsrechten zoals locatie en beweging zijn toegestaan, of de widget wordt gebruikt, app- en apparaatversie en bij benadering de regio. Opnamen van uw verplaatsingen, zoals locatie (coördinaten), de afgelegde route, afstand en duur, en gegevens waarmee u rechtstreeks kunt worden geïdentificeerd, zoals uw naam of contactgegevens, worden niet verzameld. Samen met de gebruiksstatistieken wordt een identificatie meegestuurd om installaties van elkaar te onderscheiden (op iOS de anonieme apparaatidentificatie, op Android een afzonderlijk voor de statistieken aangemaakte willekeurige identificatie). U kunt het verzamelen van gebruiksstatistieken op elk moment aan- of uitzetten via <strong>Instellingen &gt; Gebruiksstatistieken</strong> in de app.</p>
+<p>Het Bedrijf gebruikt daarnaast Google Firebase Crashlytics om onverwachte afsluitingen van de app te verhelpen. Daarbij worden het apparaatmodel, de versie van het besturingssysteem, de appversie en de op het moment van een fout vastgelegde gegevens verzameld; opnamen van uw verplaatsingen horen daar niet bij. Deze diagnosegegevens worden verzameld ongeacht de instelling voor gebruiksstatistieken.</p>
+<p>De gegevensverwerking door Google valt onder het <a href="https://policies.google.com/privacy">Privacybeleid van Google</a> en het beleid <a href="https://firebase.google.com/support/privacy">Privacy en beveiliging van Firebase</a>.</p>
+
+<h2>11. App-machtigingen</h2>
+<p>De app gebruikt voor de onderstaande functies toegangsrechten op het apparaat. Ook als u optionele rechten niet toestaat, kunt u de Dienst buiten de betreffende functie gebruiken.</p>
+<ul>
+    <li>Locatie (vereist): om de route die u aflegt op te nemen. Om op te nemen zonder de app te openen is "Altijd" nodig.</li>
+    <li>Beweging en fitness (iOS) / Lichamelijke activiteit (Android) (optioneel): om wandelen, hardlopen, fietsen en verplaatsingen per voertuig van elkaar te onderscheiden.</li>
+    <li>Meldingen (Android, optioneel): om tijdens het opnemen van uw verplaatsing de melding te tonen dat er wordt opgenomen. Andere meldingen worden niet verstuurd.</li>
+    <li>Foto's toevoegen (iOS, optioneel): wordt alleen gebruikt wanneer u de afbeelding van een dag in uw fotobibliotheek bewaart. De app leest uw foto's niet.</li>
+    <li>App-tracking toestaan (iOS, optioneel): voor gepersonaliseerde advertenties.</li>
+</ul>
+<p>U kunt toegangsrechten op elk moment wijzigen of intrekken in de instellingen van uw apparaat.</p>
+
+<h2>12. Beveiligingsmaatregelen</h2>
+<p>Het Bedrijf treft organisatorische en technische beschermingsmaatregelen, waaronder het beheer van toegangsrechten, versleuteling van de transmissietrajecten en toegangscontrole, voor een veilige verwerking van persoonsgegevens. De opnamen van uw verplaatsingen worden niet op de servers van het Bedrijf bewaard; ze zijn op uw apparaat opgeslagen en worden beschermd door de beveiligingsfuncties van het apparaat, zoals de apparaatvergrendeling.</p>
+
+<h2>13. Functionaris voor gegevensbescherming</h2>
+<p>Het Bedrijf wijst een functionaris voor gegevensbescherming aan die eindverantwoordelijk is voor de verwerking van persoonsgegevens en die klachten van gebruikers afhandelt en schade herstelt.</p>
+<ul>
+    <li>Functie: functionaris voor gegevensbescherming van Zaco Labs</li>
+    <li>E-mail: <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
+</ul>
+
+<h2>14. Diensten van derden en uw eigen verantwoordelijkheid</h2>
+<ul>
+    <li>Op diensten die door derden worden geëxploiteerd, zoals websites of apps die u via een advertentie bereikt en de kaartaanbieders, is het privacybeleid van de betreffende aanbieder van toepassing; het Bedrijf is niet verantwoordelijk voor de verwerking van persoonsgegevens binnen die diensten.</li>
+    <li>Bestanden en afbeeldingen die u hebt geëxporteerd of gedeeld, kan het Bedrijf niet meer beheren zodra ze bij de door u gekozen bestemming zijn afgeleverd; het gebruik en het beheer daarna zijn de verantwoordelijkheid van u en van de ontvanger.</li>
+    <li>Omdat de opnamen van uw verplaatsingen op uw apparaat worden opgeslagen, is het beheer van het apparaat, waaronder de vergrendelingsinstellingen en het voorkomen van verlies en diefstal, aan u. Het Bedrijf is niet verantwoordelijk wanneer opnamen zonder opzet of nalatigheid van het Bedrijf voor anderen zichtbaar worden door verlies of diefstal van het apparaat, gebruik door een ander of iets dergelijks.</li>
+</ul>
+
+<h2>15. Wijzigingen in dit Privacybeleid</h2>
+<p>Dit Privacybeleid kan worden herzien naar aanleiding van wijzigingen in wetgeving en in het beleid van de Dienst. Wijzigingen worden binnen de Dienst of op deze pagina bekendgemaakt.</p>
+
+<div class="contact">
+    <p>Contact: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

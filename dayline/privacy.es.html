@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Política de privacidad de Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Política de privacidad de Dayline</h1>
+    <p class="langnav"><a href="privacy.ko.html">한국어</a> · <a href="privacy.en.html">English</a> · <a href="privacy.ja.html">日本語</a> · <a href="privacy.zh-hans.html">简体中文</a> · <a href="privacy.zh-hant.html">繁體中文</a> · <strong>Español</strong> · <a href="privacy.fil.html">Filipino</a> · <a href="privacy.nl.html">Nederlands</a> · <a href="privacy.da.html">Dansk</a> · <a href="privacy.de.html">Deutsch</a> · <a href="privacy.ru.html">Русский</a> · <a href="privacy.ar.html">العربية</a> · <a href="privacy.it.html">Italiano</a> · <a href="privacy.id.html">Bahasa Indonesia</a> · <a href="privacy.pt.html">Português</a> · <a href="privacy.pl.html">Polski</a> · <a href="privacy.fr.html">Français</a> · <a href="privacy.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Fecha de entrada en vigor: 5 de octubre de 2026</p>
+
+<p>Zaco Labs ("la Empresa") valora su privacidad y cumple la legislación aplicable, incluida la Ley de protección de datos personales de Corea. Esta Política de privacidad explica cómo se recogen, utilizan, conservan y destruyen sus datos personales dentro del servicio Dayline ("el Servicio") que presta la Empresa. Esta política se aplica tanto a la aplicación de iOS como a la de Android.</p>
+
+<h2>1. Datos personales que recogemos</h2>
+<p>La Empresa presta el Servicio sin un proceso de registro de cuenta, y la aplicación no le pide información que le identifique directamente, como su nombre o su número de teléfono. Para prestar el Servicio recogemos la siguiente información:</p>
+<ul>
+    <li>Identificador anónimo de dispositivo (userKey): un identificador que la aplicación genera transformando de forma unidireccional información del dispositivo y de la instalación de la aplicación (en Android, un valor identificador del dispositivo; en iOS, el identificador de la transacción de compra de la aplicación); si no es posible obtener esa información, se utiliza un valor generado aleatoriamente. No le identifica por su nombre, sus datos de contacto ni información similar. Para que pueda utilizarse el mismo identificador aunque se reinstale la aplicación, este se conserva en el llavero (Keychain) del dispositivo en iOS y en Google Play services Block Store en Android.</li>
+    <li>Información del dispositivo y de la aplicación: tipo y versión del sistema operativo, modelo del dispositivo, versión de la aplicación, idioma de la aplicación, país (el valor de región configurado en el dispositivo, no información de ubicación) y fecha y hora del primer y del último uso</li>
+    <li>Identificador publicitario (información de comportamiento): IDFA en iOS e ID de publicidad (ADID) en Android (véase la sección 3)</li>
+    <li>Información que Google recoge al ofrecer publicidad: la dirección IP y la región aproximada que se deduce de ella, el registro de los anuncios vistos o pulsados, etc. (véase la sección 3)</li>
+    <li>Estadísticas de uso y diagnósticos de errores de la aplicación: registro de la navegación entre pantallas y del uso de funciones, valores de configuración de la aplicación, si se han concedido los permisos, modelo del dispositivo, versión del sistema operativo, versión de la aplicación y el registro del momento en que se produce un error (véase la sección 10)</li>
+    <li>Al contactar con nosotros: la dirección de correo electrónico desde la que escribe y el contenido de su consulta</li>
+</ul>
+<p>La siguiente información se almacena únicamente en su dispositivo y no se transmite a los servidores de la Empresa.</p>
+<ul>
+    <li>Registro de movimientos: ubicación (coordenadas) y hora, recorrido, distancia y duración de los desplazamientos, lugares en los que ha permanecido y medio de desplazamiento (a pie, corriendo, en bicicleta, en vehículo)</li>
+    <li>Información de movimiento y actividad del dispositivo, que se utiliza para distinguir el medio de desplazamiento</li>
+</ul>
+
+<h2>2. Finalidades de la recogida y el uso</h2>
+<ul>
+    <li>Registrar y mostrar el recorrido, la distancia y los medios de desplazamiento de su día (se tratan únicamente dentro del dispositivo)</li>
+    <li>Gestionar el uso del Servicio mediante el identificador anónimo y ofrecer la configuración de la aplicación, como si se muestran anuncios y los avisos de actualización obligatoria</li>
+    <li>Ofrecer publicidad personalizada, medir el rendimiento de los anuncios y prevenir el fraude publicitario</li>
+    <li>Mejorar el Servicio, realizar análisis estadísticos y corregir errores de la aplicación</li>
+    <li>Atender las consultas de los clientes</li>
+</ul>
+
+<h2>3. Recogida y uso de identificadores publicitarios (información de comportamiento)</h2>
+<p>Para ofrecer publicidad personalizada y mejorar el Servicio, la Empresa utiliza una plataforma publicitaria de terceros y en ese proceso puede recogerse un identificador publicitario. La aplicación no transmite su registro de movimientos a la plataforma publicitaria.</p>
+<ol>
+    <li>Información de comportamiento recogida
+        <ul>
+            <li>iOS: IDFA (Identifier for Advertisers)</li>
+            <li>Android: ID de publicidad (ADID, Google Advertising ID)</li>
+        </ul>
+    </li>
+    <li>Finalidades de la recogida y el uso
+        <ul>
+            <li>Ofrecer publicidad personalizada (segmentada) basada en intereses</li>
+            <li>Analizar el rendimiento de impresiones y clics y prevenir el fraude publicitario (tráfico no válido)</li>
+        </ul>
+    </li>
+    <li>Método de recogida y servicio de terceros
+        <ul>
+            <li>Se recoge y transmite automáticamente a través del SDK de publicidad móvil incluido en la aplicación.</li>
+            <li>Servicio: Google AdMob (Google LLC). El tratamiento de datos por parte de Google se rige por la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>.</li>
+        </ul>
+    </li>
+    <li>Su derecho de oposición y cómo ejercerlo<br />
+        Puede rechazar la recogida de identificadores para publicidad personalizada mediante los métodos siguientes. Aunque se oponga, es posible que se sigan mostrando anuncios no personalizados (generales).
+        <ul>
+            <li>iOS: rechace la solicitud de seguimiento que aparece al abrir la aplicación por primera vez, o vaya a Ajustes &gt; Privacidad y seguridad &gt; Seguimiento y desactive "Permitir solicitudes de seguimiento" o el seguimiento de esa aplicación concreta.</li>
+            <li>Android: vaya a Ajustes &gt; Google &gt; Anuncios y seleccione "Eliminar ID de publicidad" o "Inhabilitar la personalización de anuncios".</li>
+            <li>Los usuarios de regiones en las que se exige consentimiento para la publicidad, como el Espacio Económico Europeo (EEE) y el Reino Unido, pueden elegir en la pantalla de consentimiento que aparece al abrir la aplicación por primera vez. En la aplicación de iOS pueden cambiar su elección en cualquier momento desde <strong>Ajustes &gt; Privacidad de anuncios</strong>.</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>4. Tratamiento de la información de ubicación y del registro de movimientos</h2>
+<ul>
+    <li>La información de ubicación y de movimiento se utiliza únicamente para crear su registro de movimientos; se trata dentro del dispositivo y se almacena solo en él. No se transmite a los servidores de la Empresa ni se incluye en las estadísticas de uso.</li>
+    <li>El widget de la pantalla de inicio se dibuja a partir de los registros almacenados en el dispositivo y no los envía fuera de él.</li>
+    <li>En las pantallas que muestran un mapa, el proveedor de mapas (Mapas de Apple en iOS, Google Maps en Android) obtiene de sus propios servidores los datos cartográficos de la zona que aparece en pantalla. El tratamiento de datos por parte del proveedor de mapas se rige por la <a href="https://www.apple.com/legal/privacy/">Política de Privacidad de Apple</a> y la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a>.</li>
+    <li>La exportación de un archivo GPX y el uso compartido de una imagen solo se realizan cuando usted mismo lo elige, y solo se entregan al destino que usted haya elegido.</li>
+</ul>
+
+<h2>5. Periodo de conservación y uso</h2>
+<p>La Empresa conserva los datos personales mientras usted utiliza el Servicio y los destruye sin demora cuando se cumple la finalidad de su recogida y uso o cuando usted solicita su supresión. La Empresa no puede saber que ha eliminado la aplicación solo porque la desinstale, así que, si desea que se suprima la información que queda en el servidor, solicítelo por el medio indicado en la sección 9. No obstante, cuando la legislación aplicable exija su conservación, la información se conserva durante el periodo que dicha legislación establezca.</p>
+<p>La información que se almacena únicamente en el dispositivo (sección 1) permanece en él hasta que usted la borre. Puede borrarla por completo con <strong>Ajustes &gt; Eliminar todos los registros</strong> en la aplicación, y al eliminar la aplicación también se elimina del dispositivo. Como la Empresa no dispone de su registro de movimientos, no puede eliminarlo ni recuperarlo en su lugar.</p>
+<p>El periodo de conservación de la información que recoge Google se rige por la política de conservación de datos de Google.</p>
+
+<h2>6. Cesión a terceros</h2>
+<p>La Empresa no cede sus datos personales a terceros más allá del alcance indicado en esta política, salvo cuando lo exija la ley o cuando un organismo de investigación así lo solicite con fines de investigación conforme a los procedimientos y métodos previstos por la ley.</p>
+
+<h2>7. Encargo del tratamiento de datos personales</h2>
+<p>Para la correcta prestación del Servicio, la Empresa encarga las siguientes tareas de tratamiento de datos personales:</p>
+<ul>
+    <li>Vercel Inc.: operación de servidores (ubicación de los servidores: Seúl, República de Corea)</li>
+    <li>Supabase Inc.: operación de la base de datos (ubicación de los servidores: Seúl, República de Corea)</li>
+    <li>Google LLC: publicidad personalizada y gestión del consentimiento publicitario (Google AdMob, Google User Messaging Platform), análisis de estadísticas de uso (Google Firebase Analytics), diagnóstico de errores de la aplicación (Google Firebase Crashlytics) y conservación del identificador anónimo de dispositivo (Android, Google Play services Block Store)</li>
+</ul>
+
+<h2>8. Transferencia internacional de datos personales</h2>
+<p>Para analizar las estadísticas de uso, diagnosticar errores de la aplicación y ofrecer publicidad, la Empresa transfiere datos personales al extranjero como se indica a continuación.</p>
+<ul>
+    <li>Destinatario: Google LLC (contacto: <a href="https://support.google.com/policies/contact/general_privacy_form">formulario de consultas de privacidad de Google</a>)</li>
+    <li>Países de destino: Estados Unidos y otros países en los que Google opera centros de datos</li>
+    <li>Datos transferidos: identificador publicitario, dirección IP, registro de impresiones y clics de anuncios, estadísticas de uso, diagnósticos de errores de la aplicación, modelo del dispositivo, versión del sistema operativo y versión de la aplicación</li>
+    <li>Momento y método de la transferencia: se transmiten por la red de forma continua mientras usa la aplicación, a través de los SDK incluidos en ella</li>
+    <li>Finalidad del uso y periodo de conservación: las finalidades indicadas en las secciones 3 y 10; durante el periodo que establezca la política de conservación de datos de Google</li>
+    <li>Cómo oponerse y efectos: puede rechazar la transmisión del identificador publicitario para publicidad personalizada y de las estadísticas de uso mediante los ajustes descritos en las secciones 3 y 10. La información necesaria para mostrar anuncios no personalizados y los diagnósticos de errores de la aplicación se transmiten mientras usa la aplicación.</li>
+</ul>
+
+<h2>9. Sus derechos y cómo ejercerlos</h2>
+<p>Puede solicitar en cualquier momento el acceso, la rectificación o la supresión de sus datos personales, o la limitación de su tratamiento. Si lo solicita escribiendo a la dirección de correo electrónico indicada en la sección 13, la Empresa actuará sin demora conforme a la legislación aplicable. Dado que la Empresa no dispone de información que le identifique directamente, como su nombre o sus datos de contacto, puede pedirle la información necesaria para identificar el dispositivo en cuestión a fin de tramitar su solicitud.</p>
+<p>Su registro de movimientos se encuentra únicamente en su dispositivo, por lo que puede consultarlo directamente en la aplicación, exportarlo con <strong>Ajustes &gt; Exportar registros (GPX)</strong> o eliminarlo con <strong>Ajustes &gt; Eliminar todos los registros</strong>.</p>
+
+<h2>10. Recogida de estadísticas de uso mediante herramientas de análisis</h2>
+<p>Para mejorar la calidad del Servicio, la Empresa utiliza Google Firebase Analytics para recoger estadísticas de uso. La información recogida se refiere al comportamiento de uso del Servicio, como la navegación entre pantallas, el uso de funciones, los valores de configuración de la aplicación (idioma, tema, modo de visualización, etc.), si se han concedido permisos como los de ubicación y movimiento, si se utiliza el widget, la versión de la aplicación y del dispositivo y la región aproximada. No se recoge su registro de movimientos, como la ubicación (coordenadas), el recorrido o la distancia y la duración de los desplazamientos, ni información que le identifique directamente, como su nombre o sus datos de contacto. Junto con las estadísticas de uso se transmite un identificador que permite distinguir las instalaciones (en iOS, el identificador anónimo de dispositivo; en Android, un identificador aleatorio creado aparte para las estadísticas). Puede activar o desactivar en cualquier momento la recogida de estadísticas de uso desde <strong>Ajustes &gt; Estadísticas de uso</strong> en la aplicación.</p>
+<p>La Empresa también utiliza Google Firebase Crashlytics para corregir los cierres inesperados de la aplicación. Esta herramienta recoge el modelo del dispositivo, la versión del sistema operativo, la versión de la aplicación y el registro del momento en que se produce un error; no incluye su registro de movimientos. Esta información de diagnóstico se recoge con independencia del ajuste de estadísticas de uso.</p>
+<p>El tratamiento de datos por parte de Google se rige por la <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a> y por la política de <a href="https://firebase.google.com/support/privacy">Privacidad y seguridad de Firebase</a>.</p>
+
+<h2>11. Permisos de la aplicación</h2>
+<p>La aplicación utiliza permisos de acceso al dispositivo para las funciones siguientes. Aunque no conceda los permisos opcionales, puede utilizar el resto del Servicio, salvo la función correspondiente.</p>
+<ul>
+    <li>Ubicación (obligatorio): se utiliza para registrar el recorrido que hace. Para registrar sin abrir la aplicación se necesita "Siempre".</li>
+    <li>Actividad física (iOS y Android) (opcional): se utiliza para distinguir los desplazamientos a pie, corriendo, en bicicleta y en vehículo.</li>
+    <li>Notificaciones (Android, opcional): se utiliza para mostrar, mientras se registran sus desplazamientos, la notificación que indica que el registro está en curso. No se envía ninguna otra notificación.</li>
+    <li>Añadir solo fotos (iOS, opcional): se utiliza únicamente cuando guarda la imagen de un día en su fototeca. La aplicación no lee sus fotos.</li>
+    <li>Permiso de seguimiento de apps (iOS, opcional): se utiliza para la publicidad personalizada.</li>
+</ul>
+<p>Puede cambiar o retirar los permisos en cualquier momento desde los Ajustes del dispositivo.</p>
+
+<h2>12. Medidas de seguridad</h2>
+<p>La Empresa aplica medidas de protección administrativas y técnicas, incluidas la gestión de los derechos de acceso, el cifrado de los tramos de transmisión y el control de accesos, para el tratamiento seguro de los datos personales. Su registro de movimientos no se conserva en los servidores de la Empresa; se almacena en su dispositivo y queda protegido por las funciones de seguridad del propio dispositivo, como el bloqueo.</p>
+
+<h2>13. Responsable de protección de datos</h2>
+<p>La Empresa designa un responsable de protección de datos encargado de asumir la responsabilidad global del tratamiento de datos personales y de atender las reclamaciones de los usuarios y reparar los daños.</p>
+<ul>
+    <li>Función: responsable de protección de datos de Zaco Labs</li>
+    <li>Correo electrónico: <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></li>
+</ul>
+
+<h2>14. Servicios de terceros y responsabilidad de gestión del usuario</h2>
+<ul>
+    <li>A los servicios gestionados por terceros, como los sitios web o las aplicaciones a los que se accede a través de un anuncio y los proveedores de mapas, se les aplica la política de privacidad del operador correspondiente, y la Empresa no responde del tratamiento de datos personales que tenga lugar en esos servicios.</li>
+    <li>Una vez que los archivos e imágenes que usted exporta o comparte se han entregado al destino que usted ha elegido, la Empresa no puede gestionarlos; su uso y gestión posteriores son responsabilidad de usted y de quien los haya recibido.</li>
+    <li>Dado que su registro de movimientos se almacena en su dispositivo, la gestión del dispositivo, incluidos los ajustes de bloqueo y la prevención de la pérdida o el robo, le corresponde a usted. La Empresa no responde cuando, sin que medie dolo ni culpa de la Empresa, los registros queden expuestos por la pérdida o el robo del dispositivo, su uso por otra persona o causas similares.</li>
+</ul>
+
+<h2>15. Cambios en esta Política de privacidad</h2>
+<p>Esta Política de privacidad puede revisarse conforme a los cambios en la legislación y en las políticas del Servicio. Cualquier cambio se anunciará dentro del Servicio o en esta página.</p>
+
+<div class="contact">
+    <p>Contacto: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

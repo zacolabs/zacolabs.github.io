@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Licencias de código abierto de Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <p class="langnav"><a href="licenses.ko.html">한국어</a> · <a href="licenses.en.html">English</a> · <a href="licenses.ja.html">日本語</a> · <a href="licenses.zh-hans.html">简体中文</a> · <a href="licenses.zh-hant.html">繁體中文</a> · <strong>Español</strong> · <a href="licenses.fil.html">Filipino</a> · <a href="licenses.nl.html">Nederlands</a> · <a href="licenses.da.html">Dansk</a> · <a href="licenses.de.html">Deutsch</a> · <a href="licenses.ru.html">Русский</a> · <a href="licenses.ar.html">العربية</a> · <a href="licenses.it.html">Italiano</a> · <a href="licenses.id.html">Bahasa Indonesia</a> · <a href="licenses.pt.html">Português</a> · <a href="licenses.pl.html">Polski</a> · <a href="licenses.fr.html">Français</a> · <a href="licenses.vi.html">Tiếng Việt</a></p>
+    <p>Dayline utiliza el siguiente software de código abierto. Los derechos de cada uno corresponden a su titular.</p>
+
+    <h2>Android</h2>
+    <div class="lib"><div class="nm">AndroidX Core / Activity / Lifecycle / AppCompat / Fragment / Startup</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Jetpack Compose (UI, Foundation, Animation, Material, Material3, Material Icons)</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">AndroidX Room / SQLite</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">AndroidX DataStore</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">AndroidX WorkManager / Browser / WebKit / Privacy Sandbox Ads Services</div><div class="cp">© The Android Open Source Project</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Kotlin Standard Library</div><div class="cp">© JetBrains s.r.o.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Kotlin Coroutines</div><div class="cp">© JetBrains s.r.o.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">kotlinx.serialization</div><div class="cp">© JetBrains s.r.o.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Lottie for Android (Lottie, Lottie Compose)</div><div class="cp">© Airbnb, Inc.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Okio</div><div class="cp">© Square, Inc.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Maps Compose / Maps KTX</div><div class="cp">© Google LLC</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Firebase Android SDK (Crashlytics, Installations, Sessions, Data Transport)</div><div class="cp">© Google LLC</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Guava</div><div class="cp">© Google LLC</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">javax.inject</div><div class="cp">© The JSR-330 Expert Group</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">JSpecify / Error Prone Annotations / J2ObjC Annotations / JSR-305 / JetBrains Annotations</div><div class="cp">© The JSpecify Authors, Google LLC, JetBrains s.r.o.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Protocol Buffers (Java Lite)</div><div class="cp">© Google LLC</div><div class="lc">BSD 3-Clause License</div></div>
+    <div class="lib"><div class="nm">Checker Framework Qualifiers</div><div class="cp">© The Checker Framework developers</div><div class="lc">MIT License</div></div>
+    <div class="lib"><div class="nm">Google Analytics for Firebase</div><div class="cp">© Google LLC</div><div class="lc">Android Software Development Kit License</div></div>
+    <div class="lib"><div class="nm">Google Play Services (Base, Tasks, Location, Block Store, App Set, Ads Identifier)</div><div class="cp">© Google LLC</div><div class="lc">Android Software Development Kit License</div></div>
+    <div class="lib"><div class="nm">Maps SDK for Android</div><div class="cp">© Google LLC</div><div class="lc">Google Maps Platform Terms of Service</div></div>
+    <div class="lib"><div class="nm">Google Mobile Ads SDK (AdMob)</div><div class="cp">© Google LLC</div><div class="lc">Android Software Development Kit License</div></div>
+    <div class="lib"><div class="nm">Google User Messaging Platform (UMP)</div><div class="cp">© Google LLC</div><div class="lc">Android Software Development Kit License</div></div>
+    <h2>iOS</h2>
+    <p>La aplicación de iOS utiliza marcos de trabajo facilitados por Apple (SwiftUI, SwiftData, WidgetKit, MapKit, Core Location, Core Motion, StoreKit, CryptoKit, WebKit, App Tracking Transparency y otros), sujetos al Acuerdo de licencia del SDK de Apple Inc. Los datos de los mapas los proporciona Apple Maps. También incluye el siguiente software de terceros.</p>
+    <div class="lib"><div class="nm">Lottie for iOS</div><div class="cp">© Airbnb, Inc.</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Firebase Apple SDK (Analytics, Crashlytics)</div><div class="cp">© Google LLC</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">GoogleUtilities / GoogleDataTransport / Promises / GoogleAppMeasurement / Interop for Google SDKs</div><div class="cp">© Google LLC</div><div class="lc">Apache License 2.0</div></div>
+    <div class="lib"><div class="nm">Google Mobile Ads SDK (AdMob) / User Messaging Platform / Google Ads On-Device Conversion</div><div class="cp">© Google LLC</div><div class="lc">Google Mobile Ads SDK License</div></div>
+    <div class="lib"><div class="nm">nanopb</div><div class="cp">© 2011 Petteri Aimonen</div><div class="lc">zlib License</div></div>
+    <div class="notice">Licensed under the Apache License, Version 2.0 (the "License");
+you may not use these files except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</div>
+    <div class="notice">Protocol Buffers — Copyright 2008 Google Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+    * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</div>
+    <div class="notice">Checker Framework Qualifiers — Copyright 2004-present by the Checker Framework developers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</div>
+    <div class="notice">nanopb — Copyright (c) 2011 Petteri Aimonen
+
+This software is provided 'as-is', without any express or implied warranty.
+In no event will the authors be held liable for any damages arising from the
+use of this software.
+
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it
+freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not
+   claim that you wrote the original software. If you use this software in
+   a product, an acknowledgment in the product documentation would be
+   appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be
+   misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.</div>
+
+    <h2>Tipografías</h2>
+    <p>Las aplicaciones incluyen la siguiente tipografía.</p>
+    <div class="lib"><div class="nm">Pretendard JP</div><div class="cp">© 2023 Kil Hyung-jin, with Reserved Font Name Pretendard JP. Based on Inter (© The Inter Project Authors) and Source Han Sans (© Adobe)</div><div class="lc">SIL Open Font License 1.1</div></div>
+    <div class="notice">Copyright (c) 2023, Kil Hyung-jin (https://github.com/orioncactus/pretendard),
+with Reserved Font Name Pretendard JP.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.</div>
+
+    <div class="contact">
+        <p>Contacto: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+    </div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

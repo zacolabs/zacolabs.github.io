@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Điều khoản sử dụng Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Điều khoản sử dụng Dayline</h1>
+    <p class="langnav"><a href="terms.ko.html">한국어</a> · <a href="terms.en.html">English</a> · <a href="terms.ja.html">日本語</a> · <a href="terms.zh-hans.html">简体中文</a> · <a href="terms.zh-hant.html">繁體中文</a> · <a href="terms.es.html">Español</a> · <a href="terms.fil.html">Filipino</a> · <a href="terms.nl.html">Nederlands</a> · <a href="terms.da.html">Dansk</a> · <a href="terms.de.html">Deutsch</a> · <a href="terms.ru.html">Русский</a> · <a href="terms.ar.html">العربية</a> · <a href="terms.it.html">Italiano</a> · <a href="terms.id.html">Bahasa Indonesia</a> · <a href="terms.pt.html">Português</a> · <a href="terms.pl.html">Polski</a> · <a href="terms.fr.html">Français</a> · <strong>Tiếng Việt</strong></p>
+    <p class="meta">Ngày hiệu lực: 5 tháng 10 năm 2026</p>
+    <p class="meta">Đây là bản dịch được cung cấp để thuận tiện cho người đọc. Nếu có khác biệt, bản tiếng Hàn được ưu tiên áp dụng.</p>
+
+<h2>Điều 1 (Mục đích)</h2>
+<p>Điều khoản này quy định những nội dung cơ bản giữa Zaco Labs ("Công ty") và người dùng liên quan đến việc sử dụng Dayline và các dịch vụ liên quan ("Dịch vụ") do Công ty cung cấp, bao gồm quyền, nghĩa vụ, trách nhiệm, điều kiện sử dụng và trình tự thủ tục.</p>
+
+<h2>Điều 2 (Định nghĩa)</h2>
+<ul>
+    <li>"Dịch vụ" là ứng dụng Dayline do Công ty cung cấp và mọi dịch vụ đi kèm như ghi lại việc di chuyển, chế độ xem nét vẽ và bản đồ, tiện ích trên màn hình chính và xuất nhật ký.</li>
+    <li>"Người dùng" là người sử dụng Dịch vụ do Công ty cung cấp theo Điều khoản này.</li>
+    <li>"Nhật ký" là thông tin như lộ trình di chuyển, quãng đường và cách di chuyển do Dịch vụ tạo ra trên thiết bị của Người dùng, cũng như các tệp và hình ảnh do Người dùng tạo ra khi xuất hoặc chia sẻ thông tin đó.</li>
+</ul>
+
+<h2>Điều 3 (Hiệu lực và sửa đổi Điều khoản)</h2>
+<p>Điều khoản này có hiệu lực khi được đăng trên màn hình của Dịch vụ hoặc được thông báo cho Người dùng bằng cách khác. Công ty có thể sửa đổi Điều khoản này trong phạm vi không vi phạm pháp luật hiện hành, bao gồm Luật về Quy chế điều khoản mẫu. Khi sửa đổi Điều khoản, Công ty sẽ nêu rõ ngày áp dụng và lý do sửa đổi và thông báo trong Dịch vụ trước ngày áp dụng; đối với những thay đổi bất lợi hoặc quan trọng đối với Người dùng, Công ty sẽ thông báo trước với một khoảng thời gian đầy đủ. Người dùng tiếp tục sử dụng Dịch vụ mà không bày tỏ ý kiến từ chối rõ ràng trước ngày áp dụng được coi là đã đồng ý với Điều khoản sửa đổi. Người dùng có quyền từ chối Điều khoản sửa đổi và nếu không đồng ý, có thể ngừng sử dụng Dịch vụ và chấm dứt hợp đồng.</p>
+
+<h2>Điều 4 (Cung cấp và thay đổi Dịch vụ)</h2>
+<p>Công ty cung cấp các dịch vụ sau.</p>
+<ul>
+    <li>Tự động ghi lại lộ trình, quãng đường và cách di chuyển trong ngày bằng thông tin vị trí và chuyển động của thiết bị</li>
+    <li>Hiển thị Nhật ký dưới dạng nét vẽ và trên bản đồ</li>
+    <li>Xem lại Nhật ký của những ngày đã qua theo từng ngày</li>
+    <li>Hiển thị Nhật ký của hôm nay bằng tiện ích trên màn hình chính</li>
+    <li>Xuất Nhật ký thành tệp GPX hoặc chia sẻ dưới dạng hình ảnh</li>
+    <li>Các dịch vụ khác do Công ty quyết định</li>
+</ul>
+<p>Công ty có thể thay đổi toàn bộ hoặc một phần Dịch vụ khi có yêu cầu về vận hành hoặc kỹ thuật.</p>
+
+<h2>Điều 5 (Ngừng Dịch vụ và cập nhật)</h2>
+<ol>
+    <li>Công ty có thể tạm thời hoặc vĩnh viễn ngừng cung cấp toàn bộ hoặc một phần Dịch vụ trong trường hợp bảo trì, thay thế hoặc hỏng hóc thiết bị thông tin và truyền thông, mất kết nối, hoặc khi có lý do chính đáng về vận hành hoặc kỹ thuật. Trong trường hợp đó, Công ty sẽ thông báo cho Người dùng trước hoặc sau khi ngừng.</li>
+    <li>Để duy trì chất lượng và bảo mật của Dịch vụ, Công ty có thể yêu cầu cập nhật ứng dụng lên phiên bản mới nhất, và việc sử dụng ứng dụng có thể bị hạn chế cho đến khi cập nhật.</li>
+    <li>Vì Nhật ký được lưu trên thiết bị của Người dùng, Người dùng nên xuất trước để lưu giữ những Nhật ký cần thiết.</li>
+</ol>
+
+<h2>Điều 6 (Nghĩa vụ của Người dùng)</h2>
+<p>Người dùng không được thực hiện bất kỳ hành vi nào sau đây.</p>
+<ul>
+    <li>Ghi lại hoặc theo dõi vị trí hay việc di chuyển của người khác, chẳng hạn bằng cách cài đặt Dịch vụ trên thiết bị của người đó mà không có sự đồng ý của họ</li>
+    <li>Thao tác với ứng dụng khi đang lái xe hoặc trong tình huống cần tập trung chú ý</li>
+    <li>Sử dụng Dịch vụ trái với hạn chế tại những nơi mà việc ghi lại vị trí hoặc sử dụng thiết bị điện tử bị hạn chế theo pháp luật hoặc theo quy định của nơi đó</li>
+    <li>Sử dụng Dịch vụ để thực hiện hành vi vi phạm pháp luật hoặc trật tự công cộng và thuần phong mỹ tục</li>
+    <li>Sửa đổi trái phép hoặc dịch ngược Dịch vụ, cố ý cản trở việc vận hành Dịch vụ hoặc làm phương hại đến sự ổn định của Dịch vụ</li>
+    <li>Xâm phạm quyền sở hữu trí tuệ của Công ty hoặc của bên thứ ba</li>
+</ul>
+
+<h2>Điều 7 (Quyền và trách nhiệm đối với Nhật ký)</h2>
+<p>Quyền đối với những gì Công ty cung cấp, như ứng dụng cùng thiết kế, tên gọi và biểu tượng của ứng dụng, thuộc về Công ty hoặc chủ sở hữu quyền hợp pháp. Nhật ký chỉ được lưu trên thiết bị của Người dùng và Công ty không truy cập vào đó. Quyền và trách nhiệm đối với Nhật ký thuộc về chính Người dùng, và Người dùng cũng chịu trách nhiệm quản lý Nhật ký đã xuất hoặc chia sẻ.</p>
+
+<h2>Điều 8 (Quảng cáo)</h2>
+<p>Dịch vụ được cung cấp miễn phí và ứng dụng có hiển thị quảng cáo. Công ty có thể thay đổi việc có hiển thị quảng cáo hay không, cũng như vị trí và hình thức của quảng cáo. Nhà quảng cáo tương ứng chịu trách nhiệm về nội dung quảng cáo và về dịch vụ mà Người dùng chuyển đến thông qua quảng cáo; Công ty không tham gia vào giao dịch hay tranh chấp giữa Người dùng và nhà quảng cáo.</p>
+
+<h2>Điều 9 (Dịch vụ của bên thứ ba)</h2>
+<p>Dịch vụ sử dụng các dịch vụ do bên thứ ba cung cấp, như bản đồ (Apple Maps, Google Maps), quảng cáo (Google AdMob) và cửa hàng ứng dụng. Nội dung, độ chính xác và việc có cung cấp các dịch vụ này hay không do nhà cung cấp tương ứng quyết định, và điều khoản cùng chính sách của nhà cung cấp đó được áp dụng.</p>
+
+<h2>Điều 10 (Miễn trừ trách nhiệm)</h2>
+<ol>
+    <li>Công ty không chịu trách nhiệm về việc không sử dụng được Dịch vụ do những nguyên nhân nằm ngoài tầm kiểm soát của Công ty, như sự kiện bất khả kháng, nguyên nhân thuộc về Người dùng, hoặc sự cố hay thay đổi chính sách của dịch vụ bên thứ ba (cửa hàng ứng dụng, nhà mạng, nhà sản xuất hệ điều hành và thiết bị, nhà cung cấp bản đồ, quảng cáo, máy chủ, v.v.).</li>
+    <li>Dịch vụ được cung cấp theo hiện trạng (as-is). Công ty không bảo đảm Dịch vụ sẽ hoạt động liên tục hay không có lỗi, cũng không bảo đảm Dịch vụ phù hợp với một mục đích cụ thể.</li>
+    <li>Lộ trình, quãng đường, thời gian và cách di chuyển là các giá trị ước tính từ cảm biến của thiết bị và có thể khác với thực tế. Người dùng không được sử dụng Nhật ký cho những mục đích đòi hỏi độ chính xác, như đo đạc, chỉ đường, chứng nhận thành tích tập luyện, chứng minh việc chấm công hoặc đi công tác, hay làm chứng cứ pháp lý. Công ty không chịu trách nhiệm về bất kỳ thiệt hại trực tiếp, gián tiếp hay hệ quả nào phát sinh do Nhật ký bị thiếu sót hoặc sai lệch, trừ khi do lỗi cố ý hoặc lỗi nghiêm trọng của Công ty.</li>
+    <li>Việc tự động ghi chịu ảnh hưởng bởi thiết lập thiết bị của Người dùng, thiết lập quyền, chính sách của hệ điều hành, trạng thái pin và tiết kiệm năng lượng, việc ứng dụng bị buộc dừng, việc thiết bị khởi động lại, và môi trường xung quanh như trong nhà, dưới lòng đất hay giữa các tòa nhà cao tầng. Do đó, việc ghi có thể không bắt đầu hoặc bị gián đoạn giữa chừng. Công ty không bảo đảm mọi lần di chuyển đều được ghi lại mà không bị bỏ sót.</li>
+    <li>Dịch vụ không phải là công cụ dành cho mục đích an toàn hay tình huống khẩn cấp. Người dùng không được dựa vào Dịch vụ cho những mục đích cần xác định vị trí, như cứu hộ, bảo vệ hay giám sát.</li>
+    <li>Người dùng không được thao tác với ứng dụng khi đang lái xe, hoặc khi đang di chuyển mà không chú ý quan sát xung quanh. Công ty không chịu trách nhiệm về tai nạn, chấn thương hay sự việc tương tự phát sinh trong khi sử dụng Dịch vụ, trừ khi do lỗi cố ý hoặc lỗi nghiêm trọng của Công ty.</li>
+    <li>Quãng đường, thời gian, cách di chuyển và các thông tin tương tự hiển thị trong Nhật ký không phải là lời khuyên về sức khỏe, y tế hay tập luyện, và Người dùng không được lấy đó làm căn cứ cho những quyết định như vậy.</li>
+    <li>Việc tự động ghi sử dụng chức năng vị trí trong khi Người dùng di chuyển nên tiêu hao pin, còn bản đồ, quảng cáo và các tính năng tương tự sử dụng kết nối dữ liệu. Người dùng tự chịu mức tiêu hao pin và cước viễn thông phát sinh từ đó.</li>
+    <li>Nhật ký được lưu trên thiết bị của Người dùng và Công ty không lưu giữ Nhật ký, vì vậy Công ty không thể khôi phục Nhật ký đã mất do xóa ứng dụng, đổi thiết bị, đặt lại thiết bị, lỗi hoặc nguyên nhân tương tự. Công ty không chịu trách nhiệm về việc mất dữ liệu như vậy, và Người dùng phải tự sao lưu bằng cách xuất Nhật ký khi cần.</li>
+    <li>Nếu Người dùng làm mất thiết bị hoặc người khác sử dụng thiết bị, Nhật ký có thể bị lộ. Việc khóa và bảo mật thiết bị do Người dùng quản lý, và Công ty không chịu trách nhiệm về thiệt hại phát sinh từ đó, trừ khi do lỗi cố ý hoặc lỗi nghiêm trọng của Công ty.</li>
+    <li>Sau khi Nhật ký do Người dùng xuất hoặc chia sẻ đã được chuyển đến nơi nhận do Người dùng chọn, Công ty không thể quản lý Nhật ký đó, và Công ty không chịu trách nhiệm về thiệt hại phát sinh từ việc sử dụng, rò rỉ hay phát tán lại sau đó.</li>
+    <li>Bản đồ cùng địa danh, đường sá, ảnh vệ tinh và các nội dung tương tự hiển thị trên bản đồ do nhà cung cấp bản đồ cung cấp. Công ty không bảo đảm tính chính xác hay tính cập nhật của những nội dung đó.</li>
+    <li>Công ty không có nghĩa vụ can thiệp vào tranh chấp phát sinh giữa các Người dùng với nhau hoặc giữa Người dùng và bên thứ ba thông qua Dịch vụ, và không chịu trách nhiệm bồi thường thiệt hại phát sinh từ đó, trừ khi do lỗi cố ý hoặc lỗi nghiêm trọng của Công ty.</li>
+    <li>Vì Dịch vụ được cung cấp miễn phí, Công ty không chịu trách nhiệm bồi thường bằng tiền liên quan đến Dịch vụ, bao gồm cả việc thay đổi hoặc ngừng Dịch vụ, trừ khi do lỗi cố ý hoặc lỗi nghiêm trọng của Công ty.</li>
+    <li>Không nội dung nào trong Điều này giới hạn hoặc loại trừ trách nhiệm của Công ty mà theo pháp luật hiện hành không thể giới hạn hoặc loại trừ.</li>
+</ol>
+
+<h2>Điều 11 (Trách nhiệm bồi thường của Người dùng)</h2>
+<p>Trường hợp Công ty bị thiệt hại do Người dùng vi phạm Điều khoản này hoặc pháp luật hiện hành, Người dùng phải bồi thường thiệt hại đó cho Công ty. Trường hợp Công ty bị bên thứ ba khiếu nại, chẳng hạn yêu cầu bồi thường thiệt hại, do hành vi vi phạm của Người dùng, Người dùng phải bảo đảm Công ty được miễn trách bằng trách nhiệm và chi phí của chính mình.</p>
+
+<h2>Điều 12 (Luật áp dụng và thẩm quyền xét xử)</h2>
+<p>Điều khoản này được điều chỉnh và giải thích theo pháp luật Đại Hàn Dân Quốc. Trường hợp phát sinh tranh chấp liên quan đến việc sử dụng Dịch vụ, tòa án có thẩm quyền được xác định theo Bộ luật Tố tụng dân sự.</p>
+
+<div class="contact">
+    <p>Liên hệ: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>
