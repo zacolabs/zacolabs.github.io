@@ -1,0 +1,89 @@
+# Zaco Labs
+
+> A software studio crafting small but solid products. We build software that takes small frictions out of daily life and work.
+
+Zaco Labs is a small software studio that starts from frictions we have run into ourselves. We build only what is needed, and we stand behind what we build for the long haul.
+
+- Website: https://zacolabs.github.io/
+- Contact: zaco.labs@gmail.com
+
+## Waky
+
+An alarm that only stops once you solve a mission and an alarm sound recorded in your own voice make sure you get up — and once you do, it helps you keep your morning habits too.
+
+- Type: mobile app for iOS and Android (An alarm you turn off by solving a mission, alarm sounds you record yourself, and morning habits.)
+- Page: https://zacolabs.github.io/waky-landing/introduce/en/
+- Google Play: https://play.google.com/store/apps/details?id=com.waky.android
+- App Store: https://apps.apple.com/app/id6797402938
+
+## Dayline
+
+Dayline draws where you went and how far, automatically, every day. There is no start button and nothing to remember: recording starts when you move and ends when you stop.
+
+- Type: mobile app for iOS and Android, by Zaco Labs
+- Price: free, with one ad below the tab bar
+- Account: none. The movement record is stored only on the device
+- Languages: 18
+- Page: https://zacolabs.github.io/dayline/en/
+- Google Play: https://play.google.com/store/apps/details?id=com.zacolabs.dayline
+- App Store: https://apps.apple.com/app/id6818821647
+- Privacy policy: https://zacolabs.github.io/dayline/privacy.en.html
+- Contact: zaco.labs@gmail.com
+
+### What makes Dayline different
+
+- **No start button.** Carry your phone as you always do. Dayline notices when you leave, follows the way you take, and closes the trip when you arrive. It works with the app closed.
+- **Walking, running, cycling, driving.** Dayline works out how you are travelling and colours the line to match. Each day shows the distance and time for every mode.
+- **Every day, kept.** The History tab shows a month at a glance; open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map.
+- **Stays on your device.** There is no account and no sign-in. Your movement record is never sent anywhere, not even to us. You can delete it all at any time.
+
+### How a day becomes a line
+
+1. **Step out, and it starts.** A walk or a run: once you leave home and start moving, Dayline notices and begins to draw.
+2. **Get in the car, and it carries on.** Take the wheel and the line changes colour. Walk, run, switch to a bike or a car: it stays one line.
+3. **In the evening, look at your line.** When the day is over, where you went and how far is there as a single line. See it on a clean grid or over a map.
+
+## Dayline: frequently asked questions
+
+### Do I have to press a button when I start exercising?
+
+No. Dayline has no start button and no stop button. Recording starts when you begin to move and ends when you stay in one place. Just carry your phone as you always do.
+
+### Does it record with the app closed?
+
+Yes. You don't need to open the app. For that, location access has to be set to "Always" ("Allow all the time" on Android), so the path can be drawn even while the app is closed.
+
+### How does it tell walking, running, cycling, and driving apart?
+
+Dayline works out how you are travelling and shows it in the colour of the line. The motion (physical activity) permission is optional; when allowed, it is used to tell walking, running, cycling, and driving apart.
+
+### Will it drain my battery?
+
+Location is used only while you are moving. While you stay in one place, Dayline waits, so it is built to be left on all day.
+
+### Is my movement record sent to a server?
+
+No. There is no account and no sign-in, and your movement record is stored only on your device. It is never sent anywhere, not even to us, and is never used for ads or statistics. You can delete it all at any time in Settings.
+
+### Where do I see past days?
+
+The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map.
+
+### Are there goals or badges?
+
+No. There are no goals, no badges, and no streaks. Dayline doesn't score you; it keeps the day as it was.
+
+### Is it free?
+
+Yes. Dayline is free and shows one ad below the tab bar. Anonymous usage statistics, such as which screens and settings are used, can be turned off in Settings.
+
+### Where do I send questions or suggestions?
+
+Write to zaco.labs@gmail.com. Zaco Labs, the makers of Dayline, read every message.
+
+## DUIRE
+
+We meet Google Play's closed testing requirement of 12 testers for 14 days with real Android devices, and keep every daily run in a final report.
+
+- Type: web service for app developers (Google Play closed testing service)
+- Page: https://www.duire.kr/en

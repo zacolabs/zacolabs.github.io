@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Nhật ký di chuyển tự động | Vẽ ngày thành một đường</title>
 <meta name="description" content="Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết cách di chuyển, lộ trình chỉ lưu trên thiết bị. Miễn phí cho iOS, Android." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="vi_VN" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — Một ngày của bạn, vẽ thành một đường" />
 <meta property="og:description" content="Bạn đã đi đâu và đi bao xa, được vẽ tự động mỗi ngày. Không có nút bắt đầu." />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/vi/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-vi.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — Một ngày của bạn, vẽ thành một đường" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — Một ngày của bạn, vẽ thành một đường" />
+<meta name="twitter:description" content="Bạn đã đi đâu và đi bao xa, được vẽ tự động mỗi ngày. Không có nút bắt đầu." />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-vi.png" />
+<meta name="twitter:image:alt" content="Dayline — Một ngày của bạn, vẽ thành một đường" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/vi/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "Ứng dụng tự động ghi lại việc di chuyển trong ngày và vẽ thành một đường. Bản ghi di chuyển chỉ được lưu trên thiết bị.",
-  "url": "https://zacolabs.github.io/dayline/vi/",
-  "inLanguage": "vi",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "vi",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Tôi có phải bấm nút khi bắt đầu tập luyện không?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Không. Dayline không có nút bắt đầu, cũng không có nút dừng. Việc ghi bắt đầu khi bạn di chuyển và kết thúc khi bạn ở yên một chỗ. Chỉ cần mang điện thoại theo như thường lệ."
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Ứng dụng có ghi khi đã đóng không?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Có. Bạn không cần mở ứng dụng. Để làm được vậy, quyền truy cập vị trí cần đặt là “Luôn luôn” (trên Android là “Luôn cho phép”), nhờ đó con đường bạn đi vẫn được vẽ khi ứng dụng đã đóng."
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/vi/#webpage",
+      "url": "https://zacolabs.github.io/dayline/vi/",
+      "name": "Dayline — Nhật ký di chuyển tự động | Vẽ ngày thành một đường",
+      "description": "Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết cách di chuyển, lộ trình chỉ lưu trên thiết bị. Miễn phí cho iOS, Android.",
+      "inLanguage": "vi",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/vi/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/vi/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-vi.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "Dayline phân biệt đi bộ, chạy bộ, đạp xe và lái xe như thế nào?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dayline tự nhận biết cách bạn di chuyển và thể hiện bằng màu của đường đi. Quyền “Di chuyển & thể chất” (trên Android là “Hoạt động thể chất”) là tùy chọn; khi được cho phép, quyền này dùng để phân biệt đi bộ, chạy bộ, đạp xe và đi xe."
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/vi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/vi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/vi/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/vi/#app",
+      "name": "Dayline",
+      "description": "Ứng dụng tự động ghi lại việc di chuyển trong ngày và vẽ thành một đường. Bản ghi di chuyển chỉ được lưu trên thiết bị.",
+      "url": "https://zacolabs.github.io/dayline/vi/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Không có nút bắt đầu",
+        "Tự nhận biết đi bộ, chạy, đạp xe, đi xe",
+        "Lưu giữ từng ngày",
+        "Chỉ trên thiết bị của bạn"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Ứng dụng có tốn pin không?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vị trí chỉ được dùng khi bạn đang di chuyển. Khi bạn ở yên một chỗ, Dayline chỉ chờ, nên ứng dụng được thiết kế để ít hao pin ngay cả khi bật suốt cả ngày."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Bản ghi di chuyển của tôi có được gửi lên máy chủ không?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Không. Không tài khoản, không đăng nhập, và bản ghi di chuyển chỉ được lưu trên thiết bị này. Bản ghi không bao giờ được gửi đi đâu, kể cả cho chúng tôi, và cũng không được dùng cho quảng cáo hay thống kê. Bạn có thể xóa tất cả bất cứ lúc nào trong Cài đặt."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Tôi xem lại những ngày trước ở đâu?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Có mục tiêu hay huy hiệu không?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Không. Không mục tiêu, không huy hiệu, không chuỗi ngày. Dayline không chấm điểm, chỉ lưu giữ một ngày đúng như nó đã diễn ra."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Ứng dụng có miễn phí không?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Có, Dayline miễn phí. Ứng dụng hiển thị một quảng cáo bên dưới thanh thẻ. Thống kê sử dụng ẩn danh, chẳng hạn như màn hình và cài đặt nào được dùng, có thể tắt trong Cài đặt."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Tôi gửi câu hỏi hoặc góp ý đến đâu?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Hãy gửi đến zaco.labs@gmail.com. Zaco Labs, nhóm làm ra Dayline, sẽ trực tiếp đọc thư của bạn."
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/vi/#faq",
+      "inLanguage": "vi",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/vi/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Tôi có phải bấm nút khi bắt đầu tập luyện không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không. Dayline không có nút bắt đầu, cũng không có nút dừng. Việc ghi bắt đầu khi bạn di chuyển và kết thúc khi bạn ở yên một chỗ. Chỉ cần mang điện thoại theo như thường lệ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ứng dụng có ghi khi đã đóng không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có. Bạn không cần mở ứng dụng. Để làm được vậy, quyền truy cập vị trí cần đặt là “Luôn luôn” (trên Android là “Luôn cho phép”), nhờ đó con đường bạn đi vẫn được vẽ khi ứng dụng đã đóng."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dayline phân biệt đi bộ, chạy bộ, đạp xe và lái xe như thế nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dayline tự nhận biết cách bạn di chuyển và thể hiện bằng màu của đường đi. Quyền “Di chuyển & thể chất” (trên Android là “Hoạt động thể chất”) là tùy chọn; khi được cho phép, quyền này dùng để phân biệt đi bộ, chạy bộ, đạp xe và đi xe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ứng dụng có tốn pin không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vị trí chỉ được dùng khi bạn đang di chuyển. Khi bạn ở yên một chỗ, Dayline chỉ chờ, nên ứng dụng được thiết kế để ít hao pin ngay cả khi bật suốt cả ngày."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bản ghi di chuyển của tôi có được gửi lên máy chủ không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không. Không tài khoản, không đăng nhập, và bản ghi di chuyển chỉ được lưu trên thiết bị này. Bản ghi không bao giờ được gửi đi đâu, kể cả cho chúng tôi, và cũng không được dùng cho quảng cáo hay thống kê. Bạn có thể xóa tất cả bất cứ lúc nào trong Cài đặt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tôi xem lại những ngày trước ở đâu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Có mục tiêu hay huy hiệu không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không. Không mục tiêu, không huy hiệu, không chuỗi ngày. Dayline không chấm điểm, chỉ lưu giữ một ngày đúng như nó đã diễn ra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ứng dụng có miễn phí không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có, Dayline miễn phí. Ứng dụng hiển thị một quảng cáo bên dưới thanh thẻ. Thống kê sử dụng ẩn danh, chẳng hạn như màn hình và cài đặt nào được dùng, có thể tắt trong Cài đặt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tôi gửi câu hỏi hoặc góp ý đến đâu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hãy gửi đến zaco.labs@gmail.com. Zaco Labs, nhóm làm ra Dayline, sẽ trực tiếp đọc thư của bạn."
+          }
+        }
+      ]
     }
   ]
 }

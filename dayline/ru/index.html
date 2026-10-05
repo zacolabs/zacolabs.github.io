@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — автоматический дневник маршрутов и перемещений</title>
 <meta name="description" content="Без кнопки «Старт»: ваш день сам становится линией. Dayline различает ходьбу, бег, велосипед и транспорт, а записи хранит только на устройстве. Бесплатно для iOS и Android." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="ru_RU" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — Ваш день одной линией" />
 <meta property="og:description" content="Где вы были и сколько прошли — рисуется автоматически каждый день. Без кнопки «Старт»." />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/ru/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-ru.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — Ваш день одной линией" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — Ваш день одной линией" />
+<meta name="twitter:description" content="Где вы были и сколько прошли — рисуется автоматически каждый день. Без кнопки «Старт»." />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-ru.png" />
+<meta name="twitter:image:alt" content="Dayline — Ваш день одной линией" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/ru/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "Автоматический дневник маршрутов, который рисует ваш день одной линией. Ваши перемещения хранятся только на устройстве.",
-  "url": "https://zacolabs.github.io/dayline/ru/",
-  "inLanguage": "ru",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "ru",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Нужно ли нажимать кнопку перед тренировкой?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Нет. В Dayline нет ни кнопки «Старт», ни кнопки «Стоп». Запись начинается, когда вы трогаетесь с места, и завершается, когда вы остаётесь на одном месте. Просто носите телефон с собой, как обычно."
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Идёт ли запись, когда приложение закрыто?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да. Открывать приложение не нужно. Для этого в разрешении на местоположение нужно выбрать «Всегда» (на Android — «Разрешить в любом режиме»): так путь рисуется, даже когда приложение закрыто."
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/ru/#webpage",
+      "url": "https://zacolabs.github.io/dayline/ru/",
+      "name": "Dayline — автоматический дневник маршрутов и перемещений",
+      "description": "Без кнопки «Старт»: ваш день сам становится линией. Dayline различает ходьбу, бег, велосипед и транспорт, а записи хранит только на устройстве. Бесплатно для iOS и Android.",
+      "inLanguage": "ru",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/ru/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/ru/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-ru.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "Как Dayline различает ходьбу, бег, велосипед и транспорт?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dayline сам определяет, как вы передвигаетесь, и показывает это цветом линии. Разрешение «Движение и фитнес» (на Android — «Физическая активность») необязательно; если его дать, оно помогает различать ходьбу, бег, велосипед и транспорт."
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/ru/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/ru/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/ru/#app",
+      "name": "Dayline",
+      "description": "Автоматический дневник маршрутов, который рисует ваш день одной линией. Ваши перемещения хранятся только на устройстве.",
+      "url": "https://zacolabs.github.io/dayline/ru/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Без кнопки «Старт»",
+        "Ходьба, бег, велосипед, транспорт",
+        "Каждый день сохраняется",
+        "Только на вашем устройстве"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Не будет ли быстро садиться батарея?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Геолокация используется, только пока вы движетесь. Пока вы остаётесь на одном месте, Dayline просто ждёт. Приложение сделано так, чтобы его можно было оставить включённым на весь день."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Отправляются ли мои перемещения на сервер?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Нет. Нет ни аккаунта, ни входа, а ваши перемещения хранятся только на этом устройстве. Они никуда не отправляются — даже нам — и никогда не используются для рекламы или статистики. Удалить всё можно в любой момент в настройках."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Где посмотреть прошлые дни?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Вкладка «История» показывает месяц с одного взгляда: маленькая линия для каждого дня, когда вы двигались. Откройте любой день, чтобы увидеть его маршрут и хронологию. Вкладка «Карта» собирает последние 7 дней, этот месяц, этот год или все записи на одной карте."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Есть ли цели или значки?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Нет. Ни целей, ни значков, ни серий. Dayline не ставит оценок, а просто сохраняет день таким, каким он был."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Это бесплатно?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Да. Dayline бесплатен и показывает одно объявление под панелью вкладок. Анонимную статистику использования — например, какие экраны и настройки используются — можно отключить в настройках."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Куда писать с вопросами и предложениями?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Пишите на zaco.labs@gmail.com. Письма читает сама команда Zaco Labs, которая сделала Dayline."
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/ru/#faq",
+      "inLanguage": "ru",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/ru/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Нужно ли нажимать кнопку перед тренировкой?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. В Dayline нет ни кнопки «Старт», ни кнопки «Стоп». Запись начинается, когда вы трогаетесь с места, и завершается, когда вы остаётесь на одном месте. Просто носите телефон с собой, как обычно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Идёт ли запись, когда приложение закрыто?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Открывать приложение не нужно. Для этого в разрешении на местоположение нужно выбрать «Всегда» (на Android — «Разрешить в любом режиме»): так путь рисуется, даже когда приложение закрыто."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как Dayline различает ходьбу, бег, велосипед и транспорт?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dayline сам определяет, как вы передвигаетесь, и показывает это цветом линии. Разрешение «Движение и фитнес» (на Android — «Физическая активность») необязательно; если его дать, оно помогает различать ходьбу, бег, велосипед и транспорт."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Не будет ли быстро садиться батарея?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Геолокация используется, только пока вы движетесь. Пока вы остаётесь на одном месте, Dayline просто ждёт. Приложение сделано так, чтобы его можно было оставить включённым на весь день."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Отправляются ли мои перемещения на сервер?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Нет ни аккаунта, ни входа, а ваши перемещения хранятся только на этом устройстве. Они никуда не отправляются — даже нам — и никогда не используются для рекламы или статистики. Удалить всё можно в любой момент в настройках."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где посмотреть прошлые дни?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Вкладка «История» показывает месяц с одного взгляда: маленькая линия для каждого дня, когда вы двигались. Откройте любой день, чтобы увидеть его маршрут и хронологию. Вкладка «Карта» собирает последние 7 дней, этот месяц, этот год или все записи на одной карте."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли цели или значки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Ни целей, ни значков, ни серий. Dayline не ставит оценок, а просто сохраняет день таким, каким он был."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Это бесплатно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Dayline бесплатен и показывает одно объявление под панелью вкладок. Анонимную статистику использования — например, какие экраны и настройки используются — можно отключить в настройках."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Куда писать с вопросами и предложениями?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Пишите на zaco.labs@gmail.com. Письма читает сама команда Zaco Labs, которая сделала Dayline."
+          }
+        }
+      ]
     }
   ]
 }

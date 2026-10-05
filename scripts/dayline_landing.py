@@ -300,22 +300,41 @@ def page(d, langs, css, legal):
     canon = url(code)
     og_image = f"{SITE}{ASSETS}/{og_name(code)}"
 
-    app_ld = {
-        "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Dayline",
-        "applicationCategory": "LifestyleApplication", "operatingSystem": "Android, iOS",
-        "description": d["app_description"], "url": canon, "inLanguage": d["html_lang"],
-        "image": SITE + ICON,
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": d["currency"]},
-        "downloadUrl": [u for u in (PLAY, APPLE) if u],
-        "publisher": {"@type": "Organization", "name": "Zaco Labs", "url": SITE + "/",
-                      "logo": f"{SITE}/zacolabs-assets/logo.png", "email": "zaco.labs@gmail.com"},
-    }
-    faq_ld = {
-        "@context": "https://schema.org", "@type": "FAQPage", "inLanguage": d["html_lang"],
-        "mainEntity": [{"@type": "Question", "name": f["q"],
-                        "acceptedAnswer": {"@type": "Answer", "text": f["a"]}}
-                       for f in d["faqs"]],
-    }
+    home = SITE + ("/" if code == DEFAULT else f"/{code}/")  # 회사 소개의 같은 언어
+    org, site = f"{SITE}/#organization", f"{SITE}/#website"
+    # 검색엔진과 AI 검색이 "누가 만든 무슨 앱의 어느 페이지인지"를 한 번에 읽게, 서로 @id 로 잇는다.
+    # 별점 · 리뷰는 스토어에 생기기 전이라 넣지 않는다 (없는 값을 지어 넣지 않는다).
+    graph = {"@context": "https://schema.org", "@graph": [
+        {"@type": "Organization", "@id": org, "name": "Zaco Labs", "url": SITE + "/",
+         "logo": {"@type": "ImageObject", "url": f"{SITE}/zacolabs-assets/logo.png"},
+         "email": "zaco.labs@gmail.com"},
+        {"@type": "WebSite", "@id": site, "url": SITE + "/", "name": "Zaco Labs", "publisher": {"@id": org}},
+        {"@type": "WebPage", "@id": canon + "#webpage", "url": canon, "name": d["title"],
+         "description": d["description"], "inLanguage": d["html_lang"], "isPartOf": {"@id": site},
+         "about": {"@id": canon + "#app"}, "breadcrumb": {"@id": canon + "#breadcrumb"},
+         "primaryImageOfPage": {"@type": "ImageObject", "url": og_image, "width": 1200, "height": 630}},
+        {"@type": "BreadcrumbList", "@id": canon + "#breadcrumb", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Zaco Labs", "item": home},
+            {"@type": "ListItem", "position": 2, "name": "Dayline", "item": canon}]},
+        {"@type": "MobileApplication", "@id": canon + "#app", "name": "Dayline",
+         "description": d["app_description"], "url": canon, "image": SITE + ICON,
+         "applicationCategory": "LifestyleApplication", "operatingSystem": "Android, iOS",
+         "isAccessibleForFree": True,
+         "offers": {"@type": "Offer", "price": "0", "priceCurrency": d["currency"]},
+         "featureList": [f["title"] for f in d["features"]],
+         "inLanguage": [x["hreflang"] for x in langs],
+         "downloadUrl": [u for u in (PLAY, APPLE) if u], "sameAs": [u for u in (PLAY, APPLE) if u],
+         "publisher": {"@id": org}, "author": {"@id": org}},
+        {"@type": "FAQPage", "@id": canon + "#faq", "inLanguage": d["html_lang"],
+         "isPartOf": {"@id": canon + "#webpage"},
+         "mainEntity": [{"@type": "Question", "name": f["q"],
+                         "acceptedAnswer": {"@type": "Answer", "text": f["a"]}}
+                        for f in d["faqs"]]},
+    ]}
+    locales = "\n".join(f'<meta property="og:locale:alternate" content="{x["og_locale"]}" />'
+                        for x in langs if x["code"] != code)
+    # 아이폰 사파리의 앱 배너. 앱이 스토어에 나온 뒤에만 보인다.
+    app_banner = f'\n<meta name="apple-itunes-app" content="app-id={APPLE_ID}" />' if APPLE_ID else ""
 
     feats = "\n".join(
         f'''                <li>
@@ -346,24 +365,33 @@ def page(d, langs, css, legal):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{e(d["title"])}</title>
 <meta name="description" content="{e(d["description"])}" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />{app_banner}
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="{d["og_locale"]}" />
+{locales}
 <meta property="og:title" content="{e(d["og_title"])}" />
 <meta property="og:description" content="{e(d["og_description"])}" />
 <meta property="og:url" content="{canon}" />
 <meta property="og:image" content="{og_image}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="{e(d["og_title"])}" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{e(d["og_title"])}" />
+<meta name="twitter:description" content="{e(d["og_description"])}" />
+<meta name="twitter:image" content="{og_image}" />
+<meta name="twitter:image:alt" content="{e(d["og_title"])}" />
 <link rel="icon" href="{ICON}" />
 <link rel="apple-touch-icon" href="{ICON}" />
 <link rel="canonical" href="{canon}" />
 {alternates(langs)}
-{ld(app_ld)}
-{ld(faq_ld)}
+{ld(graph)}
 {HEAD_SCRIPT}
 <style>{css.replace("{{FONT}}", d["font"])}</style>
 </head>
@@ -450,7 +478,8 @@ def page(d, langs, css, legal):
 
 
 # ── 진입 주소 ───────────────────────────────────────────────────────
-# /dayline/ 은 콘텐츠 없이 브라우저 언어에 맞는 페이지로 보낸다.
+# /dayline/ 은 브라우저 언어에 맞는 페이지로 보낸다. 스크립트를 돌리지 않는 로봇은 영어 한 줄 소개와 언어 목록을 읽고,
+# 검색엔진에는 영어 랜딩이 대표 주소(canonical)라고 알린다.
 # 우선순위: ?lang= → 직접 고른 언어(localStorage) → 브라우저 선호 언어 목록 → en
 # 언어 표기는 약관 페이지(dayline_legal.py)와 같게 읽는다: 앱 언어 태그(zh-Hans · fil …), 옛 코드(kr · jp · in · tl), 지역이 붙은 태그(pt-BR).
 def entry_page(langs):
@@ -464,7 +493,9 @@ def entry_page(langs):
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dayline</title>
+<title>{e(d["og_title"])}</title>
+<meta name="description" content="{e(d["description"])}" />
+<link rel="canonical" href="{url(DEFAULT)}" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
@@ -515,6 +546,8 @@ def entry_page(langs):
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }}
     .box {{ min-height: 100vh; display: flex; flex-direction: column; align-items: center;
         justify-content: center; gap: 14px; text-align: center; padding: 24px; box-sizing: border-box; }}
+    .box h1 {{ margin: 0; font-size: 22px; color: #f5f5f7; }}
+    .box p {{ margin: 0; max-width: 520px; line-height: 1.6; font-size: 15px; }}
     .box nav {{ max-width: 560px; line-height: 2.1; font-size: 14px; }}
     .box a {{ color: #f5f5f7; text-decoration: none; margin: 0 7px; white-space: nowrap; }}
     .box a:hover {{ text-decoration: underline; }}
@@ -522,13 +555,59 @@ def entry_page(langs):
 </head>
 <body>
     <div class="box">
-        <p>Dayline</p>
+        <h1>Dayline</h1>
+        <p>{e(d["lede"])}</p>
         <nav aria-label="Language">
             {links}
         </nav>
     </div>
 </body>
 </html>
+"""
+
+
+def llms_links():
+    """llms.txt 의 Dayline 줄들. build.py 가 쓴다."""
+    d = load(DEFAULT)
+    langs = [load(c) for c in codes() if c != DEFAULT]
+    others = ", ".join(f'[{x["label"]}]({url(x["code"])})' for x in langs)
+    return f"""- [Dayline]({url(DEFAULT)}): {d["app_description"]} Free on iOS and Android.
+- [Dayline privacy policy]({SITE}/dayline/privacy.en.html): what Dayline collects and what never leaves the device
+- [Dayline terms of service]({SITE}/dayline/terms.en.html)
+- Dayline in other languages: {others}"""
+
+
+def llms_full():
+    """llms-full.txt 의 Dayline 장: 랜딩의 영어 본문을 그대로 마크다운으로."""
+    d = load(DEFAULT)
+    stores = [f"- Google Play: {PLAY}"] + ([f"- App Store: {APPLE}"] if APPLE else [])
+    feats = "\n".join(f'- **{f["title"]}.** {f["text"]}' for f in d["features"])
+    steps = "\n".join(f'{i + 1}. **{x["title"]}.** {x["text"]}' for i, x in enumerate(d["steps"]))
+    faqs = "\n\n".join(f'### {f["q"]}\n\n{f["a"]}' for f in d["faqs"])
+    return f"""## Dayline
+
+{d["lede"]}
+
+- Type: mobile app for iOS and Android, by Zaco Labs
+- Price: free, with one ad below the tab bar
+- Account: none. The movement record is stored only on the device
+- Languages: {len(codes())}
+- Page: {url(DEFAULT)}
+{chr(10).join(stores)}
+- Privacy policy: {SITE}/dayline/privacy.en.html
+- Contact: zaco.labs@gmail.com
+
+### {d["features_title"]}
+
+{feats}
+
+### {d["story_title"]}
+
+{steps}
+
+## Dayline: {d["faq_title"].lower()}
+
+{faqs}
 """
 
 

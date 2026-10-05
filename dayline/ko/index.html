@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — 자동 이동 기록 · 하루가 선으로 남는 앱</title>
 <meta name="description" content="시작 버튼 없이, 걷고 달리고 운전한 하루가 자동으로 선이 됩니다. 도보 · 달리기 · 자전거 · 차량을 알아서 구분하고, 이동 기록은 이 기기에만 저장돼요. 자동 이동 기록 앱 Dayline. iOS · Android 무료." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — 하루가 선으로 남아요" />
 <meta property="og:description" content="어디를 얼마나 다녔는지, 시작 버튼 없이 매일 자동으로 그려져요." />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/ko/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-ko.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — 하루가 선으로 남아요" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — 하루가 선으로 남아요" />
+<meta name="twitter:description" content="어디를 얼마나 다녔는지, 시작 버튼 없이 매일 자동으로 그려져요." />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-ko.png" />
+<meta name="twitter:image:alt" content="Dayline — 하루가 선으로 남아요" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/ko/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "하루의 이동을 자동으로 기록해 선으로 보여 주는 앱. 이동 기록은 기기에만 저장됩니다.",
-  "url": "https://zacolabs.github.io/dayline/ko/",
-  "inLanguage": "ko",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "KRW"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "ko",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "운동을 시작할 때 버튼을 눌러야 하나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "아니요. Dayline에는 시작 버튼도 정지 버튼도 없습니다. 움직이기 시작하면 기록이 시작되고, 한곳에 머물면 끝나요. 휴대전화만 평소처럼 들고 다니면 됩니다."
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "앱을 닫아 두어도 기록되나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "네. 앱을 열지 않아도 기록됩니다. 그러려면 위치 권한을 '항상 허용'으로 두어야 해요. 앱이 닫혀 있을 때에도 지나온 길을 그리기 위해서입니다."
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/ko/#webpage",
+      "url": "https://zacolabs.github.io/dayline/ko/",
+      "name": "Dayline — 자동 이동 기록 · 하루가 선으로 남는 앱",
+      "description": "시작 버튼 없이, 걷고 달리고 운전한 하루가 자동으로 선이 됩니다. 도보 · 달리기 · 자전거 · 차량을 알아서 구분하고, 이동 기록은 이 기기에만 저장돼요. 자동 이동 기록 앱 Dayline. iOS · Android 무료.",
+      "inLanguage": "ko",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/ko/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/ko/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-ko.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "걷기, 달리기, 자전거, 운전을 어떻게 구분하나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "무엇을 타고 있는지 Dayline이 알아서 구분해 선의 색으로 보여 줍니다. 신체 활동(동작) 권한은 선택이지만, 허용하면 도보·달리기·자전거·차량을 구분하는 데 쓰여요."
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/ko/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/ko/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/ko/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/ko/#app",
+      "name": "Dayline",
+      "description": "하루의 이동을 자동으로 기록해 선으로 보여 주는 앱. 이동 기록은 기기에만 저장됩니다.",
+      "url": "https://zacolabs.github.io/dayline/ko/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "featureList": [
+        "시작 버튼이 없어요",
+        "걷고, 뛰고, 타는 걸 알아서 구분해요",
+        "하루하루가 남아요",
+        "이 기기에만 저장돼요"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "배터리가 많이 닳지 않나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "위치는 이동하는 동안에만 사용합니다. 한곳에 머무는 동안에는 기다리기만 해서, 하루 종일 켜 두어도 부담이 적도록 만들었어요."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "내 이동 기록이 서버로 전송되나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "아니요. 계정도 로그인도 없고, 이동 기록은 이 기기에만 저장됩니다. 어디로도, 저희에게도 전송되지 않으며 광고나 통계에도 쓰이지 않아요. 설정에서 언제든 모두 삭제할 수 있습니다."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "지난 기록은 어디서 보나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "기록 탭에서 한 달을 한눈에 볼 수 있고, 움직인 날마다 작은 선이 남아 있어요. 날짜를 누르면 그날의 경로와 타임라인이 열립니다. 지도 탭에서는 최근 7일, 이번 달, 올해, 전체 기록을 한 지도에 모아 볼 수 있어요."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "목표나 배지 같은 것도 있나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "없습니다. 목표도, 배지도, 연속 기록도 넣지 않았어요. Dayline은 평가하지 않고, 있는 그대로의 하루만 남깁니다."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "무료인가요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "네, 무료입니다. 탭바 아래에 광고가 하나 표시돼요. 어떤 화면과 설정을 쓰는지 같은 익명 사용 통계는 설정에서 끌 수 있습니다."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "문의나 제안은 어디로 보내나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "zaco.labs@gmail.com 으로 보내 주세요. Dayline을 만든 Zaco Labs가 직접 확인합니다."
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/ko/#faq",
+      "inLanguage": "ko",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/ko/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "운동을 시작할 때 버튼을 눌러야 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아니요. Dayline에는 시작 버튼도 정지 버튼도 없습니다. 움직이기 시작하면 기록이 시작되고, 한곳에 머물면 끝나요. 휴대전화만 평소처럼 들고 다니면 됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "앱을 닫아 두어도 기록되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 앱을 열지 않아도 기록됩니다. 그러려면 위치 권한을 '항상 허용'으로 두어야 해요. 앱이 닫혀 있을 때에도 지나온 길을 그리기 위해서입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "걷기, 달리기, 자전거, 운전을 어떻게 구분하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "무엇을 타고 있는지 Dayline이 알아서 구분해 선의 색으로 보여 줍니다. 신체 활동(동작) 권한은 선택이지만, 허용하면 도보·달리기·자전거·차량을 구분하는 데 쓰여요."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "배터리가 많이 닳지 않나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "위치는 이동하는 동안에만 사용합니다. 한곳에 머무는 동안에는 기다리기만 해서, 하루 종일 켜 두어도 부담이 적도록 만들었어요."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "내 이동 기록이 서버로 전송되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아니요. 계정도 로그인도 없고, 이동 기록은 이 기기에만 저장됩니다. 어디로도, 저희에게도 전송되지 않으며 광고나 통계에도 쓰이지 않아요. 설정에서 언제든 모두 삭제할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "지난 기록은 어디서 보나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기록 탭에서 한 달을 한눈에 볼 수 있고, 움직인 날마다 작은 선이 남아 있어요. 날짜를 누르면 그날의 경로와 타임라인이 열립니다. 지도 탭에서는 최근 7일, 이번 달, 올해, 전체 기록을 한 지도에 모아 볼 수 있어요."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "목표나 배지 같은 것도 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "없습니다. 목표도, 배지도, 연속 기록도 넣지 않았어요. Dayline은 평가하지 않고, 있는 그대로의 하루만 남깁니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "무료인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 무료입니다. 탭바 아래에 광고가 하나 표시돼요. 어떤 화면과 설정을 쓰는지 같은 익명 사용 통계는 설정에서 끌 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "문의나 제안은 어디로 보내나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "zaco.labs@gmail.com 으로 보내 주세요. Dayline을 만든 Zaco Labs가 직접 확인합니다."
+          }
+        }
+      ]
     }
   ]
 }

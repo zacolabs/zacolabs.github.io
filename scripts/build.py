@@ -199,6 +199,16 @@ def json_ld(t, code):
         }, {
             "@type": "Offer",
             "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "Dayline",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "Android, iOS",
+                "description": t["dayline_body"],
+                "url": SITE + dayline_landing.landing_path(code),
+            },
+        }, {
+            "@type": "Offer",
+            "itemOffered": {
                 "@type": "Service",
                 "name": t["duire_ld_name"],
                 "description": t["duire_ld"],
@@ -416,6 +426,60 @@ def sitemap(langs):
 '''
 
 
+def llms(en):
+    """/llms.txt — AI 검색 · 에이전트에게 주는 사이트 안내 (llmstxt.org 의 형식). 영어로 쓴다."""
+    return f"""# Zaco Labs
+
+> {en["tagline"]}. {en["org_description"]}
+
+{" ".join(en["about"])} Contact: zaco.labs@gmail.com
+
+## Products
+
+- [Waky]({WAKY_LANDING}/en/): {en["waky_ld"]} Free on iOS and Android.
+{dayline_landing.llms_links()}
+- [{en["duire_ld_name"]}]({DUIRE_EN}): {en["duire_body"]}
+
+## Company
+
+- [About Zaco Labs]({SITE}/): the studio and its products, in 18 languages
+
+## Optional
+
+- [Full text for LLMs]({SITE}/llms-full.txt): this guide with Dayline's features and FAQ written out
+"""
+
+
+def llms_full(en):
+    """/llms-full.txt — 링크를 따라가지 않아도 되게 본문을 한 파일에 편 것."""
+    return f"""# Zaco Labs
+
+> {en["tagline"]}. {en["org_description"]}
+
+{" ".join(en["about"])}
+
+- Website: {SITE}/
+- Contact: zaco.labs@gmail.com
+
+## Waky
+
+{en["waky_body"]}
+
+- Type: mobile app for iOS and Android ({en["waky_ld"]})
+- Page: {WAKY_LANDING}/en/
+- Google Play: {PLAY}
+- App Store: {APPLE}
+
+{dayline_landing.llms_full()}
+## {en["duire_ld_name"]}
+
+{en["duire_body"]}
+
+- Type: web service for app developers ({en["duire_ld"]})
+- Page: {DUIRE_EN}
+"""
+
+
 def main():
     langs = {c: load(c) for c in ORDER}
     keys = set(langs[DEFAULT])
@@ -435,6 +499,9 @@ def main():
         f.write(moved_stub())
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(sitemap(langs))
+    for name, text in (("llms.txt", llms(langs[DEFAULT])), ("llms-full.txt", llms_full(langs[DEFAULT]))):
+        with open(os.path.join(ROOT, name), "w", encoding="utf-8") as f:
+            f.write(text)
     print(f"built {len(ORDER)} pages")
     print(f"built {dayline_legal.build()} dayline legal pages")
     print(f"built {dayline_landing.build()} dayline landing pages")

@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — 自动出行轨迹记录｜把每一天，画成一条线</title>
 <meta name="description" content="没有开始按钮，步行、跑步、开车的一天会自动变成一条线。Dayline 自动识别步行、跑步、骑行和乘车，出行记录只保存在这台设备上。自动记录出行轨迹与路线的应用，iOS、Android 免费。" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="zh_CN" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — 把每一天，画成一条线" />
 <meta property="og:description" content="去了哪里、走了多远，不用按开始按钮，每天自动为你画出来。" />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/zh-hans/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-zh-hans.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — 把每一天，画成一条线" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — 把每一天，画成一条线" />
+<meta name="twitter:description" content="去了哪里、走了多远，不用按开始按钮，每天自动为你画出来。" />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-zh-hans.png" />
+<meta name="twitter:image:alt" content="Dayline — 把每一天，画成一条线" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/zh-hans/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "自动记录一天的出行，并画成一条线的应用。出行记录只保存在设备上。",
-  "url": "https://zacolabs.github.io/dayline/zh-hans/",
-  "inLanguage": "zh-Hans",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "zh-Hans",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "开始运动时需要按按钮吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "不需要。Dayline 没有开始按钮，也没有停止按钮。一动身就开始记录，在一个地方停留下来就结束。像平常一样带着手机就行。"
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "关闭应用也会记录吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "会的。不用打开应用也能记录。为此需要把位置权限设为“始终”（Android 上为“始终允许”），这样在应用关闭时也能画出你走过的路。"
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/zh-hans/#webpage",
+      "url": "https://zacolabs.github.io/dayline/zh-hans/",
+      "name": "Dayline — 自动出行轨迹记录｜把每一天，画成一条线",
+      "description": "没有开始按钮，步行、跑步、开车的一天会自动变成一条线。Dayline 自动识别步行、跑步、骑行和乘车，出行记录只保存在这台设备上。自动记录出行轨迹与路线的应用，iOS、Android 免费。",
+      "inLanguage": "zh-Hans",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/zh-hans/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/zh-hans/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-zh-hans.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "如何区分步行、跑步、骑行和开车？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dayline 会自动识别你的出行方式，并用线条的颜色来表示。“运动与健身”权限（Android 上为“身体活动”）是可选的；允许后，会用来区分步行、跑步、骑行和乘车。"
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/zh-hans/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/zh-hans/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/zh-hans/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/zh-hans/#app",
+      "name": "Dayline",
+      "description": "自动记录一天的出行，并画成一条线的应用。出行记录只保存在设备上。",
+      "url": "https://zacolabs.github.io/dayline/zh-hans/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "没有开始按钮",
+        "步行、跑步、骑行、乘车，自动识别",
+        "每一天都留存",
+        "只保存在你的设备上"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "会不会很耗电？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "只有在你移动时才会使用位置信息。停留在一个地方时，Dayline 只是待命。我们把它设计成即使全天开着，负担也尽量小。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "我的出行记录会发送到服务器吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "不会。无需账号，无需登录，出行记录只保存在这台设备上。不会发送到任何地方，也不会发送给我们，更不会用于广告或统计。你可以随时在设置中将其全部删除。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "过去的记录在哪里看？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "在“历史”标签页，一个月一目了然，出行的每一天都留有一条小线。点开任意一天，就能查看当天的轨迹和时间线。在“地图”标签页，可以把最近 7 天、本月、今年或全部记录放在同一张地图上查看。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "有目标或徽章之类的功能吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "没有。我们没有加入目标、徽章，也没有连续打卡。Dayline 不打分，只留下这一天本来的样子。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "是免费的吗？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "是的，免费。标签栏下方会显示一条广告。匿名的使用情况统计（例如使用了哪些页面和设置）可以在设置中关闭。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "咨询或建议发到哪里？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "请发送至 zaco.labs@gmail.com。开发 Dayline 的 Zaco Labs 会亲自查看。"
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/zh-hans/#faq",
+      "inLanguage": "zh-Hans",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/zh-hans/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "开始运动时需要按按钮吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要。Dayline 没有开始按钮，也没有停止按钮。一动身就开始记录，在一个地方停留下来就结束。像平常一样带着手机就行。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "关闭应用也会记录吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "会的。不用打开应用也能记录。为此需要把位置权限设为“始终”（Android 上为“始终允许”），这样在应用关闭时也能画出你走过的路。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何区分步行、跑步、骑行和开车？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dayline 会自动识别你的出行方式，并用线条的颜色来表示。“运动与健身”权限（Android 上为“身体活动”）是可选的；允许后，会用来区分步行、跑步、骑行和乘车。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "会不会很耗电？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "只有在你移动时才会使用位置信息。停留在一个地方时，Dayline 只是待命。我们把它设计成即使全天开着，负担也尽量小。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我的出行记录会发送到服务器吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不会。无需账号，无需登录，出行记录只保存在这台设备上。不会发送到任何地方，也不会发送给我们，更不会用于广告或统计。你可以随时在设置中将其全部删除。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "过去的记录在哪里看？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在“历史”标签页，一个月一目了然，出行的每一天都留有一条小线。点开任意一天，就能查看当天的轨迹和时间线。在“地图”标签页，可以把最近 7 天、本月、今年或全部记录放在同一张地图上查看。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "有目标或徽章之类的功能吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "没有。我们没有加入目标、徽章，也没有连续打卡。Dayline 不打分，只留下这一天本来的样子。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "是免费的吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的，免费。标签栏下方会显示一条广告。匿名的使用情况统计（例如使用了哪些页面和设置）可以在设置中关闭。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "咨询或建议发到哪里？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "请发送至 zaco.labs@gmail.com。开发 Dayline 的 Zaco Labs 会亲自查看。"
+          }
+        }
+      ]
     }
   ]
 }

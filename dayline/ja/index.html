@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — 自動移動ログ｜一日が、一本の線になる移動記録アプリ</title>
 <meta name="description" content="スタートボタンなしで、歩いて、走って、運転した一日が自動で一本の線に。徒歩・ランニング・自転車・乗り物を見分け、移動の記録はこのデバイスにだけ保存。自動移動ログ・ルート記録アプリ Dayline。iOS・Androidで無料。" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="ja_JP" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — 一日が、一本の線になる" />
 <meta property="og:description" content="どこへどれだけ移動したかを、スタートボタンなしで毎日自動で描きます。" />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/ja/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-ja.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — 一日が、一本の線になる" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — 一日が、一本の線になる" />
+<meta name="twitter:description" content="どこへどれだけ移動したかを、スタートボタンなしで毎日自動で描きます。" />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-ja.png" />
+<meta name="twitter:image:alt" content="Dayline — 一日が、一本の線になる" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/ja/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "一日の移動を自動で記録し、一本の線で見せるアプリ。移動の記録はデバイスにだけ保存されます。",
-  "url": "https://zacolabs.github.io/dayline/ja/",
-  "inLanguage": "ja",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "JPY"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "ja",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "運動を始めるときに、ボタンを押す必要はありますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "いいえ。Daylineにはスタートボタンもストップボタンもありません。動き出すと記録が始まり、同じ場所にとどまると終わります。スマートフォンをいつものように持ち歩くだけです。"
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "アプリを閉じていても記録されますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "はい。アプリを開かなくても記録されます。そのためには、位置情報の許可を「常に」（Androidでは「常に許可」）にしておく必要があります。アプリが閉じている間も、通った道を描くためです。"
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/ja/#webpage",
+      "url": "https://zacolabs.github.io/dayline/ja/",
+      "name": "Dayline — 自動移動ログ｜一日が、一本の線になる移動記録アプリ",
+      "description": "スタートボタンなしで、歩いて、走って、運転した一日が自動で一本の線に。徒歩・ランニング・自転車・乗り物を見分け、移動の記録はこのデバイスにだけ保存。自動移動ログ・ルート記録アプリ Dayline。iOS・Androidで無料。",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/ja/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/ja/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-ja.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "徒歩、ランニング、自転車、運転をどうやって見分けるのですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "どの手段で移動しているかをDaylineが自動で見分けて、線の色で表します。「モーションとフィットネス」（Androidでは「身体活動」）の許可は任意ですが、許可すると、徒歩・ランニング・自転車・乗り物を見分けるために使われます。"
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/ja/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/ja/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/ja/#app",
+      "name": "Dayline",
+      "description": "一日の移動を自動で記録し、一本の線で見せるアプリ。移動の記録はデバイスにだけ保存されます。",
+      "url": "https://zacolabs.github.io/dayline/ja/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "JPY"
+      },
+      "featureList": [
+        "スタートボタンはありません",
+        "歩く、走る、乗るを自動で見分けます",
+        "毎日が残ります",
+        "このデバイスにだけ保存"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "バッテリーの減りは早くなりませんか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "位置情報を使うのは移動している間だけです。同じ場所にとどまっている間は待機するだけなので、一日中オンにしていても負担が少なくなるように作りました。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "移動の記録はサーバーに送信されますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "いいえ。アカウントもログインもなく、移動の記録はこのデバイスにだけ保存されます。どこにも、私たちにも送信されず、広告や統計に使われることもありません。設定からいつでもすべて削除できます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "過去の記録はどこで見られますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "「履歴」タブではひと月をひと目で見渡せ、移動した日ごとに小さな線が残っています。日付を開くと、その日の経路とタイムラインが表示されます。「地図」タブでは、過去7日間、今月、今年、全期間の記録を1枚の地図にまとめて見られます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "目標やバッジのようなものはありますか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ありません。目標も、バッジも、連続記録も入れていません。Daylineは点数をつけず、ありのままの一日だけを残します。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "無料ですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "はい、無料です。タブバーの下に広告が1つ表示されます。どの画面や設定が使われているかといった匿名の利用状況の統計は、設定でオフにできます。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "お問い合わせや提案はどこに送ればいいですか？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "zaco.labs@gmail.com までお送りください。Daylineを作っているZaco Labsが直接確認します。"
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/ja/#faq",
+      "inLanguage": "ja",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/ja/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "運動を始めるときに、ボタンを押す必要はありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。Daylineにはスタートボタンもストップボタンもありません。動き出すと記録が始まり、同じ場所にとどまると終わります。スマートフォンをいつものように持ち歩くだけです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "アプリを閉じていても記録されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。アプリを開かなくても記録されます。そのためには、位置情報の許可を「常に」（Androidでは「常に許可」）にしておく必要があります。アプリが閉じている間も、通った道を描くためです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "徒歩、ランニング、自転車、運転をどうやって見分けるのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "どの手段で移動しているかをDaylineが自動で見分けて、線の色で表します。「モーションとフィットネス」（Androidでは「身体活動」）の許可は任意ですが、許可すると、徒歩・ランニング・自転車・乗り物を見分けるために使われます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "バッテリーの減りは早くなりませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "位置情報を使うのは移動している間だけです。同じ場所にとどまっている間は待機するだけなので、一日中オンにしていても負担が少なくなるように作りました。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "移動の記録はサーバーに送信されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。アカウントもログインもなく、移動の記録はこのデバイスにだけ保存されます。どこにも、私たちにも送信されず、広告や統計に使われることもありません。設定からいつでもすべて削除できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "過去の記録はどこで見られますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "「履歴」タブではひと月をひと目で見渡せ、移動した日ごとに小さな線が残っています。日付を開くと、その日の経路とタイムラインが表示されます。「地図」タブでは、過去7日間、今月、今年、全期間の記録を1枚の地図にまとめて見られます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "目標やバッジのようなものはありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ありません。目標も、バッジも、連続記録も入れていません。Daylineは点数をつけず、ありのままの一日だけを残します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "無料ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい、無料です。タブバーの下に広告が1つ表示されます。どの画面や設定が使われているかといった匿名の利用状況の統計は、設定でオフにできます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "お問い合わせや提案はどこに送ればいいですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "zaco.labs@gmail.com までお送りください。Daylineを作っているZaco Labsが直接確認します。"
+          }
+        }
+      ]
     }
   ]
 }

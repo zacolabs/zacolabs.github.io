@@ -1,5 +1,20 @@
 User-agent: *
 Allow: /
 
+# AI 검색 · 어시스턴트의 크롤러. 위의 규칙으로 이미 허용돼 있지만, 막지 않는다는 것을 따로 적어 둔다.
+# 사이트 안내는 /llms.txt, 본문을 편 것은 /llms-full.txt
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://zacolabs.github.io/sitemap.xml
 Sitemap: https://zacolabs.github.io/waky-landing/sitemap.xml

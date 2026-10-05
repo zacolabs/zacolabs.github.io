@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — 自動移動軌跡紀錄｜把每一天，畫成一條線</title>
 <meta name="description" content="沒有開始按鈕，走路、跑步、開車的一天會自動變成一條線。Dayline 自動辨識步行、跑步、自行車和車輛，移動紀錄只儲存在這台裝置上。自動記錄移動軌跡與路線的 App，iOS、Android 免費。" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="zh_TW" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — 把每一天，畫成一條線" />
 <meta property="og:description" content="去了哪裡、走了多遠，不必按開始按鈕，每天自動為你畫出來。" />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/zh-hant/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-zh-hant.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — 把每一天，畫成一條線" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — 把每一天，畫成一條線" />
+<meta name="twitter:description" content="去了哪裡、走了多遠，不必按開始按鈕，每天自動為你畫出來。" />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-zh-hant.png" />
+<meta name="twitter:image:alt" content="Dayline — 把每一天，畫成一條線" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/zh-hant/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "自動記錄一天的移動，並畫成一條線的 App。移動紀錄只儲存在裝置上。",
-  "url": "https://zacolabs.github.io/dayline/zh-hant/",
-  "inLanguage": "zh-Hant",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "zh-Hant",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "開始運動時需要按按鈕嗎？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "不需要。Dayline 沒有開始按鈕，也沒有停止按鈕。一動身就開始記錄，在同一個地方停留下來就結束。像平常一樣帶著手機就好。"
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "關閉 App 也會記錄嗎？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "會的。不必打開 App 也能記錄。為此需要把位置權限設為「永遠」（Android 上為「一律允許」），這樣在 App 關閉時也能畫出你走過的路。"
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/zh-hant/#webpage",
+      "url": "https://zacolabs.github.io/dayline/zh-hant/",
+      "name": "Dayline — 自動移動軌跡紀錄｜把每一天，畫成一條線",
+      "description": "沒有開始按鈕，走路、跑步、開車的一天會自動變成一條線。Dayline 自動辨識步行、跑步、自行車和車輛，移動紀錄只儲存在這台裝置上。自動記錄移動軌跡與路線的 App，iOS、Android 免費。",
+      "inLanguage": "zh-Hant",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/zh-hant/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/zh-hant/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-zh-hant.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "如何區分步行、跑步、自行車和開車？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dayline 會自動辨識你的移動方式，並以線條的顏色來表示。「動作與健身」權限（Android 上為「體能活動」）是選用的；允許後，會用來區分步行、跑步、自行車和車輛。"
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/zh-hant/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/zh-hant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/zh-hant/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/zh-hant/#app",
+      "name": "Dayline",
+      "description": "自動記錄一天的移動，並畫成一條線的 App。移動紀錄只儲存在裝置上。",
+      "url": "https://zacolabs.github.io/dayline/zh-hant/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "沒有開始按鈕",
+        "步行、跑步、騎車、搭車，自動辨識",
+        "每一天都留存",
+        "只儲存在你的裝置上"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "會不會很耗電？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "只有在你移動時才會使用位置資訊。停留在同一個地方時，Dayline 只是待命。我們把它設計成即使整天開著，負擔也盡量小。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "我的移動紀錄會傳送到伺服器嗎？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "不會。不需帳號，不需登入，移動紀錄只儲存在這台裝置上。不會傳送到任何地方，也不會傳送給我們，更不會用於廣告或統計。你可以隨時在設定中將其全部刪除。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "過去的紀錄在哪裡看？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "在「紀錄」分頁，一個月一目了然，有移動的每一天都留有一條小線。點開任何一天，就能查看當天的路線和時間軸。在「地圖」分頁，可以把最近 7 天、本月、今年或全部紀錄放在同一張地圖上查看。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "有目標或徽章之類的功能嗎？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "沒有。我們沒有加入目標、徽章，也沒有連續紀錄。Dayline 不評分，只留下這一天原本的樣子。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "是免費的嗎？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "是的，免費。分頁列下方會顯示一則廣告。匿名的使用統計（例如使用了哪些畫面和設定）可以在設定中關閉。"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "問題或建議要寄到哪裡？",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "請寄到 zaco.labs@gmail.com。開發 Dayline 的 Zaco Labs 會親自查看。"
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/zh-hant/#faq",
+      "inLanguage": "zh-Hant",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/zh-hant/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "開始運動時需要按按鈕嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要。Dayline 沒有開始按鈕，也沒有停止按鈕。一動身就開始記錄，在同一個地方停留下來就結束。像平常一樣帶著手機就好。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "關閉 App 也會記錄嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "會的。不必打開 App 也能記錄。為此需要把位置權限設為「永遠」（Android 上為「一律允許」），這樣在 App 關閉時也能畫出你走過的路。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何區分步行、跑步、自行車和開車？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dayline 會自動辨識你的移動方式，並以線條的顏色來表示。「動作與健身」權限（Android 上為「體能活動」）是選用的；允許後，會用來區分步行、跑步、自行車和車輛。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "會不會很耗電？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "只有在你移動時才會使用位置資訊。停留在同一個地方時，Dayline 只是待命。我們把它設計成即使整天開著，負擔也盡量小。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我的移動紀錄會傳送到伺服器嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不會。不需帳號，不需登入，移動紀錄只儲存在這台裝置上。不會傳送到任何地方，也不會傳送給我們，更不會用於廣告或統計。你可以隨時在設定中將其全部刪除。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "過去的紀錄在哪裡看？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "在「紀錄」分頁，一個月一目了然，有移動的每一天都留有一條小線。點開任何一天，就能查看當天的路線和時間軸。在「地圖」分頁，可以把最近 7 天、本月、今年或全部紀錄放在同一張地圖上查看。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "有目標或徽章之類的功能嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "沒有。我們沒有加入目標、徽章，也沒有連續紀錄。Dayline 不評分，只留下這一天原本的樣子。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "是免費的嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的，免費。分頁列下方會顯示一則廣告。匿名的使用統計（例如使用了哪些畫面和設定）可以在設定中關閉。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "問題或建議要寄到哪裡？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "請寄到 zaco.labs@gmail.com。開發 Dayline 的 Zaco Labs 會親自查看。"
+          }
+        }
+      ]
     }
   ]
 }

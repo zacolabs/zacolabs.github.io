@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Diario automatico dei percorsi e degli spostamenti</title>
 <meta name="description" content="Nessun pulsante di avvio: a piedi, in bici o in auto, la tua giornata diventa una linea. Un diario automatico che resta sul dispositivo. Gratis su iOS e Android." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="it_IT" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="id_ID" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — La tua giornata, in una linea" />
 <meta property="og:description" content="Dove sei stato e quanta strada hai fatto, disegnato in automatico ogni giorno. Nessun pulsante di avvio." />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/it/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-it.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — La tua giornata, in una linea" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — La tua giornata, in una linea" />
+<meta name="twitter:description" content="Dove sei stato e quanta strada hai fatto, disegnato in automatico ogni giorno. Nessun pulsante di avvio." />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-it.png" />
+<meta name="twitter:image:alt" content="Dayline — La tua giornata, in una linea" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/it/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "Un diario automatico dei percorsi che disegna la tua giornata in una linea. I tuoi spostamenti restano sul tuo dispositivo.",
-  "url": "https://zacolabs.github.io/dayline/it/",
-  "inLanguage": "it",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "it",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Devo premere un pulsante quando inizio ad allenarmi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Dayline non ha né un pulsante di avvio né uno di arresto. La registrazione inizia quando cominci a muoverti e finisce quando resti nello stesso posto. Ti basta portare con te il telefono come sempre."
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Registra anche con l'app chiusa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sì. Non serve aprire l'app. Per questo l'accesso alla posizione deve essere impostato su «Sempre» («Consenti sempre» su Android), così il percorso può essere disegnato anche quando l'app è chiusa."
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/it/#webpage",
+      "url": "https://zacolabs.github.io/dayline/it/",
+      "name": "Dayline — Diario automatico dei percorsi e degli spostamenti",
+      "description": "Nessun pulsante di avvio: a piedi, in bici o in auto, la tua giornata diventa una linea. Un diario automatico che resta sul dispositivo. Gratis su iOS e Android.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/it/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/it/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-it.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "Come distingue camminata, corsa, bici e auto?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dayline capisce come ti stai spostando e lo mostra con il colore della linea. L'autorizzazione «Movimento e fitness» («Attività fisica» su Android) è facoltativa; se la concedi, serve a distinguere camminata, corsa, bici e veicolo."
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/it/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/it/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/it/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/it/#app",
+      "name": "Dayline",
+      "description": "Un diario automatico dei percorsi che disegna la tua giornata in una linea. I tuoi spostamenti restano sul tuo dispositivo.",
+      "url": "https://zacolabs.github.io/dayline/it/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Nessun pulsante di avvio",
+        "A piedi, di corsa, in bici, in auto",
+        "Ogni giorno, conservato",
+        "Solo sul tuo dispositivo"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Consuma molta batteria?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La posizione viene usata solo mentre ti muovi. Finché resti nello stesso posto, Dayline aspetta: è pensata per restare attiva tutto il giorno."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "I miei spostamenti vengono inviati a un server?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Non c'è alcun account né accesso, e i tuoi spostamenti sono salvati solo su questo dispositivo. Non vengono mai inviati altrove, nemmeno a noi, e non vengono mai usati per annunci o statistiche. Puoi eliminarli tutti in qualsiasi momento dalle Impostazioni."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Dove vedo i giorni passati?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La scheda Storico mostra un mese a colpo d'occhio, con una piccola linea per ogni giorno in cui ti sei mosso. Apri un giorno per vederne il percorso e la cronologia. La scheda Mappa riunisce una settimana, un mese, un anno o tutto su un'unica mappa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Ci sono obiettivi o badge?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Niente obiettivi, niente badge, niente serie. Dayline non ti dà voti: conserva la giornata così com'è stata."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "È gratis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sì. Dayline è gratuita e mostra un solo annuncio sotto la barra delle schede. Le statistiche di utilizzo anonime, ad esempio quali schermate e impostazioni vengono usate, si possono disattivare nelle Impostazioni."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Dove invio domande o suggerimenti?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Scrivi a zaco.labs@gmail.com. Zaco Labs, che sviluppa Dayline, legge ogni messaggio."
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/it/#faq",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/it/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Devo premere un pulsante quando inizio ad allenarmi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Dayline non ha né un pulsante di avvio né uno di arresto. La registrazione inizia quando cominci a muoverti e finisce quando resti nello stesso posto. Ti basta portare con te il telefono come sempre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Registra anche con l'app chiusa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. Non serve aprire l'app. Per questo l'accesso alla posizione deve essere impostato su «Sempre» («Consenti sempre» su Android), così il percorso può essere disegnato anche quando l'app è chiusa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Come distingue camminata, corsa, bici e auto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dayline capisce come ti stai spostando e lo mostra con il colore della linea. L'autorizzazione «Movimento e fitness» («Attività fisica» su Android) è facoltativa; se la concedi, serve a distinguere camminata, corsa, bici e veicolo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Consuma molta batteria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La posizione viene usata solo mentre ti muovi. Finché resti nello stesso posto, Dayline aspetta: è pensata per restare attiva tutto il giorno."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I miei spostamenti vengono inviati a un server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Non c'è alcun account né accesso, e i tuoi spostamenti sono salvati solo su questo dispositivo. Non vengono mai inviati altrove, nemmeno a noi, e non vengono mai usati per annunci o statistiche. Puoi eliminarli tutti in qualsiasi momento dalle Impostazioni."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dove vedo i giorni passati?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La scheda Storico mostra un mese a colpo d'occhio, con una piccola linea per ogni giorno in cui ti sei mosso. Apri un giorno per vederne il percorso e la cronologia. La scheda Mappa riunisce una settimana, un mese, un anno o tutto su un'unica mappa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ci sono obiettivi o badge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Niente obiettivi, niente badge, niente serie. Dayline non ti dà voti: conserva la giornata così com'è stata."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. Dayline è gratuita e mostra un solo annuncio sotto la barra delle schede. Le statistiche di utilizzo anonime, ad esempio quali schermate e impostazioni vengono usate, si possono disattivare nelle Impostazioni."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dove invio domande o suggerimenti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scrivi a zaco.labs@gmail.com. Zaco Labs, che sviluppa Dayline, legge ogni messaggio."
+          }
+        }
+      ]
     }
   ]
 }

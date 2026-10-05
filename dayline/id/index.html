@@ -5,18 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Catatan Perjalanan dan Rute Harian Otomatis</title>
 <meta name="description" content="Tanpa tombol mulai, harimu otomatis menjadi garis. Dayline mengenali jalan kaki, lari, bersepeda, dan berkendara. Catatan tetap di perangkatmu. Gratis di iOS dan Android." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Zaco Labs" />
+<meta name="application-name" content="Dayline" />
+<meta name="apple-mobile-web-app-title" content="Dayline" />
+<meta name="apple-itunes-app" content="app-id=6818821647" />
 <meta name="theme-color" content="#111113" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="id_ID" />
+<meta property="og:locale:alternate" content="ko_KR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="nl_NL" />
+<meta property="og:locale:alternate" content="da_DK" />
+<meta property="og:locale:alternate" content="pl_PL" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="ar_AR" />
+<meta property="og:locale:alternate" content="vi_VN" />
+<meta property="og:locale:alternate" content="tl_PH" />
 <meta property="og:title" content="Dayline — Harimu, tergambar dalam satu garis" />
 <meta property="og:description" content="Ke mana kamu pergi dan seberapa jauh, tergambar otomatis setiap hari. Tanpa tombol mulai." />
 <meta property="og:url" content="https://zacolabs.github.io/dayline/id/" />
 <meta property="og:image" content="https://zacolabs.github.io/dayline/assets/og-id.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:alt" content="Dayline — Harimu, tergambar dalam satu garis" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dayline — Harimu, tergambar dalam satu garis" />
+<meta name="twitter:description" content="Ke mana kamu pergi dan seberapa jauh, tergambar otomatis setiap hari. Tanpa tombol mulai." />
+<meta name="twitter:image" content="https://zacolabs.github.io/dayline/assets/og-id.png" />
+<meta name="twitter:image:alt" content="Dayline — Harimu, tergambar dalam satu garis" />
 <link rel="icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="apple-touch-icon" href="/zacolabs-assets/dayline_icon.png" />
 <link rel="canonical" href="https://zacolabs.github.io/dayline/id/" />
@@ -42,109 +69,205 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Dayline",
-  "applicationCategory": "LifestyleApplication",
-  "operatingSystem": "Android, iOS",
-  "description": "Catatan perjalanan otomatis yang menggambar harimu dalam satu garis. Catatan pergerakanmu tetap di perangkatmu.",
-  "url": "https://zacolabs.github.io/dayline/id/",
-  "inLanguage": "id",
-  "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
-    "https://apps.apple.com/app/id6818821647"
-  ],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Zaco Labs",
-    "url": "https://zacolabs.github.io/",
-    "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-    "email": "zaco.labs@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "inLanguage": "id",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Apakah harus menekan tombol saat mulai berolahraga?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tidak. Dayline tidak punya tombol mulai maupun tombol berhenti. Perekaman dimulai saat kamu mulai bergerak dan berakhir saat kamu diam di satu tempat. Cukup bawa ponselmu seperti biasa."
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Apakah tetap merekam saat aplikasi ditutup?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ya. Kamu tidak perlu membuka aplikasinya. Untuk itu, izin lokasi harus diatur ke “Selalu” (“Selalu izinkan” di Android), supaya jalurmu tetap tergambar meski aplikasi ditutup."
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/dayline/id/#webpage",
+      "url": "https://zacolabs.github.io/dayline/id/",
+      "name": "Dayline — Catatan Perjalanan dan Rute Harian Otomatis",
+      "description": "Tanpa tombol mulai, harimu otomatis menjadi garis. Dayline mengenali jalan kaki, lari, bersepeda, dan berkendara. Catatan tetap di perangkatmu. Gratis di iOS dan Android.",
+      "inLanguage": "id",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/dayline/id/#app"
+      },
+      "breadcrumb": {
+        "@id": "https://zacolabs.github.io/dayline/id/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/dayline/assets/og-id.png",
+        "width": 1200,
+        "height": 630
       }
     },
     {
-      "@type": "Question",
-      "name": "Bagaimana Dayline membedakan jalan kaki, lari, bersepeda, dan berkendara?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dayline mengenali cara kamu bepergian dan menunjukkannya lewat warna garis. Izin Gerakan & Kebugaran (Aktivitas fisik di Android) bersifat opsional; jika diizinkan, izin ini dipakai untuk membedakan jalan kaki, lari, bersepeda, dan berkendara."
+      "@type": "BreadcrumbList",
+      "@id": "https://zacolabs.github.io/dayline/id/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zaco Labs",
+          "item": "https://zacolabs.github.io/id/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dayline",
+          "item": "https://zacolabs.github.io/dayline/id/"
+        }
+      ]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://zacolabs.github.io/dayline/id/#app",
+      "name": "Dayline",
+      "description": "Catatan perjalanan otomatis yang menggambar harimu dalam satu garis. Catatan pergerakanmu tetap di perangkatmu.",
+      "url": "https://zacolabs.github.io/dayline/id/",
+      "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android, iOS",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Tanpa tombol mulai",
+        "Jalan kaki, lari, bersepeda, berkendara",
+        "Setiap hari tersimpan",
+        "Hanya di perangkatmu"
+      ],
+      "inLanguage": [
+        "ko",
+        "en",
+        "ja",
+        "zh-Hans",
+        "zh-Hant",
+        "es",
+        "fr",
+        "de",
+        "it",
+        "pt",
+        "nl",
+        "da",
+        "pl",
+        "ru",
+        "ar",
+        "id",
+        "vi",
+        "fil"
+      ],
+      "downloadUrl": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.zacolabs.dayline",
+        "https://apps.apple.com/app/id6818821647"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "author": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Question",
-      "name": "Apakah boros baterai?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lokasi hanya digunakan saat kamu bergerak. Selama kamu diam di satu tempat, Dayline hanya menunggu. Aplikasi ini dibuat agar tetap hemat baterai meski aktif seharian."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Apakah catatan pergerakanku dikirim ke server?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tidak. Tidak ada akun dan tidak perlu login, dan catatan pergerakanmu hanya disimpan di perangkat ini. Catatan itu tidak pernah dikirim ke mana pun, bahkan kepada kami, dan tidak pernah digunakan untuk iklan atau statistik. Kamu bisa menghapus semuanya kapan saja di Pengaturan."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Di mana aku bisa melihat hari-hari sebelumnya?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tab Riwayat menampilkan sebulan dalam sekilas, dengan garis kecil untuk setiap hari kamu bergerak. Buka hari mana pun untuk melihat jalur dan linimasanya. Tab Peta menyatukan 7 hari terakhir, bulan ini, tahun ini, atau semua catatan dalam satu peta."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Apakah ada target atau lencana?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tidak ada. Tanpa target, tanpa lencana, tanpa streak. Dayline tidak menilai; hanya menyimpan harimu apa adanya."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Apakah gratis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ya. Dayline gratis dan menampilkan satu iklan di bawah bilah tab. Statistik penggunaan anonim, seperti layar dan pengaturan mana yang dipakai, bisa dimatikan di Pengaturan."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Ke mana aku bisa mengirim pertanyaan atau saran?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Kirim email ke zaco.labs@gmail.com. Zaco Labs, pembuat Dayline, membacanya langsung."
-      }
+      "@type": "FAQPage",
+      "@id": "https://zacolabs.github.io/dayline/id/#faq",
+      "inLanguage": "id",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/dayline/id/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apakah harus menekan tombol saat mulai berolahraga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak. Dayline tidak punya tombol mulai maupun tombol berhenti. Perekaman dimulai saat kamu mulai bergerak dan berakhir saat kamu diam di satu tempat. Cukup bawa ponselmu seperti biasa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah tetap merekam saat aplikasi ditutup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya. Kamu tidak perlu membuka aplikasinya. Untuk itu, izin lokasi harus diatur ke “Selalu” (“Selalu izinkan” di Android), supaya jalurmu tetap tergambar meski aplikasi ditutup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bagaimana Dayline membedakan jalan kaki, lari, bersepeda, dan berkendara?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dayline mengenali cara kamu bepergian dan menunjukkannya lewat warna garis. Izin Gerakan & Kebugaran (Aktivitas fisik di Android) bersifat opsional; jika diizinkan, izin ini dipakai untuk membedakan jalan kaki, lari, bersepeda, dan berkendara."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah boros baterai?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lokasi hanya digunakan saat kamu bergerak. Selama kamu diam di satu tempat, Dayline hanya menunggu. Aplikasi ini dibuat agar tetap hemat baterai meski aktif seharian."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah catatan pergerakanku dikirim ke server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak. Tidak ada akun dan tidak perlu login, dan catatan pergerakanmu hanya disimpan di perangkat ini. Catatan itu tidak pernah dikirim ke mana pun, bahkan kepada kami, dan tidak pernah digunakan untuk iklan atau statistik. Kamu bisa menghapus semuanya kapan saja di Pengaturan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Di mana aku bisa melihat hari-hari sebelumnya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tab Riwayat menampilkan sebulan dalam sekilas, dengan garis kecil untuk setiap hari kamu bergerak. Buka hari mana pun untuk melihat jalur dan linimasanya. Tab Peta menyatukan 7 hari terakhir, bulan ini, tahun ini, atau semua catatan dalam satu peta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah ada target atau lencana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak ada. Tanpa target, tanpa lencana, tanpa streak. Dayline tidak menilai; hanya menyimpan harimu apa adanya."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya. Dayline gratis dan menampilkan satu iklan di bawah bilah tab. Statistik penggunaan anonim, seperti layar dan pengaturan mana yang dipakai, bisa dimatikan di Pengaturan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ke mana aku bisa mengirim pertanyaan atau saran?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kirim email ke zaco.labs@gmail.com. Zaco Labs, pembuat Dayline, membacanya langsung."
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,22 @@
+# Zaco Labs
+
+> A software studio crafting small but solid products. We build software that takes small frictions out of daily life and work.
+
+Zaco Labs is a small software studio that starts from frictions we have run into ourselves. We build only what is needed, and we stand behind what we build for the long haul. Contact: zaco.labs@gmail.com
+
+## Products
+
+- [Waky](https://zacolabs.github.io/waky-landing/introduce/en/): An alarm you turn off by solving a mission, alarm sounds you record yourself, and morning habits. Free on iOS and Android.
+- [Dayline](https://zacolabs.github.io/dayline/en/): An automatic travel log that draws your day as a line. Your movement record stays on your device. Free on iOS and Android.
+- [Dayline privacy policy](https://zacolabs.github.io/dayline/privacy.en.html): what Dayline collects and what never leaves the device
+- [Dayline terms of service](https://zacolabs.github.io/dayline/terms.en.html)
+- Dayline in other languages: [한국어](https://zacolabs.github.io/dayline/ko/), [日本語](https://zacolabs.github.io/dayline/ja/), [简体中文](https://zacolabs.github.io/dayline/zh-hans/), [繁體中文](https://zacolabs.github.io/dayline/zh-hant/), [Español](https://zacolabs.github.io/dayline/es/), [Français](https://zacolabs.github.io/dayline/fr/), [Deutsch](https://zacolabs.github.io/dayline/de/), [Italiano](https://zacolabs.github.io/dayline/it/), [Português](https://zacolabs.github.io/dayline/pt/), [Nederlands](https://zacolabs.github.io/dayline/nl/), [Dansk](https://zacolabs.github.io/dayline/da/), [Polski](https://zacolabs.github.io/dayline/pl/), [Русский](https://zacolabs.github.io/dayline/ru/), [العربية](https://zacolabs.github.io/dayline/ar/), [Bahasa Indonesia](https://zacolabs.github.io/dayline/id/), [Tiếng Việt](https://zacolabs.github.io/dayline/vi/), [Filipino](https://zacolabs.github.io/dayline/fil/)
+- [DUIRE](https://www.duire.kr/en): We meet Google Play's closed testing requirement of 12 testers for 14 days with real Android devices, and keep every daily run in a final report.
+
+## Company
+
+- [About Zaco Labs](https://zacolabs.github.io/): the studio and its products, in 18 languages
+
+## Optional
+
+- [Full text for LLMs](https://zacolabs.github.io/llms-full.txt): this guide with Dayline's features and FAQ written out
