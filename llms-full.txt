@@ -71,7 +71,7 @@ The History tab shows a month at a glance, with a small line for every day you m
 
 ### Are there goals or badges?
 
-No. There are no goals, no badges, and no streaks. Dayline doesn't score you; it keeps the day as it was.
+No. There are no goals, no badges, and no streaks. Dayline may show how today compares with yesterday or with your week, but there is nothing to hit; it keeps the day as it was.
 
 ### Is it free?
 
