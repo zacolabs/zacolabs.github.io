@@ -10,7 +10,7 @@
 <meta name="application-name" content="Dayline" />
 <meta name="apple-mobile-web-app-title" content="Dayline" />
 <meta name="apple-itunes-app" content="app-id=6818821647" />
-<meta name="theme-color" content="#111113" />
+<meta name="theme-color" content="#ffffff" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="tl_PH" />
@@ -277,78 +277,81 @@
         document.documentElement.classList.add('anim');
 </script>
 <style>
-    /* 구성은 Waky 랜딩(waky-landing scripts/landing/style.css)과 같고, 색은 Dayline 의 것이다:
-       앱 · 스토어 그림과 같은 어두운 바탕(#111113)에 이동수단의 네 가지 색. */
+    /* 구성은 Waky 랜딩(waky-landing scripts/landing/style.css)과 같고, 모양은 Dayline 앱의 것이다
+       (dayline-ios DesignSystem/PopLook.swift): 검은 테두리와 오른쪽 아래로 떨어지는 딱딱한 그림자의
+       흰 카드, 숫자는 Do Hyeon. 앱의 노란 바탕은 페이지 전체에 깔면 너무 세서, 페이지는 흰색으로 두고
+       노랑은 앱 화면 안과 버튼에만 쓴다. 앱에 다크 모드가 없듯 여기도 밝은 모양 하나다. */
+    @font-face { font-family:"Do Hyeon Numbers"; font-display:swap;
+        /* 숫자와 km 만 잘라 낸 것 (0-9 . , k m i). Do Hyeon, SIL OFL. */
+        src:url("/dayline/assets/fonts/dohyeon-numbers.woff2") format("woff2"); }
     :root {
-        color-scheme:dark;
-        --bg:#111113; --surface:#19191c; --surface-2:#1e1e22;
-        --ink:#f5f5f7; --muted:#b8b8be; --muted-2:#8e8e93; --line:rgba(255,255,255,.1);
-        --walk:#1fe0a2; --run:#ff6a47; --cycle:#8a70ff; --car:#33aaff;
-        --radius:18px;
+        color-scheme:light;
+        --page:#fff; --yellow:#FFD84A; --ink:#111113; --muted:#3F3F45; --card:#fff; --block:#FFF9E0; --grid:#EBDDA6;
+        --divider:rgba(17,17,19,.16);
+        --walk:#00C97B; --run:#FF7A5C; --cycle:#B39DFF; --car:#6FC1FF;
+        --edge:2.5px; --radius:16px;
+        --font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     * { box-sizing:border-box; margin:0; padding:0; }
-    html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; background:var(--bg); }
+    html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; background:var(--page); }
     body {
-        font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        color:var(--ink); line-height:1.7;
+        font-family:var(--font);
+        background:var(--page); color:var(--ink); line-height:1.7;
         -webkit-font-smoothing:antialiased; overflow-x:hidden;
-        /* 스토어 그림의 격자 */
-        background:
-            linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 96px 96px,
-            linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 96px 96px,
-            var(--bg);
     }
     a { color:inherit; text-decoration:none; }
     img { max-width:100%; height:auto; display:block; }
     .wrap { width:100%; max-width:1060px; margin:0 auto; padding:0 24px; }
+    /* 앱의 카드: 채우고, 검은 테두리를 두르고, 그림자는 번지지 않고 그대로 떨어진다 */
+    .feature-list li, .steps li, .faq-list, .hero-art .art, .day-card, .shot::before {
+        border:var(--edge) solid var(--ink); box-shadow:4px 4px 0 var(--ink); }
 
     /* 헤더 */
-    header.site { border-bottom:1px solid var(--line); background:rgba(17,17,19,.82);
-        backdrop-filter:saturate(180%) blur(10px); -webkit-backdrop-filter:saturate(180%) blur(10px);
+    header.site { border-bottom:var(--edge) solid var(--ink); background:var(--page);
         position:sticky; top:0; z-index:20; }
     header.site .wrap { display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; letter-spacing:-.02em; }
-    .brand img { width:30px; height:30px; border-radius:8px; border:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; letter-spacing:-.02em; }
+    .brand img { width:32px; height:32px; border-radius:9px; border:2px solid var(--ink); }
     .langs { display:flex; flex-wrap:wrap; gap:4px; font-size:13px; }
-    .langs a { padding:5px 10px; border-radius:999px; color:var(--muted-2); }
-    .langs a:hover { background:var(--surface-2); color:var(--ink); }
-    .langs a.on { background:var(--ink); color:var(--bg); }
+    .langs a { padding:5px 10px; border-radius:999px; color:var(--muted); }
+    .langs a:hover { background:rgba(17,17,19,.1); color:var(--ink); }
+    .langs a.on { background:var(--ink); color:#fff; }
 
     /* 헤더 언어 드롭다운 (JS 없이 details 로 동작) */
     .lang-menu { position:relative; font-size:13px; }
     .lang-menu summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:6px;
-        padding:6px 12px; border:1px solid var(--line); border-radius:999px;
-        background:var(--surface); color:var(--ink); white-space:nowrap; }
+        padding:5px 12px; border:2px solid var(--ink); border-radius:999px;
+        background:var(--card); color:var(--ink); font-weight:600; white-space:nowrap; }
     .lang-menu summary::-webkit-details-marker { display:none; }
-    .lang-menu summary:hover { background:var(--surface-2); }
+    .lang-menu summary:hover { background:var(--block); }
     .lang-menu .globe { width:15px; height:15px; flex:none; }
     .lang-menu summary::after { content:""; width:6px; height:6px; margin-top:-3px;
         /* 회전시켜 만든 ⌄ 모양이라 방향과 무관 — RTL 에서 뒤집히면 안 된다 */
-        border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
+        border-right:2px solid currentColor; border-bottom:2px solid currentColor;
         transform:rotate(45deg); }
-    .lang-menu ul { list-style:none; position:absolute; top:calc(100% + 8px); inset-inline-end:0;
+    .lang-menu ul { list-style:none; position:absolute; top:calc(100% + 10px); inset-inline-end:0;
         z-index:30; display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:2px;
         width:max-content; min-width:250px; max-height:min(70vh, 480px); overflow:auto; padding:6px;
-        background:var(--surface-2); border:1px solid var(--line); border-radius:14px;
-        box-shadow:0 14px 34px rgba(0,0,0,.5); }
+        background:var(--card); border:var(--edge) solid var(--ink); border-radius:14px;
+        box-shadow:4px 4px 0 var(--ink); }
     .lang-menu li a { display:block; padding:7px 10px; border-radius:8px; color:var(--muted); white-space:nowrap; }
-    .lang-menu li a:hover { background:rgba(255,255,255,.07); color:var(--ink); }
-    .lang-menu li a[aria-current] { background:var(--ink); color:var(--bg); }
+    .lang-menu li a:hover { background:var(--block); color:var(--ink); }
+    .lang-menu li a[aria-current] { background:var(--ink); color:#fff; }
 
     /* 히어로 */
     .hero { display:grid; grid-template-columns:1fr 1.02fr; gap:48px; align-items:center;
         padding:76px 0 72px; }
-    .eyebrow { font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
-        color:var(--walk); margin-bottom:14px; }
+    .eyebrow { font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+        color:var(--ink); margin-bottom:14px; }
     h1 { font-size:clamp(34px,5.2vw,54px); line-height:1.22; letter-spacing:-.03em; font-weight:800; }
     .lede { margin-top:20px; font-size:17.5px; color:var(--muted); max-width:34em; }
-    .note { margin-top:16px; font-size:13.5px; color:var(--muted-2); }
-    /* 그림은 앱의 선 보기처럼 흰 격자 카드다. 먹선 그림 위에 색 선(.trail)을 얹는다 — 그림의 색은 이 선뿐이다. */
-    .art { position:relative; background:#fff; overflow:hidden; }
-    .art img { width:100%; }
+    .note { margin-top:16px; font-size:13.5px; color:var(--muted); }
+    /* 그림은 앱의 선 보기처럼 크림색 격자 판이다. 먹선 그림을 판에 곱해 얹고, 그 위에 색 선(.trail)을 얹는다
+       — 그림의 색은 이 선뿐이다. */
+    .art { position:relative; background:var(--block); overflow:hidden; }
+    .art img { width:100%; mix-blend-mode:multiply; }
     .art .trail { position:absolute; inset:0; width:100%; height:100%; }
-    .hero-art .art { max-width:520px; margin-inline-start:auto; border-radius:28px;
-        box-shadow:0 30px 70px rgba(0,0,0,.45); }
+    .hero-art .art { max-width:520px; margin-inline-start:auto; border-radius:26px; box-shadow:6px 6px 0 var(--ink); }
 
     /* 화면에 들어오면(.in) 선이 구간 순서대로 같은 빠르기로 그려진다. 구간마다 때(--d)와 시간(--t)을 받는다.
        .anim 은 머리의 스크립트가 켠다 — 없으면 처음부터 다 그려진 채다. */
@@ -356,127 +359,131 @@
     .anim [data-inview] .pin { opacity:0; transform-box:fill-box; transform-origin:center; }
     .anim .in .leg { animation:line-draw var(--t) var(--d) linear forwards; }
     .anim .in .pin { animation:line-pop .35s var(--d, 0s) ease-out forwards; }
-    .anim .in .halo { animation:line-halo 2.4s 3s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
     @keyframes line-draw { from { stroke-dashoffset:1; opacity:1; } to { stroke-dashoffset:0; opacity:1; } }
     @keyframes line-pop { from { opacity:0; transform:scale(.3); } to { opacity:1; transform:scale(1); } }
-    @keyframes line-halo { 0%,100% { transform:scale(1); } 50% { transform:scale(1.25); } }
 
-    /* 스토어 배지 */
+    /* 스토어 배지: 앱의 버튼처럼 검정에 흰 글자 */
     .stores { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
     .badge { direction:ltr; display:inline-flex; align-items:center; gap:11px; padding:11px 20px;
-        border-radius:14px; background:var(--ink); color:var(--bg);
-        transition:transform .15s ease, box-shadow .15s ease; }
-    a.badge:hover { transform:translateY(-2px); box-shadow:0 8px 26px rgba(255,255,255,.14); }
+        border-radius:14px; background:var(--ink); color:#fff; border:var(--edge) solid var(--ink);
+        transition:transform .15s ease; }
+    a.badge:hover { transform:translate(-2px, -2px); }
     .badge-ico { width:22px; height:22px; flex:none; }
     .badge-txt { display:flex; flex-direction:column; line-height:1.15; text-align:left; }
     .badge-txt small { font-size:10px; opacity:.72; letter-spacing:.04em; }
     .badge-txt strong { font-size:15.5px; font-weight:600; letter-spacing:-.01em; }
     /* 아직 주소가 없는 스토어 */
-    .badge-soon { background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,.22);
-        padding:10px 19px; cursor:default; }
-    .badge-soon .badge-txt small { opacity:1; color:var(--walk); letter-spacing:.02em; }
+    .badge-soon { background:transparent; color:var(--muted); border-style:dashed; cursor:default; }
+    .badge-soon .badge-txt small { opacity:1; color:var(--ink); font-weight:700; letter-spacing:.02em; }
 
     /* 섹션 공통 */
     section { padding:72px 0; }
-    section + section { border-top:1px solid var(--line); }
+    section + section { border-top:var(--edge) solid var(--divider); }
     h2 { font-size:clamp(25px,3.4vw,34px); line-height:1.3; letter-spacing:-.025em; font-weight:800; }
     .section-lede { margin-top:14px; font-size:16.5px; color:var(--muted); max-width:36em; }
 
     /* 기능 */
     .feature-wrap { display:grid; grid-template-columns:1.15fr .85fr; gap:52px;
         align-items:start; margin-top:44px; }
-    .feature-list { list-style:none; display:grid; gap:14px; }
-    .feature-list li { background:var(--surface); border:1px solid var(--line);
-        border-radius:var(--radius); padding:22px 24px; }
+    .feature-list { list-style:none; display:grid; gap:16px; }
+    .feature-list li { background:var(--card); border-radius:var(--radius); padding:22px 24px; }
     .feature-list h3 { font-size:17px; font-weight:700; letter-spacing:-.015em;
         display:flex; align-items:center; gap:10px; }
     /* 선의 한 토막 — 이동수단의 네 가지 색 */
-    .feature-list h3::before { content:""; width:18px; height:6px; border-radius:3px;
-        background:var(--walk); flex:none; }
+    .feature-list h3::before { content:""; width:20px; height:10px; border-radius:5px;
+        background:var(--walk); border:2px solid var(--ink); flex:none; }
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
-    /* 뒤 패널의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. 하루 화면은 패널 안에 위아래 36 · 38px 를 두고 놓인다. */
-    .shot { position:relative; padding-top:36px; }
-    .shot::before { content:""; position:absolute; inset:0 -10% 44px -10%;
-        background:var(--surface-2); border:1px solid var(--line); border-radius:32px; z-index:0; }
-    /* 앱의 하루 화면. 크기는 스토어 그림의 카드(가로 900)를 글자 크기 12px = 36 으로 줄인 것이라 em 으로 적는다. */
-    .day { position:relative; z-index:1; width:25em; max-width:100%; margin:0 auto; font-size:12px; line-height:1.2;
-        background:#fff; color:#111113; border-radius:1.78em; padding:1.67em 1.56em 1.56em;
-        box-shadow:0 18px 34px rgba(0,0,0,.5); text-align:start; }
-    .day-total { display:flex; align-items:baseline; gap:.39em; }
-    .day-total b { font-size:3.44em; font-weight:800; letter-spacing:-.04em; line-height:1;
+    /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
+    .shot { position:relative; padding:26px 0 0; }
+    .shot::before { content:""; position:absolute; inset:0 4% 44px 4%; border-width:3.5px;
+        background:var(--yellow); border-radius:34px; box-shadow:6px 6px 0 var(--ink); z-index:0; }
+    /* 크기는 글자 크기 12px 를 바탕으로 em 으로 적는다 — 좁은 화면에서는 글자 크기만 줄인다 */
+    .day { position:relative; z-index:1; width:23em; max-width:100%; margin:0 auto; font-size:12px; line-height:1.2;
+        display:grid; gap:1em; text-align:start; }
+    .day-card { background:var(--card); border-radius:1.17em; box-shadow:.25em .25em 0 var(--ink); }
+    .day-total { padding:1em 1.25em .9em; }
+    .day-total p:first-child { display:flex; align-items:baseline; gap:.35em; }
+    .day-total b { font-family:"Do Hyeon Numbers", var(--font); font-size:3.4em; font-weight:400; line-height:1;
         font-variant-numeric:tabular-nums; }
-    .day-total span { font-size:1.33em; font-weight:500; color:#6c6c70; }
-    .day-sub { margin-top:.41em; font-size:.94em; font-weight:500; color:#6c6c70; white-space:nowrap; }
-    .day-canvas { display:block; width:100%; height:auto; margin-top:1.22em; }
-    .day-stats { margin-top:1em; background:#f2f2f7; border-radius:1.11em; padding:1.11em 1.22em .5em; }
-    .day-bar { display:flex; gap:.17em; height:.39em; margin-bottom:.6em; }
-    .day-bar i { border-radius:.2em; transform-origin:0 50%; }
+    .day-total b + span { font-family:"Do Hyeon Numbers", var(--font); font-size:1.5em; }
+    .day-sub { margin-top:.35em; font-size:1em; font-weight:500; color:var(--muted); white-space:nowrap; }
+    .day-path { background:var(--block); overflow:hidden; }
+    .day-canvas { display:block; width:100%; height:auto; }
+    .day-stats { padding:1em 1.1em .95em; }
+    /* 막대: 검은 테두리 안에 이동수단의 색이 거리만큼씩 */
+    .day-bar { display:flex; gap:2px; height:.95em; padding:2px; border:2px solid var(--ink); border-radius:999px;
+        background:var(--ink); overflow:hidden; }
+    .day-bar i { border-radius:2px; transform-origin:0 50%; }
+    .day-bar i:first-child { border-start-start-radius:999px; border-end-start-radius:999px; }
+    .day-bar i:last-child { border-start-end-radius:999px; border-end-end-radius:999px; }
     [dir="rtl"] .day-bar i { transform-origin:100% 50%; }
-    .day-row { display:flex; align-items:center; font-weight:500; padding:.56em 0; }
-    .day-row i { flex:none; width:.56em; height:.56em; border-radius:50%; margin-inline-end:.67em; }
-    .day-row .name { flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .day-row .km { flex:none; width:5.5em; text-align:end; font-weight:600; white-space:nowrap; }
-    .day-row .time { flex:none; width:5.2em; text-align:end; color:#6c6c70; white-space:nowrap; }
+    /* 이동수단마다: 색 원 안의 아이콘, 그 아래에 거리와 시간 */
+    .day-modes { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:.3em; margin-top:1em; text-align:center; }
+    .day-mode { display:flex; flex-direction:column; align-items:center; min-width:0; }
+    .day-mode i { display:flex; align-items:center; justify-content:center; width:2.7em; height:2.7em;
+        border:2px solid var(--ink); border-radius:50%; }
+    .day-mode svg { width:1.6em; height:1.6em; }
+    .day-mode b { margin-top:.4em; font-family:"Do Hyeon Numbers", var(--font); font-size:1.55em; font-weight:400; line-height:1.1; }
+    .day-mode span { font-size:.92em; color:var(--muted); white-space:nowrap; }
+    .day-mode .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
 
-    /* 선이 그려지는 동안 막대와 줄이 제 구간에 맞춰 따라 나온다 */
+    /* 선이 그려지는 동안 막대와 이동수단이 제 구간에 맞춰 따라 나온다 */
     .anim .day-bar i { transform:scaleX(0); }
-    .anim .day-row { opacity:0; }
+    .anim .day-mode { opacity:0; }
     .anim .day.in .day-bar i { animation:day-grow var(--t) var(--d) linear forwards; }
-    .anim .day.in .day-row { animation:day-show .4s var(--d) ease-out forwards; }
+    .anim .day.in .day-mode { animation:day-show .4s var(--d) ease-out forwards; }
     @keyframes day-grow { from { transform:scaleX(0); } to { transform:scaleX(1); } }
     @keyframes day-show { from { opacity:0; transform:translateY(.4em); } to { opacity:1; transform:none; } }
-    .shot figcaption { position:relative; z-index:1; margin-top:62px; text-align:center;
-        font-size:13px; color:var(--muted-2); }
+    .shot figcaption { position:relative; z-index:1; margin-top:66px; text-align:center;
+        font-size:13px; color:var(--muted); }
 
     /* 3컷 */
     .steps { list-style:none; counter-reset:step; display:grid;
         grid-template-columns:repeat(3,1fr); gap:26px; margin-top:44px; }
-    .steps li { background:var(--surface); border:1px solid var(--line);
-        border-radius:var(--radius); text-align:center; overflow:hidden; }
-    .steps .art { aspect-ratio:1/1; }
+    .steps li { background:var(--card); border-radius:var(--radius); text-align:center; overflow:hidden; }
+    .steps .art { aspect-ratio:1/1; border-bottom:var(--edge) solid var(--ink); }
     .step-body { padding:20px 22px 26px; }
     .steps h3 { font-size:16.5px; font-weight:700; letter-spacing:-.015em; }
     /* 숫자 정렬을 상속 text-align 과 line-height 에 맡기지 않는다 */
     .steps h3::before { counter-increment:step; content:counter(step);
         display:flex; align-items:center; justify-content:center; flex:none;
-        width:26px; height:26px; margin:0 auto 10px; border-radius:999px;
-        background:var(--walk); color:#06281c; font-size:13px; font-weight:800;
+        width:30px; height:30px; margin:0 auto 10px; border-radius:999px; border:2px solid var(--ink);
+        background:var(--walk); color:var(--ink); font-family:"Do Hyeon Numbers", var(--font); font-size:17px; font-weight:400;
         line-height:1; }
-    .steps li:nth-child(2) h3::before { background:var(--car); color:#04243d; }
-    .steps li:nth-child(3) h3::before { background:var(--cycle); color:#fff; }
+    .steps li:nth-child(2) h3::before { background:var(--car); }
+    .steps li:nth-child(3) h3::before { background:var(--cycle); }
     .steps p { margin-top:8px; font-size:14.5px; color:var(--muted); }
 
     /* FAQ */
-    .faq-list { margin-top:34px; border-top:1px solid var(--line); }
-    .faq-list details { border-bottom:1px solid var(--line); }
+    .faq-list { margin-top:34px; background:var(--card); border-radius:var(--radius); padding:2px 24px; }
+    .faq-list details + details { border-top:1.5px solid var(--divider); }
     .faq-list summary { cursor:pointer; list-style:none; padding-block:20px; padding-inline:0 44px;
         position:relative; font-size:16.5px; font-weight:600; letter-spacing:-.015em; }
     .faq-list summary::-webkit-details-marker { display:none; }
     .faq-list summary::after { content:""; position:absolute; inset-inline-end:8px; top:50%;
-        width:10px; height:10px; margin-top:-6px; border-right:2px solid var(--muted-2);
-        border-bottom:2px solid var(--muted-2); transform:rotate(45deg);
+        width:10px; height:10px; margin-top:-6px; border-right:2.5px solid var(--ink);
+        border-bottom:2.5px solid var(--ink); transform:rotate(45deg);
         transition:transform .2s ease; }
     .faq-list details[open] summary::after { transform:rotate(-135deg); margin-top:-2px; }
-    .faq-list summary:hover { color:var(--walk); }
     .faq-list .answer { padding-block:0 22px; padding-inline:0 44px; font-size:15.5px; color:var(--muted); }
 
-    /* 하단 CTA */
-    .cta { text-align:center; background:var(--surface-2); border-top:1px solid var(--line); }
-    .cta p { margin-top:14px; font-size:16.5px; color:var(--muted); }
+    /* 하단 CTA: 앱의 탭바처럼 검정 */
+    .cta { text-align:center; background:var(--ink); color:#fff; border-top:none; }
+    .cta p { margin-top:14px; font-size:16.5px; color:#c9c9cf; }
     .cta .stores { justify-content:center; }
+    .cta .badge { background:var(--yellow); color:var(--ink); border-color:var(--yellow); }
 
     /* 푸터 */
-    footer.site { padding:44px 0 56px; text-align:center; font-size:13.5px; color:var(--muted-2);
-        border-top:1px solid var(--line); background:var(--bg); }
-    footer.site a { color:var(--muted); text-decoration:underline; text-underline-offset:3px; }
-    footer.site a:hover { color:var(--ink); }
+    footer.site { padding:44px 0 56px; text-align:center; font-size:13.5px; color:var(--muted);
+        background:var(--page); }
+    footer.site a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
     footer.site .row + .row { margin-top:8px; }
     footer.site .langs { justify-content:center; max-width:680px; margin:18px auto 0; }
-    footer.site .langs a { text-decoration:none; }
-    footer.site .langs a.on { color:var(--bg); }
+    footer.site .langs a { text-decoration:none; color:var(--muted); }
+    footer.site .langs a.on { color:#fff; }
 
     [dir="rtl"] * { letter-spacing:0 !important; }
     [dir="rtl"] .eyebrow { text-transform:none; }
@@ -488,16 +495,16 @@
         .hero { grid-template-columns:1fr; gap:34px; padding:52px 0 56px; }
         .hero-art .art { margin:0 auto; max-width:460px; }
         .feature-wrap { grid-template-columns:1fr; gap:40px; }
-        /* 1단으로 접히면 장식 패널이 화면 밖으로 나가므로 좌우 여백을 없앤다 */
         .shot::before { left:0; right:0; }
-        .day { font-size:11px; }
+        .day { font-size:11.5px; }
         /* 1단에서는 그림이 과하게 커지므로 가로 배치로 바꾼다 */
-        .steps { grid-template-columns:1fr; gap:14px; }
-        .steps li { display:flex; align-items:center; text-align:start; }
-        .steps .art { width:132px; flex:none; }
+        .steps { grid-template-columns:1fr; gap:16px; }
+        .steps li { display:flex; align-items:stretch; text-align:start; }
+        .steps .art { width:132px; flex:none; border-bottom:none; border-inline-end:var(--edge) solid var(--ink); }
+        .steps .art img { height:100%; object-fit:cover; }
         .steps h3 { display:flex; align-items:center; gap:10px; }
         .steps h3::before { margin:0; }
-        .step-body { padding:18px 20px; }
+        .step-body { padding:18px 20px; align-self:center; }
     }
     @media (max-width:560px) {
         .wrap { padding:0 18px; }
@@ -507,6 +514,7 @@
         .step-body { padding:14px 16px; }
         .badge { flex:1 1 100%; justify-content:center; }
         .lede { font-size:16.5px; }
+        .faq-list { padding:2px 18px; }
     }
 </style>
 </head>
@@ -564,7 +572,7 @@
                 <p class="note">iOS · Android · Libre · Walang account</p>
             </div>
             <div class="hero-art">
-                <div class="art" data-inview><img src="/dayline/assets/illustration/hero.webp" alt="Taong tumatakbo na may phone sa braso, at nakaguhit sa likuran niya ang dinaanan bilang berde at orange na linya" width="1000" height="1000" fetchpriority="high" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:0.87s" d="M115 190 C300 190 370 300 290 400 C215 495 90 510 125 640" fill="none" stroke="#00c97b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.87s;--t:1.03s" d="M125 640 C155 790 270 945 470 945 L760 945" fill="none" stroke="#ff4d26" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="115" cy="190" r="15.8" fill="#ffffff" stroke="#111113" stroke-width="9.8"/><g class="pin" style="--d:1.90s"><circle class="halo" cx="760" cy="945" r="41.2" fill="#007aff" opacity=".18"/><circle cx="760" cy="945" r="17.4" fill="#007aff" stroke="#ffffff" stroke-width="7.1"/></g></svg></div>
+                <div class="art" data-inview><img src="/dayline/assets/illustration/hero.webp" alt="Taong tumatakbo na may phone sa braso, at nakaguhit sa likuran niya ang dinaanan bilang berde at orange na linya" width="1000" height="1000" fetchpriority="high" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:0.87s" d="M115 190 C300 190 370 300 290 400 C215 495 90 510 125 640" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="32"/><path class="leg" pathLength="1" style="--d:0.87s;--t:1.03s" d="M125 640 C155 790 270 945 470 945 L760 945" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="32"/><path class="leg" pathLength="1" style="--d:0.00s;--t:0.87s" d="M115 190 C300 190 370 300 290 400 C215 495 90 510 125 640" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#00c97b" stroke-width="20"/><path class="leg" pathLength="1" style="--d:0.87s;--t:1.03s" d="M125 640 C155 790 270 945 470 945 L760 945" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#ff4d26" stroke-width="20"/><circle class="pin" cx="115" cy="190" r="15.6" fill="#fff" stroke="#111113" stroke-width="9.7"/><circle class="pin" style="--d:1.90s" cx="760" cy="945" r="17.9" fill="#0a8fff" stroke="#111113" stroke-width="9.7"/></svg></div>
             </div>
         </section>
 
@@ -592,21 +600,27 @@
                 </ul>
                 <figure class="shot">
                     <div class="day" role="img" aria-label="Ang screen ng araw sa Dayline: linyang may kulay ayon sa paraan ng pagbiyahe, kasama ang mga layo" data-inview data-draw="2.8">
-                    <div class="day-total"><b data-count="31.9">31.9</b><span>km</span></div>
-                    <div class="day-sub">2 oras 6 min na gumagalaw</div>
-                    <svg class="day-canvas" viewBox="0 0 788 700" aria-hidden="true">
-                        <rect x="1" y="1" width="786" height="698" rx="40" fill="#fff" stroke="rgba(0,0,0,.14)" stroke-width="2"/>
-                        <g stroke="rgba(0,0,0,.08)" stroke-width="2"><path d="M131.3 0V700"/><path d="M262.7 0V700"/><path d="M394.0 0V700"/><path d="M525.3 0V700"/><path d="M656.7 0V700"/><path d="M0 131.3H788"/><path d="M0 262.7H788"/><path d="M0 394.0H788"/><path d="M0 525.3H788"/><path d="M0 656.7H788"/></g>
-                        <path class="leg" pathLength="1" style="--d:0.00s;--t:0.55s" d="M39.0,636.7 C46.6,624.6 64.8,580.6 84.5,563.9 C104.2,547.2 148.2,554.8 157.3,536.6 C166.4,518.4 130.0,475.9 139.1,454.7 C148.2,433.4 184.6,422.8 211.9,409.2" fill="none" stroke="#00c97b" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.55s;--t:0.88s" d="M211.9,409.2 C239.3,395.5 271.1,381.9 303.0,372.8 C334.8,363.7 374.3,371.2 403.1,354.6 C431.9,337.9 456.2,306.0 475.9,272.6 C495.6,239.3 500.2,184.6 521.4,154.3 C542.7,124.0 576.1,105.7 603.4,90.6" fill="none" stroke="#0a8fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:1.43s;--t:0.62s" d="M603.4,90.6 C630.7,75.4 661.0,55.7 685.3,63.3 C709.6,70.9 742.9,107.3 749.0,136.1 C755.1,164.9 739.9,211.9 721.7,236.2 C703.5,260.5 665.6,266.6 639.8,281.7" fill="none" stroke="#6a45ff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:2.05s;--t:0.75s" d="M639.8,281.7 C614.0,296.9 588.2,307.5 566.9,327.2 C545.7,347.0 513.9,374.3 512.3,400.1 C510.8,425.9 535.1,462.3 557.8,482.0 C580.6,501.7 623.1,501.7 648.9,518.4 C674.7,535.1 702.0,571.5 712.6,582.1" fill="none" stroke="#ff4d26" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle class="pin" cx="39.0" cy="636.7" r="14.9" fill="#fff" stroke="#111113" stroke-width="7.2"/>
-                        <circle class="pin" style="--d:2.80s" cx="712.6" cy="582.1" r="14.9" fill="#111113" stroke="#fff" stroke-width="5.9"/>
-                    </svg>
-                    <div class="day-stats">
-                        <div class="day-bar"><i style="flex:3.1;background:#00c97b;--d:0.00s;--t:0.55s"></i><i style="flex:2.8;background:#ff4d26;--d:2.05s;--t:0.75s"></i><i style="flex:7.4;background:#6a45ff;--d:1.43s;--t:0.62s"></i><i style="flex:18.6;background:#0a8fff;--d:0.55s;--t:0.88s"></i></div>
-                        <div class="day-row" style="--d:0.00s;--t:0.55s"><i style="background:#00c97b"></i><span class="name">Lakad</span><span class="km">3.1 km</span><span class="time">48 min</span></div>
-                        <div class="day-row" style="--d:2.05s;--t:0.75s"><i style="background:#ff4d26"></i><span class="name">Takbo</span><span class="km">2.8 km</span><span class="time">21 min</span></div>
-                        <div class="day-row" style="--d:1.43s;--t:0.62s"><i style="background:#6a45ff"></i><span class="name">Bisikleta</span><span class="km">7.4 km</span><span class="time">32 min</span></div>
-                        <div class="day-row" style="--d:0.55s;--t:0.88s"><i style="background:#0a8fff"></i><span class="name">Sasakyan</span><span class="km">18.6 km</span><span class="time">25 min</span></div>
+                    <div class="day-card day-total">
+                        <p><b data-count="31.9">31.9</b><span>km</span></p>
+                        <p class="day-sub">2 oras 6 min na gumagalaw</p>
+                    </div>
+                    <div class="day-card day-path">
+                        <svg class="day-canvas" viewBox="0 0 788 660" aria-hidden="true">
+                            <g stroke="#ebdda6" stroke-width="3"><path d="M131.3 0V660"/><path d="M262.7 0V660"/><path d="M394.0 0V660"/><path d="M525.3 0V660"/><path d="M656.7 0V660"/><path d="M0 131.3H788"/><path d="M0 262.7H788"/><path d="M0 394.0H788"/><path d="M0 525.3H788"/><path d="M0 656.7H788"/></g>
+                            <path class="leg" pathLength="1" style="--d:0.00s;--t:0.55s" d="M47.6,609.8 C55.0,597.9 72.8,555.0 92.0,538.7 C111.3,522.4 154.2,529.8 163.1,512.1 C171.9,494.3 136.4,452.9 145.3,432.1 C154.2,411.4 189.7,401.1 216.4,387.7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="27"/><path class="leg" pathLength="1" style="--d:0.55s;--t:0.88s" d="M216.4,387.7 C243.0,374.4 274.1,361.1 305.2,352.2 C336.3,343.3 374.8,350.7 402.9,334.4 C431.0,318.2 454.7,287.1 473.9,254.5 C493.2,221.9 497.6,168.6 518.3,139.0 C539.1,109.4 571.6,91.7 598.3,76.9" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="27"/><path class="leg" pathLength="1" style="--d:1.43s;--t:0.62s" d="M598.3,76.9 C624.9,62.1 654.5,42.8 678.2,50.2 C701.9,57.6 734.5,93.1 740.4,121.3 C746.3,149.4 731.5,195.3 713.8,219.0 C696.0,242.7 659.0,248.6 633.8,263.4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="27"/><path class="leg" pathLength="1" style="--d:2.05s;--t:0.75s" d="M633.8,263.4 C608.6,278.2 583.5,288.6 562.8,307.8 C542.0,327.0 510.9,353.7 509.5,378.9 C508.0,404.0 531.7,439.5 553.9,458.8 C576.1,478.0 617.5,478.0 642.7,494.3 C667.9,510.6 694.5,546.1 704.9,556.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="27"/>
+                            <path class="leg" pathLength="1" style="--d:0.00s;--t:0.55s" d="M47.6,609.8 C55.0,597.9 72.8,555.0 92.0,538.7 C111.3,522.4 154.2,529.8 163.1,512.1 C171.9,494.3 136.4,452.9 145.3,432.1 C154.2,411.4 189.7,401.1 216.4,387.7" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#00c97b" stroke-width="14"/><path class="leg" pathLength="1" style="--d:0.55s;--t:0.88s" d="M216.4,387.7 C243.0,374.4 274.1,361.1 305.2,352.2 C336.3,343.3 374.8,350.7 402.9,334.4 C431.0,318.2 454.7,287.1 473.9,254.5 C493.2,221.9 497.6,168.6 518.3,139.0 C539.1,109.4 571.6,91.7 598.3,76.9" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#0a8fff" stroke-width="14"/><path class="leg" pathLength="1" style="--d:1.43s;--t:0.62s" d="M598.3,76.9 C624.9,62.1 654.5,42.8 678.2,50.2 C701.9,57.6 734.5,93.1 740.4,121.3 C746.3,149.4 731.5,195.3 713.8,219.0 C696.0,242.7 659.0,248.6 633.8,263.4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#8a66ff" stroke-width="14"/><path class="leg" pathLength="1" style="--d:2.05s;--t:0.75s" d="M633.8,263.4 C608.6,278.2 583.5,288.6 562.8,307.8 C542.0,327.0 510.9,353.7 509.5,378.9 C508.0,404.0 531.7,439.5 553.9,458.8 C576.1,478.0 617.5,478.0 642.7,494.3 C667.9,510.6 694.5,546.1 704.9,556.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#ff4d26" stroke-width="14"/>
+                            <circle class="pin" cx="47.6" cy="609.8" r="16.8" fill="#fff" stroke="#111113" stroke-width="8.7"/>
+                            <circle class="pin" style="--d:2.80s" cx="704.9" cy="556.5" r="16.8" fill="#ffd84a" stroke="#111113" stroke-width="8.7"/>
+                        </svg>
+                    </div>
+                    <div class="day-card day-stats">
+                        <div class="day-bar"><i style="flex:3.1;background:#00c97b;--d:0.00s;--t:0.55s"></i><i style="flex:2.8;background:#ff4d26;--d:2.05s;--t:0.75s"></i><i style="flex:7.4;background:#8a66ff;--d:1.43s;--t:0.62s"></i><i style="flex:18.6;background:#0a8fff;--d:0.55s;--t:0.88s"></i></div>
+                        <div class="day-modes">
+                            <div class="day-mode" style="--d:0.00s;--t:0.55s"><i style="background:#00c97b"><svg viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M7 21l3 -4"/><path d="M16 21l-2 -4l-3 -3l1 -6"/><path d="M6 12l2 -3l4 -1l3 3l3 1"/></svg></i><b>3.1</b><span>48 min</span><span class="sr">Lakad</span></div>
+                            <div class="day-mode" style="--d:2.05s;--t:0.75s"><i style="background:#ff7a5c"><svg viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M4 17l5 1l.75 -1.5"/><path d="M15 21l0 -4l-4 -3l1 -6"/><path d="M7 12l0 -3l5 -1l3 3l3 1"/></svg></i><b>2.8</b><span>21 min</span><span class="sr">Takbo</span></div>
+                            <div class="day-mode" style="--d:1.43s;--t:0.62s"><i style="background:#b39dff"><svg viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M16 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0"/><path d="M16 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg></i><b>7.4</b><span>32 min</span><span class="sr">Bisikleta</span></div>
+                            <div class="day-mode" style="--d:0.55s;--t:0.88s"><i style="background:#6fc1ff"><svg viewBox="0 0 24 24" fill="none" stroke="#111113" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"/></svg></i><b>18.6</b><span>25 min</span><span class="sr">Sasakyan</span></div>
+                        </div>
                     </div>
                 </div>
                     <figcaption>Ang screen ng araw — ipinapakita ng kulay ng linya kung paano ka bumiyahe.</figcaption>
@@ -619,21 +633,21 @@
             <p class="section-lede">Wala kang kailangang gawin. Ituloy mo lang ang araw mo gaya ng dati.</p>
             <ol class="steps">
                 <li>
-                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-1.webp" alt="Taong lumalabas ng bahay na may phone sa bulsa, may berdeng linyang nakaguhit sa likuran niya" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:1.20s" d="M300 818 C325 905 385 950 480 950 L645 950" fill="none" stroke="#00c97b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="300" cy="818" r="15.8" fill="#ffffff" stroke="#111113" stroke-width="9.8"/><g class="pin" style="--d:1.20s"><circle class="halo" cx="645" cy="950" r="41.2" fill="#007aff" opacity=".18"/><circle cx="645" cy="950" r="17.4" fill="#007aff" stroke="#ffffff" stroke-width="7.1"/></g></svg></div>
+                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-1.webp" alt="Taong lumalabas ng bahay na may phone sa bulsa, may berdeng linyang nakaguhit sa likuran niya" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:1.20s" d="M300 818 C325 905 385 950 480 950 L645 950" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="32"/><path class="leg" pathLength="1" style="--d:0.00s;--t:1.20s" d="M300 818 C325 905 385 950 480 950 L645 950" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#00c97b" stroke-width="20"/><circle class="pin" cx="300" cy="818" r="15.6" fill="#fff" stroke="#111113" stroke-width="9.7"/><circle class="pin" style="--d:1.20s" cx="645" cy="950" r="17.9" fill="#0a8fff" stroke="#111113" stroke-width="9.7"/></svg></div>
                     <div class="step-body">
                         <h3>Paglabas mo, nagsisimula na ang pag-record</h3>
                         <p>Lakad man o takbo: kapag lumabas ka ng bahay at nagsimulang gumalaw, napapansin ito ng Dayline at sinisimulan nang iguhit ang linya.</p>
                     </div>
                 </li>
                 <li>
-                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-2.webp" alt="Taong nagmamaneho ng kotse, may tuloy-tuloy na berde, orange, at asul na linya sa likuran" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:0.43s" d="M95 170 C230 170 260 290 190 360" fill="none" stroke="#00c97b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.43s;--t:0.47s" d="M190 360 C120 430 70 540 130 640" fill="none" stroke="#ff4d26" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.90s;--t:1.00s" d="M130 640 C190 760 300 852 430 852 L700 852" fill="none" stroke="#0a8fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="95" cy="170" r="15.8" fill="#ffffff" stroke="#111113" stroke-width="9.8"/><g class="pin" style="--d:1.90s"><circle class="halo" cx="700" cy="852" r="41.2" fill="#007aff" opacity=".18"/><circle cx="700" cy="852" r="17.4" fill="#007aff" stroke="#ffffff" stroke-width="7.1"/></g></svg></div>
+                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-2.webp" alt="Taong nagmamaneho ng kotse, may tuloy-tuloy na berde, orange, at asul na linya sa likuran" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><path class="leg" pathLength="1" style="--d:0.00s;--t:0.43s" d="M95 170 C230 170 260 290 190 360" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="32"/><path class="leg" pathLength="1" style="--d:0.43s;--t:0.47s" d="M190 360 C120 430 70 540 130 640" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="32"/><path class="leg" pathLength="1" style="--d:0.90s;--t:1.00s" d="M130 640 C190 760 300 852 430 852 L700 852" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="32"/><path class="leg" pathLength="1" style="--d:0.00s;--t:0.43s" d="M95 170 C230 170 260 290 190 360" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#00c97b" stroke-width="20"/><path class="leg" pathLength="1" style="--d:0.43s;--t:0.47s" d="M190 360 C120 430 70 540 130 640" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#ff4d26" stroke-width="20"/><path class="leg" pathLength="1" style="--d:0.90s;--t:1.00s" d="M130 640 C190 760 300 852 430 852 L700 852" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#0a8fff" stroke-width="20"/><circle class="pin" cx="95" cy="170" r="15.6" fill="#fff" stroke="#111113" stroke-width="9.7"/><circle class="pin" style="--d:1.90s" cx="700" cy="852" r="17.9" fill="#0a8fff" stroke="#111113" stroke-width="9.7"/></svg></div>
                     <div class="step-body">
                         <h3>Sumakay ka man ng kotse, tuloy pa rin</h3>
                         <p>Kapag nagmaneho ka, nag-iiba ang kulay ng linya. Maglakad, tumakbo, lumipat sa bisikleta o kotse: iisang linya pa rin ito.</p>
                     </div>
                 </li>
                 <li>
-                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-3.webp" alt="Taong nakaupo sa sofa at tinitingnan sa phone ang dinaanan niya ngayong araw" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><clipPath id="step-3-cover"><rect x="649" y="190" width="279" height="591" rx="24"/></clipPath><rect x="649" y="190" width="279" height="591" rx="24" fill="#ffffff"/><g clip-path="url(#step-3-cover)" stroke="rgba(0,0,0,.09)" stroke-width="2.5"><path d="M695.5 190v591"/><path d="M742.0 190v591"/><path d="M788.5 190v591"/><path d="M835.0 190v591"/><path d="M881.5 190v591"/><path d="M649 236.5h279"/><path d="M649 283.0h279"/><path d="M649 329.5h279"/><path d="M649 376.0h279"/><path d="M649 422.5h279"/><path d="M649 469.0h279"/><path d="M649 515.5h279"/><path d="M649 562.0h279"/><path d="M649 608.5h279"/><path d="M649 655.0h279"/><path d="M649 701.5h279"/><path d="M649 748.0h279"/></g><rect x="649" y="190" width="279" height="591" rx="24" fill="none" stroke="rgba(0,0,0,.16)" stroke-width="2.5"/><path class="leg" pathLength="1" style="--d:0.00s;--t:0.73s" d="M668 686 C690 650 704 628 700 596 C696 566 716 548 742 540" fill="none" stroke="#00c97b" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:0.73s;--t:0.80s" d="M742 540 C776 530 806 524 818 494 C830 464 796 432 800 398" fill="none" stroke="#0a8fff" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:1.53s;--t:0.28s" d="M800 398 C804 372 822 362 846 354" fill="none" stroke="#6a45ff" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><path class="leg" pathLength="1" style="--d:1.82s;--t:0.38s" d="M846 354 C876 344 902 326 902 290" fill="none" stroke="#ff4d26" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><circle class="pin" cx="668" cy="686" r="12.2" fill="#ffffff" stroke="#111113" stroke-width="7.6"/><circle class="pin" style="--d:2.20s" cx="902" cy="290" r="12.2" fill="#111113" stroke="#ffffff" stroke-width="4.9"/></svg></div>
+                    <div class="art" data-inview><img src="/dayline/assets/illustration/step-3.webp" alt="Taong nakaupo sa sofa at tinitingnan sa phone ang dinaanan niya ngayong araw" width="800" height="800" loading="lazy" /><svg class="trail" viewBox="0 0 1000 1000" aria-hidden="true"><clipPath id="step-3-cover"><rect x="649" y="190" width="279" height="591" rx="24"/></clipPath><rect x="649" y="190" width="279" height="591" rx="24" fill="#fff9e0"/><g clip-path="url(#step-3-cover)" stroke="#ebdda6" stroke-width="3"><path d="M695.5 190v591"/><path d="M742.0 190v591"/><path d="M788.5 190v591"/><path d="M835.0 190v591"/><path d="M881.5 190v591"/><path d="M649 236.5h279"/><path d="M649 283.0h279"/><path d="M649 329.5h279"/><path d="M649 376.0h279"/><path d="M649 422.5h279"/><path d="M649 469.0h279"/><path d="M649 515.5h279"/><path d="M649 562.0h279"/><path d="M649 608.5h279"/><path d="M649 655.0h279"/><path d="M649 701.5h279"/><path d="M649 748.0h279"/></g><rect x="649" y="190" width="279" height="591" rx="24" fill="none" stroke="#111113" stroke-width="5"/><path class="leg" pathLength="1" style="--d:0.00s;--t:0.73s" d="M668 686 C690 650 704 628 700 596 C696 566 716 548 742 540" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="25"/><path class="leg" pathLength="1" style="--d:0.73s;--t:0.80s" d="M742 540 C776 530 806 524 818 494 C830 464 796 432 800 398" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="25"/><path class="leg" pathLength="1" style="--d:1.53s;--t:0.28s" d="M800 398 C804 372 822 362 846 354" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="25"/><path class="leg" pathLength="1" style="--d:1.82s;--t:0.38s" d="M846 354 C876 344 902 326 902 290" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#111113" stroke-width="25"/><path class="leg" pathLength="1" style="--d:0.00s;--t:0.73s" d="M668 686 C690 650 704 628 700 596 C696 566 716 548 742 540" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#00c97b" stroke-width="13"/><path class="leg" pathLength="1" style="--d:0.73s;--t:0.80s" d="M742 540 C776 530 806 524 818 494 C830 464 796 432 800 398" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#0a8fff" stroke-width="13"/><path class="leg" pathLength="1" style="--d:1.53s;--t:0.28s" d="M800 398 C804 372 822 362 846 354" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#8a66ff" stroke-width="13"/><path class="leg" pathLength="1" style="--d:1.82s;--t:0.38s" d="M846 354 C876 344 902 326 902 290" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#ff4d26" stroke-width="13"/><circle class="pin" cx="668" cy="686" r="10.1" fill="#fff" stroke="#111113" stroke-width="6.3"/><circle class="pin" style="--d:2.20s" cx="902" cy="290" r="11.7" fill="#ffd84a" stroke="#111113" stroke-width="6.3"/></svg></div>
                     <div class="step-body">
                         <h3>Sa gabi, tingnan ang linya mo ngayong araw</h3>
                         <p>Pagtapos ng araw, nakatabi bilang iisang linya kung saan ka pumunta at gaano kalayo. Tingnan ito bilang linya sa grid, o sa ibabaw ng mapa.</p>

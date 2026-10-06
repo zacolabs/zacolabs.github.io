@@ -8,6 +8,7 @@ dayline/landing/i18n/<언어>.json 의 문구로 /dayline/<언어>/index.html �
 문구는 JSON 에서, 모양은 dayline/landing/style.css 에서만 고친다.
 
 구성은 Waky 랜딩(waky-landing scripts/landing/build.py)을 따른다: 히어로 · 기능 · 3컷 · FAQ · CTA.
+모양은 앱의 것이다: 검은 테두리와 딱딱한 그림자의 흰 카드. 앱의 노란 바탕은 앱 화면 안과 버튼에만 쓴다.
 언어 이름 · 로케일 · 글꼴은 회사 소개의 i18n(scripts/i18n/<언어>.json)에서 가져온다.
 문구 파일이 있는 언어만 만든다 — 없는 언어로 온 사람은 영어로 간다.
 """
@@ -100,16 +101,26 @@ def landing_path(code):
 
 
 # ── 하루 화면 ───────────────────────────────────────────────────────
-# 앱의 하루 화면을 그림 파일이 아니라 HTML · SVG 로 그린다 — 화면에 들어올 때 선이 그려지게 하려고.
-# 길 · 거리 · 색은 스토어 그림(dayline-android scripts/store_images/store.html 의 3번)과 같다.
+# 앱의 화면을 그림 파일이 아니라 HTML · SVG 로 그린다 — 화면에 들어올 때 선이 그려지게 하려고.
+# 앱이 그리는 대로다(dayline-ios DesignSystem/PopLook.swift): 노란 바탕 위에 검은 테두리와 딱딱한 그림자의
+# 흰 카드 셋 — 거리, 크림색 격자 판 위의 선, 이동수단별 나눔. 길과 거리는 스토어 그림의 것이다.
 MODES = ["walking", "running", "cycling", "vehicle"]
-MODE_COLOR = {"walking": "#00c97b", "running": "#ff4d26", "cycling": "#6a45ff", "vehicle": "#0a8fff"}
+MODE_COLOR = {"walking": "#00c97b", "running": "#ff4d26", "cycling": "#8a66ff", "vehicle": "#0a8fff"}
+# 아이콘 밑의 원을 채우는 색: 검은 아이콘이 읽히게 밝힌 것
+MODE_TILE = {"walking": "#00c97b", "running": "#ff7a5c", "cycling": "#b39dff", "vehicle": "#6fc1ff"}
 MODE_KM = [3.1, 2.8, 7.4, 18.6]
+# 이동수단 아이콘. Tabler Icons(MIT)의 walk · run · bike · car.
+MODE_ICON = {
+    "walking": '<path d="M12 4a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M7 21l3 -4"/><path d="M16 21l-2 -4l-3 -3l1 -6"/><path d="M6 12l2 -3l4 -1l3 3l3 1"/>',
+    "running": '<path d="M12 4a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M4 17l5 1l.75 -1.5"/><path d="M15 21l0 -4l-4 -3l1 -6"/><path d="M7 12l0 -3l5 -1l3 3l3 1"/>',
+    "cycling": '<path d="M2 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M16 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M12 19l0 -4l-3 -3l5 -4l2 3l3 0"/><path d="M16 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>',
+    "vehicle": '<path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"/>',
+}
 # 가 본 적 없는 하루, 100x100 위에: 걷고, 차를 타고, 자전거를 타고, 달려서 돌아온다.
 ROUTE = [(12, 84), (17, 76), (25, 73), (23, 64), (31, 59), (41, 55), (52, 53), (60, 44), (65, 31), (74, 24),
          (83, 21), (90, 29), (87, 40), (78, 45), (70, 50), (64, 58), (69, 67), (79, 71), (86, 78)]
 LEGS = [("walking", 0, 4), ("vehicle", 4, 9), ("cycling", 9, 13), ("running", 13, 18)]
-DAY_W, DAY_H, DAY_LINE = 788, 700, 13
+DAY_W, DAY_H, DAY_LINE = 788, 660, 14
 DAY_DRAW = 2.8  # 선을 다 그리는 데 걸리는 초
 # 소수점을 쉼표로 쓰는 언어
 DECIMAL_COMMA = {"es", "fr", "de", "it", "pt", "nl", "da", "pl", "ru", "id", "vi"}
@@ -131,10 +142,11 @@ def curve(pts, a, b):
 
 
 def day_card(d):
-    """하루 화면 카드. 구간마다 그려지는 때(--d)와 걸리는 시간(--t)을 길이에 맞춰 준다 — 선이 같은 빠르기로 이어지게."""
+    """하루 화면. 구간마다 그려지는 때(--d)와 걸리는 시간(--t)을 길이에 맞춰 준다 — 선이 같은 빠르기로 이어지게."""
     code, t = d["code"], d["day"]
     w, h, line = DAY_W, DAY_H, DAY_LINE
-    xs, ys, pad = [p[0] for p in ROUTE], [p[1] for p in ROUTE], line * 3
+    ink, edge = ART.INK, DAY_LINE + 13  # 선을 두르는 검은 테두리의 굵기
+    xs, ys, pad = [p[0] for p in ROUTE], [p[1] for p in ROUTE], line * 3.4
     x0, y0, rw, rh = min(xs), min(ys), max(xs) - min(xs), max(ys) - min(ys)
     k = min((w - pad * 2) / rw, (h - pad * 2) / rh)
     ox, oy = (w - rw * k) / 2, (h - rh * k) / 2
@@ -145,37 +157,44 @@ def day_card(d):
 
     total = length(0, len(pts) - 1)
     timing, at = {}, 0.0
-    legs = ""
+    edges = colors = ""
     for mode, a, b in LEGS:
         took = DAY_DRAW * length(a, b) / total
         timing[mode] = f"--d:{at:.2f}s;--t:{took:.2f}s"
-        legs += (f'<path class="leg" pathLength="1" style="{timing[mode]}" d="{curve(pts, a, b)}" fill="none" '
-                 f'stroke="{MODE_COLOR[mode]}" stroke-width="{line}" stroke-linecap="round" stroke-linejoin="round"/>')
+        path = f'pathLength="1" style="{timing[mode]}" d="{curve(pts, a, b)}" fill="none" stroke-linecap="round" stroke-linejoin="round"'
+        edges += f'<path class="leg" {path} stroke="{ink}" stroke-width="{edge}"/>'
+        colors += f'<path class="leg" {path} stroke="{MODE_COLOR[mode]}" stroke-width="{line}"/>'
         at += took
     step = w / 6
     grid = "".join(f'<path d="M{x * step:.1f} 0V{h}"/>' for x in range(1, 6))
     grid += "".join(f'<path d="M0 {y * step:.1f}H{w}"/>' for y in range(1, int(h / step) + 1))
     (sx, sy), (ex, ey) = pts[0], pts[-1]
     canvas = f"""<svg class="day-canvas" viewBox="0 0 {w} {h}" aria-hidden="true">
-                        <rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="40" fill="#fff" stroke="rgba(0,0,0,.14)" stroke-width="2"/>
-                        <g stroke="rgba(0,0,0,.08)" stroke-width="2">{grid}</g>
-                        {legs}
-                        <circle class="pin" cx="{sx:.1f}" cy="{sy:.1f}" r="{line * 1.15:.1f}" fill="#fff" stroke="#111113" stroke-width="{line * .55:.1f}"/>
-                        <circle class="pin" style="--d:{DAY_DRAW:.2f}s" cx="{ex:.1f}" cy="{ey:.1f}" r="{line * 1.15:.1f}" fill="#111113" stroke="#fff" stroke-width="{line * .45:.1f}"/>
-                    </svg>"""
+                            <g stroke="{ART.GRID}" stroke-width="3">{grid}</g>
+                            {edges}
+                            {colors}
+                            <circle class="pin" cx="{sx:.1f}" cy="{sy:.1f}" r="{line * 1.2:.1f}" fill="#fff" stroke="{ink}" stroke-width="{line * .62:.1f}"/>
+                            <circle class="pin" style="--d:{DAY_DRAW:.2f}s" cx="{ex:.1f}" cy="{ey:.1f}" r="{line * 1.2:.1f}" fill="{ART.PAGE}" stroke="{ink}" stroke-width="{line * .62:.1f}"/>
+                        </svg>"""
     bar = "".join(f'<i style="flex:{km};background:{MODE_COLOR[m]};{timing[m]}"></i>' for m, km in zip(MODES, MODE_KM))
-    rows = "\n".join(
-        f'                        <div class="day-row" style="{timing[m]}"><i style="background:{MODE_COLOR[m]}"></i>'
-        f'<span class="name">{e(t["names"][i])}</span><span class="km">{number(MODE_KM[i], code)} {e(t["km"])}</span>'
-        f'<span class="time">{e(t["times"][i])}</span></div>'
+    modes = "\n".join(
+        f'                            <div class="day-mode" style="{timing[m]}"><i style="background:{MODE_TILE[m]}">'
+        f'<svg viewBox="0 0 24 24" fill="none" stroke="{ink}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{MODE_ICON[m]}</svg></i>'
+        f'<b>{number(MODE_KM[i], code)}</b><span>{e(t["times"][i])}</span><span class="sr">{e(t["names"][i])}</span></div>'
         for i, m in enumerate(MODES))
     return f"""<div class="day" role="img" aria-label="{e(d["shot_alt"])}" data-inview data-draw="{DAY_DRAW}">
-                    <div class="day-total"><b data-count="{sum(MODE_KM):.1f}">{number(sum(MODE_KM), code)}</b><span>{e(t["km"])}</span></div>
-                    <div class="day-sub">{e(t["moving"])}</div>
-                    {canvas}
-                    <div class="day-stats">
+                    <div class="day-card day-total">
+                        <p><b data-count="{sum(MODE_KM):.1f}">{number(sum(MODE_KM), code)}</b><span>{e(t["km"])}</span></p>
+                        <p class="day-sub">{e(t["moving"])}</p>
+                    </div>
+                    <div class="day-card day-path">
+                        {canvas}
+                    </div>
+                    <div class="day-card day-stats">
                         <div class="day-bar">{bar}</div>
-{rows}
+                        <div class="day-modes">
+{modes}
+                        </div>
                     </div>
                 </div>"""
 
@@ -369,7 +388,7 @@ def page(d, langs, css, legal):
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
 <meta name="apple-mobile-web-app-title" content="Dayline" />{app_banner}
-<meta name="theme-color" content="#111113" />
+<meta name="theme-color" content="#ffffff" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:locale" content="{d["og_locale"]}" />
@@ -496,7 +515,7 @@ def entry_page(langs):
 <title>{e(d["og_title"])}</title>
 <meta name="description" content="{e(d["description"])}" />
 <link rel="canonical" href="{url(DEFAULT)}" />
-<meta name="theme-color" content="#111113" />
+<meta name="theme-color" content="#ffffff" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Dayline" />
 <meta property="og:title" content="{e(d["og_title"])}" />
@@ -542,14 +561,14 @@ def entry_page(langs):
 </script>
 <noscript><meta http-equiv="refresh" content="0; url={path(DEFAULT)}" /></noscript>
 <style>
-    html, body {{ margin: 0; min-height: 100%; background: #111113; color: #8e8e93;
+    html, body {{ margin: 0; min-height: 100%; background: #fff; color: #3F3F45;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }}
     .box {{ min-height: 100vh; display: flex; flex-direction: column; align-items: center;
         justify-content: center; gap: 14px; text-align: center; padding: 24px; box-sizing: border-box; }}
-    .box h1 {{ margin: 0; font-size: 22px; color: #f5f5f7; }}
+    .box h1 {{ margin: 0; font-size: 22px; color: #111113; }}
     .box p {{ margin: 0; max-width: 520px; line-height: 1.6; font-size: 15px; }}
     .box nav {{ max-width: 560px; line-height: 2.1; font-size: 14px; }}
-    .box a {{ color: #f5f5f7; text-decoration: none; margin: 0 7px; white-space: nowrap; }}
+    .box a {{ color: #111113; text-decoration: none; margin: 0 7px; white-space: nowrap; }}
     .box a:hover {{ text-decoration: underline; }}
 </style>
 </head>

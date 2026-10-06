@@ -22,7 +22,8 @@
   - 아랍어는 오른쪽에서 왼쪽으로 쓴다 (`dayline_legal.py` `RTL`)
   - `zacolabs` 조직에 `dayline` 이라는 이름의 저장소로 Pages 를 켜면 이 주소와 겹친다
 - `dayline/index.html` · `dayline/<언어>/index.html` — Dayline 랜딩. **`scripts/dayline_landing.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
-  - 구성은 Waky 랜딩(`waky-landing` `scripts/landing/`)을 따른다: 히어로 · 기능 · 3컷 · FAQ · CTA. 색은 앱 · 스토어 그림과 같은 어두운 바탕에 이동수단의 네 가지 색
+  - 구성은 Waky 랜딩(`waky-landing` `scripts/landing/`)을 따른다: 히어로 · 기능 · 3컷 · FAQ · CTA. 모양은 앱의 것이다(`dayline-ios` `DesignSystem/PopLook.swift`): 검은 테두리와 오른쪽 아래로 떨어지는 딱딱한 그림자의 흰 카드, 크림색 격자 판, 숫자는 Do Hyeon. 앱의 노란 바탕은 페이지 전체에 깔면 너무 세서 페이지는 흰색으로 두고, 노랑은 앱 화면 안과 하단 버튼에만 쓴다. 앱에 다크 모드가 없듯 여기도 밝은 모양 하나다
+  - 숫자 글꼴은 Do Hyeon(SIL OFL)에서 숫자와 `km` 만 잘라 낸 `dayline/assets/fonts/dohyeon-numbers.woff2` (2.8KB). 다시 자를 때: `pyftsubset DoHyeon-Regular.ttf --text="0123456789.,kmi " --flavor=woff2` (fonttools · brotli 필요, 원본은 `dayline-ios` `Dayline/Resources/Fonts/`)
   - 문구는 `scripts/dayline/landing/i18n/<언어>.json`, 모양은 `scripts/dayline/landing/style.css`. 언어 이름 · 로케일 · 글꼴은 회사 소개의 `scripts/i18n/<언어>.json` 에서 가져온다. 약관 링크의 글은 `scripts/dayline/strings.json` 의 문서 제목이다
   - **문구 파일이 있는 언어만 만든다** (지금은 앱과 같은 18개 언어 모두). 한국어가 원문이고 나머지는 번역이다 — 앱의 말(탭 · 이동수단 · 권한 이름)은 스토어 등록정보(`listing.md`)와 앱의 문자열을 따른다. 언어를 더할 때는 `<언어>.json` 을 두고 `make_assets.py` 를 돌린 뒤 빌드한다 — hreflang · 언어 메뉴 · 사이트맵 · 진입 주소가 따라 늘어난다. 언어 코드는 회사 소개와 같다 (`ko` · `ja` · `zh-hans` …)
   - `/dayline/` 로 온 사람의 언어: ① `?lang=`(앱 언어 태그 `zh-Hans` · `pt-BR`, 옛 코드 `kr` · `jp` · `in` · `tl` 도 받는다) ② 언어 메뉴로 고른 언어(`localStorage` 의 `zacolabs-lang`, 회사 소개와 같이 쓴다) ③ 브라우저 선호 언어 목록 ④ 영어
@@ -30,10 +31,10 @@
   - `/dayline/` 진입 주소는 스크립트를 돌리지 않는 로봇도 읽게 영어 한 줄 소개와 언어 목록을 싣고, 영어 랜딩을 대표 주소(canonical)로 알린다
   - 스토어 버튼: Play 는 패키지 이름(`com.zacolabs.dayline`)으로 주소를 만든다. App Store 는 번들 ID 로는 주소를 만들 수 없어, App Store Connect 의 Apple ID(앱 정보 → 일반 정보의 숫자)를 `dayline_landing.py` 의 `APPLE_ID` 에 둔다 — `None` 이면 App Store 버튼이 링크 없이 "출시 예정"으로 나온다
   - 그림(`dayline/assets/illustration/hero.webp` · `step-1~3.webp`)은 Waky 랜딩과 같은 화풍의 먹선 그림이다. ChatGPT 의 이미지 생성으로, Waky 그림 한 장을 화풍 참고로 올려 같은 인물로 네 장을 이어 그렸다 — 다시 만드는 법은 `scripts/dayline/landing/art.py` 머리말. 글자가 없어 모든 언어 공용
-  - 그림에는 색이 없고, 색은 그 위에 얹는 선뿐이다: `art.py` 의 `TRAILS` 가 그림마다 지나온 길을 이동수단의 색으로 그린다 (좌표는 그림을 1000x1000 으로 본 자리). 3번 컷은 전화기 화면에 그려져 있던 선을 흰 화면으로 덮고 다시 그린다. 그림을 바꾸면 이 좌표를 발과 땅에 맞게 고친다
+  - 그림에는 색이 없고, 색은 그 위에 얹는 선뿐이다: `art.py` 의 `TRAILS` 가 그림마다 지나온 길을 이동수단의 색으로, 앱처럼 검은 테두리를 둘러 그린다 (좌표는 그림을 1000x1000 으로 본 자리). 그림의 흰 종이는 크림색 판에 곱해 얹어 판의 색이 된다. 3번 컷은 전화기 화면에 그려져 있던 선을 격자 판으로 덮고 다시 그린다. 그림을 바꾸면 이 좌표를 발과 땅에 맞게 고친다
   - 그림과 하루 화면의 선은 스크롤해서 화면에 들어올 때 그려진다 (`[data-inview]` 에 `.in` 이 붙는다). 스크립트가 없거나 기기가 움직임을 줄이라고 하면 처음부터 다 그려진 채다
-  - 기능 옆의 **하루 화면**은 그림 파일이 아니라 `dayline_landing.py` 의 `day_card` 가 HTML · SVG 로 그린다 (길 · 거리 · 색은 스토어 그림 3번과 같다). 화면에 들어오면 선이 구간 순서대로 그려지고, 그동안 거리가 0 에서부터 올라가고 막대와 줄이 따라 나온다. 카드 안의 글(`km` · 이동 시간 · 이동수단 이름)은 문구 파일의 `day` — 스토어 그림의 `text.js` 와 맞춘다
-  - `dayline/assets/og-<언어>.png`(공유 미리보기)는 `scripts/dayline/landing/make_assets.py` 가 앱 저장소의 Play 피처 그래픽에서 만든다 (`dayline-android` 가 옆에 있어야 하고 Pillow 필요). 빌드는 이걸 돌리지 않는다
+  - 기능 옆의 **하루 화면**은 그림 파일이 아니라 `dayline_landing.py` 의 `day_card` 가 HTML · SVG 로 그린다: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋 — 거리, 격자 판 위의 선, 이동수단별 나눔(색 원 안의 아이콘 아래에 거리와 시간). 길과 거리는 스토어 그림 3번의 것이다. 화면에 들어오면 선이 구간 순서대로 그려지고, 그동안 거리가 0 에서부터 올라가고 막대와 이동수단이 따라 나온다. 카드 안의 글(`km` · 이동 시간, 화면 낭독기용 이동수단 이름)은 문구 파일의 `day` — 스토어 그림의 `text.js` 와 맞춘다. 이동수단 아이콘은 Tabler Icons(MIT)
+  - `dayline/assets/og-<언어>.png`(공유 미리보기)는 아직 앱의 이전 모양(어두운 바탕)이다 — 새 스토어 그래픽이 나오면 다시 만든다. 이 그림은 `scripts/dayline/landing/make_assets.py` 가 앱 저장소의 Play 피처 그래픽에서 만든다 (`dayline-android` 가 옆에 있어야 하고 Pillow 필요). 빌드는 이걸 돌리지 않는다
 - `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
-  - `dayline_icon.png` — Dayline 앱 아이콘 (`dayline-android` `store/play/icon-512.png`)
+  - `dayline_icon.png` — Dayline 앱 아이콘. 회사 소개의 카드와 Dayline 랜딩이 같이 쓴다 (`dayline-ios` `Assets.xcassets/AppIcon.appiconset/AppIcon.png` 를 512px 로 줄인 것)
   - `og-image-1200x630.png` — 공유 미리보기 그림(모든 언어 공용). `scripts/og-image.html` 을 크롬에서 1200×630 으로 찍은 것
