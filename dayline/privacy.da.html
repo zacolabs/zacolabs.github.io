@@ -96,6 +96,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Brugsstatistik og diagnosticering af appfejl: registreringer af navigation mellem skærme og brug af funktioner, appens indstillingsværdier, om tilladelser er givet, enhedsmodel, operativsystemversion, appversion og de oplysninger, der registreres, når en fejl opstår (se afsnit 10)</li>
     <li>Ved kundehenvendelser: den e-mailadresse, du skriver fra, og indholdet af din henvendelse</li>
     <li>Hvis du bruger "Alles linjer": dit kaldenavn og din avatarfarve; formen på linjen for en dag, du vælger at slå op (linjens form og størrelse uden koordinater), afstand, varighed, tallene for hver transportform og dato; din tekst, dine kommentarer og likes; appens sprog på det tidspunkt, hvor du slår op; registreringer af, at du har anmeldt eller blokeret andre brugere; registreringer af, at opslag er blevet skjult, eller at brugen er blevet begrænset</li>
+    <li>For at forhindre misbrug af "Alles linjer": når der oprettes et opslag, kommenteres, synes godt om, gemmes en profil eller anmeldes, en værdi, der er dannet ved envejsomdannelse af den IP-adresse, anmodningen kommer fra (selve IP-adressen gemmes ikke), samt et token fra Google Firebase App Check, der bekræfter, at anmodningen kommer fra den ægte app</li>
 </ul>
 <p>Følgende oplysninger gemmes kun på din enhed og sendes ikke til Virksomhedens servere. Dog sendes, alene for en dag, du vælger at slå op i "Alles linjer", formen på den pågældende dags linje, afstand, varighed, tallene for hver transportform og dato. Lokation (koordinater), tidspunkter, steder, hvor du har opholdt dig, og kortet sendes under ingen omstændigheder.</p>
 <ul>
@@ -111,6 +112,7 @@ a { color: var(--link); text-decoration: none; }
     <li>At forbedre Tjenesten, foretage statistik og analyser og rette appfejl</li>
     <li>At besvare kundehenvendelser</li>
     <li>At levere "Alles linjer": offentliggørelse og visning af opslag og kaldenavne, kommentarer, likes og notifikationer, oversættelse af opslag samt drift, herunder behandling af anmeldelser og begrænsning af brug</li>
+    <li>At forhindre misbrug af "Alles linjer": begrænsning af antallet af anmodninger fra én adresse og bekræftelse af, at anmodninger kommer fra den ægte app</li>
 </ul>
 
 <h2>3. Indsamling og brug af annonceidentifikatorer (adfærdsoplysninger)</h2>
@@ -160,6 +162,7 @@ a { color: var(--link); text-decoration: none; }
 <p>Virksomheden opbevarer personoplysninger, så længe du bruger Tjenesten, og sletter dem uden unødigt ophold, når formålet med indsamlingen og brugen er opfyldt, eller når du anmoder om sletning. Den anonyme enhedsidentifikator og de oplysninger om enheden og appen, der er gemt på Virksomhedens servere, slettes, når der er gået et år, siden du sidst brugte Tjenesten. E-mailadressen og indholdet af en henvendelse til kundeservice opbevares i et år, efter at henvendelsen er færdigbehandlet, og slettes derefter. Virksomheden får ikke besked, blot fordi du sletter appen; hvis du ønsker de oplysninger, der er tilbage på serveren, slettet, bedes du anmode om det på den måde, der er beskrevet i afsnit 9. Hvor opbevaring er påkrævet efter gældende lovgivning, opbevares oplysningerne dog i den periode, som den pågældende lovgivning fastsætter.</p>
 <p>Oplysninger, der kun gemmes på enheden (afsnit 1), bliver på enheden, indtil du sletter dem. Du kan slette dem alle med <strong>Indstillinger &gt; Slet alle registreringer</strong> i appen, og hvis du sletter appen, slettes de også fra enheden. Da Virksomheden ikke er i besiddelse af registreringerne af din færden, kan den ikke slette eller gendanne dem for dig.</p>
 <p>Kaldenavn og opslag i "Alles linjer" opbevares på serveren, indtil du sletter dem, og slettes sammen med registreringerne af anmeldelser og blokeringer, hvis der ikke har været nogen brug i et år fra datoen for den seneste brug. Opslag og kommentarer kan du selv slette fra menuen på det enkelte opslag. "Slet alle registreringer" i appen og sletning af appen fjerner kun registreringerne på enheden og ikke opslagene på serveren; hvis du ønsker dit kaldenavn og alle dine opslag slettet, bedes du derfor anmode om det pr. e-mail til den databeskyttelsesansvarlige. Når anmodningen er modtaget, slettes de uden unødigt ophold. Notifikationer i notifikationsoversigten slettes efter 30 dage.</p>
+<p>Den værdi, der er dannet ud fra IP-adressen for at forhindre misbrug, destrueres efter to dage. App Check-tokenet kontrolleres kun, når anmodningen modtages, og gemmes ikke.</p>
 <p>Opbevaringsperioden for de oplysninger, Google indsamler, følger Googles politik for dataopbevaring.</p>
 
 <h2>6. Videregivelse til tredjemand</h2>
@@ -171,6 +174,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Vercel Inc.: serverdrift (serverplacering: Seoul, Sydkorea)</li>
     <li>Supabase Inc.: databasedrift (serverplacering: Seoul, Sydkorea)</li>
     <li>Google LLC: analyse af brugsstatistik (Google Firebase Analytics), diagnosticering af appfejl (Google Firebase Crashlytics) og opbevaring af den anonyme enhedsidentifikator (Android, Google Play services Block Store)</li>
+    <li>Google LLC: bekræftelse af, at anmodninger kommer fra den ægte app (Google Firebase App Check; på Android anvendes Google Play Integrity og på iOS Apples App Attest)</li>
 </ul>
 
 <h2>8. Overførsel af personoplysninger til udlandet</h2>
@@ -182,6 +186,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Tidspunkt og metode for overførsel: løbende over netværket, mens appen bruges, via de SDK'er, der indgår i appen</li>
     <li>Formål og opbevaringsperiode: formålene i afsnit 3 og 10; opbevaring i den periode, Googles politik for dataopbevaring fastsætter</li>
     <li>Sådan siger du fra, og hvad det betyder: med indstillingerne i afsnit 3 og 10 kan du afvise overførsel af annonceidentifikatoren til personaliserede annoncer og af brugsstatistikken. De oplysninger, der er nødvendige for at vise ikke-personaliserede annoncer, samt diagnosticering af appfejl overføres, mens appen bruges.</li>
+    <li>Bekræftelse af appen: når der oprettes et opslag, kommenteres, synes godt om eller anmeldes i "Alles linjer", sendes de oplysninger, der er nødvendige for at bekræfte, at enheden og appen er ægte, til Google (Firebase App Check) til dette formål. Dette kan ikke afvises, så længe "Alles linjer" bruges.</li>
 </ul>
 
 <h2>9. Dine rettigheder og udøvelsen af dem</h2>

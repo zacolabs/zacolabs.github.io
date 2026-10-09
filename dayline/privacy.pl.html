@@ -96,6 +96,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Statystyki użycia oraz dane diagnostyczne dotyczące błędów aplikacji: zapisy przechodzenia między ekranami i korzystania z funkcji, wartości ustawień aplikacji, informacja o udzieleniu uprawnień, model urządzenia, wersja systemu operacyjnego, wersja aplikacji oraz informacje zapisane w chwili wystąpienia błędu (szczegóły w punkcie 10)</li>
     <li>Przy zapytaniach do obsługi klienta: adres e-mail, z którego piszesz, i treść zapytania</li>
     <li>W przypadku korzystania z „Linii wszystkich”: pseudonim i kolor awatara; kształt linii dnia, który zdecydujesz się opublikować (kształt i rozmiar linii, bez współrzędnych), odległość, czas przemieszczania się, wartości dla każdego sposobu poruszania się, data; opis, komentarze i polubienia; język aplikacji w chwili publikowania wpisu; zapisy o zgłoszeniu lub zablokowaniu przez Ciebie innych użytkowników; zapisy o ukryciu wpisów lub ograniczeniu korzystania</li>
+    <li>Aby zapobiegać nadużyciom w „Liniach wszystkich”: przy publikowaniu wpisu, komentowaniu, polubieniu, zapisywaniu profilu lub zgłaszaniu — wartość uzyskana przez jednokierunkowe przekształcenie adresu IP, z którego pochodzi żądanie (sam adres IP nie jest przechowywany), oraz token Google Firebase App Check potwierdzający, że żądanie pochodzi z prawdziwej aplikacji</li>
 </ul>
 <p>Następujące informacje są przechowywane wyłącznie na Twoim urządzeniu i nie są przesyłane na serwery Spółki. Jednak wyłącznie w odniesieniu do dnia, który zdecydujesz się opublikować w „Liniach wszystkich”, przesyłane są kształt linii tego dnia, odległość, czas przemieszczania się, wartości dla każdego sposobu poruszania się i data. Lokalizacja (współrzędne), godziny, miejsca postoju i mapa nie są przesyłane w żadnym przypadku.</p>
 <ul>
@@ -111,6 +112,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Doskonalenie Usługi, statystyki i analizy oraz usuwanie błędów aplikacji</li>
     <li>Odpowiadanie na zapytania klientów</li>
     <li>Udostępnianie „Linii wszystkich”: publikowanie i wyświetlanie wpisów i pseudonimów, komentarze, polubienia i powiadomienia, tłumaczenie wpisów oraz działania operacyjne, takie jak rozpatrywanie zgłoszeń i ograniczanie korzystania</li>
+    <li>Zapobieganie nadużyciom w „Liniach wszystkich”: ograniczanie liczby żądań z jednego adresu oraz potwierdzanie, że żądania pochodzą z prawdziwej aplikacji</li>
 </ul>
 
 <h2>3. Zbieranie i wykorzystywanie identyfikatorów reklamowych (informacje o zachowaniu)</h2>
@@ -160,6 +162,7 @@ a { color: var(--link); text-decoration: none; }
 <p>Spółka przechowuje dane osobowe przez cały czas korzystania przez Ciebie z Usługi i niezwłocznie je usuwa, gdy cel ich zbierania i wykorzystywania zostanie osiągnięty lub gdy zażądasz ich usunięcia. Anonimowy identyfikator urządzenia oraz informacje o urządzeniu i aplikacji przechowywane na serwerach Spółki są usuwane po upływie roku od ostatniego skorzystania przez Ciebie z Usługi. Adres e-mail i treść zapytania do obsługi klienta są przechowywane przez rok od zakończenia jego obsługi, a następnie usuwane. Samo usunięcie aplikacji nie informuje o tym Spółki, dlatego jeśli chcesz usunąć informacje pozostałe na serwerze, złóż prośbę w sposób opisany w punkcie 9. Jeżeli jednak obowiązujące przepisy wymagają przechowywania, informacje są przechowywane przez okres określony w tych przepisach.</p>
 <p>Informacje przechowywane wyłącznie na urządzeniu (punkt 1) pozostają na urządzeniu, dopóki ich nie usuniesz. Wszystkie możesz usunąć za pomocą opcji <strong>Ustawienia &gt; Usuń wszystkie zapisy</strong> w aplikacji, a usunięcie aplikacji powoduje również ich usunięcie z urządzenia. Spółka nie posiada Twoich zapisów przemieszczania się, dlatego nie może ich za Ciebie usunąć ani przywrócić.</p>
 <p>Pseudonim i wpisy w „Liniach wszystkich” są przechowywane na serwerze do czasu ich usunięcia przez Ciebie, a w razie braku korzystania przez rok od dnia ostatniego użycia są usuwane wraz z zapisami zgłoszeń i blokad. Wpisy i komentarze możesz usunąć samodzielnie z menu danego wpisu. Opcja „Usuń wszystkie zapisy” w aplikacji oraz usunięcie aplikacji usuwają tylko zapisy na urządzeniu, a nie wpisy na serwerze, dlatego jeśli chcesz usunąć pseudonim i wszystkie wpisy, wyślij prośbę na adres e-mail osoby odpowiedzialnej za ochronę danych. Po otrzymaniu prośby Spółka usuwa je niezwłocznie. Powiadomienia w skrzynce powiadomień są usuwane po upływie 30 dni.</p>
+<p>Wartość uzyskana z adresu IP w celu zapobiegania nadużyciom jest niszczona po dwóch dniach. Token App Check jest jedynie sprawdzany przy odbiorze żądania i nie jest przechowywany.</p>
 <p>Okres przechowywania informacji zbieranych przez Google wynika z zasad przechowywania danych Google.</p>
 
 <h2>6. Udostępnianie osobom trzecim</h2>
@@ -171,6 +174,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Vercel Inc.: obsługa serwerów (lokalizacja serwerów: Seul, Republika Korei)</li>
     <li>Supabase Inc.: obsługa bazy danych (lokalizacja serwerów: Seul, Republika Korei)</li>
     <li>Google LLC: analiza statystyk użycia (Google Firebase Analytics), diagnostyka błędów aplikacji (Google Firebase Crashlytics), przechowywanie anonimowego identyfikatora urządzenia (Android, Google Play services Block Store)</li>
+    <li>Google LLC: potwierdzanie, że żądania pochodzą z prawdziwej aplikacji (Google Firebase App Check; na Androidzie korzysta z Google Play Integrity, a na iOS z App Attest firmy Apple)</li>
 </ul>
 
 <h2>8. Przekazywanie danych osobowych za granicę</h2>
@@ -182,6 +186,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Czas i sposób przekazywania: na bieżąco podczas korzystania z aplikacji, przez sieć, za pośrednictwem pakietów SDK zawartych w aplikacji</li>
     <li>Cel wykorzystania i okres przechowywania: cele określone w punktach 3 i 10; przechowywanie przez okres wynikający z zasad przechowywania danych Google</li>
     <li>Sposób sprzeciwu i jego skutki: za pomocą ustawień opisanych w punktach 3 i 10 możesz odmówić przekazywania identyfikatora reklamowego na potrzeby reklam spersonalizowanych oraz statystyk użycia. Informacje niezbędne do wyświetlania reklam niespersonalizowanych oraz dane diagnostyczne dotyczące błędów aplikacji są przekazywane podczas korzystania z aplikacji.</li>
+    <li>Weryfikacja aplikacji: przy publikowaniu wpisu, komentowaniu, polubieniu lub zgłaszaniu w „Liniach wszystkich” informacje potrzebne do potwierdzenia, że urządzenie i aplikacja są prawdziwe, są w tym celu przesyłane do Google (Firebase App Check). Nie można się temu sprzeciwić podczas korzystania z „Linii wszystkich”.</li>
 </ul>
 
 <h2>9. Twoje prawa i sposób ich wykonywania</h2>

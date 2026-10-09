@@ -96,6 +96,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Estadísticas de uso y diagnósticos de errores de la aplicación: registro de la navegación entre pantallas y del uso de funciones, valores de configuración de la aplicación, si se han concedido los permisos, modelo del dispositivo, versión del sistema operativo, versión de la aplicación y el registro del momento en que se produce un error (véase la sección 10)</li>
     <li>Al contactar con nosotros: la dirección de correo electrónico desde la que escribe y el contenido de su consulta</li>
     <li>Al utilizar Las líneas de todos: el apodo y el color del avatar; la forma de la línea del día que usted elige publicar (la forma y el tamaño de la línea, sin coordenadas), la distancia, la duración, las cifras de cada medio de desplazamiento y la fecha; el texto, los comentarios y los "me gusta"; el idioma de la aplicación en el momento de publicar; el registro de las denuncias o los bloqueos que usted haya hecho de otros usuarios; y el registro de las publicaciones ocultadas o de las restricciones de uso</li>
+    <li>Para evitar el uso indebido de Las líneas de todos: al publicar, comentar, dar me gusta, guardar el perfil o denunciar, un valor obtenido por transformación unidireccional de la dirección IP desde la que llega la solicitud (la dirección IP en sí no se almacena), y un token de Google Firebase App Check que confirma que la solicitud procede de la aplicación auténtica</li>
 </ul>
 <p>La siguiente información se almacena únicamente en su dispositivo y no se transmite a los servidores de la Empresa. No obstante, únicamente respecto del día que usted elige publicar en Las líneas de todos, se transmiten la forma de la línea, la distancia, la duración, las cifras de cada medio de desplazamiento y la fecha de ese día. La ubicación (coordenadas) y la hora, los lugares en los que ha permanecido y el mapa no se transmiten en ningún caso.</p>
 <ul>
@@ -111,6 +112,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Mejorar el Servicio, realizar análisis estadísticos y corregir errores de la aplicación</li>
     <li>Atender las consultas de los clientes</li>
     <li>Ofrecer Las líneas de todos: publicación y visualización de las publicaciones y los apodos; comentarios, "me gusta" y notificaciones; traducción de las publicaciones; y tareas de gestión, como la tramitación de las denuncias y la restricción del uso</li>
+    <li>Evitar el uso indebido de Las líneas de todos: limitar el número de solicitudes procedentes de una misma dirección y confirmar que las solicitudes proceden de la aplicación auténtica</li>
 </ul>
 
 <h2>3. Recogida y uso de identificadores publicitarios (información de comportamiento)</h2>
@@ -160,6 +162,7 @@ a { color: var(--link); text-decoration: none; }
 <p>La Empresa conserva los datos personales mientras usted utiliza el Servicio y los destruye sin demora cuando se cumple la finalidad de su recogida y uso o cuando usted solicita su supresión. El identificador anónimo de dispositivo y la información del dispositivo y de la aplicación almacenados en los servidores de la Empresa se destruyen cuando ha transcurrido un año desde la última vez que utilizó el Servicio. La dirección de correo electrónico y el contenido de las consultas de atención al cliente se conservan durante un año desde que se da por atendida la consulta y después se destruyen. La Empresa no puede saber que ha eliminado la aplicación solo porque la desinstale, así que, si desea que se suprima la información que queda en el servidor, solicítelo por el medio indicado en la sección 9. No obstante, cuando la legislación aplicable exija su conservación, la información se conserva durante el periodo que dicha legislación establezca.</p>
 <p>La información que se almacena únicamente en el dispositivo (sección 1) permanece en él hasta que usted la borre. Puede borrarla por completo con <strong>Ajustes &gt; Eliminar todos los registros</strong> en la aplicación, y al eliminar la aplicación también se elimina del dispositivo. Como la Empresa no dispone de su registro de movimientos, no puede eliminarlo ni recuperarlo en su lugar.</p>
 <p>Los apodos y las publicaciones de Las líneas de todos se conservan en el servidor hasta que usted los elimine y, si no hay ningún uso durante un año desde la fecha del último uso, se destruyen junto con los registros de denuncias y bloqueos. Usted mismo puede eliminar las publicaciones y los comentarios desde el menú de cada publicación. La opción "Eliminar todos los registros" de la aplicación y la eliminación de la aplicación solo borran los registros del dispositivo y no las publicaciones del servidor; por ello, si desea que se eliminen su apodo y todas sus publicaciones, solicítelo escribiendo al correo electrónico del responsable de protección de datos. Una vez recibida la solicitud, se eliminan sin demora. Las notificaciones de la bandeja de notificaciones se destruyen cuando han transcurrido 30 días.</p>
+<p>El valor obtenido de la dirección IP para evitar el uso indebido se destruye a los dos días. El token de App Check solo se comprueba al recibir la solicitud y no se almacena.</p>
 <p>El periodo de conservación de la información que recoge Google se rige por la política de conservación de datos de Google.</p>
 
 <h2>6. Cesión a terceros</h2>
@@ -171,6 +174,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Vercel Inc.: operación de servidores (ubicación de los servidores: Seúl, República de Corea)</li>
     <li>Supabase Inc.: operación de la base de datos (ubicación de los servidores: Seúl, República de Corea)</li>
     <li>Google LLC: análisis de estadísticas de uso (Google Firebase Analytics), diagnóstico de errores de la aplicación (Google Firebase Crashlytics) y conservación del identificador anónimo de dispositivo (Android, Google Play services Block Store)</li>
+    <li>Google LLC: confirmación de que las solicitudes proceden de la aplicación auténtica (Google Firebase App Check; utiliza Google Play Integrity en Android y App Attest de Apple en iOS)</li>
 </ul>
 
 <h2>8. Transferencia internacional de datos personales</h2>
@@ -182,6 +186,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Momento y método de la transferencia: se transmiten por la red de forma continua mientras usa la aplicación, a través de los SDK incluidos en ella</li>
     <li>Finalidad del uso y periodo de conservación: las finalidades indicadas en las secciones 3 y 10; durante el periodo que establezca la política de conservación de datos de Google</li>
     <li>Cómo oponerse y efectos: puede rechazar la transmisión del identificador publicitario para publicidad personalizada y de las estadísticas de uso mediante los ajustes descritos en las secciones 3 y 10. La información necesaria para mostrar anuncios no personalizados y los diagnósticos de errores de la aplicación se transmiten mientras usa la aplicación.</li>
+    <li>Verificación de la aplicación: al publicar, comentar, dar me gusta o denunciar en Las líneas de todos, la información necesaria para confirmar que el dispositivo y la aplicación son auténticos se envía a Google (Firebase App Check) con ese fin. No es posible rechazarlo mientras se use Las líneas de todos.</li>
 </ul>
 
 <h2>9. Sus derechos y cómo ejercerlos</h2>

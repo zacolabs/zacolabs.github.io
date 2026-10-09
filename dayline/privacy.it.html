@@ -96,6 +96,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Statistiche di utilizzo e diagnostica degli errori dell'app: registro della navigazione tra le schermate e dell'uso delle funzioni, valori delle impostazioni dell'app, stato di concessione delle autorizzazioni, modello del dispositivo, versione del sistema operativo, versione dell'app e registro del momento in cui si verifica un errore (vedi la sezione 10)</li>
     <li>Quando ci contatti: l'indirizzo e-mail da cui scrivi e il contenuto della richiesta</li>
     <li>Quando usi Le linee di tutti: il soprannome e il colore dell'avatar; la forma della linea della giornata che scegli di pubblicare (forma e dimensioni della linea, senza coordinate), la distanza, la durata, i valori per ogni modalità di spostamento e la data; il testo, i commenti e i "mi piace"; la lingua dell'app al momento della pubblicazione; il registro delle tue segnalazioni o dei tuoi blocchi di altri utenti; il registro dei post nascosti o delle limitazioni d'uso</li>
+    <li>Per prevenire l'uso improprio di Le linee di tutti: quando si pubblica, si commenta, si mette «Mi piace», si salva il profilo o si effettua una segnalazione, un valore ottenuto mediante trasformazione unidirezionale dell'indirizzo IP da cui proviene la richiesta (l'indirizzo IP in sé non viene conservato) e un token di Google Firebase App Check che conferma che la richiesta proviene dall'app autentica</li>
 </ul>
 <p>Le seguenti informazioni sono memorizzate soltanto sul tuo dispositivo e non vengono trasmesse ai server della Società. Tuttavia, limitatamente alla giornata che scegli di pubblicare in Le linee di tutti, vengono trasmessi la forma della linea, la distanza, la durata, i valori per ogni modalità di spostamento e la data di quella giornata. La posizione (coordinate) e l'orario, i luoghi di sosta e la mappa non vengono trasmessi in nessun caso.</p>
 <ul>
@@ -111,6 +112,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Migliorare il Servizio, eseguire analisi statistiche e correggere gli errori dell'app</li>
     <li>Rispondere alle richieste dei clienti</li>
     <li>Fornire Le linee di tutti: pubblicazione e visualizzazione dei post e dei soprannomi; commenti, "mi piace" e notifiche; traduzione dei post; attività di gestione quali il trattamento delle segnalazioni e la limitazione dell'uso</li>
+    <li>Prevenire l'uso improprio di Le linee di tutti: limitare il numero di richieste provenienti da uno stesso indirizzo e confermare che le richieste provengono dall'app autentica</li>
 </ul>
 
 <h2>3. Raccolta e uso degli identificatori pubblicitari (informazioni comportamentali)</h2>
@@ -160,6 +162,7 @@ a { color: var(--link); text-decoration: none; }
 <p>La Società conserva i dati personali finché utilizzi il Servizio e li distrugge senza indugio quando la finalità della raccolta e dell'uso è raggiunta o quando ne chiedi la cancellazione. L'identificatore anonimo del dispositivo e le informazioni sul dispositivo e sull'app memorizzati sui server della Società vengono distrutti trascorso un anno dall'ultima volta in cui hai utilizzato il Servizio. L'indirizzo email e il contenuto di una richiesta di assistenza sono conservati per un anno dalla conclusione della sua gestione e poi distrutti. La sola rimozione dell'app non consente alla Società di saperlo: se desideri che le informazioni rimaste sul server vengano cancellate, richiedilo nel modo indicato nella sezione 9. Tuttavia, quando la conservazione è prescritta dalla normativa applicabile, le informazioni sono conservate per il periodo stabilito da tale normativa.</p>
 <p>Le informazioni memorizzate solo sul dispositivo (sezione 1) restano sul dispositivo finché non le elimini. Puoi eliminarle tutte con <strong>Impostazioni &gt; Elimina tutto lo storico</strong> nell'app; se rimuovi l'app, vengono eliminate dal dispositivo insieme a essa. Poiché la Società non detiene lo storico dei tuoi spostamenti, non può eliminarlo né ripristinarlo al posto tuo.</p>
 <p>I soprannomi e i post in Le linee di tutti sono conservati sul server finché non li elimini e, in assenza di utilizzo per un anno dalla data dell'ultimo utilizzo, vengono distrutti insieme ai registri di segnalazioni e blocchi. Puoi eliminare tu stesso i post e i commenti dal menu di ciascun post. "Elimina tutto lo storico" nell'app e la rimozione dell'app cancellano soltanto lo storico presente sul dispositivo e non i post sul server: se desideri l'eliminazione del soprannome e di tutti i post, richiedila scrivendo all'indirizzo e-mail del responsabile della protezione dei dati. Ricevuta la richiesta, l'eliminazione avviene senza indugio. Le notifiche nella casella delle notifiche vengono distrutte trascorsi 30 giorni.</p>
+<p>Il valore ricavato dall'indirizzo IP per prevenire l'uso improprio viene distrutto dopo due giorni. Il token di App Check viene soltanto verificato alla ricezione della richiesta e non viene conservato.</p>
 <p>Il periodo di conservazione delle informazioni raccolte da Google segue le norme di conservazione dei dati di Google.</p>
 
 <h2>6. Comunicazione a terzi</h2>
@@ -171,6 +174,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Vercel Inc.: gestione dei server (ubicazione dei server: Seul, Repubblica di Corea)</li>
     <li>Supabase Inc.: gestione del database (ubicazione dei server: Seul, Repubblica di Corea)</li>
     <li>Google LLC: analisi delle statistiche di utilizzo (Google Firebase Analytics), diagnostica degli errori dell'app (Google Firebase Crashlytics), conservazione dell'identificatore anonimo del dispositivo (Android, Google Play services Block Store)</li>
+    <li>Google LLC: conferma che le richieste provengono dall'app autentica (Google Firebase App Check; utilizza Google Play Integrity su Android e App Attest di Apple su iOS)</li>
 </ul>
 
 <h2>8. Trasferimento dei dati personali all'estero</h2>
@@ -182,6 +186,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Tempi e modalità del trasferimento: trasmissione in rete, in modo continuo durante l'uso dell'app, tramite gli SDK inclusi nell'app</li>
     <li>Finalità e periodo di conservazione: le finalità delle sezioni 3 e 10; per il periodo previsto dalle norme di conservazione dei dati di Google</li>
     <li>Modalità di rifiuto ed effetti: puoi rifiutare la trasmissione dell'identificatore pubblicitario usato per la pubblicità personalizzata e delle statistiche di utilizzo tramite le impostazioni descritte nelle sezioni 3 e 10. Le informazioni necessarie per mostrare annunci non personalizzati e la diagnostica degli errori dell'app vengono trasmesse durante l'uso dell'app.</li>
+    <li>Verifica dell'app: quando si pubblica, si commenta, si mette «Mi piace» o si effettua una segnalazione in Le linee di tutti, le informazioni necessarie per confermare che il dispositivo e l'app sono autentici vengono inviate a Google (Firebase App Check) a tale scopo. Non è possibile opporsi finché si utilizza Le linee di tutti.</li>
 </ul>
 
 <h2>9. I tuoi diritti e come esercitarli</h2>

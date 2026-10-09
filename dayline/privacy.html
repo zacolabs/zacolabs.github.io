@@ -116,6 +116,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Usage statistics and app crash diagnostics: screen navigation and feature usage records, app setting values, whether permissions are allowed, device model, OS version, app version, and the records captured when an error occurs (see Section 10)</li>
     <li>When you contact us: the email address you send from and the content of your inquiry</li>
     <li>If you use Everyone's lines: your nickname and avatar color; for a day you choose to post, the shape of its line (the shape and size of the line, without coordinates), its distance and duration, the figures for each travel mode, and its date; your caption, comments, and likes; the app language at the time you post; records of your reporting or blocking other users; and records of your posts being hidden or your use being restricted</li>
+    <li>To keep Everyone's lines from being misused: when you post, comment, like, save your profile, or report, a value made by one-way transformation of the IP address the request came from (the IP address itself is not stored), and a token from Google Firebase App Check confirming that the request comes from the genuine app</li>
 </ul>
 <p>The following information is stored only on your device and is not transmitted to the Company's servers. However, only for a day you choose to post to Everyone's lines, that day's line shape, distance, duration, figures for each travel mode, and date are transmitted. Location (coordinates), times of day, places where you stayed, and the map are never transmitted.</p>
 <ul>
@@ -131,6 +132,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Improving the Service, performing statistics and analysis, and fixing app errors</li>
     <li>Responding to customer inquiries</li>
     <li>Providing Everyone's lines: publishing and showing posts and nicknames; comments, likes, and notifications; translating posts; and operations such as handling reports and restricting use</li>
+    <li>Preventing misuse of Everyone's lines: limiting how many requests come from one address, and confirming that requests come from the genuine app</li>
 </ul>
 
 <h2>3. Collection and Use of Advertising Identifiers (Behavioral Information)</h2>
@@ -180,6 +182,7 @@ a { color: var(--link); text-decoration: none; }
 <p>The Company retains personal information while you use the Service, and destroys it without delay once the purpose of collection and use has been achieved or you request deletion. The anonymous device identifier and the device and app information stored on the Company's servers are destroyed once one year has passed since you last used the Service. The email address and the content of a customer inquiry are kept for one year after the inquiry has been handled, and then destroyed. Deleting the app alone does not let the Company know, so if you want the information remaining on our servers deleted, please request it as described in Section 9. However, where retention is required under applicable laws, information is retained for the period those laws prescribe.</p>
 <p>Information stored only on the device (Section 1) stays on the device until you delete it. You can remove everything with <strong>Settings &gt; Delete all records</strong> in the app, and deleting the app removes it from the device as well. Because the Company does not hold your movement record, it cannot delete or restore it for you.</p>
 <p>Nicknames and posts in Everyone's lines are kept on the server until you delete them, and are destroyed, together with report and block records, if there is no use for one year from the last date of use. You can delete posts and comments yourself from each post's menu. "Delete all records" in the app and deleting the app remove only the records on the device, not the posts on the server; to have your nickname and all your posts deleted, please request it by email to the Privacy Officer. The Company deletes them without delay on receiving the request. Notifications in the inbox are destroyed after 30 days.</p>
+<p>The value derived from an IP address to prevent misuse is destroyed after two days. The App Check token is only checked when a request arrives and is not stored.</p>
 <p>The retention period of information collected by Google follows Google's data retention policy.</p>
 
 <h2>6. Provision to Third Parties</h2>
@@ -191,6 +194,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Vercel Inc.: server operation (server location: Seoul, Republic of Korea)</li>
     <li>Supabase Inc.: database operation (server location: Seoul, Republic of Korea)</li>
     <li>Google LLC: usage statistics analysis (Google Firebase Analytics), app crash diagnostics (Google Firebase Crashlytics), and keeping the anonymous device identifier (Android, Google Play services Block Store)</li>
+    <li>Google LLC: confirming that requests come from the genuine app (Google Firebase App Check; it uses Google Play Integrity on Android and Apple's App Attest on iOS)</li>
 </ul>
 
 <h2>8. Transfer of Personal Information Abroad</h2>
@@ -202,6 +206,7 @@ a { color: var(--link); text-decoration: none; }
     <li>Timing and method of transfer: sent over the network from time to time through the SDKs included in the app while you use it</li>
     <li>Purposes of use and retention period: the purposes in Sections 3 and 10, for the period under Google's data retention policy</li>
     <li>How to refuse and its effect: you can refuse the transfer of the advertising identifier for personalized advertising and of usage statistics through the settings in Sections 3 and 10. The information needed to show non-personalized ads and app crash diagnostics are transmitted while you use the app.</li>
+    <li>App verification: when you post, comment, like, or report in Everyone's lines, the information needed to confirm that the device and the app are genuine is sent to Google (Firebase App Check) for that purpose. This cannot be refused while you use Everyone's lines.</li>
 </ul>
 
 <h2>9. Your Rights and How to Exercise Them</h2>
