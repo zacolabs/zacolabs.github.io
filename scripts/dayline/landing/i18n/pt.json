@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Diário automático de trajetos e deslocamentos",
-  "description": "Sem botão de iniciar: seu dia a pé, correndo ou de carro vira uma linha. Um registro automático de trajetos que fica no seu aparelho. Grátis para iOS e Android.",
+  "description": "Sem botão de iniciar: o dia em que você andou, correu e dirigiu vira uma linha automaticamente. O Dayline diferencia sozinho caminhada, corrida, bicicleta e veículo, e seu registro de deslocamentos fica guardado no seu aparelho. Um app de registro automático de trajetos. Grátis para iOS e Android.",
   "og_title": "Dayline — Seu dia, desenhado em uma linha",
   "og_description": "Aonde você foi e quanto percorreu, desenhado automaticamente todos os dias. Sem botão de iniciar.",
-  "app_description": "Um diário de trajetos automático que desenha o seu dia em uma linha. Seu registro de deslocamentos fica no seu aparelho.",
+  "app_description": "Um app que registra automaticamente os deslocamentos do seu dia e os mostra como uma linha. Seu registro de deslocamentos fica guardado no seu aparelho, e só a linha do dia que você escolhe publicar é compartilhada com outras pessoas.",
   "eyebrow": "Zaco Labs",
   "h1": "Seu dia, desenhado em uma linha",
   "lede": "O Dayline desenha aonde você foi e quanto percorreu, automaticamente, todos os dias. Não há botão de iniciar nem nada para lembrar: o registro começa quando você se move e termina quando você para.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Todos os dias, guardados",
-      "text": "A aba Histórico mostra um mês em um relance; abra qualquer dia para ver o trajeto e a linha do tempo. A aba Mapa reúne uma semana, um mês, um ano ou tudo em um só mapa."
+      "text": "A aba Histórico mostra um mês em um relance; abra qualquer dia para ver o trajeto e a linha do tempo. Troque o calendário pelos percursos e os caminhos que você fez naquele mês se reúnem em uma só imagem."
     },
     {
-      "title": "Só no seu aparelho",
-      "text": "Não há conta nem login. Seu registro de deslocamentos nunca é enviado a lugar nenhum, nem para nós. Você pode apagar tudo quando quiser."
+      "title": "O registro fica no seu aparelho",
+      "text": "Não há conta nem login. Seu registro de deslocamentos fica guardado no seu aparelho, e só a forma da linha, a distância, a duração e a data do dia que você escolhe publicar vão para o servidor. O mapa e as coordenadas não são enviados. Você pode apagar todos os registros do aparelho quando quiser."
+    },
+    {
+      "title": "Compartilhe a linha de um dia",
+      "text": "Na aba As linhas de todos, escolha o dia que quiser publicar e publique-o como uma linha, e veja os dias de outras pessoas. Dá para deixar curtidas e comentários, e ver traduzidas as publicações em outros idiomas."
     }
   ],
   "shot_alt": "A tela do dia do Dayline: uma linha colorida de acordo com o modo de deslocamento, com as distâncias",
@@ -79,11 +83,15 @@
     },
     {
       "q": "Meu registro de deslocamentos é enviado para algum servidor?",
-      "a": "Não. Não há conta nem login, e seu registro de deslocamentos fica guardado apenas neste aparelho. Ele nunca é enviado a lugar nenhum, nem para nós, e nunca é usado para anúncios ou estatísticas. Você pode apagar tudo quando quiser em Ajustes."
+      "a": "Não, a menos que você mesmo publique. Não há conta nem login, e seu registro de deslocamentos fica guardado no seu aparelho. Quando você publica um dia em As linhas de todos, só a forma da linha, a distância, a duração, a data e o texto desse dia vão para o servidor; o mapa, as coordenadas e os horários não são enviados. Seu registro também não é usado para anúncios nem estatísticas."
+    },
+    {
+      "q": "O que é “As linhas de todos”?",
+      "a": "É onde mostramos uns aos outros a linha de um dia. Escolha um apelido e o dia que quiser publicar, e a forma da linha, a distância e a duração são publicadas. O mapa e as coordenadas, que mostrariam por onde você andou, não são publicados. Você pode excluir suas publicações a qualquer momento."
     },
     {
       "q": "Onde vejo os dias anteriores?",
-      "a": "A aba Histórico mostra um mês em um relance, com uma pequena linha para cada dia em que você se moveu. Abra qualquer dia para ver o trajeto e a linha do tempo. A aba Mapa reúne uma semana, um mês, um ano ou tudo em um só mapa."
+      "a": "A aba Histórico mostra um mês em um relance, com uma pequena linha para cada dia em que você se moveu. Abra qualquer dia para ver o trajeto e a linha do tempo. Troque o calendário pelos percursos para ver reunidos em uma só imagem os caminhos que você fez naquele mês."
     },
     {
       "q": "Tem metas ou medalhas?",

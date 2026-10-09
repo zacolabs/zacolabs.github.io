@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Automatisches Bewegungstagebuch: dein Tag als Linie</title>
-<meta name="description" content="Kein Startknopf: Dayline zeichnet deinen Tag automatisch auf und erkennt Gehen, Laufen, Radfahren und Fahren. Deine Wege bleiben auf deinem Gerät. Kostenlos für iOS und Android." />
+<meta name="description" content="Kein Startknopf: Der Tag, an dem du gegangen, gelaufen und gefahren bist, wird automatisch zur Linie. Dayline unterscheidet Gehen, Laufen, Radfahren und Fahren von selbst, und deine Aufzeichnungen werden auf deinem Gerät gespeichert. Dayline, das automatische Bewegungstagebuch. Kostenlos für iOS und Android." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/de/#webpage",
       "url": "https://zacolabs.github.io/dayline/de/",
       "name": "Dayline — Automatisches Bewegungstagebuch: dein Tag als Linie",
-      "description": "Kein Startknopf: Dayline zeichnet deinen Tag automatisch auf und erkennt Gehen, Laufen, Radfahren und Fahren. Deine Wege bleiben auf deinem Gerät. Kostenlos für iOS und Android.",
+      "description": "Kein Startknopf: Der Tag, an dem du gegangen, gelaufen und gefahren bist, wird automatisch zur Linie. Dayline unterscheidet Gehen, Laufen, Radfahren und Fahren von selbst, und deine Aufzeichnungen werden auf deinem Gerät gespeichert. Dayline, das automatische Bewegungstagebuch. Kostenlos für iOS und Android.",
       "inLanguage": "de",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/de/#app",
       "name": "Dayline",
-      "description": "Ein automatisches Bewegungstagebuch, das deinen Tag als Linie zeichnet. Deine Aufzeichnungen bleiben auf deinem Gerät.",
+      "description": "Ein automatisches Bewegungstagebuch, das deinen Tag als Linie zeichnet. Deine Aufzeichnungen werden auf deinem Gerät gespeichert; mit anderen geteilt wird nur die Linie eines Tages, den du zum Posten auswählst.",
       "url": "https://zacolabs.github.io/dayline/de/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "Kein Startknopf",
         "Gehen, laufen, radeln, fahren",
         "Jeder Tag bleibt",
-        "Nur auf deinem Gerät"
+        "Deine Aufzeichnungen bleiben auf deinem Gerät",
+        "Teile die Linie eines Tages"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "Werden meine Aufzeichnungen an einen Server gesendet?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein. Es gibt kein Konto und keine Anmeldung, und deine Aufzeichnungen werden nur auf diesem Gerät gespeichert. Sie werden nirgendwohin gesendet, auch nicht an uns, und niemals für Werbung oder Statistiken verwendet. In den Einstellungen kannst du jederzeit alles löschen."
+            "text": "Nicht, solange du sie nicht selbst postest. Es gibt kein Konto und keine Anmeldung, und deine Aufzeichnungen werden auf diesem Gerät gespeichert. Wenn du einen Tag in „Linien von allen“ postest, gehen nur die Form der Linie dieses Tages, die Strecke, die Dauer, das Datum und dein Text dazu an den Server; Karte, Koordinaten und Uhrzeiten werden nicht gesendet. Deine Aufzeichnungen werden auch nicht für Werbung oder Statistiken verwendet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist „Linien von allen“?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das ist der Ort, an dem wir einander die Linie eines Tages zeigen. Wähle einen Spitznamen und einen Tag, den du posten möchtest; dann werden die Form der Linie, die Strecke und die Dauer gepostet. Karte und Koordinaten, die zeigen, wo du warst, werden nicht gepostet. Was du gepostet hast, kannst du jederzeit löschen."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "Wo sehe ich vergangene Tage?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Der Tab „Verlauf“ zeigt einen Monat auf einen Blick, mit einer kleinen Linie für jeden Tag, an dem du unterwegs warst. Tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Im Tab „Karte“ siehst du die letzten 7 Tage, diesen Monat, dieses Jahr oder alle Aufzeichnungen auf einer Karte."
+            "text": "Der Tab „Verlauf“ zeigt einen Monat auf einen Blick, mit einer kleinen Linie für jeden Tag, an dem du unterwegs warst. Tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Wechselst du vom Kalender zu den Wegen, siehst du alle Wege des Monats gesammelt auf einem Blatt."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>Jeder Tag bleibt</h3>
-                    <p>Der Tab „Verlauf“ zeigt einen Monat auf einen Blick; tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Der Tab „Karte“ legt die letzten 7 Tage, diesen Monat, dieses Jahr oder alle Aufzeichnungen auf eine Karte.</p>
+                    <p>Der Tab „Verlauf“ zeigt einen Monat auf einen Blick; tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Wechselst du vom Kalender zu den Wegen, kommen alle Wege des Monats auf einem Blatt zusammen.</p>
                 </li>
                 <li>
-                    <h3>Nur auf deinem Gerät</h3>
-                    <p>Es gibt kein Konto und keine Anmeldung. Deine Aufzeichnungen werden nirgendwohin gesendet, auch nicht an uns. Du kannst jederzeit alles löschen.</p>
+                    <h3>Deine Aufzeichnungen bleiben auf deinem Gerät</h3>
+                    <p>Es gibt kein Konto und keine Anmeldung. Deine Aufzeichnungen werden auf diesem Gerät gespeichert; an den Server gehen nur die Form der Linie, die Strecke, die Dauer und das Datum eines Tages, den du zum Posten auswählst. Karte und Koordinaten werden nicht gesendet. Die Aufzeichnungen auf dem Gerät kannst du jederzeit alle löschen.</p>
+                </li>
+                <li>
+                    <h3>Teile die Linie eines Tages</h3>
+                    <p>Im Tab „Linien von allen“ wählst du einen Tag aus, den du posten möchtest, postest ihn als Linie und schaust dir die Tage anderer an. Du kannst Likes und Kommentare hinterlassen und Beiträge in anderen Sprachen übersetzt lesen.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>Werden meine Aufzeichnungen an einen Server gesendet?</summary>
-                    <div class="answer">Nein. Es gibt kein Konto und keine Anmeldung, und deine Aufzeichnungen werden nur auf diesem Gerät gespeichert. Sie werden nirgendwohin gesendet, auch nicht an uns, und niemals für Werbung oder Statistiken verwendet. In den Einstellungen kannst du jederzeit alles löschen.</div>
+                    <div class="answer">Nicht, solange du sie nicht selbst postest. Es gibt kein Konto und keine Anmeldung, und deine Aufzeichnungen werden auf diesem Gerät gespeichert. Wenn du einen Tag in „Linien von allen“ postest, gehen nur die Form der Linie dieses Tages, die Strecke, die Dauer, das Datum und dein Text dazu an den Server; Karte, Koordinaten und Uhrzeiten werden nicht gesendet. Deine Aufzeichnungen werden auch nicht für Werbung oder Statistiken verwendet.</div>
+                </details>
+                <details>
+                    <summary>Was ist „Linien von allen“?</summary>
+                    <div class="answer">Das ist der Ort, an dem wir einander die Linie eines Tages zeigen. Wähle einen Spitznamen und einen Tag, den du posten möchtest; dann werden die Form der Linie, die Strecke und die Dauer gepostet. Karte und Koordinaten, die zeigen, wo du warst, werden nicht gepostet. Was du gepostet hast, kannst du jederzeit löschen.</div>
                 </details>
                 <details>
                     <summary>Wo sehe ich vergangene Tage?</summary>
-                    <div class="answer">Der Tab „Verlauf“ zeigt einen Monat auf einen Blick, mit einer kleinen Linie für jeden Tag, an dem du unterwegs warst. Tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Im Tab „Karte“ siehst du die letzten 7 Tage, diesen Monat, dieses Jahr oder alle Aufzeichnungen auf einer Karte.</div>
+                    <div class="answer">Der Tab „Verlauf“ zeigt einen Monat auf einen Blick, mit einer kleinen Linie für jeden Tag, an dem du unterwegs warst. Tippe auf einen Tag, um seinen Weg und seine Zeitachse zu sehen. Wechselst du vom Kalender zu den Wegen, siehst du alle Wege des Monats gesammelt auf einem Blatt.</div>
                 </details>
                 <details>
                     <summary>Gibt es Ziele oder Abzeichen?</summary>

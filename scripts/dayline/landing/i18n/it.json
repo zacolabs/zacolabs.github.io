@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Diario automatico dei percorsi e degli spostamenti",
-  "description": "Nessun pulsante di avvio: a piedi, in bici o in auto, la tua giornata diventa una linea. Un diario automatico che resta sul dispositivo. Gratis su iOS e Android.",
+  "description": "Nessun pulsante di avvio: la giornata in cui hai camminato, corso e guidato diventa una linea in automatico. Dayline distingue da sola camminata, corsa, bici e veicolo, e i tuoi spostamenti sono salvati sul tuo dispositivo. Un'app che registra gli spostamenti in automatico. Gratis su iOS e Android.",
   "og_title": "Dayline — La tua giornata, in una linea",
   "og_description": "Dove sei stato e quanta strada hai fatto, disegnato in automatico ogni giorno. Nessun pulsante di avvio.",
-  "app_description": "Un diario automatico dei percorsi che disegna la tua giornata in una linea. I tuoi spostamenti restano sul tuo dispositivo.",
+  "app_description": "Un'app che registra in automatico gli spostamenti della tua giornata e li mostra come una linea. I tuoi spostamenti sono salvati sul tuo dispositivo, e solo la linea della giornata che scegli di pubblicare viene condivisa con gli altri.",
   "eyebrow": "Zaco Labs",
   "h1": "La tua giornata, in una linea",
   "lede": "Dayline disegna dove sei stato e quanta strada hai fatto, in automatico, ogni giorno. Non c'è un pulsante di avvio e non c'è nulla da ricordare: la registrazione inizia quando ti muovi e finisce quando ti fermi.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Ogni giorno, conservato",
-      "text": "La scheda Storico mostra un mese a colpo d'occhio; apri un giorno per vederne il percorso e la cronologia. La scheda Mappa riunisce una settimana, un mese, un anno o tutto su un'unica mappa."
+      "text": "La scheda Storico mostra un mese a colpo d'occhio; apri un giorno per vederne il percorso e la cronologia. Passa dal calendario ai percorsi e le strade che hai fatto in quel mese si riuniscono in un'unica immagine."
     },
     {
-      "title": "Solo sul tuo dispositivo",
-      "text": "Non c'è alcun account né accesso. I tuoi spostamenti non vengono mai inviati altrove, nemmeno a noi. Puoi eliminarli tutti in qualsiasi momento."
+      "title": "Lo storico resta sul tuo dispositivo",
+      "text": "Non c'è alcun account né accesso. I tuoi spostamenti sono salvati sul tuo dispositivo, e al server arrivano solo la forma della linea, la distanza, la durata e la data della giornata che scegli di pubblicare. La mappa e le coordinate non vengono inviate. Puoi eliminare tutto lo storico dal dispositivo in qualsiasi momento."
+    },
+    {
+      "title": "Condividi la linea di una giornata",
+      "text": "Nella scheda Le linee di tutti scegli la giornata che vuoi pubblicare e pubblicala come una linea, e dai un'occhiata alle giornate degli altri. Puoi lasciare «mi piace» e commenti, e leggere in traduzione i post in altre lingue."
     }
   ],
   "shot_alt": "La schermata del giorno di Dayline: una linea colorata in base alla modalità di spostamento, con le distanze",
@@ -79,11 +83,15 @@
     },
     {
       "q": "I miei spostamenti vengono inviati a un server?",
-      "a": "No. Non c'è alcun account né accesso, e i tuoi spostamenti sono salvati solo su questo dispositivo. Non vengono mai inviati altrove, nemmeno a noi, e non vengono mai usati per annunci o statistiche. Puoi eliminarli tutti in qualsiasi momento dalle Impostazioni."
+      "a": "No, a meno che non sia tu a pubblicarli. Non c'è alcun account né accesso, e i tuoi spostamenti sono salvati sul tuo dispositivo. Quando pubblichi una giornata in Le linee di tutti, al server arrivano solo la forma della linea, la distanza, la durata, la data e il testo di quella giornata; la mappa, le coordinate e gli orari non vengono inviati. I tuoi spostamenti non vengono usati nemmeno per annunci o statistiche."
+    },
+    {
+      "q": "Che cos'è «Le linee di tutti»?",
+      "a": "È il posto in cui ci mostriamo a vicenda la linea di una giornata. Scegli un soprannome e la giornata che vuoi pubblicare, e vengono pubblicate la forma della linea, la distanza e la durata. La mappa e le coordinate, che mostrerebbero dove sei stato, non vengono pubblicate. Puoi eliminare i tuoi post in qualsiasi momento."
     },
     {
       "q": "Dove vedo i giorni passati?",
-      "a": "La scheda Storico mostra un mese a colpo d'occhio, con una piccola linea per ogni giorno in cui ti sei mosso. Apri un giorno per vederne il percorso e la cronologia. La scheda Mappa riunisce una settimana, un mese, un anno o tutto su un'unica mappa."
+      "a": "La scheda Storico mostra un mese a colpo d'occhio, con una piccola linea per ogni giorno in cui ti sei mosso. Apri un giorno per vederne il percorso e la cronologia. Passa dal calendario ai percorsi per vedere riunite in un'unica immagine le strade che hai fatto in quel mese."
     },
     {
       "q": "Ci sono obiettivi o badge?",

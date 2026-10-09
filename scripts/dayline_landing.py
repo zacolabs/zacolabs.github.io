@@ -610,7 +610,7 @@ def llms_full():
 
 - Type: mobile app for iOS and Android, by Zaco Labs
 - Price: free, with one ad below the tab bar
-- Account: none. The movement record is stored only on the device
+- Account: none. The movement record is stored on the device; only a day the user chooses to post sends its line's shape, distance, duration and date to the server, never the map or coordinates
 - Languages: {len(codes())}
 - Page: {url(DEFAULT)}
 {chr(10).join(stores)}

@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Automatic Travel Log | Your day, drawn as a line</title>
-<meta name="description" content="No start button. The day you walked, ran, and drove becomes a line on its own. Dayline tells walking, running, cycling, and driving apart, and your movement record stays on your device. Free on iOS and Android." />
+<meta name="description" content="No start button. The day you walked, ran, and drove becomes a line on its own. Dayline tells walking, running, cycling, and driving apart, and your movement record is stored on your device. Free on iOS and Android." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/en/#webpage",
       "url": "https://zacolabs.github.io/dayline/en/",
       "name": "Dayline — Automatic Travel Log | Your day, drawn as a line",
-      "description": "No start button. The day you walked, ran, and drove becomes a line on its own. Dayline tells walking, running, cycling, and driving apart, and your movement record stays on your device. Free on iOS and Android.",
+      "description": "No start button. The day you walked, ran, and drove becomes a line on its own. Dayline tells walking, running, cycling, and driving apart, and your movement record is stored on your device. Free on iOS and Android.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/en/#app",
       "name": "Dayline",
-      "description": "An automatic travel log that draws your day as a line. Your movement record stays on your device.",
+      "description": "An automatic travel log that draws your day as a line. Your movement record is stored on your device, and only the line of a day you choose to post is shared with others.",
       "url": "https://zacolabs.github.io/dayline/en/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "No start button",
         "Walking, running, cycling, driving",
         "Every day, kept",
-        "Stays on your device"
+        "Your record stays on your device",
+        "Share the line of a day"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "Is my movement record sent to a server?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. There is no account and no sign-in, and your movement record is stored only on your device. It is never sent anywhere, not even to us, and is never used for ads or statistics. You can delete it all at any time in Settings."
+            "text": "Not unless you post it yourself. There is no account and no sign-in, and your movement record is stored on your device. When you post a day to Everyone's lines, only that day's line shape, distance, duration, date, and caption go to the server; the map, coordinates, and times of day are not sent. Your record is never used for ads or statistics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Everyone's lines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is where people show one another the line of a day. Choose a nickname, pick a day you want to post, and its line shape, distance, and duration are posted. The map and coordinates that would show where you went are not. You can delete a post at any time."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "Where do I see past days?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map."
+            "text": "The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. Switch the calendar to paths to see every path of the month on one card."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>Every day, kept</h3>
-                    <p>The History tab shows a month at a glance; open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map.</p>
+                    <p>The History tab shows a month at a glance; open any day to see its path and timeline. Switch the calendar to paths and every path of the month comes together on one card.</p>
                 </li>
                 <li>
-                    <h3>Stays on your device</h3>
-                    <p>There is no account and no sign-in. Your movement record is never sent anywhere, not even to us. You can delete it all at any time.</p>
+                    <h3>Your record stays on your device</h3>
+                    <p>There is no account and no sign-in. Your movement record is stored on your device, and only the shape, distance, duration, and date of a day you choose to post go to the server. The map and coordinates are never sent. You can delete the record on your device at any time.</p>
+                </li>
+                <li>
+                    <h3>Share the line of a day</h3>
+                    <p>In the Everyone&#x27;s lines tab, pick a day you want to post and post it as a line, and look at other people&#x27;s days. You can leave likes and comments, and read posts in other languages in translation.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>Is my movement record sent to a server?</summary>
-                    <div class="answer">No. There is no account and no sign-in, and your movement record is stored only on your device. It is never sent anywhere, not even to us, and is never used for ads or statistics. You can delete it all at any time in Settings.</div>
+                    <div class="answer">Not unless you post it yourself. There is no account and no sign-in, and your movement record is stored on your device. When you post a day to Everyone&#x27;s lines, only that day&#x27;s line shape, distance, duration, date, and caption go to the server; the map, coordinates, and times of day are not sent. Your record is never used for ads or statistics.</div>
+                </details>
+                <details>
+                    <summary>What is Everyone&#x27;s lines?</summary>
+                    <div class="answer">It is where people show one another the line of a day. Choose a nickname, pick a day you want to post, and its line shape, distance, and duration are posted. The map and coordinates that would show where you went are not. You can delete a post at any time.</div>
                 </details>
                 <details>
                     <summary>Where do I see past days?</summary>
-                    <div class="answer">The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map.</div>
+                    <div class="answer">The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. Switch the calendar to paths to see every path of the month on one card.</div>
                 </details>
                 <details>
                     <summary>Are there goals or badges?</summary>

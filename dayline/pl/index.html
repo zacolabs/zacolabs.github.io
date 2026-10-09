@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Automatyczny dziennik tras | Twój dzień jedną linią</title>
-<meta name="description" content="Bez przycisku Start: Dayline automatycznie zapisuje Twoje trasy i rozpoznaje chód, bieg, rower i pojazd. Zapis tras zostaje na Twoim urządzeniu. Bezpłatnie na iOS i Androida." />
+<meta name="description" content="Bez przycisku Start: dzień, w którym chodzisz, biegasz i jeździsz autem, automatycznie staje się linią. Dayline sama rozróżnia chód, bieg, rower i pojazd, a zapis tras jest przechowywany na Twoim urządzeniu. Dayline – automatyczny dziennik tras. Bezpłatnie na iOS i Androida." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/pl/#webpage",
       "url": "https://zacolabs.github.io/dayline/pl/",
       "name": "Dayline — Automatyczny dziennik tras | Twój dzień jedną linią",
-      "description": "Bez przycisku Start: Dayline automatycznie zapisuje Twoje trasy i rozpoznaje chód, bieg, rower i pojazd. Zapis tras zostaje na Twoim urządzeniu. Bezpłatnie na iOS i Androida.",
+      "description": "Bez przycisku Start: dzień, w którym chodzisz, biegasz i jeździsz autem, automatycznie staje się linią. Dayline sama rozróżnia chód, bieg, rower i pojazd, a zapis tras jest przechowywany na Twoim urządzeniu. Dayline – automatyczny dziennik tras. Bezpłatnie na iOS i Androida.",
       "inLanguage": "pl",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/pl/#app",
       "name": "Dayline",
-      "description": "Automatyczny dziennik tras, który rysuje Twój dzień jedną linią. Zapis Twoich tras zostaje na urządzeniu.",
+      "description": "Automatyczny dziennik tras, który rysuje Twój dzień jedną linią. Zapis Twoich tras jest przechowywany na urządzeniu, a innym udostępniana jest tylko linia dnia, który zdecydujesz się opublikować.",
       "url": "https://zacolabs.github.io/dayline/pl/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "Bez przycisku Start",
         "Pieszo, biegiem, rowerem, autem",
         "Każdy dzień zachowany",
-        "Tylko na Twoim urządzeniu"
+        "Zapis tras zostaje na Twoim urządzeniu",
+        "Podziel się linią dnia"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "Czy zapis moich tras jest wysyłany na serwer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nie. Nie ma konta ani logowania, a zapis Twoich tras jest przechowywany wyłącznie na tym urządzeniu. Nigdy nie jest nigdzie wysyłany, nawet do nas, i nie jest wykorzystywany do reklam ani statystyk. W Ustawieniach możesz w każdej chwili usunąć wszystko."
+            "text": "Nie, dopóki samodzielnie go nie opublikujesz. Nie ma konta ani logowania, a zapis Twoich tras jest przechowywany na tym urządzeniu. Gdy opublikujesz dzień w Liniach wszystkich, na serwer trafiają tylko kształt linii tego dnia, dystans, czas trwania, data i Twój opis; mapa, współrzędne i godziny nie są wysyłane. Zapis tras nie jest też wykorzystywany do reklam ani statystyk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czym są Linie wszystkich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To miejsce, w którym pokazujemy sobie nawzajem linię dnia. Wybierz pseudonim i dzień, który chcesz opublikować, a opublikowane zostaną kształt linii, dystans i czas trwania. Mapa i współrzędne, które pokazują, dokąd prowadziła Twoja droga, nie są publikowane. Opublikowany wpis możesz usunąć w każdej chwili."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "Gdzie zobaczę poprzednie dni?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Karta Historia pokazuje miesiąc na jeden rzut oka, z małą linią dla każdego dnia w ruchu. Dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Na karcie Mapa zobaczysz ostatnie 7 dni, ten miesiąc, ten rok lub cały okres na jednej mapie."
+            "text": "Karta Historia pokazuje miesiąc na jeden rzut oka, z małą linią dla każdego dnia w ruchu. Dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Gdy przełączysz Kalendarz na Trasy, zobaczysz wszystkie trasy z danego miesiąca zebrane na jednym arkuszu."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>Każdy dzień zachowany</h3>
-                    <p>Karta Historia pokazuje miesiąc na jeden rzut oka; dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Karta Mapa zbiera ostatnie 7 dni, ten miesiąc, ten rok lub cały okres na jednej mapie.</p>
+                    <p>Karta Historia pokazuje miesiąc na jeden rzut oka; dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Gdy przełączysz Kalendarz na Trasy, wszystkie trasy z danego miesiąca zbiorą się na jednym arkuszu.</p>
                 </li>
                 <li>
-                    <h3>Tylko na Twoim urządzeniu</h3>
-                    <p>Nie ma konta ani logowania. Zapis Twoich tras nigdy nie jest nigdzie wysyłany, nawet do nas. W każdej chwili możesz usunąć wszystko.</p>
+                    <h3>Zapis tras zostaje na Twoim urządzeniu</h3>
+                    <p>Nie ma konta ani logowania. Zapis Twoich tras jest przechowywany na tym urządzeniu, a na serwer trafiają tylko kształt linii, dystans, czas trwania i data dnia, który zdecydujesz się opublikować. Mapa i współrzędne nie są wysyłane. Zapis na urządzeniu możesz w każdej chwili usunąć w całości.</p>
+                </li>
+                <li>
+                    <h3>Podziel się linią dnia</h3>
+                    <p>Na karcie Linie wszystkich wybierasz dzień, który chcesz opublikować, publikujesz go jako linię i oglądasz dni innych osób. Możesz zostawiać polubienia i komentarze, a wpisy w innych językach czytać w tłumaczeniu.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>Czy zapis moich tras jest wysyłany na serwer?</summary>
-                    <div class="answer">Nie. Nie ma konta ani logowania, a zapis Twoich tras jest przechowywany wyłącznie na tym urządzeniu. Nigdy nie jest nigdzie wysyłany, nawet do nas, i nie jest wykorzystywany do reklam ani statystyk. W Ustawieniach możesz w każdej chwili usunąć wszystko.</div>
+                    <div class="answer">Nie, dopóki samodzielnie go nie opublikujesz. Nie ma konta ani logowania, a zapis Twoich tras jest przechowywany na tym urządzeniu. Gdy opublikujesz dzień w Liniach wszystkich, na serwer trafiają tylko kształt linii tego dnia, dystans, czas trwania, data i Twój opis; mapa, współrzędne i godziny nie są wysyłane. Zapis tras nie jest też wykorzystywany do reklam ani statystyk.</div>
+                </details>
+                <details>
+                    <summary>Czym są Linie wszystkich?</summary>
+                    <div class="answer">To miejsce, w którym pokazujemy sobie nawzajem linię dnia. Wybierz pseudonim i dzień, który chcesz opublikować, a opublikowane zostaną kształt linii, dystans i czas trwania. Mapa i współrzędne, które pokazują, dokąd prowadziła Twoja droga, nie są publikowane. Opublikowany wpis możesz usunąć w każdej chwili.</div>
                 </details>
                 <details>
                     <summary>Gdzie zobaczę poprzednie dni?</summary>
-                    <div class="answer">Karta Historia pokazuje miesiąc na jeden rzut oka, z małą linią dla każdego dnia w ruchu. Dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Na karcie Mapa zobaczysz ostatnie 7 dni, ten miesiąc, ten rok lub cały okres na jednej mapie.</div>
+                    <div class="answer">Karta Historia pokazuje miesiąc na jeden rzut oka, z małą linią dla każdego dnia w ruchu. Dotknij dowolnego dnia, aby zobaczyć jego trasę i oś czasu. Gdy przełączysz Kalendarz na Trasy, zobaczysz wszystkie trasy z danego miesiąca zebrane na jednym arkuszu.</div>
                 </details>
                 <details>
                     <summary>Czy są cele albo odznaki?</summary>

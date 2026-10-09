@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Awtomatikong Tala ng Biyahe at Ruta Araw-araw</title>
-<meta name="description" content="Walang start button. Awtomatikong nagiging linya ang araw mo, lakad man, takbo, bisikleta, o sasakyan. Nasa device mo lang ang tala ng galaw mo. Libre sa iOS at Android." />
+<meta name="description" content="Walang start button. Awtomatikong nagiging linya ang araw na naglakad, tumakbo, at nagmaneho ka. Kusang tinutukoy ng Dayline kung lakad, takbo, bisikleta, o sasakyan, at naka-save sa device na ito ang tala ng galaw mo. Dayline, ang app na awtomatikong tala ng biyahe. Libre sa iOS at Android." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/fil/#webpage",
       "url": "https://zacolabs.github.io/dayline/fil/",
       "name": "Dayline — Awtomatikong Tala ng Biyahe at Ruta Araw-araw",
-      "description": "Walang start button. Awtomatikong nagiging linya ang araw mo, lakad man, takbo, bisikleta, o sasakyan. Nasa device mo lang ang tala ng galaw mo. Libre sa iOS at Android.",
+      "description": "Walang start button. Awtomatikong nagiging linya ang araw na naglakad, tumakbo, at nagmaneho ka. Kusang tinutukoy ng Dayline kung lakad, takbo, bisikleta, o sasakyan, at naka-save sa device na ito ang tala ng galaw mo. Dayline, ang app na awtomatikong tala ng biyahe. Libre sa iOS at Android.",
       "inLanguage": "fil",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/fil/#app",
       "name": "Dayline",
-      "description": "Awtomatikong tala ng biyahe na iginuguhit ang araw mo bilang linya. Nasa device mo lang ang tala ng galaw mo.",
+      "description": "App na awtomatikong nagtatala ng galaw mo sa bawat araw at ipinapakita ito bilang linya. Naka-save sa device mo ang tala ng galaw mo, at ang linya lang ng araw na pinili mong i-post ang ibinabahagi sa iba.",
       "url": "https://zacolabs.github.io/dayline/fil/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "Walang start button",
         "Paglalakad, pagtakbo, pagbibisikleta, sasakyan",
         "Bawat araw, nakatabi",
-        "Sa device mo lang"
+        "Nananatili sa device na ito ang tala",
+        "Ibahagi ang linya ng isang araw"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "Ipinapadala ba sa server ang tala ng galaw ko?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hindi. Walang account at walang sign-in, at naka-save lang sa device na ito ang tala ng galaw mo. Hindi ito kailanman ipinapadala kahit saan, kahit sa amin, at hindi kailanman ginagamit para sa mga ad o istatistika. Puwede mo itong burahin lahat kahit kailan sa Settings."
+            "text": "Hindi, maliban kung ikaw mismo ang mag-post. Walang account at walang sign-in, at naka-save sa device na ito ang tala ng galaw mo. Kapag nag-post ka ng isang araw sa Mga linya ng lahat, ang hugis ng linya, layo, tagal, petsa, at ang sinabi mo tungkol sa araw na iyon lang ang napupunta sa server; hindi ipinapadala ang mapa, mga coordinate, at oras ng paggalaw. Hindi rin ginagamit ang tala mo para sa mga ad o istatistika."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ano ang Mga linya ng lahat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dito natin ipinapakita sa isa't isa ang linya ng isang araw. Pumili ng palayaw at piliin ang araw na gusto mong i-post, at maipo-post ang hugis ng linya, layo, at tagal nito. Hindi naipo-post ang mapa at mga coordinate na magpapakita kung saan ka pumunta. Puwede mong burahin ang post mo kahit kailan."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "Saan ko makikita ang mga nakaraang araw?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ipinapakita ng History tab ang isang buwan sa isang tingin, na may maliit na linya para sa bawat araw na gumalaw ka. Buksan ang alinmang araw para makita ang dinaanan at timeline nito. Pinagsasama ng Mapa tab ang nakaraang 7 araw, ngayong buwan, ngayong taon, o lahat ng tala sa iisang mapa."
+            "text": "Ipinapakita ng History tab ang isang buwan sa isang tingin, na may maliit na linya para sa bawat araw na gumalaw ka. Buksan ang alinmang araw para makita ang dinaanan at timeline nito. Palitan ng mga ruta ang kalendaryo para makita sa iisang card ang mga dinaanan mo sa buwang iyon."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>Bawat araw, nakatabi</h3>
-                    <p>Ipinapakita ng History tab ang isang buwan sa isang tingin; buksan ang alinmang araw para makita ang dinaanan at timeline nito. Pinagsasama ng Mapa tab ang nakaraang 7 araw, ngayong buwan, ngayong taon, o lahat ng tala sa iisang mapa.</p>
+                    <p>Ipinapakita ng History tab ang isang buwan sa isang tingin; buksan ang alinmang araw para makita ang dinaanan at timeline nito. Palitan ng mga ruta ang kalendaryo, at magsasama-sama sa iisang card ang mga dinaanan mo sa buwang iyon.</p>
                 </li>
                 <li>
-                    <h3>Sa device mo lang</h3>
-                    <p>Walang account at walang sign-in. Ang tala ng galaw mo ay hindi kailanman ipinapadala kahit saan, kahit sa amin. Puwede mo itong burahin lahat kahit kailan.</p>
+                    <h3>Nananatili sa device na ito ang tala</h3>
+                    <p>Walang account at walang sign-in. Naka-save sa device na ito ang tala ng galaw mo, at ang hugis ng linya, layo, tagal, at petsa lang ng araw na pinili mong i-post ang napupunta sa server. Hindi ipinapadala ang mapa at mga coordinate. Puwede mong burahin lahat ng tala sa device kahit kailan.</p>
+                </li>
+                <li>
+                    <h3>Ibahagi ang linya ng isang araw</h3>
+                    <p>Sa tab na Mga linya ng lahat, piliin ang araw na gusto mong i-post at i-post ito bilang linya, at silipin ang araw ng iba. Puwede kang mag-iwan ng like at komento, at mababasa mo nang nakasalin ang mga post sa ibang wika.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>Ipinapadala ba sa server ang tala ng galaw ko?</summary>
-                    <div class="answer">Hindi. Walang account at walang sign-in, at naka-save lang sa device na ito ang tala ng galaw mo. Hindi ito kailanman ipinapadala kahit saan, kahit sa amin, at hindi kailanman ginagamit para sa mga ad o istatistika. Puwede mo itong burahin lahat kahit kailan sa Settings.</div>
+                    <div class="answer">Hindi, maliban kung ikaw mismo ang mag-post. Walang account at walang sign-in, at naka-save sa device na ito ang tala ng galaw mo. Kapag nag-post ka ng isang araw sa Mga linya ng lahat, ang hugis ng linya, layo, tagal, petsa, at ang sinabi mo tungkol sa araw na iyon lang ang napupunta sa server; hindi ipinapadala ang mapa, mga coordinate, at oras ng paggalaw. Hindi rin ginagamit ang tala mo para sa mga ad o istatistika.</div>
+                </details>
+                <details>
+                    <summary>Ano ang Mga linya ng lahat?</summary>
+                    <div class="answer">Dito natin ipinapakita sa isa&#x27;t isa ang linya ng isang araw. Pumili ng palayaw at piliin ang araw na gusto mong i-post, at maipo-post ang hugis ng linya, layo, at tagal nito. Hindi naipo-post ang mapa at mga coordinate na magpapakita kung saan ka pumunta. Puwede mong burahin ang post mo kahit kailan.</div>
                 </details>
                 <details>
                     <summary>Saan ko makikita ang mga nakaraang araw?</summary>
-                    <div class="answer">Ipinapakita ng History tab ang isang buwan sa isang tingin, na may maliit na linya para sa bawat araw na gumalaw ka. Buksan ang alinmang araw para makita ang dinaanan at timeline nito. Pinagsasama ng Mapa tab ang nakaraang 7 araw, ngayong buwan, ngayong taon, o lahat ng tala sa iisang mapa.</div>
+                    <div class="answer">Ipinapakita ng History tab ang isang buwan sa isang tingin, na may maliit na linya para sa bawat araw na gumalaw ka. Buksan ang alinmang araw para makita ang dinaanan at timeline nito. Palitan ng mga ruta ang kalendaryo para makita sa iisang card ang mga dinaanan mo sa buwang iyon.</div>
                 </details>
                 <details>
                     <summary>May mga goal o badge ba?</summary>

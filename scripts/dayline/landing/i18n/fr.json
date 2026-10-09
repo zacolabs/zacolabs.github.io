@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Journal automatique de trajets et de déplacements",
-  "description": "Pas de bouton Démarrer : à pied, à vélo ou en voiture, vos trajets se tracent seuls. Un journal automatique qui reste sur l'appareil. Gratuit sur iOS et Android.",
+  "description": "Pas de bouton Démarrer : la journée où vous avez marché, couru et conduit devient une ligne automatiquement. Dayline distingue d'elle-même la marche, la course, le vélo et le véhicule, et vos déplacements sont stockés sur votre appareil. Une app qui enregistre automatiquement les déplacements. Gratuit sur iOS et Android.",
   "og_title": "Dayline — Votre journée, en une ligne",
   "og_description": "Vos trajets et vos distances, tracés automatiquement chaque jour. Pas de bouton Démarrer.",
-  "app_description": "Un journal de trajets automatique qui trace votre journée en une ligne. Vos déplacements restent sur votre appareil.",
+  "app_description": "Une app qui enregistre automatiquement les déplacements de votre journée et les montre sous forme de ligne. Vos déplacements sont stockés sur votre appareil, et seule la ligne de la journée que vous choisissez de publier est partagée avec d'autres personnes.",
   "eyebrow": "Zaco Labs",
   "h1": "Votre journée, en une ligne",
   "lede": "Dayline trace vos trajets et vos distances, automatiquement, chaque jour. Pas de bouton Démarrer, rien à retenir : l'enregistrement commence quand vous bougez et s'arrête quand vous vous arrêtez.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Chaque jour, conservé",
-      "text": "L'onglet Historique montre un mois en un coup d'œil ; ouvrez un jour pour voir son parcours et sa chronologie. L'onglet Carte réunit une semaine, un mois, une année ou tout sur une seule carte."
+      "text": "L'onglet Historique montre un mois en un coup d'œil ; ouvrez un jour pour voir son parcours et sa chronologie. Passez du calendrier aux trajets et les chemins parcourus ce mois-là se rassemblent sur une seule image."
     },
     {
-      "title": "Uniquement sur votre appareil",
-      "text": "Ni compte ni connexion. Vos déplacements ne sont jamais envoyés ailleurs, pas même à nous. Vous pouvez tout supprimer à tout moment."
+      "title": "L'historique reste sur votre appareil",
+      "text": "Ni compte ni connexion. Vos déplacements sont stockés sur votre appareil, et seules la forme de la ligne, la distance, la durée et la date de la journée que vous choisissez de publier partent vers le serveur. La carte et les coordonnées ne sont pas envoyées. Vous pouvez supprimer tout l'historique de l'appareil à tout moment."
+    },
+    {
+      "title": "Partagez la ligne d'une journée",
+      "text": "Dans l'onglet Les lignes de tous, choisissez la journée que vous voulez publier et publiez-la sous forme de ligne, et découvrez les journées des autres. Vous pouvez laisser des mentions « J'aime » et des commentaires, et lire en traduction les publications dans d'autres langues."
     }
   ],
   "shot_alt": "L'écran du jour de Dayline : une ligne colorée selon le mode de déplacement, avec les distances",
@@ -79,11 +83,15 @@
     },
     {
       "q": "Mes déplacements sont-ils envoyés à un serveur ?",
-      "a": "Non. Ni compte ni connexion, et vos déplacements sont stockés uniquement sur cet appareil. Ils ne sont jamais envoyés ailleurs, pas même à nous, et ne sont jamais utilisés pour la publicité ni pour les statistiques. Vous pouvez tout supprimer à tout moment dans Réglages."
+      "a": "Non, sauf si vous les publiez vous-même. Ni compte ni connexion, et vos déplacements sont stockés sur votre appareil. Lorsque vous publiez une journée dans Les lignes de tous, seuls la forme de la ligne, la distance, la durée, la date et le texte de cette journée partent vers le serveur ; la carte, les coordonnées et les heures ne sont pas envoyées. Vos déplacements ne sont pas non plus utilisés pour la publicité ni pour les statistiques."
+    },
+    {
+      "q": "Qu'est-ce que « Les lignes de tous » ?",
+      "a": "C'est l'endroit où l'on se montre la ligne d'une journée. Choisissez un pseudo et la journée que vous voulez publier : la forme de la ligne, la distance et la durée sont publiées. La carte et les coordonnées, qui montreraient où vous êtes allé, ne le sont pas. Vous pouvez supprimer vos publications à tout moment."
     },
     {
       "q": "Où voir les jours passés ?",
-      "a": "L'onglet Historique montre un mois en un coup d'œil, avec une petite ligne pour chaque jour où vous avez bougé. Ouvrez un jour pour voir son parcours et sa chronologie. L'onglet Carte réunit une semaine, un mois, une année ou tout sur une seule carte."
+      "a": "L'onglet Historique montre un mois en un coup d'œil, avec une petite ligne pour chaque jour où vous avez bougé. Ouvrez un jour pour voir son parcours et sa chronologie. Passez du calendrier aux trajets pour voir rassemblés sur une seule image les chemins parcourus ce mois-là."
     },
     {
       "q": "Y a-t-il des objectifs ou des badges ?",

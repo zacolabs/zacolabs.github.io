@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Journal automatique de trajets et de déplacements</title>
-<meta name="description" content="Pas de bouton Démarrer : à pied, à vélo ou en voiture, vos trajets se tracent seuls. Un journal automatique qui reste sur l&#x27;appareil. Gratuit sur iOS et Android." />
+<meta name="description" content="Pas de bouton Démarrer : la journée où vous avez marché, couru et conduit devient une ligne automatiquement. Dayline distingue d&#x27;elle-même la marche, la course, le vélo et le véhicule, et vos déplacements sont stockés sur votre appareil. Une app qui enregistre automatiquement les déplacements. Gratuit sur iOS et Android." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/fr/#webpage",
       "url": "https://zacolabs.github.io/dayline/fr/",
       "name": "Dayline — Journal automatique de trajets et de déplacements",
-      "description": "Pas de bouton Démarrer : à pied, à vélo ou en voiture, vos trajets se tracent seuls. Un journal automatique qui reste sur l'appareil. Gratuit sur iOS et Android.",
+      "description": "Pas de bouton Démarrer : la journée où vous avez marché, couru et conduit devient une ligne automatiquement. Dayline distingue d'elle-même la marche, la course, le vélo et le véhicule, et vos déplacements sont stockés sur votre appareil. Une app qui enregistre automatiquement les déplacements. Gratuit sur iOS et Android.",
       "inLanguage": "fr",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/fr/#app",
       "name": "Dayline",
-      "description": "Un journal de trajets automatique qui trace votre journée en une ligne. Vos déplacements restent sur votre appareil.",
+      "description": "Une app qui enregistre automatiquement les déplacements de votre journée et les montre sous forme de ligne. Vos déplacements sont stockés sur votre appareil, et seule la ligne de la journée que vous choisissez de publier est partagée avec d'autres personnes.",
       "url": "https://zacolabs.github.io/dayline/fr/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "Pas de bouton Démarrer",
         "Marche, course, vélo, voiture",
         "Chaque jour, conservé",
-        "Uniquement sur votre appareil"
+        "L'historique reste sur votre appareil",
+        "Partagez la ligne d'une journée"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "Mes déplacements sont-ils envoyés à un serveur ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non. Ni compte ni connexion, et vos déplacements sont stockés uniquement sur cet appareil. Ils ne sont jamais envoyés ailleurs, pas même à nous, et ne sont jamais utilisés pour la publicité ni pour les statistiques. Vous pouvez tout supprimer à tout moment dans Réglages."
+            "text": "Non, sauf si vous les publiez vous-même. Ni compte ni connexion, et vos déplacements sont stockés sur votre appareil. Lorsque vous publiez une journée dans Les lignes de tous, seuls la forme de la ligne, la distance, la durée, la date et le texte de cette journée partent vers le serveur ; la carte, les coordonnées et les heures ne sont pas envoyées. Vos déplacements ne sont pas non plus utilisés pour la publicité ni pour les statistiques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que « Les lignes de tous » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est l'endroit où l'on se montre la ligne d'une journée. Choisissez un pseudo et la journée que vous voulez publier : la forme de la ligne, la distance et la durée sont publiées. La carte et les coordonnées, qui montreraient où vous êtes allé, ne le sont pas. Vous pouvez supprimer vos publications à tout moment."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "Où voir les jours passés ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "L'onglet Historique montre un mois en un coup d'œil, avec une petite ligne pour chaque jour où vous avez bougé. Ouvrez un jour pour voir son parcours et sa chronologie. L'onglet Carte réunit une semaine, un mois, une année ou tout sur une seule carte."
+            "text": "L'onglet Historique montre un mois en un coup d'œil, avec une petite ligne pour chaque jour où vous avez bougé. Ouvrez un jour pour voir son parcours et sa chronologie. Passez du calendrier aux trajets pour voir rassemblés sur une seule image les chemins parcourus ce mois-là."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>Chaque jour, conservé</h3>
-                    <p>L&#x27;onglet Historique montre un mois en un coup d&#x27;œil ; ouvrez un jour pour voir son parcours et sa chronologie. L&#x27;onglet Carte réunit une semaine, un mois, une année ou tout sur une seule carte.</p>
+                    <p>L&#x27;onglet Historique montre un mois en un coup d&#x27;œil ; ouvrez un jour pour voir son parcours et sa chronologie. Passez du calendrier aux trajets et les chemins parcourus ce mois-là se rassemblent sur une seule image.</p>
                 </li>
                 <li>
-                    <h3>Uniquement sur votre appareil</h3>
-                    <p>Ni compte ni connexion. Vos déplacements ne sont jamais envoyés ailleurs, pas même à nous. Vous pouvez tout supprimer à tout moment.</p>
+                    <h3>L&#x27;historique reste sur votre appareil</h3>
+                    <p>Ni compte ni connexion. Vos déplacements sont stockés sur votre appareil, et seules la forme de la ligne, la distance, la durée et la date de la journée que vous choisissez de publier partent vers le serveur. La carte et les coordonnées ne sont pas envoyées. Vous pouvez supprimer tout l&#x27;historique de l&#x27;appareil à tout moment.</p>
+                </li>
+                <li>
+                    <h3>Partagez la ligne d&#x27;une journée</h3>
+                    <p>Dans l&#x27;onglet Les lignes de tous, choisissez la journée que vous voulez publier et publiez-la sous forme de ligne, et découvrez les journées des autres. Vous pouvez laisser des mentions « J&#x27;aime » et des commentaires, et lire en traduction les publications dans d&#x27;autres langues.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>Mes déplacements sont-ils envoyés à un serveur ?</summary>
-                    <div class="answer">Non. Ni compte ni connexion, et vos déplacements sont stockés uniquement sur cet appareil. Ils ne sont jamais envoyés ailleurs, pas même à nous, et ne sont jamais utilisés pour la publicité ni pour les statistiques. Vous pouvez tout supprimer à tout moment dans Réglages.</div>
+                    <div class="answer">Non, sauf si vous les publiez vous-même. Ni compte ni connexion, et vos déplacements sont stockés sur votre appareil. Lorsque vous publiez une journée dans Les lignes de tous, seuls la forme de la ligne, la distance, la durée, la date et le texte de cette journée partent vers le serveur ; la carte, les coordonnées et les heures ne sont pas envoyées. Vos déplacements ne sont pas non plus utilisés pour la publicité ni pour les statistiques.</div>
+                </details>
+                <details>
+                    <summary>Qu&#x27;est-ce que « Les lignes de tous » ?</summary>
+                    <div class="answer">C&#x27;est l&#x27;endroit où l&#x27;on se montre la ligne d&#x27;une journée. Choisissez un pseudo et la journée que vous voulez publier : la forme de la ligne, la distance et la durée sont publiées. La carte et les coordonnées, qui montreraient où vous êtes allé, ne le sont pas. Vous pouvez supprimer vos publications à tout moment.</div>
                 </details>
                 <details>
                     <summary>Où voir les jours passés ?</summary>
-                    <div class="answer">L&#x27;onglet Historique montre un mois en un coup d&#x27;œil, avec une petite ligne pour chaque jour où vous avez bougé. Ouvrez un jour pour voir son parcours et sa chronologie. L&#x27;onglet Carte réunit une semaine, un mois, une année ou tout sur une seule carte.</div>
+                    <div class="answer">L&#x27;onglet Historique montre un mois en un coup d&#x27;œil, avec une petite ligne pour chaque jour où vous avez bougé. Ouvrez un jour pour voir son parcours et sa chronologie. Passez du calendrier aux trajets pour voir rassemblés sur une seule image les chemins parcourus ce mois-là.</div>
                 </details>
                 <details>
                     <summary>Y a-t-il des objectifs ou des badges ?</summary>

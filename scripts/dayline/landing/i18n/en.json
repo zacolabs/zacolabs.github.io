@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Automatic Travel Log | Your day, drawn as a line",
-  "description": "No start button. The day you walked, ran, and drove becomes a line on its own. Dayline tells walking, running, cycling, and driving apart, and your movement record stays on your device. Free on iOS and Android.",
+  "description": "No start button. The day you walked, ran, and drove becomes a line on its own. Dayline tells walking, running, cycling, and driving apart, and your movement record is stored on your device. Free on iOS and Android.",
   "og_title": "Dayline — Your day, drawn as a line",
   "og_description": "Where you went and how far, drawn automatically every day. No start button.",
-  "app_description": "An automatic travel log that draws your day as a line. Your movement record stays on your device.",
+  "app_description": "An automatic travel log that draws your day as a line. Your movement record is stored on your device, and only the line of a day you choose to post is shared with others.",
   "eyebrow": "Zaco Labs",
   "h1": "Your day, drawn as a line",
   "lede": "Dayline draws where you went and how far, automatically, every day. There is no start button and nothing to remember: recording starts when you move and ends when you stop.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Every day, kept",
-      "text": "The History tab shows a month at a glance; open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map."
+      "text": "The History tab shows a month at a glance; open any day to see its path and timeline. Switch the calendar to paths and every path of the month comes together on one card."
     },
     {
-      "title": "Stays on your device",
-      "text": "There is no account and no sign-in. Your movement record is never sent anywhere, not even to us. You can delete it all at any time."
+      "title": "Your record stays on your device",
+      "text": "There is no account and no sign-in. Your movement record is stored on your device, and only the shape, distance, duration, and date of a day you choose to post go to the server. The map and coordinates are never sent. You can delete the record on your device at any time."
+    },
+    {
+      "title": "Share the line of a day",
+      "text": "In the Everyone's lines tab, pick a day you want to post and post it as a line, and look at other people's days. You can leave likes and comments, and read posts in other languages in translation."
     }
   ],
   "shot_alt": "Dayline's day screen: a line coloured by travel mode, with distances",
@@ -79,11 +83,15 @@
     },
     {
       "q": "Is my movement record sent to a server?",
-      "a": "No. There is no account and no sign-in, and your movement record is stored only on your device. It is never sent anywhere, not even to us, and is never used for ads or statistics. You can delete it all at any time in Settings."
+      "a": "Not unless you post it yourself. There is no account and no sign-in, and your movement record is stored on your device. When you post a day to Everyone's lines, only that day's line shape, distance, duration, date, and caption go to the server; the map, coordinates, and times of day are not sent. Your record is never used for ads or statistics."
+    },
+    {
+      "q": "What is Everyone's lines?",
+      "a": "It is where people show one another the line of a day. Choose a nickname, pick a day you want to post, and its line shape, distance, and duration are posted. The map and coordinates that would show where you went are not. You can delete a post at any time."
     },
     {
       "q": "Where do I see past days?",
-      "a": "The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map."
+      "a": "The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. Switch the calendar to paths to see every path of the month on one card."
     },
     {
       "q": "Are there goals or badges?",

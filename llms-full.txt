@@ -22,7 +22,7 @@ Dayline draws where you went and how far, automatically, every day. There is no 
 
 - Type: mobile app for iOS and Android, by Zaco Labs
 - Price: free, with one ad below the tab bar
-- Account: none. The movement record is stored only on the device
+- Account: none. The movement record is stored on the device; only a day the user chooses to post sends its line's shape, distance, duration and date to the server, never the map or coordinates
 - Languages: 18
 - Page: https://zacolabs.github.io/dayline/en/
 - Google Play: https://play.google.com/store/apps/details?id=com.zacolabs.dayline
@@ -34,8 +34,9 @@ Dayline draws where you went and how far, automatically, every day. There is no 
 
 - **No start button.** Carry your phone as you always do. Dayline notices when you leave, follows the way you take, and closes the trip when you arrive. It works with the app closed.
 - **Walking, running, cycling, driving.** Dayline works out how you are travelling and colours the line to match. Each day shows the distance and time for every mode.
-- **Every day, kept.** The History tab shows a month at a glance; open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map.
-- **Stays on your device.** There is no account and no sign-in. Your movement record is never sent anywhere, not even to us. You can delete it all at any time.
+- **Every day, kept.** The History tab shows a month at a glance; open any day to see its path and timeline. Switch the calendar to paths and every path of the month comes together on one card.
+- **Your record stays on your device.** There is no account and no sign-in. Your movement record is stored on your device, and only the shape, distance, duration, and date of a day you choose to post go to the server. The map and coordinates are never sent. You can delete the record on your device at any time.
+- **Share the line of a day.** In the Everyone's lines tab, pick a day you want to post and post it as a line, and look at other people's days. You can leave likes and comments, and read posts in other languages in translation.
 
 ### How a day becomes a line
 
@@ -63,11 +64,15 @@ Location is used only while you are moving. While you stay in one place, Dayline
 
 ### Is my movement record sent to a server?
 
-No. There is no account and no sign-in, and your movement record is stored only on your device. It is never sent anywhere, not even to us, and is never used for ads or statistics. You can delete it all at any time in Settings.
+Not unless you post it yourself. There is no account and no sign-in, and your movement record is stored on your device. When you post a day to Everyone's lines, only that day's line shape, distance, duration, date, and caption go to the server; the map, coordinates, and times of day are not sent. Your record is never used for ads or statistics.
+
+### What is Everyone's lines?
+
+It is where people show one another the line of a day. Choose a nickname, pick a day you want to post, and its line shape, distance, and duration are posted. The map and coordinates that would show where you went are not. You can delete a post at any time.
 
 ### Where do I see past days?
 
-The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. The Map tab puts a week, a month, a year, or everything on one map.
+The History tab shows a month at a glance, with a small line for every day you moved. Open any day to see its path and timeline. Switch the calendar to paths to see every path of the month on one card.
 
 ### Are there goals or badges?
 

@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Catatan Perjalanan dan Rute Harian Otomatis",
-  "description": "Tanpa tombol mulai, harimu otomatis menjadi garis. Dayline mengenali jalan kaki, lari, bersepeda, dan berkendara. Catatan tetap di perangkatmu. Gratis di iOS dan Android.",
+  "description": "Tanpa tombol mulai, hari saat kamu berjalan, berlari, dan berkendara otomatis menjadi garis. Dayline sendiri yang membedakan jalan kaki, lari, bersepeda, dan berkendara, dan catatan pergerakanmu disimpan di perangkat ini. Dayline, aplikasi catatan perjalanan otomatis. Gratis di iOS dan Android.",
   "og_title": "Dayline — Harimu, tergambar dalam satu garis",
   "og_description": "Ke mana kamu pergi dan seberapa jauh, tergambar otomatis setiap hari. Tanpa tombol mulai.",
-  "app_description": "Catatan perjalanan otomatis yang menggambar harimu dalam satu garis. Catatan pergerakanmu tetap di perangkatmu.",
+  "app_description": "Aplikasi yang otomatis merekam pergerakanmu dalam sehari dan menampilkannya sebagai garis. Catatan pergerakanmu disimpan di perangkat, dan hanya garis dari hari yang kamu pilih untuk diposting yang dibagikan kepada orang lain.",
   "eyebrow": "Zaco Labs",
   "h1": "Harimu, tergambar dalam satu garis",
   "lede": "Dayline menggambar ke mana kamu pergi dan seberapa jauh, otomatis, setiap hari. Tidak ada tombol mulai dan tidak ada yang perlu diingat: perekaman dimulai saat kamu bergerak dan berakhir saat kamu berhenti.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Setiap hari tersimpan",
-      "text": "Tab Riwayat menampilkan sebulan dalam sekilas; buka hari mana pun untuk melihat jalur dan linimasanya. Tab Peta menyatukan 7 hari terakhir, bulan ini, tahun ini, atau semua catatan dalam satu peta."
+      "text": "Tab Riwayat menampilkan sebulan dalam sekilas; buka hari mana pun untuk melihat jalur dan linimasanya. Ubah kalender menjadi rute, dan semua jalan yang kamu lalui bulan itu terkumpul dalam satu kartu."
     },
     {
-      "title": "Hanya di perangkatmu",
-      "text": "Tidak ada akun dan tidak perlu login. Catatan pergerakanmu tidak pernah dikirim ke mana pun, bahkan kepada kami. Kamu bisa menghapus semuanya kapan saja."
+      "title": "Catatan tetap di perangkat ini",
+      "text": "Tidak ada akun dan tidak perlu login. Catatan pergerakanmu disimpan di perangkat ini, dan hanya bentuk garis, jarak, durasi, dan tanggal dari hari yang kamu pilih untuk diposting yang dikirim ke server. Peta dan koordinat tidak dikirim. Catatan di perangkat bisa kamu hapus semuanya kapan saja."
+    },
+    {
+      "title": "Bagikan garis satu hari",
+      "text": "Di tab Garis semua orang, pilih hari yang ingin kamu posting dan posting sebagai garis, lalu lihat-lihat hari orang lain. Kamu bisa memberi suka dan komentar, dan postingan dalam bahasa lain bisa dibaca dengan terjemahan."
     }
   ],
   "shot_alt": "Layar harian Dayline: garis yang diwarnai menurut cara bepergian, beserta jaraknya",
@@ -79,11 +83,15 @@
     },
     {
       "q": "Apakah catatan pergerakanku dikirim ke server?",
-      "a": "Tidak. Tidak ada akun dan tidak perlu login, dan catatan pergerakanmu hanya disimpan di perangkat ini. Catatan itu tidak pernah dikirim ke mana pun, bahkan kepada kami, dan tidak pernah digunakan untuk iklan atau statistik. Kamu bisa menghapus semuanya kapan saja di Pengaturan."
+      "a": "Tidak, selama kamu tidak mempostingnya sendiri. Tidak ada akun dan tidak perlu login, dan catatan pergerakanmu disimpan di perangkat ini. Saat kamu memposting satu hari ke Garis semua orang, hanya bentuk garis, jarak, durasi, tanggal, dan tulisanmu untuk hari itu yang dikirim ke server; peta, koordinat, dan waktu perjalanan tidak dikirim. Catatanmu juga tidak digunakan untuk iklan atau statistik."
+    },
+    {
+      "q": "Apa itu Garis semua orang?",
+      "a": "Tempat kita saling menunjukkan garis satu hari. Tentukan nama panggilan dan pilih hari yang ingin kamu posting, lalu bentuk garis, jarak, dan durasinya diposting. Peta dan koordinat yang menunjukkan ke mana kamu pergi tidak diposting. Postinganmu bisa kamu hapus kapan saja."
     },
     {
       "q": "Di mana aku bisa melihat hari-hari sebelumnya?",
-      "a": "Tab Riwayat menampilkan sebulan dalam sekilas, dengan garis kecil untuk setiap hari kamu bergerak. Buka hari mana pun untuk melihat jalur dan linimasanya. Tab Peta menyatukan 7 hari terakhir, bulan ini, tahun ini, atau semua catatan dalam satu peta."
+      "a": "Tab Riwayat menampilkan sebulan dalam sekilas, dengan garis kecil untuk setiap hari kamu bergerak. Buka hari mana pun untuk melihat jalur dan linimasanya. Ubah kalender menjadi rute untuk melihat semua jalan yang kamu lalui bulan itu dalam satu kartu."
     },
     {
       "q": "Apakah ada target atau lencana?",

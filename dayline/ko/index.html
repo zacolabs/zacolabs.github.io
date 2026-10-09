@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — 자동 이동 기록 · 하루가 선으로 남는 앱</title>
-<meta name="description" content="시작 버튼 없이, 걷고 달리고 운전한 하루가 자동으로 선이 됩니다. 도보 · 달리기 · 자전거 · 차량을 알아서 구분하고, 이동 기록은 이 기기에만 저장돼요. 자동 이동 기록 앱 Dayline. iOS · Android 무료." />
+<meta name="description" content="시작 버튼 없이, 걷고 달리고 운전한 하루가 자동으로 선이 됩니다. 도보 · 달리기 · 자전거 · 차량을 알아서 구분하고, 이동 기록은 이 기기에 저장돼요. 자동 이동 기록 앱 Dayline. iOS · Android 무료." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/ko/#webpage",
       "url": "https://zacolabs.github.io/dayline/ko/",
       "name": "Dayline — 자동 이동 기록 · 하루가 선으로 남는 앱",
-      "description": "시작 버튼 없이, 걷고 달리고 운전한 하루가 자동으로 선이 됩니다. 도보 · 달리기 · 자전거 · 차량을 알아서 구분하고, 이동 기록은 이 기기에만 저장돼요. 자동 이동 기록 앱 Dayline. iOS · Android 무료.",
+      "description": "시작 버튼 없이, 걷고 달리고 운전한 하루가 자동으로 선이 됩니다. 도보 · 달리기 · 자전거 · 차량을 알아서 구분하고, 이동 기록은 이 기기에 저장돼요. 자동 이동 기록 앱 Dayline. iOS · Android 무료.",
       "inLanguage": "ko",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/ko/#app",
       "name": "Dayline",
-      "description": "하루의 이동을 자동으로 기록해 선으로 보여 주는 앱. 이동 기록은 기기에만 저장됩니다.",
+      "description": "하루의 이동을 자동으로 기록해 선으로 보여 주는 앱. 이동 기록은 기기에 저장되고, 올리기로 고른 하루의 선만 다른 사람과 나눕니다.",
       "url": "https://zacolabs.github.io/dayline/ko/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "시작 버튼이 없어요",
         "걷고, 뛰고, 타는 걸 알아서 구분해요",
         "하루하루가 남아요",
-        "이 기기에만 저장돼요"
+        "기록은 이 기기에 남아요",
+        "하루의 선을 나눠요"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "내 이동 기록이 서버로 전송되나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "아니요. 계정도 로그인도 없고, 이동 기록은 이 기기에만 저장됩니다. 어디로도, 저희에게도 전송되지 않으며 광고나 통계에도 쓰이지 않아요. 설정에서 언제든 모두 삭제할 수 있습니다."
+            "text": "직접 올리지 않는 한 전송되지 않습니다. 계정도 로그인도 없고, 이동 기록은 이 기기에 저장돼요. 모두의 선에 하루를 올리면 그날의 선 모양과 거리, 이동 시간, 날짜, 한마디만 서버로 가고, 지도와 좌표, 이동한 시각은 보내지 않습니다. 기록은 광고나 통계에도 쓰이지 않아요."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "모두의 선은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "하루의 선을 서로 보여 주는 곳입니다. 닉네임을 정하고 올리고 싶은 하루를 고르면 선 모양과 거리, 이동 시간이 올라가요. 어디를 다녔는지 보여 주는 지도와 좌표는 올라가지 않습니다. 올린 글은 언제든 지울 수 있어요."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "지난 기록은 어디서 보나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "기록 탭에서 한 달을 한눈에 볼 수 있고, 움직인 날마다 작은 선이 남아 있어요. 날짜를 누르면 그날의 경로와 타임라인이 열립니다. 지도 탭에서는 최근 7일, 이번 달, 올해, 전체 기록을 한 지도에 모아 볼 수 있어요."
+            "text": "기록 탭에서 한 달을 한눈에 볼 수 있고, 움직인 날마다 작은 선이 남아 있어요. 날짜를 누르면 그날의 경로와 타임라인이 열립니다. 달력을 경로로 바꾸면 그 달에 다닌 길을 한 장에 모아 볼 수 있어요."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>하루하루가 남아요</h3>
-                    <p>기록 탭에서 한 달을 한눈에 보고, 날짜를 누르면 그날의 경로와 타임라인이 열려요. 지도 탭은 최근 7일, 이번 달, 올해, 전체 기록을 한 지도에 모아 줍니다.</p>
+                    <p>기록 탭에서 한 달을 한눈에 보고, 날짜를 누르면 그날의 경로와 타임라인이 열려요. 달력을 경로로 바꾸면 그 달에 다닌 길이 한 장에 모입니다.</p>
                 </li>
                 <li>
-                    <h3>이 기기에만 저장돼요</h3>
-                    <p>계정도 로그인도 없습니다. 이동 기록은 어디로도, 저희에게도 전송되지 않아요. 언제든 모두 삭제할 수 있습니다.</p>
+                    <h3>기록은 이 기기에 남아요</h3>
+                    <p>계정도 로그인도 없습니다. 이동 기록은 이 기기에 저장되고, 올리기로 고른 하루의 선 모양과 거리, 이동 시간, 날짜만 서버로 가요. 지도와 좌표는 보내지 않습니다. 기기의 기록은 언제든 모두 삭제할 수 있어요.</p>
+                </li>
+                <li>
+                    <h3>하루의 선을 나눠요</h3>
+                    <p>모두의 선 탭에서 올리고 싶은 하루를 골라 선으로 올리고, 다른 사람의 하루를 구경해요. 좋아요와 댓글을 남길 수 있고, 다른 언어의 글은 번역해 볼 수 있습니다.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>내 이동 기록이 서버로 전송되나요?</summary>
-                    <div class="answer">아니요. 계정도 로그인도 없고, 이동 기록은 이 기기에만 저장됩니다. 어디로도, 저희에게도 전송되지 않으며 광고나 통계에도 쓰이지 않아요. 설정에서 언제든 모두 삭제할 수 있습니다.</div>
+                    <div class="answer">직접 올리지 않는 한 전송되지 않습니다. 계정도 로그인도 없고, 이동 기록은 이 기기에 저장돼요. 모두의 선에 하루를 올리면 그날의 선 모양과 거리, 이동 시간, 날짜, 한마디만 서버로 가고, 지도와 좌표, 이동한 시각은 보내지 않습니다. 기록은 광고나 통계에도 쓰이지 않아요.</div>
+                </details>
+                <details>
+                    <summary>모두의 선은 무엇인가요?</summary>
+                    <div class="answer">하루의 선을 서로 보여 주는 곳입니다. 닉네임을 정하고 올리고 싶은 하루를 고르면 선 모양과 거리, 이동 시간이 올라가요. 어디를 다녔는지 보여 주는 지도와 좌표는 올라가지 않습니다. 올린 글은 언제든 지울 수 있어요.</div>
                 </details>
                 <details>
                     <summary>지난 기록은 어디서 보나요?</summary>
-                    <div class="answer">기록 탭에서 한 달을 한눈에 볼 수 있고, 움직인 날마다 작은 선이 남아 있어요. 날짜를 누르면 그날의 경로와 타임라인이 열립니다. 지도 탭에서는 최근 7일, 이번 달, 올해, 전체 기록을 한 지도에 모아 볼 수 있어요.</div>
+                    <div class="answer">기록 탭에서 한 달을 한눈에 볼 수 있고, 움직인 날마다 작은 선이 남아 있어요. 날짜를 누르면 그날의 경로와 타임라인이 열립니다. 달력을 경로로 바꾸면 그 달에 다닌 길을 한 장에 모아 볼 수 있어요.</div>
                 </details>
                 <details>
                     <summary>목표나 배지 같은 것도 있나요?</summary>

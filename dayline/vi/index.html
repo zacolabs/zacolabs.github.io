@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Nhật ký di chuyển tự động | Vẽ ngày thành một đường</title>
-<meta name="description" content="Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết cách di chuyển, lộ trình chỉ lưu trên thiết bị. Miễn phí cho iOS, Android." />
+<meta name="description" content="Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết đi bộ, chạy bộ, đạp xe và đi xe, bản ghi di chuyển được lưu trên thiết bị này. Ứng dụng nhật ký di chuyển tự động Dayline. Miễn phí cho iOS, Android." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/vi/#webpage",
       "url": "https://zacolabs.github.io/dayline/vi/",
       "name": "Dayline — Nhật ký di chuyển tự động | Vẽ ngày thành một đường",
-      "description": "Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết cách di chuyển, lộ trình chỉ lưu trên thiết bị. Miễn phí cho iOS, Android.",
+      "description": "Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết đi bộ, chạy bộ, đạp xe và đi xe, bản ghi di chuyển được lưu trên thiết bị này. Ứng dụng nhật ký di chuyển tự động Dayline. Miễn phí cho iOS, Android.",
       "inLanguage": "vi",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/vi/#app",
       "name": "Dayline",
-      "description": "Ứng dụng tự động ghi lại việc di chuyển trong ngày và vẽ thành một đường. Bản ghi di chuyển chỉ được lưu trên thiết bị.",
+      "description": "Ứng dụng tự động ghi lại việc di chuyển trong ngày và vẽ thành một đường. Bản ghi di chuyển được lưu trên thiết bị, và chỉ đường của ngày bạn chọn đăng mới được chia sẻ với người khác.",
       "url": "https://zacolabs.github.io/dayline/vi/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "Không có nút bắt đầu",
         "Tự nhận biết đi bộ, chạy, đạp xe, đi xe",
         "Lưu giữ từng ngày",
-        "Chỉ trên thiết bị của bạn"
+        "Bản ghi ở lại trên thiết bị này",
+        "Chia sẻ đường của một ngày"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "Bản ghi di chuyển của tôi có được gửi lên máy chủ không?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Không. Không tài khoản, không đăng nhập, và bản ghi di chuyển chỉ được lưu trên thiết bị này. Bản ghi không bao giờ được gửi đi đâu, kể cả cho chúng tôi, và cũng không được dùng cho quảng cáo hay thống kê. Bạn có thể xóa tất cả bất cứ lúc nào trong Cài đặt."
+            "text": "Bản ghi không được gửi đi, trừ khi bạn tự đăng. Không tài khoản, không đăng nhập, và bản ghi di chuyển được lưu trên thiết bị này. Khi bạn đăng một ngày lên Đường của mọi người, chỉ hình dạng đường, quãng đường, thời gian di chuyển, ngày tháng và phần lời của ngày đó được gửi lên máy chủ; bản đồ, tọa độ và giờ di chuyển không được gửi đi. Bản ghi cũng không được dùng cho quảng cáo hay thống kê."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Đường của mọi người là gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Đó là nơi mọi người cho nhau xem đường của một ngày. Chọn biệt danh, chọn một ngày bạn muốn đăng, và hình dạng đường, quãng đường cùng thời gian di chuyển sẽ được đăng lên. Bản đồ và tọa độ cho thấy bạn đã đi những đâu thì không được đăng lên. Bạn có thể xóa bài đã đăng bất cứ lúc nào."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "Tôi xem lại những ngày trước ở đâu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ."
+            "text": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Chuyển từ Lịch sang Lộ trình để xem những con đường bạn đã đi trong tháng đó gom lại trên một trang."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>Lưu giữ từng ngày</h3>
-                    <p>Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn; mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ.</p>
+                    <p>Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn; mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Chuyển từ Lịch sang Lộ trình, những con đường bạn đã đi trong tháng đó sẽ gom lại trên một trang.</p>
                 </li>
                 <li>
-                    <h3>Chỉ trên thiết bị của bạn</h3>
-                    <p>Không tài khoản, không đăng nhập. Bản ghi di chuyển không bao giờ được gửi đi đâu, kể cả cho chúng tôi. Bạn có thể xóa tất cả bất cứ lúc nào.</p>
+                    <h3>Bản ghi ở lại trên thiết bị này</h3>
+                    <p>Không tài khoản, không đăng nhập. Bản ghi di chuyển được lưu trên thiết bị này, và chỉ hình dạng đường, quãng đường, thời gian di chuyển và ngày tháng của ngày bạn chọn đăng mới được gửi lên máy chủ. Bản đồ và tọa độ không được gửi đi. Bạn có thể xóa tất cả bản ghi trên thiết bị bất cứ lúc nào.</p>
+                </li>
+                <li>
+                    <h3>Chia sẻ đường của một ngày</h3>
+                    <p>Trong thẻ Đường của mọi người, hãy chọn một ngày bạn muốn đăng rồi đăng thành một đường, và ngắm một ngày của người khác. Bạn có thể để lại lượt thích và bình luận, và xem bài đăng bằng ngôn ngữ khác qua bản dịch.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>Bản ghi di chuyển của tôi có được gửi lên máy chủ không?</summary>
-                    <div class="answer">Không. Không tài khoản, không đăng nhập, và bản ghi di chuyển chỉ được lưu trên thiết bị này. Bản ghi không bao giờ được gửi đi đâu, kể cả cho chúng tôi, và cũng không được dùng cho quảng cáo hay thống kê. Bạn có thể xóa tất cả bất cứ lúc nào trong Cài đặt.</div>
+                    <div class="answer">Bản ghi không được gửi đi, trừ khi bạn tự đăng. Không tài khoản, không đăng nhập, và bản ghi di chuyển được lưu trên thiết bị này. Khi bạn đăng một ngày lên Đường của mọi người, chỉ hình dạng đường, quãng đường, thời gian di chuyển, ngày tháng và phần lời của ngày đó được gửi lên máy chủ; bản đồ, tọa độ và giờ di chuyển không được gửi đi. Bản ghi cũng không được dùng cho quảng cáo hay thống kê.</div>
+                </details>
+                <details>
+                    <summary>Đường của mọi người là gì?</summary>
+                    <div class="answer">Đó là nơi mọi người cho nhau xem đường của một ngày. Chọn biệt danh, chọn một ngày bạn muốn đăng, và hình dạng đường, quãng đường cùng thời gian di chuyển sẽ được đăng lên. Bản đồ và tọa độ cho thấy bạn đã đi những đâu thì không được đăng lên. Bạn có thể xóa bài đã đăng bất cứ lúc nào.</div>
                 </details>
                 <details>
                     <summary>Tôi xem lại những ngày trước ở đâu?</summary>
-                    <div class="answer">Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ.</div>
+                    <div class="answer">Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Chuyển từ Lịch sang Lộ trình để xem những con đường bạn đã đi trong tháng đó gom lại trên một trang.</div>
                 </details>
                 <details>
                     <summary>Có mục tiêu hay huy hiệu không?</summary>

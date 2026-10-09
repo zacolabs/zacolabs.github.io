@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — 自動移動軌跡紀錄｜把每一天，畫成一條線</title>
-<meta name="description" content="沒有開始按鈕，走路、跑步、開車的一天會自動變成一條線。Dayline 自動辨識步行、跑步、自行車和車輛，移動紀錄只儲存在這台裝置上。自動記錄移動軌跡與路線的 App，iOS、Android 免費。" />
+<meta name="description" content="沒有開始按鈕，走路、跑步、開車的一天會自動變成一條線。Dayline 自動辨識步行、跑步、自行車和車輛，移動紀錄儲存在這台裝置上。自動記錄移動軌跡與路線的 App，iOS、Android 免費。" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/zh-hant/#webpage",
       "url": "https://zacolabs.github.io/dayline/zh-hant/",
       "name": "Dayline — 自動移動軌跡紀錄｜把每一天，畫成一條線",
-      "description": "沒有開始按鈕，走路、跑步、開車的一天會自動變成一條線。Dayline 自動辨識步行、跑步、自行車和車輛，移動紀錄只儲存在這台裝置上。自動記錄移動軌跡與路線的 App，iOS、Android 免費。",
+      "description": "沒有開始按鈕，走路、跑步、開車的一天會自動變成一條線。Dayline 自動辨識步行、跑步、自行車和車輛，移動紀錄儲存在這台裝置上。自動記錄移動軌跡與路線的 App，iOS、Android 免費。",
       "inLanguage": "zh-Hant",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/zh-hant/#app",
       "name": "Dayline",
-      "description": "自動記錄一天的移動，並畫成一條線的 App。移動紀錄只儲存在裝置上。",
+      "description": "自動記錄一天的移動，並畫成一條線的 App。移動紀錄儲存在裝置上，只有你選擇發佈的那一天的線會與他人分享。",
       "url": "https://zacolabs.github.io/dayline/zh-hant/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "沒有開始按鈕",
         "步行、跑步、騎車、搭車，自動辨識",
         "每一天都留存",
-        "只儲存在你的裝置上"
+        "紀錄留在這台裝置上",
+        "分享一天的線"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "我的移動紀錄會傳送到伺服器嗎？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不會。不需帳號，不需登入，移動紀錄只儲存在這台裝置上。不會傳送到任何地方，也不會傳送給我們，更不會用於廣告或統計。你可以隨時在設定中將其全部刪除。"
+            "text": "只要你不自己發佈，就不會傳送。不需帳號，不需登入，移動紀錄儲存在這台裝置上。把某一天發佈到「大家的線」時，只有當天的線的形狀、距離、移動時長、日期和附言會傳送到伺服器，地圖、座標和移動的時刻不會傳送。紀錄也不會用於廣告或統計。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「大家的線」是什麼？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是大家互相展示一天的線的地方。設定暱稱，選一個想發佈的日子，線的形狀、距離和移動時長就會發佈上去。能看出你去過哪裡的地圖和座標不會上傳。發佈的貼文可以隨時刪除。"
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "過去的紀錄在哪裡看？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "在「紀錄」分頁，一個月一目了然，有移動的每一天都留有一條小線。點開任何一天，就能查看當天的路線和時間軸。在「地圖」分頁，可以把最近 7 天、本月、今年或全部紀錄放在同一張地圖上查看。"
+            "text": "在「紀錄」分頁，一個月一目了然，有移動的每一天都留有一條小線。點開任何一天，就能查看當天的路線和時間軸。把日曆切換為路線，就能把當月走過的路匯集在一張卡片上查看。"
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>每一天都留存</h3>
-                    <p>在「紀錄」分頁，一個月一目了然；點開任何一天，就能查看當天的路線和時間軸。「地圖」分頁可以把最近 7 天、本月、今年或全部紀錄放在同一張地圖上。</p>
+                    <p>在「紀錄」分頁，一個月一目了然；點開任何一天，就能查看當天的路線和時間軸。把日曆切換為路線，當月走過的路就會匯集在一張卡片上。</p>
                 </li>
                 <li>
-                    <h3>只儲存在你的裝置上</h3>
-                    <p>不需帳號，不需登入。移動紀錄不會傳送到任何地方，也不會傳送給我們。你可以隨時將其全部刪除。</p>
+                    <h3>紀錄留在這台裝置上</h3>
+                    <p>不需帳號，不需登入。移動紀錄儲存在這台裝置上，只有你選擇發佈的那一天的線的形狀、距離、移動時長和日期會傳送到伺服器。地圖和座標不會傳送。裝置上的紀錄可以隨時全部刪除。</p>
+                </li>
+                <li>
+                    <h3>分享一天的線</h3>
+                    <p>在「大家的線」分頁，選一個想發佈的日子，把它當成一條線發佈出去，也看看別人的一天。可以按讚和留言，其他語言的貼文還能翻譯後閱讀。</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>我的移動紀錄會傳送到伺服器嗎？</summary>
-                    <div class="answer">不會。不需帳號，不需登入，移動紀錄只儲存在這台裝置上。不會傳送到任何地方，也不會傳送給我們，更不會用於廣告或統計。你可以隨時在設定中將其全部刪除。</div>
+                    <div class="answer">只要你不自己發佈，就不會傳送。不需帳號，不需登入，移動紀錄儲存在這台裝置上。把某一天發佈到「大家的線」時，只有當天的線的形狀、距離、移動時長、日期和附言會傳送到伺服器，地圖、座標和移動的時刻不會傳送。紀錄也不會用於廣告或統計。</div>
+                </details>
+                <details>
+                    <summary>「大家的線」是什麼？</summary>
+                    <div class="answer">是大家互相展示一天的線的地方。設定暱稱，選一個想發佈的日子，線的形狀、距離和移動時長就會發佈上去。能看出你去過哪裡的地圖和座標不會上傳。發佈的貼文可以隨時刪除。</div>
                 </details>
                 <details>
                     <summary>過去的紀錄在哪裡看？</summary>
-                    <div class="answer">在「紀錄」分頁，一個月一目了然，有移動的每一天都留有一條小線。點開任何一天，就能查看當天的路線和時間軸。在「地圖」分頁，可以把最近 7 天、本月、今年或全部紀錄放在同一張地圖上查看。</div>
+                    <div class="answer">在「紀錄」分頁，一個月一目了然，有移動的每一天都留有一條小線。點開任何一天，就能查看當天的路線和時間軸。把日曆切換為路線，就能把當月走過的路匯集在一張卡片上查看。</div>
                 </details>
                 <details>
                     <summary>有目標或徽章之類的功能嗎？</summary>

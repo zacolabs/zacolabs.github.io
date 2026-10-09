@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dayline — Automatisk rutelog | Din dag som en linje</title>
-<meta name="description" content="Ingen startknap: Dayline registrerer automatisk dine ruter og skelner mellem gang, løb, cykling og kørsel. Dine bevægelser bliver på din enhed. Gratis til iOS og Android." />
+<meta name="description" content="Ingen startknap: dagen, hvor du gik, løb og kørte, bliver automatisk til en linje. Dayline skelner selv mellem gang, løb, cykling og kørsel, og dine bevægelser gemmes på din enhed. Dayline, den automatiske rutelog. Gratis til iOS og Android." />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Zaco Labs" />
 <meta name="application-name" content="Dayline" />
@@ -95,7 +95,7 @@
       "@id": "https://zacolabs.github.io/dayline/da/#webpage",
       "url": "https://zacolabs.github.io/dayline/da/",
       "name": "Dayline — Automatisk rutelog | Din dag som en linje",
-      "description": "Ingen startknap: Dayline registrerer automatisk dine ruter og skelner mellem gang, løb, cykling og kørsel. Dine bevægelser bliver på din enhed. Gratis til iOS og Android.",
+      "description": "Ingen startknap: dagen, hvor du gik, løb og kørte, bliver automatisk til en linje. Dayline skelner selv mellem gang, løb, cykling og kørsel, og dine bevægelser gemmes på din enhed. Dayline, den automatiske rutelog. Gratis til iOS og Android.",
       "inLanguage": "da",
       "isPartOf": {
         "@id": "https://zacolabs.github.io/#website"
@@ -135,7 +135,7 @@
       "@type": "MobileApplication",
       "@id": "https://zacolabs.github.io/dayline/da/#app",
       "name": "Dayline",
-      "description": "En automatisk rutelog, der tegner din dag som en linje. Dine bevægelser bliver på din enhed.",
+      "description": "En automatisk rutelog, der tegner din dag som en linje. Dine bevægelser gemmes på din enhed, og kun linjen for en dag, du vælger at slå op, deles med andre.",
       "url": "https://zacolabs.github.io/dayline/da/",
       "image": "https://zacolabs.github.io/zacolabs-assets/dayline_icon.png",
       "applicationCategory": "LifestyleApplication",
@@ -150,7 +150,8 @@
         "Ingen startknap",
         "Gå, løb, cykl, kør",
         "Hver dag gemt",
-        "Kun på din enhed"
+        "Dine bevægelser bliver på din enhed",
+        "Del en dags linje"
       ],
       "inLanguage": [
         "ko",
@@ -232,7 +233,15 @@
           "name": "Bliver mine bevægelser sendt til en server?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nej. Der er ingen konto og intet login, og dine bevægelser gemmes kun på denne enhed. De sendes aldrig nogen steder hen, heller ikke til os, og bruges aldrig til annoncer eller statistik. Du kan når som helst slette det hele i Indstillinger."
+            "text": "Ikke medmindre du selv slår dem op. Der er ingen konto og intet login, og dine bevægelser gemmes på denne enhed. Når du slår en dag op i Alles linjer, sendes kun formen på dagens linje, distancen, varigheden, datoen og din tekst til serveren; kort, koordinater og tidspunkter sendes ikke. Dine bevægelser bruges heller ikke til annoncer eller statistik."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvad er Alles linjer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det er stedet, hvor vi viser hinanden en dags linje. Vælg et kaldenavn og en dag, du vil slå op, så bliver formen på linjen, distancen og varigheden slået op. Kort og koordinater, der viser, hvor du har været, bliver ikke slået op. Du kan når som helst slette det, du har slået op."
           }
         },
         {
@@ -240,7 +249,7 @@
           "name": "Hvor ser jeg tidligere dage?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fanen Historik viser en måned i ét blik med en lille linje for hver dag, du har bevæget dig. Tryk på en dag for at se dens rute og tidslinje. På fanen Kort kan du se de seneste 7 dage, denne måned, i år eller det hele samlet på ét kort."
+            "text": "Fanen Historik viser en måned i ét blik med en lille linje for hver dag, du har bevæget dig. Tryk på en dag for at se dens rute og tidslinje. Skifter du fra Kalender til Ruter, kan du se månedens ruter samlet på ét ark."
           }
         },
         {
@@ -395,6 +404,8 @@
     .feature-list li:nth-child(2) h3::before { background:var(--run); }
     .feature-list li:nth-child(3) h3::before { background:var(--cycle); }
     .feature-list li:nth-child(4) h3::before { background:var(--car); }
+    /* 다섯째는 모두의 선: 이동수단이 아니라 앱의 노랑 */
+    .feature-list li:nth-child(5) h3::before { background:var(--yellow); }
     .feature-list p { margin-top:8px; font-size:15px; color:var(--muted); }
     /* 앱 화면: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋. 테두리의 윗선을 왼쪽 첫 카드의 윗선에 맞춘다. */
     .shot { position:relative; padding:26px 0 0; }
@@ -591,11 +602,15 @@
                 </li>
                 <li>
                     <h3>Hver dag gemt</h3>
-                    <p>Fanen Historik viser en måned i ét blik; tryk på en dag for at se dens rute og tidslinje. Fanen Kort samler de seneste 7 dage, denne måned, i år eller det hele på ét kort.</p>
+                    <p>Fanen Historik viser en måned i ét blik; tryk på en dag for at se dens rute og tidslinje. Skifter du fra Kalender til Ruter, samles månedens ruter på ét ark.</p>
                 </li>
                 <li>
-                    <h3>Kun på din enhed</h3>
-                    <p>Der er ingen konto og intet login. Dine bevægelser sendes aldrig nogen steder hen, heller ikke til os. Du kan når som helst slette det hele.</p>
+                    <h3>Dine bevægelser bliver på din enhed</h3>
+                    <p>Der er ingen konto og intet login. Dine bevægelser gemmes på denne enhed, og kun formen på linjen, distancen, varigheden og datoen for en dag, du vælger at slå op, sendes til serveren. Kort og koordinater sendes ikke. Du kan når som helst slette alt det, der ligger på enheden.</p>
+                </li>
+                <li>
+                    <h3>Del en dags linje</h3>
+                    <p>På fanen Alles linjer vælger du en dag, du vil slå op, slår den op som en linje og ser andres dage. Du kan efterlade likes og kommentarer, og opslag på andre sprog kan du læse i oversættelse.</p>
                 </li>
                 </ul>
                 <figure class="shot">
@@ -678,11 +693,15 @@
                 </details>
                 <details>
                     <summary>Bliver mine bevægelser sendt til en server?</summary>
-                    <div class="answer">Nej. Der er ingen konto og intet login, og dine bevægelser gemmes kun på denne enhed. De sendes aldrig nogen steder hen, heller ikke til os, og bruges aldrig til annoncer eller statistik. Du kan når som helst slette det hele i Indstillinger.</div>
+                    <div class="answer">Ikke medmindre du selv slår dem op. Der er ingen konto og intet login, og dine bevægelser gemmes på denne enhed. Når du slår en dag op i Alles linjer, sendes kun formen på dagens linje, distancen, varigheden, datoen og din tekst til serveren; kort, koordinater og tidspunkter sendes ikke. Dine bevægelser bruges heller ikke til annoncer eller statistik.</div>
+                </details>
+                <details>
+                    <summary>Hvad er Alles linjer?</summary>
+                    <div class="answer">Det er stedet, hvor vi viser hinanden en dags linje. Vælg et kaldenavn og en dag, du vil slå op, så bliver formen på linjen, distancen og varigheden slået op. Kort og koordinater, der viser, hvor du har været, bliver ikke slået op. Du kan når som helst slette det, du har slået op.</div>
                 </details>
                 <details>
                     <summary>Hvor ser jeg tidligere dage?</summary>
-                    <div class="answer">Fanen Historik viser en måned i ét blik med en lille linje for hver dag, du har bevæget dig. Tryk på en dag for at se dens rute og tidslinje. På fanen Kort kan du se de seneste 7 dage, denne måned, i år eller det hele samlet på ét kort.</div>
+                    <div class="answer">Fanen Historik viser en måned i ét blik med en lille linje for hver dag, du har bevæget dig. Tryk på en dag for at se dens rute og tidslinje. Skifter du fra Kalender til Ruter, kan du se månedens ruter samlet på ét ark.</div>
                 </details>
                 <details>
                     <summary>Er der mål eller badges?</summary>

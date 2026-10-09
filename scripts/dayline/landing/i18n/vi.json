@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Nhật ký di chuyển tự động | Vẽ ngày thành một đường",
-  "description": "Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết cách di chuyển, lộ trình chỉ lưu trên thiết bị. Miễn phí cho iOS, Android.",
+  "description": "Không cần nút bắt đầu: một ngày đi bộ, chạy, lái xe tự thành một đường. Dayline tự nhận biết đi bộ, chạy bộ, đạp xe và đi xe, bản ghi di chuyển được lưu trên thiết bị này. Ứng dụng nhật ký di chuyển tự động Dayline. Miễn phí cho iOS, Android.",
   "og_title": "Dayline — Một ngày của bạn, vẽ thành một đường",
   "og_description": "Bạn đã đi đâu và đi bao xa, được vẽ tự động mỗi ngày. Không có nút bắt đầu.",
-  "app_description": "Ứng dụng tự động ghi lại việc di chuyển trong ngày và vẽ thành một đường. Bản ghi di chuyển chỉ được lưu trên thiết bị.",
+  "app_description": "Ứng dụng tự động ghi lại việc di chuyển trong ngày và vẽ thành một đường. Bản ghi di chuyển được lưu trên thiết bị, và chỉ đường của ngày bạn chọn đăng mới được chia sẻ với người khác.",
   "eyebrow": "Zaco Labs",
   "h1": "Một ngày của bạn, vẽ thành một đường",
   "lede": "Dayline là ứng dụng tự động vẽ lại bạn đã đi đâu và đi bao xa mỗi ngày. Không có nút bắt đầu và không cần nhớ gì cả: việc ghi bắt đầu khi bạn di chuyển và kết thúc khi bạn dừng lại.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Lưu giữ từng ngày",
-      "text": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn; mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ."
+      "text": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn; mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Chuyển từ Lịch sang Lộ trình, những con đường bạn đã đi trong tháng đó sẽ gom lại trên một trang."
     },
     {
-      "title": "Chỉ trên thiết bị của bạn",
-      "text": "Không tài khoản, không đăng nhập. Bản ghi di chuyển không bao giờ được gửi đi đâu, kể cả cho chúng tôi. Bạn có thể xóa tất cả bất cứ lúc nào."
+      "title": "Bản ghi ở lại trên thiết bị này",
+      "text": "Không tài khoản, không đăng nhập. Bản ghi di chuyển được lưu trên thiết bị này, và chỉ hình dạng đường, quãng đường, thời gian di chuyển và ngày tháng của ngày bạn chọn đăng mới được gửi lên máy chủ. Bản đồ và tọa độ không được gửi đi. Bạn có thể xóa tất cả bản ghi trên thiết bị bất cứ lúc nào."
+    },
+    {
+      "title": "Chia sẻ đường của một ngày",
+      "text": "Trong thẻ Đường của mọi người, hãy chọn một ngày bạn muốn đăng rồi đăng thành một đường, và ngắm một ngày của người khác. Bạn có thể để lại lượt thích và bình luận, và xem bài đăng bằng ngôn ngữ khác qua bản dịch."
     }
   ],
   "shot_alt": "Màn hình một ngày của Dayline: đường đi được tô màu theo cách di chuyển, kèm quãng đường",
@@ -79,11 +83,15 @@
     },
     {
       "q": "Bản ghi di chuyển của tôi có được gửi lên máy chủ không?",
-      "a": "Không. Không tài khoản, không đăng nhập, và bản ghi di chuyển chỉ được lưu trên thiết bị này. Bản ghi không bao giờ được gửi đi đâu, kể cả cho chúng tôi, và cũng không được dùng cho quảng cáo hay thống kê. Bạn có thể xóa tất cả bất cứ lúc nào trong Cài đặt."
+      "a": "Bản ghi không được gửi đi, trừ khi bạn tự đăng. Không tài khoản, không đăng nhập, và bản ghi di chuyển được lưu trên thiết bị này. Khi bạn đăng một ngày lên Đường của mọi người, chỉ hình dạng đường, quãng đường, thời gian di chuyển, ngày tháng và phần lời của ngày đó được gửi lên máy chủ; bản đồ, tọa độ và giờ di chuyển không được gửi đi. Bản ghi cũng không được dùng cho quảng cáo hay thống kê."
+    },
+    {
+      "q": "Đường của mọi người là gì?",
+      "a": "Đó là nơi mọi người cho nhau xem đường của một ngày. Chọn biệt danh, chọn một ngày bạn muốn đăng, và hình dạng đường, quãng đường cùng thời gian di chuyển sẽ được đăng lên. Bản đồ và tọa độ cho thấy bạn đã đi những đâu thì không được đăng lên. Bạn có thể xóa bài đã đăng bất cứ lúc nào."
     },
     {
       "q": "Tôi xem lại những ngày trước ở đâu?",
-      "a": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Thẻ Bản đồ gom 7 ngày qua, tháng này, năm nay hoặc tất cả lên cùng một bản đồ."
+      "a": "Thẻ Lịch sử cho thấy cả tháng trong một cái nhìn, với một đường nhỏ cho mỗi ngày bạn di chuyển. Mở một ngày bất kỳ để xem lộ trình và dòng thời gian của ngày đó. Chuyển từ Lịch sang Lộ trình để xem những con đường bạn đã đi trong tháng đó gom lại trên một trang."
     },
     {
       "q": "Có mục tiêu hay huy hiệu không?",

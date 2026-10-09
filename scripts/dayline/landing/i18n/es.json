@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Registro automático de rutas | Tu día en una línea",
-  "description": "Sin botón de inicio: el día que caminas, corres o conduces se dibuja solo. Un registro automático de rutas que no sale de tu dispositivo. Gratis en iOS y Android.",
+  "description": "Sin botón de inicio: el día que caminas, corres y conduces se convierte en una línea automáticamente. Dayline distingue por sí solo entre ir a pie, correr, ir en bicicleta y en vehículo, y tu registro de movimientos se guarda en tu dispositivo. Una app de registro automático de rutas. Gratis en iOS y Android.",
   "og_title": "Dayline — Tu día, dibujado en una línea",
   "og_description": "Dónde estuviste y cuánto recorriste, dibujado automáticamente cada día. Sin botón de inicio.",
-  "app_description": "Una app que registra tus recorridos automáticamente y dibuja tu día en una línea. Tu registro de movimientos no sale de tu dispositivo.",
+  "app_description": "Una app que registra automáticamente los desplazamientos de tu día y los muestra como una línea. Tu registro de movimientos se guarda en tu dispositivo, y solo se comparte con otras personas la línea del día que eliges publicar.",
   "eyebrow": "Zaco Labs",
   "h1": "Tu día, dibujado en una línea",
   "lede": "Dayline dibuja dónde estuviste y cuánto recorriste, automáticamente, cada día. No hay botón de inicio ni nada que recordar: el registro empieza cuando te mueves y termina cuando te detienes.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Cada día, guardado",
-      "text": "La pestaña Historial muestra un mes de un vistazo; abre cualquier día para ver su recorrido y su cronología. La pestaña Mapa reúne una semana, un mes, un año o todo en un solo mapa."
+      "text": "La pestaña Historial muestra un mes de un vistazo; abre cualquier día para ver su recorrido y su cronología. Cambia del calendario a los recorridos y los caminos que hiciste ese mes se reúnen en una sola imagen."
     },
     {
-      "title": "Solo en tu dispositivo",
-      "text": "No hay cuenta ni inicio de sesión. Tu registro de movimientos nunca se envía a ningún sitio, ni siquiera a nosotros. Puedes borrarlo todo cuando quieras."
+      "title": "El registro se queda en tu dispositivo",
+      "text": "No hay cuenta ni inicio de sesión. Tu registro de movimientos se guarda en tu dispositivo, y al servidor solo van la forma de la línea, la distancia, la duración y la fecha del día que eliges publicar. El mapa y las coordenadas no se envían. Puedes borrar todo el registro del dispositivo cuando quieras."
+    },
+    {
+      "title": "Comparte la línea de un día",
+      "text": "En la pestaña Las líneas de todos, elige el día que quieras publicar y publícalo como una línea, y echa un vistazo a los días de otras personas. Puedes dejar «me gusta» y comentarios, y ver traducidas las publicaciones en otros idiomas."
     }
   ],
   "shot_alt": "La pantalla del día de Dayline: una línea coloreada según el modo de desplazamiento, con las distancias",
@@ -79,11 +83,15 @@
     },
     {
       "q": "¿Mi registro de movimientos se envía a algún servidor?",
-      "a": "No. No hay cuenta ni inicio de sesión, y tu registro de movimientos se guarda solo en este dispositivo. Nunca se envía a ningún sitio, ni siquiera a nosotros, y nunca se usa para anuncios ni estadísticas. Puedes borrarlo todo cuando quieras en Ajustes."
+      "a": "No, a menos que lo publiques tú. No hay cuenta ni inicio de sesión, y tu registro de movimientos se guarda en tu dispositivo. Cuando publicas un día en Las líneas de todos, al servidor solo van la forma de la línea, la distancia, la duración, la fecha y el texto de ese día; el mapa, las coordenadas y las horas no se envían. Tu registro tampoco se usa para anuncios ni estadísticas."
+    },
+    {
+      "q": "¿Qué es «Las líneas de todos»?",
+      "a": "Es el lugar donde nos enseñamos la línea de un día. Elige un apodo y el día que quieras publicar, y se publican la forma de la línea, la distancia y la duración. El mapa y las coordenadas, que mostrarían por dónde estuviste, no se publican. Puedes eliminar tus publicaciones en cualquier momento."
     },
     {
       "q": "¿Dónde veo los días anteriores?",
-      "a": "La pestaña Historial muestra un mes de un vistazo, con una pequeña línea por cada día que te moviste. Abre cualquier día para ver su recorrido y su cronología. La pestaña Mapa reúne una semana, un mes, un año o todo en un solo mapa."
+      "a": "La pestaña Historial muestra un mes de un vistazo, con una pequeña línea por cada día que te moviste. Abre cualquier día para ver su recorrido y su cronología. Cambia del calendario a los recorridos para ver reunidos en una sola imagen los caminos que hiciste ese mes."
     },
     {
       "q": "¿Hay objetivos o insignias?",

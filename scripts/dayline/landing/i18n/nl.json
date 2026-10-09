@@ -1,10 +1,10 @@
 {
   "currency": "USD",
   "title": "Dayline — Automatisch logboek van je routes | Je dag als lijn",
-  "description": "Geen startknop: Dayline legt je routes automatisch vast en herkent wandelen, hardlopen, fietsen en rijden. Je bewegingen blijven op je apparaat. Gratis voor iOS en Android.",
+  "description": "Geen startknop: de dag waarop je liep, rende en reed wordt vanzelf een lijn. Dayline onderscheidt zelf wandelen, hardlopen, fietsen en rijden, en je bewegingen worden op je apparaat bewaard. Dayline, het automatische logboek van je routes. Gratis voor iOS en Android.",
   "og_title": "Dayline — Je dag, getekend als een lijn",
   "og_description": "Waar je was en hoe ver je ging, elke dag automatisch getekend. Zonder startknop.",
-  "app_description": "Een automatisch logboek dat je dag als een lijn tekent. Je bewegingen blijven op je apparaat.",
+  "app_description": "Een automatisch logboek dat je dag als een lijn tekent. Je bewegingen worden op je apparaat bewaard, en alleen de lijn van een dag die je kiest om te plaatsen wordt met anderen gedeeld.",
   "eyebrow": "Zaco Labs",
   "h1": "Je dag, getekend als een lijn",
   "lede": "Dayline tekent elke dag automatisch waar je was en hoe ver je ging. Er is geen startknop en je hoeft nergens aan te denken: de registratie begint als je beweegt en stopt als je stilstaat.",
@@ -24,11 +24,15 @@
     },
     {
       "title": "Elke dag bewaard",
-      "text": "Het tabblad Geschiedenis toont een maand in één oogopslag; tik op een dag om de route en tijdlijn te zien. Het tabblad Kaart zet de laatste 7 dagen, deze maand, dit jaar of alles op één kaart."
+      "text": "Het tabblad Geschiedenis toont een maand in één oogopslag; tik op een dag om de route en tijdlijn te zien. Schakel je van Kalender naar Routes, dan komen alle routes van die maand samen op één blad."
     },
     {
-      "title": "Alleen op je apparaat",
-      "text": "Er is geen account en geen login. Je bewegingen worden nooit ergens naartoe gestuurd, ook niet naar ons. Je kunt ze op elk moment allemaal wissen."
+      "title": "Je bewegingen blijven op je apparaat",
+      "text": "Er is geen account en geen login. Je bewegingen worden op dit apparaat bewaard, en alleen de vorm van de lijn, de afstand, de duur en de datum van een dag die je kiest om te plaatsen gaan naar de server. De kaart en coördinaten worden niet verstuurd. De bewegingen op je apparaat kun je op elk moment allemaal wissen."
+    },
+    {
+      "title": "Deel de lijn van een dag",
+      "text": "Op het tabblad Lijnen van iedereen kies je een dag die je wilt plaatsen, plaats je die als lijn en bekijk je de dagen van anderen. Je kunt likes en reacties achterlaten en berichten in een andere taal vertaald lezen."
     }
   ],
   "shot_alt": "Het dagscherm van Dayline: een lijn die per vervoerswijze een andere kleur heeft, met de afstanden",
@@ -79,11 +83,15 @@
     },
     {
       "q": "Worden mijn bewegingen naar een server gestuurd?",
-      "a": "Nee. Er is geen account en geen login, en je bewegingen worden alleen op dit apparaat bewaard. Ze worden nooit ergens naartoe gestuurd, ook niet naar ons, en nooit gebruikt voor advertenties of statistieken. In Instellingen kun je ze op elk moment allemaal wissen."
+      "a": "Niet zolang je ze niet zelf plaatst. Er is geen account en geen login, en je bewegingen worden op dit apparaat bewaard. Plaats je een dag in Lijnen van iedereen, dan gaan alleen de vorm van de lijn, de afstand, de duur en de datum van die dag en je tekst erbij naar de server; de kaart, coördinaten en tijdstippen worden niet verstuurd. Je bewegingen worden ook niet gebruikt voor advertenties of statistieken."
+    },
+    {
+      "q": "Wat is Lijnen van iedereen?",
+      "a": "Het is de plek waar we elkaar de lijn van een dag laten zien. Kies een bijnaam en een dag die je wilt plaatsen; dan worden de vorm van de lijn, de afstand en de duur geplaatst. De kaart en coördinaten, die laten zien waar je bent geweest, worden niet geplaatst. Wat je hebt geplaatst, kun je op elk moment verwijderen."
     },
     {
       "q": "Waar zie ik eerdere dagen?",
-      "a": "Het tabblad Geschiedenis toont een maand in één oogopslag, met een klein lijntje voor elke dag dat je bewoog. Tik op een dag om de route en tijdlijn te zien. Op het tabblad Kaart zie je de laatste 7 dagen, deze maand, dit jaar of alles op één kaart."
+      "a": "Het tabblad Geschiedenis toont een maand in één oogopslag, met een klein lijntje voor elke dag dat je bewoog. Tik op een dag om de route en tijdlijn te zien. Schakel je van Kalender naar Routes, dan zie je alle routes van die maand bij elkaar op één blad."
     },
     {
       "q": "Zijn er doelen of badges?",
