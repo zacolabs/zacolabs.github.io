@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>قواعد مجتمع Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>قواعد مجتمع Dayline</h1>
+    <p class="langnav"><a href="community.ko.html">한국어</a> · <a href="community.en.html">English</a> · <a href="community.ja.html">日本語</a> · <a href="community.zh-hans.html">简体中文</a> · <a href="community.zh-hant.html">繁體中文</a> · <a href="community.es.html">Español</a> · <a href="community.fil.html">Filipino</a> · <a href="community.nl.html">Nederlands</a> · <a href="community.da.html">Dansk</a> · <a href="community.de.html">Deutsch</a> · <a href="community.ru.html">Русский</a> · <strong>العربية</strong> · <a href="community.it.html">Italiano</a> · <a href="community.id.html">Bahasa Indonesia</a> · <a href="community.pt.html">Português</a> · <a href="community.pl.html">Polski</a> · <a href="community.fr.html">Français</a> · <a href="community.vi.html">Tiếng Việt</a></p>
+    <p class="meta">تاريخ السريان: ٩ أكتوبر ٢٠٢٦</p>
+
+<p>«خطوط الجميع» هو المكان الذي نُري فيه بعضنا خط اليوم. باختيارك لقبًا ونشرك منشورًا أو تعليقًا، فإنك توافق على القواعد أدناه. لما لم يرد هنا، راجع <a href="terms.ar.html">شروط استخدام Dayline</a> و<a href="privacy.ar.html">سياسة خصوصية Dayline</a>.</p>
+
+<h2>ما الذي يُنشر</h2>
+<ul>
+    <li>يُرسل إلى الخادم: لقبك ولون صورتك الرمزية؛ وشكل خط اليوم الذي تختار نشره ومسافته ومدته وأرقام كل وسيلة تنقل وتاريخه وما تكتبه عنه؛ وكذلك تعليقاتك وإعجاباتك.</li>
+    <li>لا تُرسَل الخريطة والإحداثيات وأوقات التنقل إلى الخادم.</li>
+    <li>المنشورات والتعليقات والألقاب يراها كل من يستخدم التطبيق. لا يظهر التاريخ للآخرين إلا في المنشورات التي فُعّل فيها «إظهار التاريخ».</li>
+</ul>
+
+<h2>ما الذي لا يجوز نشره</h2>
+<ul>
+    <li>الشتائم أو الكراهية أو الكلام الذي يضايق أحدًا</li>
+    <li>الإعلانات أو الترويج أو تكرار المحتوى نفسه</li>
+    <li>المحتوى الجنسي أو العنيف</li>
+    <li>كل ما يكشف عنوانك أو بيانات الاتصال بك أو مكان سكنك، أو ما يخص شخصًا آخر من ذلك</li>
+    <li>لقب ينتحل شخصية شخص آخر</li>
+    <li>محتوى مخالف للقانون أو ينتهك حقوق الآخرين</li>
+</ul>
+
+<h2>الإبلاغ والحظر</h2>
+<p>يمكن الإبلاغ عن المنشورات والتعليقات والألقاب من قائمة النقاط الثلاث. ما تبلّغ عنه يُخفى من شاشتك فورًا ويراجعه المشغّل. يمكنك حظر المستخدمين الذين لا تريد رؤيتهم، فلا تظهر منشوراتهم وتعليقاتهم على شاشتك بعد ذلك. يمكن إلغاء الحظر من الإعدادات.</p>
+
+<h2>عند مخالفة القواعد</h2>
+<p>قد يُخفى المنشور أو التعليق عن الجميع، وقد يُحذف اللقب، وقد يُعلَّق النشر والتعليق لمدة محددة أو إلى أجل غير مسمى.</p>
+
+<h2>الترجمة</h2>
+<p>تُعرض المنشورات والتعليقات المكتوبة بلغة أخرى مترجمة آليًا عند الضغط على «عرض الترجمة». قد لا تكون الترجمة دقيقة.</p>
+
+<h2>تعديل ما يخصك وحذفه</h2>
+<ul>
+    <li>لا يمكن تعديل شيء في المنشور سوى النص. عدّله من قائمة النقاط الثلاث في شاشة المنشور.</li>
+    <li>يمكنك حذف منشوراتك وتعليقاتك في أي وقت. عند حذف منشور تُحذف معه تعليقاته والإعجابات به.</li>
+    <li>يمكن تغيير اللقب مرة كل ثلاثة أشهر.</li>
+    <li>إذا لم تستخدم التطبيق لمدة سنة، يُحذف من الخادم أيضًا لقبك ومنشوراتك وتعليقاتك. إذا أردت حذف كل شيء قبل ذلك، راسلنا على العنوان أدناه.</li>
+</ul>
+
+<div class="contact">
+    <p>للتواصل: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

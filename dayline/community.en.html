@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dayline Community Rules</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Dayline Community Rules</h1>
+    <p class="langnav"><a href="community.ko.html">한국어</a> · <strong>English</strong> · <a href="community.ja.html">日本語</a> · <a href="community.zh-hans.html">简体中文</a> · <a href="community.zh-hant.html">繁體中文</a> · <a href="community.es.html">Español</a> · <a href="community.fil.html">Filipino</a> · <a href="community.nl.html">Nederlands</a> · <a href="community.da.html">Dansk</a> · <a href="community.de.html">Deutsch</a> · <a href="community.ru.html">Русский</a> · <a href="community.ar.html">العربية</a> · <a href="community.it.html">Italiano</a> · <a href="community.id.html">Bahasa Indonesia</a> · <a href="community.pt.html">Português</a> · <a href="community.pl.html">Polski</a> · <a href="community.fr.html">Français</a> · <a href="community.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Effective date: October 9, 2026</p>
+
+<p>“Everyone's lines” is where people show one another the line of a day. By choosing a nickname and posting or commenting, you agree to the rules below. For anything not covered here, see the <a href="terms.en.html">Dayline Terms of Service</a> and the <a href="privacy.en.html">Dayline Privacy Policy</a>.</p>
+
+<h2>What is posted</h2>
+<ul>
+    <li>Sent to the server: your nickname and avatar color; the shape of the line of a day you choose to post, its distance and duration, the figures for each travel mode, its date and your caption; and your comments and likes.</li>
+    <li>The map, coordinates and times of day are not sent to the server.</li>
+    <li>Posts, comments and nicknames can be seen by anyone who uses the app. The date is shown to others only on posts with “Show the date” turned on.</li>
+</ul>
+
+<h2>What must not be posted</h2>
+<ul>
+    <li>Insults, hate, or words that harass someone</li>
+    <li>Advertising, promotion, or the same thing posted over and over</li>
+    <li>Sexual or violent content</li>
+    <li>Anything that reveals your own or someone else's address, contact details or where they live</li>
+    <li>A nickname that imitates someone else</li>
+    <li>Anything unlawful or that infringes someone else's rights</li>
+</ul>
+
+<h2>Reporting and blocking</h2>
+<p>Posts, comments and nicknames can be reported from the three-dot menu. What you report is hidden from your screen at once and is reviewed by the operator. You can block users you do not want to see; their posts and comments no longer appear on your screen. Blocks can be undone in Settings.</p>
+
+<h2>If the rules are broken</h2>
+<p>A post or comment may be hidden from everyone, a nickname may be removed, and posting and commenting may be suspended for a period or indefinitely.</p>
+
+<h2>Translation</h2>
+<p>Posts and comments written in another language are shown machine-translated when you tap “See translation”. Translations may not be accurate.</p>
+
+<h2>Editing and deleting what is yours</h2>
+<ul>
+    <li>Of a post, only the caption can be edited. Edit it from the three-dot menu on the post's own screen.</li>
+    <li>You can delete your posts and comments at any time. Deleting a post also deletes its comments and likes.</li>
+    <li>A nickname can be changed once every three months.</li>
+    <li>If you do not use the app for one year, your nickname, posts and comments on the server are deleted as well. To have everything deleted sooner, write to the address below.</li>
+</ul>
+
+<div class="contact">
+    <p>Contact: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

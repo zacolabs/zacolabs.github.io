@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quy tắc cộng đồng Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Quy tắc cộng đồng Dayline</h1>
+    <p class="langnav"><a href="community.ko.html">한국어</a> · <a href="community.en.html">English</a> · <a href="community.ja.html">日本語</a> · <a href="community.zh-hans.html">简体中文</a> · <a href="community.zh-hant.html">繁體中文</a> · <a href="community.es.html">Español</a> · <a href="community.fil.html">Filipino</a> · <a href="community.nl.html">Nederlands</a> · <a href="community.da.html">Dansk</a> · <a href="community.de.html">Deutsch</a> · <a href="community.ru.html">Русский</a> · <a href="community.ar.html">العربية</a> · <a href="community.it.html">Italiano</a> · <a href="community.id.html">Bahasa Indonesia</a> · <a href="community.pt.html">Português</a> · <a href="community.pl.html">Polski</a> · <a href="community.fr.html">Français</a> · <strong>Tiếng Việt</strong></p>
+    <p class="meta">Ngày hiệu lực: 9 tháng 10 năm 2026</p>
+
+<p>“Đường của mọi người” là nơi chúng ta cho nhau xem đường của một ngày. Khi chọn biệt danh và đăng bài hoặc bình luận, bạn đồng ý với các quy tắc dưới đây. Với những điều không nêu ở đây, xem <a href="terms.vi.html">Điều khoản sử dụng Dayline</a> và <a href="privacy.vi.html">Chính sách quyền riêng tư của Dayline</a>.</p>
+
+<h2>Những gì được đăng</h2>
+<ul>
+    <li>Những thông tin sau được gửi lên máy chủ: biệt danh và màu ảnh đại diện của bạn; hình dạng đường của ngày bạn chọn đăng, quãng đường và thời lượng, số liệu của từng phương tiện di chuyển, ngày tháng và lời bạn viết; cùng các bình luận và lượt thích của bạn.</li>
+    <li>Bản đồ, tọa độ và giờ di chuyển không được gửi lên máy chủ.</li>
+    <li>Bài đăng, bình luận và biệt danh hiển thị với bất kỳ ai dùng ứng dụng. Ngày chỉ hiển thị với người khác ở những bài đăng bật “Hiện ngày”.</li>
+</ul>
+
+<h2>Những gì không được đăng</h2>
+<ul>
+    <li>Lời lăng mạ, thù ghét hoặc quấy rối người khác</li>
+    <li>Quảng cáo, tiếp thị hoặc đăng lặp đi lặp lại cùng một nội dung</li>
+    <li>Nội dung khiêu dâm hoặc bạo lực</li>
+    <li>Bất cứ điều gì làm lộ địa chỉ, thông tin liên lạc hoặc nơi ở của bạn hay của người khác</li>
+    <li>Biệt danh giả mạo người khác</li>
+    <li>Nội dung vi phạm pháp luật hoặc xâm phạm quyền của người khác</li>
+</ul>
+
+<h2>Báo cáo và chặn</h2>
+<p>Có thể báo cáo bài đăng, bình luận và biệt danh từ menu ba chấm. Nội dung bạn báo cáo sẽ bị ẩn khỏi màn hình của bạn ngay lập tức và được người vận hành xem xét. Bạn có thể chặn những người dùng mình không muốn thấy; bài đăng và bình luận của họ sẽ không còn xuất hiện trên màn hình của bạn. Có thể bỏ chặn trong Cài đặt.</p>
+
+<h2>Nếu vi phạm quy tắc</h2>
+<p>Bài đăng hoặc bình luận có thể bị ẩn với mọi người, biệt danh có thể bị xóa, và việc đăng bài cùng bình luận có thể bị tạm ngừng trong một thời gian hoặc vô thời hạn.</p>
+
+<h2>Bản dịch</h2>
+<p>Bài đăng và bình luận viết bằng ngôn ngữ khác sẽ được hiển thị bằng bản dịch máy khi bạn nhấn “Xem bản dịch”. Bản dịch có thể không chính xác.</p>
+
+<h2>Sửa và xóa nội dung của bạn</h2>
+<ul>
+    <li>Trong một bài đăng, chỉ có thể sửa phần lời. Sửa từ menu ba chấm trên màn hình của bài đăng.</li>
+    <li>Bạn có thể xóa bài đăng và bình luận của mình bất cứ lúc nào. Khi xóa bài đăng, các bình luận và lượt thích của bài cũng bị xóa.</li>
+    <li>Biệt danh có thể đổi một lần mỗi ba tháng.</li>
+    <li>Nếu bạn không dùng ứng dụng trong một năm, biệt danh, bài đăng và bình luận của bạn trên máy chủ cũng sẽ bị xóa. Nếu muốn xóa tất cả sớm hơn, hãy gửi thư đến địa chỉ bên dưới.</li>
+</ul>
+
+<div class="contact">
+    <p>Liên hệ: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

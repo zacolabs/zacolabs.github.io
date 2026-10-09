@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Community-Regeln von Dayline</title>
+<script>
+    (function () {
+        var q = new URLSearchParams(location.search);
+        var light = (q.get("theme") || "").toLowerCase() === "light";
+        if (light) document.documentElement.setAttribute("data-theme", "light");
+    })();
+</script>
+<style>
+/*
+  Waky 의 같은 페이지(zacolabs-backend src/content/waky/legal)와 같은 모양이다.
+
+  밝기는 앱이 `?theme=` 로 알려 준다. `<html data-theme="light">` 로 받는다. 값이 없으면 다크다.
+
+  `prefers-color-scheme` 을 쓰지 않는 이유는 그것이 **기기 설정**을 보기 때문이다.
+  앱 안에서 라이트를 골라 두고 기기가 다크면 이 페이지만 다크로 열린다.
+*/
+:root {
+    color-scheme: dark;
+    --bg: #000000;
+    --fg: #ffffff;
+    --body: #f2f2f7;
+    --muted: #8e8e93;
+    --sub: #c7c7cc;
+    --line: #2c2c2e;
+    --card: #1c1c1e;
+    --link: #0a84ff;
+}
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f2f2f7;
+    --fg: #1c1c1e;
+    --body: #3a3a3c;
+    --muted: #6c6c70;
+    --sub: #6c6c70;
+    --line: #d8d8dc;
+    --card: #ffffff;
+    --link: #007aff;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px 16px 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    line-height: 1.75;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+}
+.container { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 24px; margin: 0 0 4px; color: var(--fg); }
+h2 { font-size: 18px; margin: 32px 0 8px; color: var(--fg); }
+p, li { font-size: 15px; color: var(--body); }
+ul, ol { padding-left: 20px; }
+ol li { margin-bottom: 8px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+.langnav { font-size: 13px; color: var(--muted); margin: 0 0 24px; line-height: 2; }
+.langnav strong { color: var(--fg); font-weight: 600; }
+.contact { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--sub); }
+a { color: var(--link); text-decoration: none; }
+/* 아랍어는 오른쪽에서 왼쪽으로 읽는다 — 목록의 들여쓰기도 반대쪽에 둔다. */
+[dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 20px; }
+
+/* 오픈소스 라이선스 */
+.lib { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.lib:last-child { border-bottom: none; }
+.lib .nm { font-size: 15px; font-weight: 600; color: var(--fg); }
+.lib .cp { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.lib .lc { font-size: 13px; color: var(--link); margin-top: 2px; }
+.notice { white-space: pre-wrap; font-size: 12.5px; color: var(--muted); background: var(--card); border-radius: 10px; padding: 14px; margin-top: 12px; }
+/* 라이선스 원문은 영어라 아랍어 페이지에서도 왼쪽부터 쓴다 */
+[dir="rtl"] .notice { direction: ltr; text-align: left; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Community-Regeln von Dayline</h1>
+    <p class="langnav"><a href="community.ko.html">한국어</a> · <a href="community.en.html">English</a> · <a href="community.ja.html">日本語</a> · <a href="community.zh-hans.html">简体中文</a> · <a href="community.zh-hant.html">繁體中文</a> · <a href="community.es.html">Español</a> · <a href="community.fil.html">Filipino</a> · <a href="community.nl.html">Nederlands</a> · <a href="community.da.html">Dansk</a> · <strong>Deutsch</strong> · <a href="community.ru.html">Русский</a> · <a href="community.ar.html">العربية</a> · <a href="community.it.html">Italiano</a> · <a href="community.id.html">Bahasa Indonesia</a> · <a href="community.pt.html">Português</a> · <a href="community.pl.html">Polski</a> · <a href="community.fr.html">Français</a> · <a href="community.vi.html">Tiếng Việt</a></p>
+    <p class="meta">Gültig ab: 9. Oktober 2026</p>
+
+<p>„Linien von allen“ ist der Ort, an dem wir einander die Linie eines Tages zeigen. Wenn du einen Spitznamen wählst und etwas postest oder kommentierst, stimmst du den folgenden Regeln zu. Für alles, was hier nicht steht, siehe <a href="terms.de.html">Nutzungsbedingungen von Dayline</a> und <a href="privacy.de.html">Datenschutzerklärung von Dayline</a>.</p>
+
+<h2>Was gepostet wird</h2>
+<ul>
+    <li>An den Server gesendet werden: dein Spitzname und deine Avatarfarbe; die Form der Linie des Tages, den du postest, seine Strecke und Dauer, die Werte je Fortbewegungsart, sein Datum und dein Text dazu; außerdem deine Kommentare und Likes.</li>
+    <li>Karte, Koordinaten und Uhrzeiten werden nicht an den Server gesendet.</li>
+    <li>Beiträge, Kommentare und Spitznamen sind für alle sichtbar, die die App nutzen. Das Datum wird anderen nur bei Beiträgen angezeigt, bei denen „Datum anzeigen“ eingeschaltet ist.</li>
+</ul>
+
+<h2>Was nicht gepostet werden darf</h2>
+<ul>
+    <li>Beleidigungen, Hass oder Worte, die jemanden belästigen</li>
+    <li>Werbung, Promotion oder immer wieder derselbe Inhalt</li>
+    <li>Sexuelle oder gewalttätige Inhalte</li>
+    <li>Alles, woraus deine eigene oder eine fremde Adresse, Kontaktdaten oder der Wohnort hervorgehen</li>
+    <li>Ein Spitzname, der jemand anderen nachahmt</li>
+    <li>Rechtswidrige Inhalte oder Inhalte, die die Rechte anderer verletzen</li>
+</ul>
+
+<h2>Melden und Blockieren</h2>
+<p>Beiträge, Kommentare und Spitznamen können über das Drei-Punkte-Menü gemeldet werden. Was du meldest, wird sofort von deinem Bildschirm ausgeblendet und vom Betreiber geprüft. Nutzer, die du nicht sehen möchtest, kannst du blockieren; ihre Beiträge und Kommentare erscheinen dann nicht mehr auf deinem Bildschirm. Blockierungen lassen sich in den Einstellungen aufheben.</p>
+
+<h2>Bei Verstößen gegen die Regeln</h2>
+<p>Ein Beitrag oder Kommentar kann für alle ausgeblendet, ein Spitzname entfernt und das Posten und Kommentieren für eine bestimmte Zeit oder unbefristet gesperrt werden.</p>
+
+<h2>Übersetzung</h2>
+<p>Beiträge und Kommentare in einer anderen Sprache werden maschinell übersetzt angezeigt, wenn du auf „Übersetzung anzeigen“ tippst. Übersetzungen können ungenau sein.</p>
+
+<h2>Eigenes bearbeiten und löschen</h2>
+<ul>
+    <li>An einem Beitrag lässt sich nur der Text bearbeiten. Das geht über das Drei-Punkte-Menü auf dem Bildschirm des Beitrags.</li>
+    <li>Du kannst deine Beiträge und Kommentare jederzeit löschen. Mit einem Beitrag werden auch seine Kommentare und Likes gelöscht.</li>
+    <li>Der Spitzname kann einmal alle drei Monate geändert werden.</li>
+    <li>Wenn du die App ein Jahr lang nicht nutzt, werden auch dein Spitzname, deine Beiträge und deine Kommentare vom Server gelöscht. Wenn du alles früher löschen lassen möchtest, schreib an die Adresse unten.</li>
+</ul>
+
+<div class="contact">
+    <p>Kontakt: Zaco Labs (<a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a>)</p>
+</div>
+</div>
+<script>
+    // 언어를 바꿔도 밝기가 따라가게 한다
+    if (document.documentElement.getAttribute("data-theme") === "light") {
+        document.querySelectorAll(".langnav a").forEach(function (a) {
+            a.setAttribute("href", a.getAttribute("href") + "?theme=light");
+        });
+    }
+</script>
+</body>
+</html>

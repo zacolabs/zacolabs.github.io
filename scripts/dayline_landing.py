@@ -483,7 +483,7 @@ def page(d, langs, css, legal):
 
 <footer class="site">
     <div class="wrap">
-        <div class="row"><a href="/dayline/privacy.{code}.html">{e(legal["privacy"])}</a> · <a href="/dayline/terms.{code}.html">{e(legal["terms"])}</a></div>
+        <div class="row"><a href="/dayline/privacy.{code}.html">{e(legal["privacy"])}</a> · <a href="/dayline/terms.{code}.html">{e(legal["terms"])}</a> · <a href="/dayline/community.{code}.html">{e(legal["community"])}</a></div>
         <div class="row"><a href="/">{e(d["about_link"])}</a> · <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></div>
         <div class="row">© <span id="year">2026</span> Zaco Labs. {e(d["rights"])}</div>
         {langnav(code, langs)}
@@ -593,6 +593,7 @@ def llms_links():
     return f"""- [Dayline]({url(DEFAULT)}): {d["app_description"]} Free on iOS and Android.
 - [Dayline privacy policy]({SITE}/dayline/privacy.en.html): what Dayline collects and what never leaves the device
 - [Dayline terms of service]({SITE}/dayline/terms.en.html)
+- [Dayline community rules]({SITE}/dayline/community.en.html): what may be posted to the feed of days, reporting and blocking
 - Dayline in other languages: {others}"""
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dayline 이용 약관 · 개인정보 처리방침 · 오픈소스 라이선스 페이지 생성기. build.py 가 같이 돌린다.
+"""Dayline 이용 약관 · 개인정보 처리방침 · 커뮤니티 규칙 · 오픈소스 라이선스 페이지 생성기. build.py 가 같이 돌린다.
 
     python3 scripts/dayline_legal.py     (이 페이지들만 다시 만들 때)
 
@@ -36,7 +36,7 @@ DEFAULT = "en"
 RTL = {"ar"}
 
 # 라이선스는 Waky 처럼 본문 머리(h1) 없이 목록부터 시작한다.
-DOCS = ["privacy", "terms", "licenses"]
+DOCS = ["privacy", "terms", "community", "licenses"]
 NO_HEADING = {"licenses"}
 # 언어마다 본문을 따로 두지 않고 틀 하나에 strings.json 의 문구를 채우는 문서
 TEMPLATED = {"licenses"}
