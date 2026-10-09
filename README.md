@@ -15,6 +15,7 @@
 - 서치 콘솔 확인 태그는 맨 앞(영어) 페이지에만 있다
 - `dayline/` — Dayline 의 이용 약관 · 개인정보 처리방침 · 커뮤니티 규칙 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
   - 커뮤니티 규칙(`community`)은 피드 "모두의 선"에 올려도 되는 것과 안 되는 것, 신고 · 차단, 고치기 · 지우기를 적은 글이다. 앱이 닉네임을 정하는 화면의 "커뮤니티 규칙 › 보기"로 이 주소(`/dayline/community.html?lang=…`)를 열고, 랜딩 아래쪽에서도 건다 (2026-10-09 에 더했다). 약관 · 방침과 같은 방식으로 언어마다 본문을 둔다
+  - `scripts/dayline/drafts/` 는 아직 내지 않은 개정 초안이다. 빌드가 읽지 않는다. 지금 있는 것은 피드("모두의 선")를 담은 이용 약관 · 개인정보 처리방침의 한국어 초안(2026-10-09)으로, 시행일 · 이용 연령 · 프로필 전체 삭제 방법이 정해지지 않았고 다른 17개 언어로 옮기지 않았다. 확정하면 `scripts/dayline/<문서>.<언어>.html` 로 옮기고 초안은 지운다
   - 약관 · 개인정보 처리방침의 본문은 `scripts/dayline/<문서>.<언어>.html`, 모양은 `scripts/dayline/style.css`. **이 본문이 기준이다** — 앱은 글을 따로 싣지 않고 이 주소를 연다. Waky 의 같은 페이지(`zacolabs-backend` `src/content/waky/legal`)에서 따와 Dayline 에 맞게 고친 것이라, 구조와 모양은 그쪽과 맞춘다
   - 라이선스는 언어마다 다른 글이 몇 줄뿐이라 본문 하나(`scripts/dayline/licenses.html`)의 `{{…}}` 자리에 `scripts/dayline/strings.json` 의 문구를 채운다. 문서 제목도 `strings.json` 에 있다
   - 주소도 Waky 와 같다: `/dayline/privacy.html?lang=ko&theme=light` (`terms` · `licenses` 도 같다). `?lang=` → 브라우저 언어 → 영어 순으로 언어를 정하고, `theme` 이 없으면 다크다. 언어를 고정한 주소는 `/dayline/privacy.ko.html` · `privacy.zh-hans.html` 처럼 언어 태그를 소문자로 쓴다
