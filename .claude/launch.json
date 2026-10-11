@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-I", "-c", "import functools, http.server; http.server.ThreadingHTTPServer(('127.0.0.1', 4173), functools.partial(http.server.SimpleHTTPRequestHandler, directory='/private/tmp/claude-501/-Users-kwonho-Documents-GitHub-zacolabs-github-io/b3d6f901-5479-4de1-9f7a-1da08b89bfe9/scratchpad/site')).serve_forever()"],
+      "port": 4173
+    }
+  ]
+}
