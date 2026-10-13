@@ -103,6 +103,8 @@ VERIFY = [
 ]
 # Bing 웹마스터 도구 확인 태그. waky-landing 과 같은 계정의 것이다 (scripts/landing/build.py VERIFY_BING).
 VERIFY_BING = "CCC1C7BAFF2250CE75A2C3318980D759"
+# 네이버 서치어드바이저 확인 태그
+VERIFY_NAVER = "00b23ca6a2e49b33d1476eaaf9b07be6dbdbad17"
 
 # 구조화 데이터의 조직 · 사이트 @id. Dayline 랜딩(dayline_landing.py)이 같은 @id 로 가리킨다.
 ORG_ID = f"{SITE}/#organization"
@@ -310,6 +312,7 @@ def page(langs, code, css):
     if code == DEFAULT:
         verify = "".join(f'<meta name="google-site-verification" content="{v}" />\n' for v in VERIFY)
         verify += f'<meta name="msvalidate.01" content="{VERIFY_BING}" />\n'
+        verify += f'<meta name="naver-site-verification" content="{VERIFY_NAVER}" />\n'
     about = "<br />\n        ".join(e(line) for line in t["about"])
     style = css.replace("$FONT", t["font"])
     return f'''<!DOCTYPE html>
