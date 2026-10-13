@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zaco Labs — Et softwarestudie, der laver små, men solide produkter</title>
 <meta name="description" content="Zaco Labs er et lille softwarestudie. Vi laver Waky, en vækkeur-app med missioner; Dayline, en automatisk rutelog; og DUIRE, en tjeneste til lukkede test på Google Play." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0a0a" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Zaco Labs" />
@@ -42,43 +43,92 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zaco Labs",
-  "url": "https://zacolabs.github.io/da/",
-  "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-  "email": "zaco.labs@gmail.com",
-  "description": "Vi laver software, der fjerner små irritationsmomenter i hverdagen og på arbejdet.",
-  "inLanguage": "da",
-  "makesOffer": [
+  "@graph": [
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Waky",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android, iOS",
-        "description": "En alarm, der slukker efter en mission, alarmlyde du selv indspiller, og morgenvaner.",
-        "url": "https://zacolabs.github.io/waky-landing/introduce/da/"
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "alternateName": [
+        "ZacoLabs",
+        "자코 랩스"
+      ],
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com",
+      "description": "Vi laver software, der fjerner små irritationsmomenter i hverdagen og på arbejdet.",
+      "sameAs": [
+        "https://www.youtube.com/@zacolabs",
+        "https://play.google.com/store/apps/dev?id=5530769646250897027",
+        "https://github.com/zacolabs"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Waky",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Android, iOS",
+            "description": "En alarm, der slukker efter en mission, alarmlyde du selv indspiller, og morgenvaner.",
+            "url": "https://zacolabs.github.io/waky-landing/introduce/da/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Dayline",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Android, iOS",
+            "description": "Hvor du har været, og hvor langt du er kommet, registreres automatisk hver dag – uden startknap. Dine bevægelser bliver på din enhed.",
+            "url": "https://zacolabs.github.io/dayline/da/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "DUIRE",
+            "description": "Tjeneste til lukkede test på Google Play",
+            "url": "https://www.duire.kr/en"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "alternateName": [
+        "ZacoLabs",
+        "자코 랩스"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Dayline",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android, iOS",
-        "description": "Hvor du har været, og hvor langt du er kommet, registreres automatisk hver dag – uden startknap. Dine bevægelser bliver på din enhed.",
-        "url": "https://zacolabs.github.io/dayline/da/"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "DUIRE",
-        "description": "Tjeneste til lukkede test på Google Play",
-        "url": "https://www.duire.kr/en"
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/da/#webpage",
+      "url": "https://zacolabs.github.io/da/",
+      "name": "Zaco Labs — Et softwarestudie, der laver små, men solide produkter",
+      "description": "Zaco Labs er et lille softwarestudie. Vi laver Waky, en vækkeur-app med missioner; Dayline, en automatisk rutelog; og DUIRE, en tjeneste til lukkede test på Google Play.",
+      "inLanguage": "da",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/og-image-1200x630.png",
+        "width": 1200,
+        "height": 630
       }
     }
   ]

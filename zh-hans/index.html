@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zaco Labs — 打造小而扎实产品的软件工作室</title>
 <meta name="description" content="Zaco Labs 是一家为日常生活和工作消除小烦恼的软件工作室。我们开发任务闹钟应用 Waky、自动出行记录应用 Dayline，以及 Google Play 封闭测试代办服务 DUIRE。" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0a0a" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Zaco Labs" />
@@ -42,43 +43,92 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zaco Labs",
-  "url": "https://zacolabs.github.io/zh-hans/",
-  "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-  "email": "zaco.labs@gmail.com",
-  "description": "我们开发为日常生活和工作消除小烦恼的软件。",
-  "inLanguage": "zh-Hans",
-  "makesOffer": [
+  "@graph": [
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Waky",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android, iOS",
-        "description": "完成任务才能关闭的闹钟、自己录制的铃声，还有晨间习惯。",
-        "url": "https://zacolabs.github.io/waky-landing/introduce/zh-hans/"
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "alternateName": [
+        "ZacoLabs",
+        "자코 랩스"
+      ],
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com",
+      "description": "我们开发为日常生活和工作消除小烦恼的软件。",
+      "sameAs": [
+        "https://www.youtube.com/@zacolabs",
+        "https://play.google.com/store/apps/dev?id=5530769646250897027",
+        "https://github.com/zacolabs"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Waky",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Android, iOS",
+            "description": "完成任务才能关闭的闹钟、自己录制的铃声，还有晨间习惯。",
+            "url": "https://zacolabs.github.io/waky-landing/introduce/zh-hans/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Dayline",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Android, iOS",
+            "description": "去了哪里、走了多远，无需按开始键，每天自动记录。移动记录只保存在你的设备上。",
+            "url": "https://zacolabs.github.io/dayline/zh-hans/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "DUIRE",
+            "description": "Google Play 封闭测试代办",
+            "url": "https://www.duire.kr/en"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "alternateName": [
+        "ZacoLabs",
+        "자코 랩스"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Dayline",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android, iOS",
-        "description": "去了哪里、走了多远，无需按开始键，每天自动记录。移动记录只保存在你的设备上。",
-        "url": "https://zacolabs.github.io/dayline/zh-hans/"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "DUIRE",
-        "description": "Google Play 封闭测试代办",
-        "url": "https://www.duire.kr/en"
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/zh-hans/#webpage",
+      "url": "https://zacolabs.github.io/zh-hans/",
+      "name": "Zaco Labs — 打造小而扎实产品的软件工作室",
+      "description": "Zaco Labs 是一家为日常生活和工作消除小烦恼的软件工作室。我们开发任务闹钟应用 Waky、自动出行记录应用 Dayline，以及 Google Play 封闭测试代办服务 DUIRE。",
+      "inLanguage": "zh-Hans",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/og-image-1200x630.png",
+        "width": 1200,
+        "height": 630
       }
     }
   ]

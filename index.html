@@ -6,8 +6,10 @@
 <meta name="google-site-verification" content="3JNaFd6fvPNBA7NMsjDxFkAvM1aAESN3FrJCD46fIfc" />
 <meta name="google-site-verification" content="j4UymJXi-PpVcq8t-553W-iBpZxQchNTUFjvLdqMrXU" />
 <meta name="google-site-verification" content="rAAo91osYvOPP0Yz3pm0CsJnhYeOqQEqn37xbCX3l0Q" />
+<meta name="msvalidate.01" content="CCC1C7BAFF2250CE75A2C3318980D759" />
 <title>Zaco Labs — A software studio crafting small but solid products</title>
 <meta name="description" content="Zaco Labs is a small software studio. We make Waky, a mission alarm app; Dayline, an automatic travel log; and DUIRE, a Google Play closed testing service." />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0a0a" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Zaco Labs" />
@@ -64,43 +66,92 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zaco Labs",
-  "url": "https://zacolabs.github.io/",
-  "logo": "https://zacolabs.github.io/zacolabs-assets/logo.png",
-  "email": "zaco.labs@gmail.com",
-  "description": "We build software that takes small frictions out of daily life and work.",
-  "inLanguage": "en",
-  "makesOffer": [
+  "@graph": [
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Waky",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android, iOS",
-        "description": "An alarm you turn off by solving a mission, alarm sounds you record yourself, and morning habits.",
-        "url": "https://zacolabs.github.io/waky-landing/introduce/en/"
+      "@type": "Organization",
+      "@id": "https://zacolabs.github.io/#organization",
+      "name": "Zaco Labs",
+      "alternateName": [
+        "ZacoLabs",
+        "자코 랩스"
+      ],
+      "url": "https://zacolabs.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/logo.png"
+      },
+      "email": "zaco.labs@gmail.com",
+      "description": "We build software that takes small frictions out of daily life and work.",
+      "sameAs": [
+        "https://www.youtube.com/@zacolabs",
+        "https://play.google.com/store/apps/dev?id=5530769646250897027",
+        "https://github.com/zacolabs"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Waky",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Android, iOS",
+            "description": "An alarm you turn off by solving a mission, alarm sounds you record yourself, and morning habits.",
+            "url": "https://zacolabs.github.io/waky-landing/introduce/en/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Dayline",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Android, iOS",
+            "description": "Where you went and how far is recorded automatically every day, with no start button. Your movement record stays on your device.",
+            "url": "https://zacolabs.github.io/dayline/en/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "DUIRE",
+            "description": "Google Play closed testing service",
+            "url": "https://www.duire.kr/en"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zacolabs.github.io/#website",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs",
+      "alternateName": [
+        "ZacoLabs",
+        "자코 랩스"
+      ],
+      "publisher": {
+        "@id": "https://zacolabs.github.io/#organization"
       }
     },
     {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Dayline",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android, iOS",
-        "description": "Where you went and how far is recorded automatically every day, with no start button. Your movement record stays on your device.",
-        "url": "https://zacolabs.github.io/dayline/en/"
-      }
-    },
-    {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "DUIRE",
-        "description": "Google Play closed testing service",
-        "url": "https://www.duire.kr/en"
+      "@type": "WebPage",
+      "@id": "https://zacolabs.github.io/#webpage",
+      "url": "https://zacolabs.github.io/",
+      "name": "Zaco Labs — A software studio crafting small but solid products",
+      "description": "Zaco Labs is a small software studio. We make Waky, a mission alarm app; Dayline, an automatic travel log; and DUIRE, a Google Play closed testing service.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://zacolabs.github.io/#website"
+      },
+      "about": {
+        "@id": "https://zacolabs.github.io/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://zacolabs.github.io/zacolabs-assets/og-image-1200x630.png",
+        "width": 1200,
+        "height": 630
       }
     }
   ]

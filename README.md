@@ -12,13 +12,15 @@
   - Waky 자세히 보기는 그 언어 랜딩으로 건다. 두이레는 한국어 · 영어뿐이라 한국어가 아니면 `duire.kr/en` 으로 보낸다
   - Dayline 자세히 보기는 그 언어의 랜딩(`/dayline/<언어>/`)으로 걸고, 그 언어의 랜딩이 아직 없으면 영어로 건다
   - Dayline 카드의 스토어 버튼은 랜딩과 같은 주소를 쓴다 (`dayline_landing.py` 의 `PLAY` · `APPLE_ID`). 주소가 있는 스토어의 버튼만 나온다
-- 서치 콘솔 확인 태그는 맨 앞(영어) 페이지에만 있다
+- 서치 콘솔 · Bing 웹마스터 도구 확인 태그는 맨 앞(영어) 페이지에만 있다. Bing 의 것은 waky-landing 과 같은 계정의 태그다
+- 회사 소개의 구조화 데이터는 조직 · 사이트 · 페이지를 `@id` 로 이은 그래프 하나다 (`build.py` `json_ld`, Dayline 랜딩과 같은 `@id`). 구글은 검색결과의 사이트 이름을 도메인 맨 앞 페이지의 `WebSite` 에서만 읽는다 — 없으면 "GitHub" 로 나온다. 조직의 `sameAs`(유튜브 채널 · Play 개발자 페이지 · GitHub 조직)는 `build.py` 의 `SAME_AS`
 - `dayline/` — Dayline 의 이용 약관 · 개인정보 처리방침 · 커뮤니티 규칙 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
   - 커뮤니티 규칙(`community`)은 피드 "모두의 선"에 올려도 되는 것과 안 되는 것, 신고 · 차단, 고치기 · 지우기를 적은 글이다. 앱이 닉네임을 정하는 화면의 "커뮤니티 규칙 › 보기"로 이 주소(`/dayline/community.html?lang=…`)를 열고, 랜딩 아래쪽에서도 건다 (2026-10-09 에 더했다). 약관 · 방침과 같은 방식으로 언어마다 본문을 둔다
   - 약관 · 개인정보 처리방침의 본문은 `scripts/dayline/<문서>.<언어>.html`, 모양은 `scripts/dayline/style.css`. **이 본문이 기준이다** — 앱은 글을 따로 싣지 않고 이 주소를 연다. Waky 의 같은 페이지(`zacolabs-backend` `src/content/waky/legal`)에서 따와 Dayline 에 맞게 고친 것이라, 구조와 모양은 그쪽과 맞춘다
   - 라이선스는 언어마다 다른 글이 몇 줄뿐이라 본문 하나(`scripts/dayline/licenses.html`)의 `{{…}}` 자리에 `scripts/dayline/strings.json` 의 문구를 채운다. 문서 제목도 `strings.json` 에 있다
   - 주소도 Waky 와 같다: `/dayline/privacy.html?lang=ko&theme=light` (`terms` · `licenses` 도 같다). `?lang=` → 브라우저 언어 → 영어 순으로 언어를 정하고, `theme` 이 없으면 다크다. 언어를 고정한 주소는 `/dayline/privacy.ko.html` · `privacy.zh-hans.html` 처럼 언어 태그를 소문자로 쓴다
   - Waky 는 서버가 `?lang=` · `?theme=` 을 읽지만 여기는 정적 호스팅이라 페이지 안의 스크립트가 읽는다
+  - 검색엔진에는 언어 고정 주소를 대표 주소(canonical)로 알리고 18개 언어를 hreflang 으로 잇는다. 언어 자동 주소(`privacy.html`)는 영어 고정 주소와 본문이 같아 `privacy.en.html` 을 대표 주소로 알린다
   - 언어는 Dayline 앱과 같은 18개. 앱은 `?lang=` 에 앱 언어 태그(`zh-Hans`, `fil` …)를 그대로 싣는다. 한국어가 원문이고 나머지는 번역이다 — 글을 고치면 한국어부터 고치고 18개를 함께 맞춘다. 언어를 늘릴 때는 `dayline_legal.py` 의 `LANGS`, `strings.json`, 본문 파일을 더한다
   - 아랍어는 오른쪽에서 왼쪽으로 쓴다 (`dayline_legal.py` `RTL`)
   - `zacolabs` 조직에 `dayline` 이라는 이름의 저장소로 Pages 를 켜면 이 주소와 겹친다

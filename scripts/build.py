@@ -95,11 +95,26 @@ DUIRE_EN = "https://www.duire.kr/en"  # 두이레는 한국어 · 영어뿐이�
 BRIDGE_KO = "https://bridge.duire.kr/"
 BRIDGE_EN = "https://bridge.duire.kr/en"
 
-# 서치 콘솔 확인 태그. 도메인 맨 앞(한국어) 페이지에만 둔다.
+# 서치 콘솔 확인 태그. 도메인 맨 앞(영어) 페이지에만 둔다.
 VERIFY = [
     "3JNaFd6fvPNBA7NMsjDxFkAvM1aAESN3FrJCD46fIfc",
     "j4UymJXi-PpVcq8t-553W-iBpZxQchNTUFjvLdqMrXU",
     "rAAo91osYvOPP0Yz3pm0CsJnhYeOqQEqn37xbCX3l0Q",
+]
+# Bing 웹마스터 도구 확인 태그. waky-landing 과 같은 계정의 것이다 (scripts/landing/build.py VERIFY_BING).
+VERIFY_BING = "CCC1C7BAFF2250CE75A2C3318980D759"
+
+# 구조화 데이터의 조직 · 사이트 @id. Dayline 랜딩(dayline_landing.py)이 같은 @id 로 가리킨다.
+ORG_ID = f"{SITE}/#organization"
+SITE_ID = f"{SITE}/#website"
+# 검색결과의 사이트 이름. 구글은 도메인 맨 앞 페이지의 WebSite 에서만 읽는다 — 없으면 "GitHub" 로 나온다.
+SITE_NAME = "Zaco Labs"
+SITE_ALT_NAMES = ["ZacoLabs", "자코 랩스"]
+# 같은 조직의 다른 곳 프로필 (유튜브 채널 · Play 개발자 페이지 · GitHub 조직)
+SAME_AS = [
+    "https://www.youtube.com/@zacolabs",
+    "https://play.google.com/store/apps/dev?id=5530769646250897027",
+    "https://github.com/zacolabs",
 ]
 
 PLAY_PATH = "M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.208 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.041 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"
@@ -185,15 +200,20 @@ def lang_menu(langs, code):
 
 
 def json_ld(t, code):
-    data = {
-        "@context": "https://schema.org",
+    """조직 · 사이트 · 페이지를 @id 로 이은 그래프 하나. Dayline 랜딩과 같은 짜임이다."""
+    org = {
         "@type": "Organization",
-        "name": "Zaco Labs",
-        "url": url(code),
-        "logo": f"{SITE}/zacolabs-assets/logo.png",
+        "@id": ORG_ID,
+        "name": SITE_NAME,
+        "alternateName": SITE_ALT_NAMES,
+        "url": f"{SITE}/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": f"{SITE}/zacolabs-assets/logo.png",
+        },
         "email": "zaco.labs@gmail.com",
         "description": t["org_description"],
-        "inLanguage": t["html_lang"],
+        "sameAs": SAME_AS,
         "makesOffer": [{
             "@type": "Offer",
             "itemOffered": {
@@ -224,6 +244,31 @@ def json_ld(t, code):
             },
         }],
     }
+    site = {
+        "@type": "WebSite",
+        "@id": SITE_ID,
+        "url": f"{SITE}/",
+        "name": SITE_NAME,
+        "alternateName": SITE_ALT_NAMES,
+        "publisher": {"@id": ORG_ID},
+    }
+    webpage = {
+        "@type": "WebPage",
+        "@id": f"{url(code)}#webpage",
+        "url": url(code),
+        "name": f"{SITE_NAME} — {t['tagline']}",
+        "description": t["description"],
+        "inLanguage": t["html_lang"],
+        "isPartOf": {"@id": SITE_ID},
+        "about": {"@id": ORG_ID},
+        "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": OG_IMAGE,
+            "width": 1200,
+            "height": 630,
+        },
+    }
+    data = {"@context": "https://schema.org", "@graph": [org, site, webpage]}
     # </script> 로 끊기지 않게
     return json.dumps(data, ensure_ascii=False, indent=2).replace("</", "<\\/")
 
@@ -261,7 +306,10 @@ def head_script(code):
 def page(langs, code, css):
     t = langs[code]
     title = f"Zaco Labs — {t['tagline']}"
-    verify = "".join(f'<meta name="google-site-verification" content="{v}" />\n' for v in VERIFY) if code == DEFAULT else ""
+    verify = ""
+    if code == DEFAULT:
+        verify = "".join(f'<meta name="google-site-verification" content="{v}" />\n' for v in VERIFY)
+        verify += f'<meta name="msvalidate.01" content="{VERIFY_BING}" />\n'
     about = "<br />\n        ".join(e(line) for line in t["about"])
     style = css.replace("$FONT", t["font"])
     return f'''<!DOCTYPE html>
@@ -271,9 +319,10 @@ def page(langs, code, css):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {verify}<title>{e(title)}</title>
 <meta name="description" content="{e(t["description"])}" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0a0a" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Zaco Labs" />
+<meta property="og:site_name" content="{SITE_NAME}" />
 <meta property="og:locale" content="{t["og_locale"]}" />
 <meta property="og:title" content="{e(title)}" />
 <meta property="og:description" content="{e(t["og_description"])}" />

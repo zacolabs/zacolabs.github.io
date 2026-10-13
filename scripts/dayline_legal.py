@@ -22,6 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
 SRC = os.path.join(HERE, "dayline")
 OUT = os.path.join(ROOT, "dayline")
+BASE = "https://zacolabs.github.io/dayline"
 
 # 언어 순서 — 언어 줄이 이 순서를 따른다. Dayline 앱이 내는 언어와 같고(dayline-android AppLanguage,
 # dayline-ios AppLanguage), 앱은 `?lang=` 에 이 태그를 그대로 싣는다. 파일 이름에는 소문자로 쓴다 (privacy.zh-hans.html).
@@ -52,6 +53,19 @@ def langnav(doc, lang):
         for tag, label in LANGS
     ]
     return f'    <p class="langnav">{" · ".join(items)}</p>'
+
+
+def url(doc, tag):
+    return f"{BASE}/{doc}.{slug(tag)}.html"
+
+
+def seo_links(doc, lang):
+    """대표 주소(canonical)와 언어별 주소(hreflang). 언어 자동 주소(<문서>.html)는 영어 고정 주소와 본문이 같아
+    그쪽을 대표 주소로 알린다 — `?lang=` · `?theme=` 이 붙은 주소도 같은 글 하나로 묶인다."""
+    rows = [f'<link rel="canonical" href="{url(doc, lang)}" />']
+    rows += [f'<link rel="alternate" hreflang="{tag}" href="{url(doc, tag)}" />' for tag, _ in LANGS]
+    rows.append(f'<link rel="alternate" hreflang="x-default" href="{url(doc, DEFAULT)}" />')
+    return "\n".join(rows)
 
 
 def head_script(doc, auto):
@@ -117,6 +131,7 @@ def page(doc, lang, css, strings, auto=False):
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{html.escape(title)}</title>
+{seo_links(doc, lang)}
 {head_script(doc, auto)}
 <style>
 {css}</style>
