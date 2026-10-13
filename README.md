@@ -32,6 +32,7 @@
   - **문구 파일이 있는 언어만 만든다** (지금은 앱과 같은 18개 언어 모두). 한국어가 원문이고 나머지는 번역이다 — 앱의 말(탭 · 이동수단 · 권한 이름)은 스토어 등록정보(`listing.md`)와 앱의 문자열을 따른다. 언어를 더할 때는 `<언어>.json` 을 두고 `make_assets.py` 를 돌린 뒤 빌드한다 — hreflang · 언어 메뉴 · 사이트맵 · 진입 주소가 따라 늘어난다. 언어 코드는 회사 소개와 같다 (`ko` · `ja` · `zh-hans` …)
   - `/dayline/` 로 온 사람의 언어: ① `?lang=`(앱 언어 태그 `zh-Hans` · `pt-BR`, 옛 코드 `kr` · `jp` · `in` · `tl` 도 받는다) ② 언어 메뉴로 고른 언어(`localStorage` 의 `zacolabs-lang`, 회사 소개와 같이 쓴다) ③ 브라우저 선호 언어 목록 ④ 영어
   - 검색 · 공유 · AI 검색용 표기: 제목 · 설명 · canonical · hreflang · OG(언어별 그림, `og:locale:alternate`) · 트위터 카드 · `robots`(큰 그림 미리보기 허용) · 아이폰 사파리의 앱 배너(`apple-itunes-app`). 구조화 데이터는 조직 · 사이트 · 페이지 · 경로 · 앱 · FAQ 를 `@id` 로 이은 그래프 하나다. 별점 · 리뷰는 스토어에 생기기 전이라 넣지 않는다 — 없는 값을 지어 넣지 않는다
+  - `dayline/sitemap.xml` 은 서치 콘솔 · Bing 에 `/dayline/` 을 사이트로 따로 올렸을 때 내는 사이트맵이다 (그런 사이트에는 그 주소 아래의 사이트맵만 낼 수 있다). 도메인 맨 앞의 `sitemap.xml` 에도 같은 주소가 실린다. Bing 은 그 사이트의 소유를 이 페이지들의 `msvalidate.01` 태그로 확인한다
   - `/dayline/` 진입 주소는 스크립트를 돌리지 않는 로봇도 읽게 영어 한 줄 소개와 언어 목록을 싣고, 영어 랜딩을 대표 주소(canonical)로 알린다
   - 스토어 버튼: Play 는 패키지 이름(`com.zacolabs.dayline`)으로 주소를 만든다. App Store 는 번들 ID 로는 주소를 만들 수 없어, App Store Connect 의 Apple ID(앱 정보 → 일반 정보의 숫자)를 `dayline_landing.py` 의 `APPLE_ID` 에 둔다 — `None` 이면 App Store 버튼이 링크 없이 "출시 예정"으로 나온다
   - 그림(`dayline/assets/illustration/hero.webp` · `step-1~3.webp`)은 Waky 랜딩과 같은 화풍의 먹선 그림이다. ChatGPT 의 이미지 생성으로, Waky 그림 한 장을 화풍 참고로 올려 같은 인물로 네 장을 이어 그렸다 — 다시 만드는 법은 `scripts/dayline/landing/art.py` 머리말. 글자가 없어 모든 언어 공용

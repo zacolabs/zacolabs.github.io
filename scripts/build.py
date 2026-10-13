@@ -102,7 +102,7 @@ VERIFY = [
     "rAAo91osYvOPP0Yz3pm0CsJnhYeOqQEqn37xbCX3l0Q",
 ]
 # Bing 웹마스터 도구 확인 태그. waky-landing 과 같은 계정의 것이다 (scripts/landing/build.py VERIFY_BING).
-VERIFY_BING = "CCC1C7BAFF2250CE75A2C3318980D759"
+VERIFY_BING = dayline_landing.VERIFY_BING
 # 네이버 서치어드바이저 확인 태그
 VERIFY_NAVER = "00b23ca6a2e49b33d1476eaaf9b07be6dbdbad17"
 
