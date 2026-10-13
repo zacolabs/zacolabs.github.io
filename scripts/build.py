@@ -101,8 +101,9 @@ VERIFY = [
     "j4UymJXi-PpVcq8t-553W-iBpZxQchNTUFjvLdqMrXU",
     "rAAo91osYvOPP0Yz3pm0CsJnhYeOqQEqn37xbCX3l0Q",
 ]
-# Bing 웹마스터 도구 확인 태그. waky-landing 과 같은 계정의 것이다 (scripts/landing/build.py VERIFY_BING).
-VERIFY_BING = dayline_landing.VERIFY_BING
+# Bing 웹마스터 도구 확인 태그. 앞의 것은 waky-landing 에 달려 있는 태그(scripts/landing/build.py VERIFY_BING),
+# 뒤의 것은 지금 쓰는 Bing 계정의 태그다 — 둘은 값이 달라 다른 계정의 것으로 보인다.
+VERIFY_BING = ["CCC1C7BAFF2250CE75A2C3318980D759", dayline_landing.VERIFY_BING]
 # 네이버 서치어드바이저 확인 태그
 VERIFY_NAVER = "00b23ca6a2e49b33d1476eaaf9b07be6dbdbad17"
 
@@ -311,7 +312,7 @@ def page(langs, code, css):
     verify = ""
     if code == DEFAULT:
         verify = "".join(f'<meta name="google-site-verification" content="{v}" />\n' for v in VERIFY)
-        verify += f'<meta name="msvalidate.01" content="{VERIFY_BING}" />\n'
+        verify += "".join(f'<meta name="msvalidate.01" content="{v}" />\n' for v in VERIFY_BING)
         verify += f'<meta name="naver-site-verification" content="{VERIFY_NAVER}" />\n'
     about = "<br />\n        ".join(e(line) for line in t["about"])
     style = css.replace("$FONT", t["font"])

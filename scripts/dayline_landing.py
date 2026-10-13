@@ -34,9 +34,9 @@ DEFAULT = "en"  # x-default
 # 고른 언어를 기억하는 localStorage 키. 회사 소개와 같이 쓴다 (같은 도메인, 같은 언어 코드).
 STORAGE_KEY = "zacolabs-lang"
 
-# Bing 웹마스터 도구 확인 태그. Bing 에 /dayline/ 을 사이트로 따로 올리면 이 주소의 페이지에서 태그를 찾는다
-# (waky-landing 과 같은 계정의 태그 — 회사 소개도 이 값을 쓴다).
-VERIFY_BING = "CCC1C7BAFF2250CE75A2C3318980D759"
+# Bing 웹마스터 도구 확인 태그. Bing 에 /dayline/ 을 사이트로 따로 올리면 이 주소의 페이지에서 태그를 찾는다.
+# 2026-10-13 에 /dayline/ 을 올릴 때 Bing 이 내준 값이다 (계정마다 하나다 — 회사 소개도 이 값을 같이 단다).
+VERIFY_BING = "D0F8F5D8D245E9F1513E7CA45F332C99"
 
 # Play 는 패키지 이름으로 주소가 정해진다. App Store 는 번들 ID 로는 주소를 만들 수 없고
 # App Store Connect 의 Apple ID(앱 정보 → 일반 정보의 숫자)가 있어야 한다. None 이면 버튼이 "출시 예정"으로 나온다.
