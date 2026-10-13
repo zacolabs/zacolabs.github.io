@@ -90,6 +90,10 @@ DAYLINE_PLAY = dayline_landing.PLAY
 DAYLINE_APPLE = dayline_landing.APPLE
 DUIRE_KO = "https://www.duire.kr"
 DUIRE_EN = "https://www.duire.kr/en"  # 두이레는 한국어 · 영어뿐이라 나머지 언어는 영어로 보낸다
+# 스토어 브릿지 — 두이레가 만든 무료 도구 (Google Play · App Store 를 링크 하나로). 전용 도메인에 있고 두이레처럼 한국어 · 영어뿐이다.
+# 이름은 번역하지 않는다 — 버튼에 이름과 도메인만 적어 언어마다 문구를 두지 않는다
+BRIDGE_KO = "https://bridge.duire.kr/"
+BRIDGE_EN = "https://bridge.duire.kr/en"
 
 # 서치 콘솔 확인 태그. 도메인 맨 앞(한국어) 페이지에만 둔다.
 VERIFY = [
@@ -126,6 +130,10 @@ def waky_url(t):
 
 def duire_url(code):
     return DUIRE_KO if code == "ko" else DUIRE_EN
+
+
+def bridge_url(code):
+    return BRIDGE_KO if code == "ko" else BRIDGE_EN
 
 
 def store_badges(t, play, apple):
@@ -354,6 +362,10 @@ def page(langs, code, css):
                         <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="{WEB_PATH}"/></svg>
                         <span class="badge-txt"><small>{e(t["web_start"])}</small><strong>duire.kr</strong></span>
                     </a>
+                    <a class="badge" href="{bridge_url(code)}" target="_blank" rel="noopener">
+                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>
+                        <span class="badge-txt"><small>{"스토어 브릿지" if code == "ko" else "Store Bridge"}</small><strong>bridge.duire.kr</strong></span>
+                    </a>
                 </div>
             </article>
         </div>
@@ -439,6 +451,7 @@ def llms(en):
 - [Waky]({WAKY_LANDING}/en/): {en["waky_ld"]} Free on iOS and Android.
 {dayline_landing.llms_links()}
 - [{en["duire_ld_name"]}]({DUIRE_EN}): {en["duire_body"]}
+- [Store Bridge]({BRIDGE_EN}): A free tool by DUIRE that makes one short link for Google Play and the App Store, sending each visitor to the store for their device.
 
 ## Company
 
@@ -477,6 +490,13 @@ def llms_full(en):
 
 - Type: web service for app developers ({en["duire_ld"]})
 - Page: {DUIRE_EN}
+
+## Store Bridge
+
+A free tool by DUIRE. Enter a Google Play package name and an App Store app ID to get one short link that sends Android users to Google Play and iPhone users to the App Store. No sign-up.
+
+- Type: free web tool for app developers and marketers
+- Page: {BRIDGE_EN}
 """
 
 

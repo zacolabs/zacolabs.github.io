@@ -13,6 +13,7 @@ Zaco Labs is a small software studio that starts from frictions we have run into
 - [Dayline community rules](https://zacolabs.github.io/dayline/community.en.html): what may be posted to the feed of days, reporting and blocking
 - Dayline in other languages: [한국어](https://zacolabs.github.io/dayline/ko/), [日本語](https://zacolabs.github.io/dayline/ja/), [简体中文](https://zacolabs.github.io/dayline/zh-hans/), [繁體中文](https://zacolabs.github.io/dayline/zh-hant/), [Español](https://zacolabs.github.io/dayline/es/), [Français](https://zacolabs.github.io/dayline/fr/), [Deutsch](https://zacolabs.github.io/dayline/de/), [Italiano](https://zacolabs.github.io/dayline/it/), [Português](https://zacolabs.github.io/dayline/pt/), [Nederlands](https://zacolabs.github.io/dayline/nl/), [Dansk](https://zacolabs.github.io/dayline/da/), [Polski](https://zacolabs.github.io/dayline/pl/), [Русский](https://zacolabs.github.io/dayline/ru/), [العربية](https://zacolabs.github.io/dayline/ar/), [Bahasa Indonesia](https://zacolabs.github.io/dayline/id/), [Tiếng Việt](https://zacolabs.github.io/dayline/vi/), [Filipino](https://zacolabs.github.io/dayline/fil/)
 - [DUIRE](https://www.duire.kr/en): We meet Google Play's closed testing requirement of 12 testers for 14 days with real Android devices, and keep every daily run in a final report.
+- [Store Bridge](https://bridge.duire.kr/en): A free tool by DUIRE that makes one short link for Google Play and the App Store, sending each visitor to the store for their device.
 
 ## Company
 

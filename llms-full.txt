@@ -92,3 +92,10 @@ We meet Google Play's closed testing requirement of 12 testers for 14 days with 
 
 - Type: web service for app developers (Google Play closed testing service)
 - Page: https://www.duire.kr/en
+
+## Store Bridge
+
+A free tool by DUIRE. Enter a Google Play package name and an App Store app ID to get one short link that sends Android users to Google Play and iPhone users to the App Store. No sign-up.
+
+- Type: free web tool for app developers and marketers
+- Page: https://bridge.duire.kr/en
