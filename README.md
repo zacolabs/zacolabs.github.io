@@ -13,6 +13,7 @@
   - Waky 자세히 보기는 그 언어 랜딩으로 건다. 두이레는 한국어 · 영어뿐이라 한국어가 아니면 `duire.kr/en` 으로 보낸다
   - Dayline 자세히 보기는 그 언어의 랜딩(`/dayline/<언어>/`)으로 걸고, 그 언어의 랜딩이 아직 없으면 영어로 건다
   - Dayline 카드의 스토어 버튼은 랜딩과 같은 주소를 쓴다 (`dayline_landing.py` 의 `PLAY` · `APPLE_ID`). 주소가 있는 스토어의 버튼만 나온다
+  - 안드로이드에서는 Waky · Dayline 카드와 Dayline 랜딩의 Google Play 버튼이 앱을 먼저 연다 — 버튼의 `data-app`(intent 주소, `build.py` `APP_LINK` · `dayline_landing.py` `APP_LINK`)을 페이지 끝의 스크립트(`dayline_landing.APP_LINK_SCRIPT`)가 주소로 바꾼다. 앱이 있으면 앱(`waky://open` · `dayline://today`)이 열리고, 없으면 브라우저가 Play 스토어로 보낸다. 아이폰의 App Store 버튼은 그대로 스토어로 간다 — 앱이 없으면 사파리가 "주소가 유효하지 않음" 창을 띄우는데, 스토어 버튼을 누르는 사람은 대개 앱이 없다
 - 서치 콘솔 · Bing 웹마스터 도구 · 네이버 서치어드바이저 확인 태그는 맨 앞(영어) 페이지에만 있다. Bing 태그는 둘이다: waky-landing 에 달려 있는 것과, 지금 쓰는 Bing 계정이 `/dayline/` 을 올릴 때 내준 것
 - 회사 소개의 구조화 데이터는 조직 · 사이트 · 페이지를 `@id` 로 이은 그래프 하나다 (`build.py` `json_ld`, Dayline 랜딩과 같은 `@id`). 구글은 검색결과의 사이트 이름을 도메인 맨 앞 페이지의 `WebSite` 에서만 읽는다 — 없으면 "GitHub" 로 나온다. 조직의 `sameAs`(유튜브 채널 · Play 개발자 페이지 · GitHub 조직)는 `build.py` 의 `SAME_AS`
 - `dayline/` — Dayline 의 이용 약관 · 개인정보 처리방침 · 커뮤니티 규칙 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)

@@ -520,7 +520,7 @@ footer .row { margin-top: 6px; }
                 <p class="card-title">No more switching it off and going back to sleep</p>
                 <p class="card-body">An alarm that only stops once you solve a mission and an alarm sound recorded in your own voice make sure you get up — and once you do, it helps you keep your morning habits too.</p>
                 <div class="card-actions">
-                    <a class="badge" href="https://play.google.com/store/apps/details?id=com.waky.android" target="_blank" rel="noopener">
+                    <a class="badge" href="https://play.google.com/store/apps/details?id=com.waky.android" data-app="intent://open#Intent;scheme=waky;package=com.waky.android;end" target="_blank" rel="noopener">
                         <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.208 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.041 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
                         <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
                     </a>
@@ -542,7 +542,7 @@ footer .row { margin-top: 6px; }
                 <p class="card-title">Your day, drawn as a line</p>
                 <p class="card-body">Where you went and how far is recorded automatically every day, with no start button. Your movement record stays on your device.</p>
                 <div class="card-actions">
-                    <a class="badge" href="https://play.google.com/store/apps/details?id=com.zacolabs.dayline" target="_blank" rel="noopener">
+                    <a class="badge" href="https://play.google.com/store/apps/details?id=com.zacolabs.dayline" data-app="intent://today#Intent;scheme=dayline;package=com.zacolabs.dayline;end" target="_blank" rel="noopener">
                         <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.208 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.041 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>
                         <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
                     </a>
@@ -600,6 +600,12 @@ footer .row { margin-top: 6px; }
             if (ev.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); }
         });
     })();
+</script>
+<script>
+    if (/Android/i.test(navigator.userAgent)) document.querySelectorAll('a[data-app]').forEach(function (a) {
+        a.href = a.getAttribute('data-app');
+        a.removeAttribute('target');
+    });
 </script>
 </body>
 </html>

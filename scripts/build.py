@@ -84,10 +84,13 @@ TZ_PREFIX_LANG = {"America/Argentina/": "es"}
 
 PLAY = "https://play.google.com/store/apps/details?id=com.waky.android"
 APPLE = "https://apps.apple.com/app/id6797402938"
+# 안드로이드에서 Google Play 버튼이 여는 앱 실행 주소 (dayline_landing.py APP_LINK 와 같은 방식). 앱만 열고 알람 화면은 띄우지 않는다
+APP_LINK = "intent://open#Intent;scheme=waky;package=com.waky.android;end"
 # Dayline 의 스토어 주소는 랜딩과 같이 쓴다 (dayline_landing.py). 주소가 있는 스토어의 버튼만 나온다 —
 # App Store 는 Apple ID 가 생길 때까지 없다. 둘 다 없으면 카드에 "출시 예정"이 나온다.
 DAYLINE_PLAY = dayline_landing.PLAY
 DAYLINE_APPLE = dayline_landing.APPLE
+DAYLINE_APP_LINK = dayline_landing.APP_LINK
 DUIRE_KO = "https://www.duire.kr"
 DUIRE_EN = "https://www.duire.kr/en"  # 두이레는 한국어 · 영어뿐이라 나머지 언어는 영어로 보낸다
 # 스토어 브릿지 — 두이레가 만든 무료 도구 (Google Play · App Store 를 링크 하나로). 전용 도메인에 있고 두이레처럼 한국어 · 영어뿐이다.
@@ -154,11 +157,13 @@ def bridge_url(code):
     return BRIDGE_KO if code == "ko" else BRIDGE_EN
 
 
-def store_badges(t, play, apple):
-    """앱 카드 아래의 스토어 버튼. 주소가 있는 스토어만 내고, 하나도 없으면 "출시 예정"을 낸다."""
+def store_badges(t, play, apple, app_link=None):
+    """앱 카드 아래의 스토어 버튼. 주소가 있는 스토어만 내고, 하나도 없으면 "출시 예정"을 낸다.
+    app_link: 안드로이드에서 Google Play 버튼이 대신 여는 앱 실행 주소 (dayline_landing.APP_LINK_SCRIPT 가 바꾼다)"""
     badges = []
     if play:
-        badges.append(f'''<a class="badge" href="{play}" target="_blank" rel="noopener">
+        app = f' data-app="{app_link}"' if app_link else ""
+        badges.append(f'''<a class="badge" href="{play}"{app} target="_blank" rel="noopener">
                         <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="{PLAY_PATH}"/></svg>
                         <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
                     </a>''')
@@ -381,7 +386,7 @@ def page(langs, code, css):
                 <p class="card-title">{e(t["waky_title"])}</p>
                 <p class="card-body">{e(t["waky_body"])}</p>
                 <div class="card-actions">
-                    {store_badges(t, PLAY, APPLE)}
+                    {store_badges(t, PLAY, APPLE, APP_LINK)}
                 </div>
             </article>
             <article class="card">
@@ -396,7 +401,7 @@ def page(langs, code, css):
                 <p class="card-title">{e(t["dayline_title"])}</p>
                 <p class="card-body">{e(t["dayline_body"])}</p>
                 <div class="card-actions">
-                    {store_badges(t, DAYLINE_PLAY, DAYLINE_APPLE)}
+                    {store_badges(t, DAYLINE_PLAY, DAYLINE_APPLE, DAYLINE_APP_LINK)}
                 </div>
             </article>
             <article class="card">
@@ -448,6 +453,7 @@ def page(langs, code, css):
         }});
     }})();
 </script>
+{dayline_landing.APP_LINK_SCRIPT}
 </body>
 </html>
 '''

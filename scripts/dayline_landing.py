@@ -44,6 +44,20 @@ PACKAGE = "com.zacolabs.dayline"
 PLAY = f"https://play.google.com/store/apps/details?id={PACKAGE}"
 APPLE_ID = "6818821647"
 APPLE = f"https://apps.apple.com/app/id{APPLE_ID}" if APPLE_ID else None
+# 안드로이드에서 Google Play 버튼이 여는 주소 — 앱이 깔려 있으면 앱(dayline://today, 오늘 탭)을 열고, 없으면 브라우저가
+# 그 패키지의 Play 스토어로 보낸다 (package 를 걸어 이 앱만 열린다). 스토어 브릿지의 앱 실행 주소와 같은 방식이다.
+# 앱이 스킴을 받기 전 버전이면 Play 스토어의 앱 화면(열기 · 업데이트)이 열린다
+APP_LINK = f"intent://today#Intent;scheme=dayline;package={PACKAGE};end"
+
+# 안드로이드 기기에서만 data-app 이 달린 스토어 버튼의 주소를 앱 실행 주소로 바꾼다. 다른 기기 · 로봇은 스토어 주소 그대로다.
+# 새 탭으로 열면 앱이 열린 뒤 빈 탭이 남아 target 을 뗀다. 회사 소개(build.py)도 같이 쓴다.
+# 아이폰은 하지 않는다: 앱이 없으면 사파리가 "주소가 유효하지 않음" 창을 띄우는데, 스토어 버튼을 누르는 사람은 대개 앱이 없다
+APP_LINK_SCRIPT = """<script>
+    if (/Android/i.test(navigator.userAgent)) document.querySelectorAll('a[data-app]').forEach(function (a) {
+        a.href = a.getAttribute('data-app');
+        a.removeAttribute('target');
+    });
+</script>"""
 
 PLAY_PATH = "M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.208 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.041 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"
 APPLE_PATH = "M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"
@@ -211,7 +225,7 @@ def og_name(code):
 
 
 def badges(d):
-    play = f'''<a class="badge" href="{PLAY}" target="_blank" rel="noopener">
+    play = f'''<a class="badge" href="{PLAY}" data-app="{APP_LINK}" target="_blank" rel="noopener">
                     <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="{PLAY_PATH}"/></svg>
                     <span class="badge-txt"><small>GET IT ON</small><strong>Google Play</strong></span>
                 </a>'''
@@ -497,6 +511,7 @@ def page(d, langs, css, legal):
 </footer>
 
 {PAGE_SCRIPT}
+{APP_LINK_SCRIPT}
 </body>
 </html>
 '''
