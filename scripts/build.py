@@ -83,7 +83,8 @@ TZ_LANG = {
 TZ_PREFIX_LANG = {"America/Argentina/": "es"}
 
 PLAY = "https://play.google.com/store/apps/details?id=com.waky.android"
-APPLE = "https://apps.apple.com/app/id6797402938"
+APPLE_ID = "6797402938"
+APPLE = f"https://apps.apple.com/app/id{APPLE_ID}"
 # 안드로이드에서 Google Play 버튼이 여는 앱 실행 주소 (dayline_landing.py APP_LINK 와 같은 방식). 앱만 열고 알람 화면은 띄우지 않는다
 APP_LINK = "intent://open#Intent;scheme=waky;package=com.waky.android;end"
 # Dayline 의 스토어 주소는 랜딩과 같이 쓴다 (dayline_landing.py). 주소가 있는 스토어의 버튼만 나온다 —
@@ -328,6 +329,7 @@ def page(langs, code, css):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {verify}<title>{e(title)}</title>
 <meta name="description" content="{e(t["description"])}" />
+<meta name="apple-itunes-app" content="app-id={APPLE_ID}" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="theme-color" content="#0a0a0a" />
 <meta property="og:type" content="website" />
