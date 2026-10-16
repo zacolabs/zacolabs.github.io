@@ -42,6 +42,9 @@
   - 그림과 하루 화면의 선은 스크롤해서 화면에 들어올 때 그려진다 (`[data-inview]` 에 `.in` 이 붙는다). 스크립트가 없거나 기기가 움직임을 줄이라고 하면 처음부터 다 그려진 채다
   - 기능 옆의 **하루 화면**은 그림 파일이 아니라 `dayline_landing.py` 의 `day_card` 가 HTML · SVG 로 그린다: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋 — 거리, 격자 판 위의 선, 이동수단별 나눔(색 원 안의 아이콘 아래에 거리와 시간). 길과 거리는 스토어 그림 3번의 것이다. 화면에 들어오면 선이 구간 순서대로 그려지고, 그동안 거리가 0 에서부터 올라가고 막대와 이동수단이 따라 나온다. 카드 안의 글(`km` · 이동 시간, 화면 낭독기용 이동수단 이름)은 문구 파일의 `day` — 스토어 그림의 `text.js` 와 맞춘다. 이동수단 아이콘은 Tabler Icons(MIT)
   - `dayline/assets/og-<언어>.png`(공유 미리보기)는 아직 앱의 이전 모양(어두운 바탕)이다 — 새 스토어 그래픽이 나오면 다시 만든다. 이 그림은 `scripts/dayline/landing/make_assets.py` 가 앱 저장소의 Play 피처 그래픽에서 만든다 (`dayline-android` 가 옆에 있어야 하고 Pillow 필요). 빌드는 이걸 돌리지 않는다
+- `dailycommit/` — Daily Commit 맥 앱(`daily.commit.dev` 저장소)이 쓰는 페이지. 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다
+  - `threads-callback.html` — 앱의 [Threads 로그인]이 돌아오는 곳. Threads 는 HTTPS 주소로만 돌려보내서 여기로 오고, 페이지가 `state` 앞의 포트(`<포트>-<난수>`)로 `http://127.0.0.1:<포트>/` 에 코드를 넘긴다. 이 주소가 Meta 앱(panchunstory)의 Threads 리디렉션 콜백 URL 에 등록돼 있어야 한다. 검색엔진에는 감춘다(`noindex`)
+  - `privacy.html` — Daily Commit 개인정보처리방침(영어 · 한국어). Meta 앱 검수에 내는 주소
 - `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
   - `dayline_icon.png` — Dayline 앱 아이콘. 회사 소개의 카드와 Dayline 랜딩이 같이 쓴다 (`dayline-ios` `Assets.xcassets/AppIcon.appiconset/AppIcon.png` 를 512px 로 줄인 것)
   - `og-image-1200x630.png` — 공유 미리보기 그림(모든 언어 공용). `scripts/og-image.html` 을 크롬에서 1200×630 으로 찍은 것

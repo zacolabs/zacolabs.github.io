@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Daily Commit · Threads 로그인</title>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0d1117; color: #e6edf3;
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; }
+  main { max-width: 28rem; padding: 0 1rem; text-align: center; }
+  h1 { font-size: 1.1rem; }
+  p { color: #9da7b3; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Daily Commit</h1>
+  <p id="msg">Threads 로그인을 앱으로 돌려보내는 중이에요…</p>
+</main>
+<script>
+// Threads only redirects to HTTPS, so it comes here; the Daily Commit app waits on
+// 127.0.0.1 and put its port at the front of `state` ("<port>-<random>").
+(function () {
+  var query = new URLSearchParams(location.search);
+  var port = parseInt((query.get('state') || '').split('-')[0], 10);
+  var answered = query.has('code') || query.has('error');
+  if (answered && port >= 1024 && port <= 65535) {
+    location.replace('http://127.0.0.1:' + port + '/' + location.search);
+  } else {
+    document.getElementById('msg').textContent =
+      '앱에서 시작한 로그인이 아니에요. Daily Commit 앱의 설정 > 계정에서 [Threads 로그인]을 다시 눌러 주세요.';
+  }
+})();
+</script>
+</body>
+</html>
