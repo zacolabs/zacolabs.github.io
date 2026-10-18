@@ -45,6 +45,8 @@
 - `dailycommit/` — Daily Commit 맥 앱(`daily.commit.dev` 저장소)이 쓰는 페이지. 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다
   - `threads-callback.html` — 앱의 [Threads 로그인]이 돌아오는 곳. Threads 는 HTTPS 주소로만 돌려보내서 여기로 오고, 페이지가 `state` 앞의 포트(`<포트>-<난수>`)로 `http://127.0.0.1:<포트>/` 에 코드를 넘긴다. 이 주소가 Meta 앱(panchunstory)의 Threads 리디렉션 콜백 URL 에 등록돼 있어야 한다. 검색엔진에는 감춘다(`noindex`)
   - `privacy.html` — Daily Commit 개인정보처리방침(영어 · 한국어). Meta 앱 검수에 내는 주소
+- `onemorefloor/` — 한층더 iOS 앱(`onemorefloor-ios` 저장소)이 쓰는 페이지. 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다
+  - `privacy.html` — 한층더 개인정보 처리방침(한국어, 한국 출시만). 앱의 설정 > 개인정보 처리방침과 App Store Connect 의 개인정보 처리방침 URL 이 이 주소다. 계단 기록은 기기 안에만 있고, Firebase(Analytics · Crashlytics)로 보내는 사용 통계 · 오류 진단만 적는다
 - `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
   - `dayline_icon.png` — Dayline 앱 아이콘. 회사 소개의 카드와 Dayline 랜딩이 같이 쓴다 (`dayline-ios` `Assets.xcassets/AppIcon.appiconset/AppIcon.png` 를 512px 로 줄인 것)
   - `og-image-1200x630.png` — 공유 미리보기 그림(모든 언어 공용). `scripts/og-image.html` 을 크롬에서 1200×630 으로 찍은 것
