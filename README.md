@@ -48,7 +48,7 @@
 - `dailysummit/` — 오늘도 정상 iOS 앱(`dailysummit-ios` 저장소, 옛 이름 한층더)이 쓰는 페이지. 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다
   - `privacy.html` — 오늘도 정상 개인정보 처리방침(한국어, 한국 출시만). 앱의 설정 > 개인정보 처리방침과 App Store Connect 의 개인정보 처리방침 URL 이 이 주소다. 걷기 기록(걸음 수)은 기기 안에만 있고, Firebase(Analytics · Crashlytics)로 보내는 사용 통계 · 오류 진단만 적는다
 - `8billion/privacy.html` — 8 Billion(`onelife` 저장소, Android `com.zacolabs.onein8Billion`) 개인정보처리방침(영어 · 한국어). 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다. Play Console · App Store Connect 의 개인정보처리방침 URL 이 이 주소다. 계정 · 서버가 없어 게임 기록 · 실제 프로필 · 메모는 기기 안에만 있고, AdMob 보상형 광고(비개인화)가 Google 로 보내는 정보만 적는다
-- `catinroom/privacy.html` — Cat in Room(`catinroom-android` 저장소, Android `com.zacolabs.catinroom`) 개인정보처리방침(한국어). 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다. Play Console 의 개인정보처리방침 URL 이 이 주소다. 계정 · 서버 · 인터넷 권한 · 분석 SDK 가 없어 타이머 · 꾸미기 설정이 기기 안에만 있고, 구독 결제는 Google Play 가 처리한다고 적는다
+- `catinroom/privacy.html` — Cat in Room(`catinroom-android` 저장소, Android `com.zacolabs.catinroom`) 개인정보처리방침(한국어). 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다. Play Console 의 개인정보처리방침 URL 이 이 주소다. WAKY 방침을 따라 썼다: 타이머 · 꾸미기 설정은 기기 안에만 있고, 서버(zacolabs-backend)로는 앱 실행 API 의 사용자 키 · 기기·앱 정보 · 구독 정보를, Google 로는 Firebase Analytics · Crashlytics 를 보낸다. 광고 · 광고 ID 는 없다
 - `onemorefloor/privacy.html` — 옛 주소. 2026-10-18 앱 이름이 바뀌어 `dailysummit/privacy.html` 로 바로 넘긴다(이미 배포된 빌드·문서의 링크가 끊기지 않게 둔다)
 - `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
   - `dayline_icon.png` — Dayline 앱 아이콘. 회사 소개의 카드와 Dayline 랜딩이 같이 쓴다 (`dayline-ios` `Assets.xcassets/AppIcon.appiconset/AppIcon.png` 를 512px 로 줄인 것)
