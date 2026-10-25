@@ -1,0 +1,21 @@
+/* 냥반장 개인정보 처리방침·이용약관·오픈소스 라이선스 공통 모양 (앱 바탕색·글자색과 같아요) */
+body { margin: 0; background: #f9f6f0; color: #2c2c2a; font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif; word-break: keep-all; overflow-wrap: break-word; -webkit-text-size-adjust: 100%; }
+main { max-width: 42rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+h1 { font-size: 1.6rem; line-height: 1.4; margin: 0 0 .3rem; }
+h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; }
+h3 { font-size: 1rem; margin: 1.4rem 0 .3rem; }
+p, li { color: #4a4945; }
+ul, ol { padding-left: 1.3rem; }
+a { color: #d85a30; }
+.meta { color: #8a8880; font-size: .9rem; margin-top: 0; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; margin: .5rem 0; }
+th, td { text-align: left; vertical-align: top; padding: .5rem .4rem; border-bottom: 1px solid #e6e0d4; }
+th { color: #2c2c2a; white-space: nowrap; }
+pre { white-space: pre-wrap; font: .8rem/1.6 ui-monospace, Menlo, monospace; color: #4a4945; background: #f1ece2; padding: 1rem; border-radius: 10px; }
+.lib { padding: .7rem 0; border-bottom: 1px solid #e6e0d4; }
+.lib b { display: block; color: #2c2c2a; }
+.lib span { display: block; color: #8a8880; font-size: .88rem; }
+.links { margin-top: 3rem; font-size: .9rem; color: #8a8880; }
+/* 앱 안에서 열 때 (?app): 앱 상단바에 제목이 있어 페이지 제목을 숨기고, 다른 문서로 가는 링크도 숨겨요 */
+.app h1, .app .links { display: none; }
+.app main { padding-top: .75rem; }
