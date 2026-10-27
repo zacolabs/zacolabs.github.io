@@ -414,6 +414,28 @@ def page(langs, code, css):
         <div class="cards">
             <article class="card">
                 <div class="card-head">
+                    <img class="card-ico" src="/zacolabs-assets/duire_icon.png" alt="{e(t["duire_icon_alt"])}" width="52" height="52" />
+                    <div class="card-name">
+                        <h3>{e(t["duire_name"])}</h3>
+                        <p class="kind">{e(t["duire_kind"])}</p>
+                    </div>
+                    <a class="card-more" href="{duire_url(code)}" target="_blank" rel="noopener">{e(t["learn_more"])}</a>
+                </div>
+                <p class="card-title">{e(t["duire_title"])}</p>
+                <p class="card-body">{e(t["duire_body"])}</p>
+                <div class="card-actions">
+                    <a class="badge" href="{duire_url(code)}" target="_blank" rel="noopener">
+                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="{WEB_PATH}"/></svg>
+                        <span class="badge-txt"><small>{e(t["web_start"])}</small><strong>duire.kr</strong></span>
+                    </a>
+                    <a class="badge" href="{bridge_url(code)}" target="_blank" rel="noopener">
+                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>
+                        <span class="badge-txt"><small>{"스토어 브릿지" if code == "ko" else "Store Bridge"}</small><strong>bridge.duire.kr</strong></span>
+                    </a>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-head">
                     <img class="card-ico" src="/zacolabs-assets/app_icon.png" alt="{e(t["waky_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>Waky</h3>
@@ -482,28 +504,6 @@ def page(langs, code, css):
                 <p class="card-body">{e(t["eightbillion_body"])}</p>
                 <div class="card-actions">
                     {store_badges(t, EIGHTBILLION_PLAY, EIGHTBILLION_APPLE)}
-                </div>
-            </article>
-            <article class="card">
-                <div class="card-head">
-                    <img class="card-ico" src="/zacolabs-assets/duire_icon.png" alt="{e(t["duire_icon_alt"])}" width="52" height="52" />
-                    <div class="card-name">
-                        <h3>{e(t["duire_name"])}</h3>
-                        <p class="kind">{e(t["duire_kind"])}</p>
-                    </div>
-                    <a class="card-more" href="{duire_url(code)}" target="_blank" rel="noopener">{e(t["learn_more"])}</a>
-                </div>
-                <p class="card-title">{e(t["duire_title"])}</p>
-                <p class="card-body">{e(t["duire_body"])}</p>
-                <div class="card-actions">
-                    <a class="badge" href="{duire_url(code)}" target="_blank" rel="noopener">
-                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="{WEB_PATH}"/></svg>
-                        <span class="badge-txt"><small>{e(t["web_start"])}</small><strong>duire.kr</strong></span>
-                    </a>
-                    <a class="badge" href="{bridge_url(code)}" target="_blank" rel="noopener">
-                        <svg class="badge-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>
-                        <span class="badge-txt"><small>{"스토어 브릿지" if code == "ko" else "Store Bridge"}</small><strong>bridge.duire.kr</strong></span>
-                    </a>
                 </div>
             </article>
         </div>
