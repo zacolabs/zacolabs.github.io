@@ -18,6 +18,7 @@ import os
 
 import dayline_landing
 import dayline_legal
+import eightbillion_landing
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, ".."))
@@ -278,6 +279,7 @@ def json_ld(t, code):
                 "applicationCategory": "GameApplication",
                 "operatingSystem": "Android, iOS",
                 "description": t["eightbillion_body"],
+                "url": SITE + eightbillion_landing.landing_path(code),
             },
         }, {
             "@type": "Offer",
@@ -504,6 +506,7 @@ def page(langs, code, css):
                 <p class="card-body">{e(t["eightbillion_body"])}</p>
                 <div class="card-actions">
                     {store_badges(t, EIGHTBILLION_PLAY, EIGHTBILLION_APPLE)}
+                    <a class="card-more" href="{eightbillion_landing.landing_path(code)}" target="_blank" rel="noopener">{e(t["learn_more"])}</a>
                 </div>
             </article>
         </div>
@@ -573,6 +576,7 @@ def sitemap(langs):
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {urls}
 {dayline_landing.sitemap_urls(today)}
+{eightbillion_landing.sitemap_urls(today)}
 </urlset>
 '''
 
@@ -591,7 +595,7 @@ def llms(en):
 {dayline_landing.llms_links()}
 - {en["catcaptain_name"]} (냥반장): {en["catcaptain_body"]} For Android and iOS, in Korea only. Coming soon.
 - Cat in Room: {en["catinroom_title"]}. {en["catinroom_body"]} For Android and iOS. Coming soon.
-- 8 Billion: {en["eightbillion_body"]} For Android and iOS. Coming soon.
+- [8 Billion]({SITE}/8billion/): {en["eightbillion_body"]} For Android and iOS. Coming soon. [한국어]({SITE}/8billion/ko/). [日本語]({SITE}/8billion/ja/). [简体中文]({SITE}/8billion/zh-hans/). [繁體中文]({SITE}/8billion/zh-hant/). [Privacy policy]({SITE}/8billion/privacy.html).
 - [{en["duire_ld_name"]}]({DUIRE_EN}): {en["duire_body"]}
 - [Store Bridge]({BRIDGE_EN}): A free tool by DUIRE that makes one short link for Google Play and the App Store, sending each visitor to the store for their device.
 
@@ -644,6 +648,8 @@ def llms_full(en):
 
 {en["eightbillion_title"]}. {en["eightbillion_body"]}
 
+- Marketing page: {SITE}/8billion/ (English), {SITE}/8billion/ko/ (Korean), {SITE}/8billion/ja/ (Japanese), {SITE}/8billion/zh-hans/ (Simplified Chinese), {SITE}/8billion/zh-hant/ (Traditional Chinese)
+- Privacy policy: {SITE}/8billion/privacy.html
 - Type: mobile game for iOS and Android
 - Status: coming soon
 
@@ -688,6 +694,7 @@ def main():
     print(f"built {len(ORDER)} pages")
     print(f"built {dayline_legal.build()} dayline legal pages")
     print(f"built {dayline_landing.build()} dayline landing pages")
+    print(f"built {eightbillion_landing.build()} 8 Billion landing pages")
 
 
 if __name__ == "__main__":

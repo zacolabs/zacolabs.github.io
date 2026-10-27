@@ -104,6 +104,8 @@ Pomodoro timer with your cat. Focus for 25 minutes while your cat sits on the ch
 
 One life among eight billion. A life simulation game. Be born in a random country and era, and live one whole life from your first moments to the story you leave behind.
 
+- Marketing page: https://zacolabs.github.io/8billion/ (English), https://zacolabs.github.io/8billion/ko/ (Korean), https://zacolabs.github.io/8billion/ja/ (Japanese), https://zacolabs.github.io/8billion/zh-hans/ (Simplified Chinese), https://zacolabs.github.io/8billion/zh-hant/ (Traditional Chinese)
+- Privacy policy: https://zacolabs.github.io/8billion/privacy.html
 - Type: mobile game for iOS and Android
 - Status: coming soon
 
