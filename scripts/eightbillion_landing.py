@@ -48,7 +48,7 @@ def page(code):
     canonical = SITE + landing_path(code)
     company = f'/{code}/' if code != 'en' else '/'
     language_links = ''.join(
-        f'<a href="{landing_path(lang)}" lang="{LANG_TAGS[lang]}" hreflang="{LANG_TAGS[lang]}"'
+        f'<a href="{landing_path(lang)}" data-lang="{lang}" lang="{LANG_TAGS[lang]}" hreflang="{LANG_TAGS[lang]}"'
         + (' aria-current="page"' if lang == code else '') + f'>{LANG_NAMES[lang]}</a>'
         for lang in LANGS)
     locale_alternates = ''.join(
@@ -81,6 +81,7 @@ def page(code):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/8billion/assets/language.js"></script>
 <title>{e(t['title'])}</title>
 <meta name="description" content="{e(t['description'])}">
 <meta name="theme-color" content="#0b1026">
@@ -107,7 +108,7 @@ def page(code):
 <header><div class="wrap header-inner">
 <a class="brand" href="{landing_path(code)}"><img src="/zacolabs-assets/8billion_icon.png" alt="" width="38" height="38"><span>8 Billion<small>ANOTHER LIFE</small></span></a>
 <nav aria-label="{e(t['navLabel'])}"><a href="#life">{e(t['nav'][0])}</a><a href="#worlds">{e(t['nav'][1])}</a><a href="#faq">{e(t['nav'][2])}</a></nav>
-<details class="languages"><summary>{LANG_NAMES[code]} <span aria-hidden="true">⌄</span></summary><div class="language-menu">{language_links}</div></details>
+<details class="languages"><summary>{LANG_NAMES[code]} <span aria-hidden="true">⌄</span></summary><div class="language-menu"><a href="/8billion/" data-lang="system">{e(t['systemLanguage'])}</a>{language_links}</div></details>
 </div></header>
 <main id="main">
 <section class="wrap hero">
@@ -149,6 +150,7 @@ def build():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(page(code), encoding='utf-8')
     (ROOT / '8billion/assets/style.css').write_text((SOURCE / 'style.css').read_text(), encoding='utf-8')
+    (ROOT / '8billion/assets/language.js').write_text((SOURCE / 'language.js').read_text(), encoding='utf-8')
     return len(LANGS)
 
 
