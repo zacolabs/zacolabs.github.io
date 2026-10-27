@@ -13,6 +13,7 @@
   - Waky 자세히 보기는 그 언어 랜딩으로 건다. 두이레는 한국어 · 영어뿐이라 한국어가 아니면 `duire.kr/en` 으로 보낸다
   - Dayline 자세히 보기는 그 언어의 랜딩(`/dayline/<언어>/`)으로 걸고, 그 언어의 랜딩이 아직 없으면 영어로 건다
   - Dayline 카드의 스토어 버튼은 랜딩과 같은 주소를 쓴다 (`dayline_landing.py` 의 `PLAY` · `APPLE_ID`). 주소가 있는 스토어의 버튼만 나온다
+  - 냥반장 · Cat in Room · 8 Billion 카드는 아직 스토어에 공개되지 않아 버튼 자리에 "출시 예정"이 나오고, 따로 랜딩이 없어 자세히 보기도 없다. 공개되면 `build.py` 의 `CATCAPTAIN_PLAY` · `CATCAPTAIN_APPLE` · `CATINROOM_…` · `EIGHTBILLION_…` 에 주소를 넣는다 (주석에 예상 주소가 있다). 냥반장은 한국에서만 서비스해 한국어가 아닌 페이지에서는 이름을 Cat Captain 으로 쓰고 종류에 "한국 전용"을 붙인다(`catcaptain_kind`). 문구는 Cat in Room 이 App Store 등록정보의 부제 · 홍보 문구, 냥반장 · 8 Billion 은 스토어 등록정보(한국어 · 영어)를 옮긴 것이다
   - 아이폰 사파리에서는 회사 소개 맨 위에 Waky 의 스마트 앱 배너(`apple-itunes-app`, `build.py` `APPLE_ID`)가 뜬다 — 앱이 없으면 [보기](App Store), 있으면 [열기](Waky). 배너는 카드가 아니라 페이지에 하나만 붙어 앱 하나만 고를 수 있고, Dayline 은 App Store 에 나오기 전이라 Waky 다. Dayline 랜딩에는 Dayline 의 배너가 있다
   - 안드로이드에서는 Waky · Dayline 카드와 Dayline 랜딩의 Google Play 버튼이 앱을 먼저 연다 — 버튼의 `data-app`(intent 주소, `build.py` `APP_LINK` · `dayline_landing.py` `APP_LINK`)을 페이지 끝의 스크립트(`dayline_landing.APP_LINK_SCRIPT`)가 주소로 바꾼다. 앱이 있으면 앱(`waky://open` · `dayline://today`)이 열리고, 없으면 브라우저가 Play 스토어로 보낸다. 아이폰의 App Store 버튼은 그대로 스토어로 간다 — 앱이 없으면 사파리가 "주소가 유효하지 않음" 창을 띄우는데, 스토어 버튼을 누르는 사람은 대개 앱이 없다
 - 서치 콘솔 · Bing 웹마스터 도구 · 네이버 서치어드바이저 확인 태그는 맨 앞(영어) 페이지에만 있다. Bing 태그는 둘이다: waky-landing 에 달려 있는 것과, 지금 쓰는 Bing 계정이 `/dayline/` 을 올릴 때 내준 것
@@ -51,5 +52,6 @@
 - `catinroom/privacy.html` — Cat in Room(`catinroom-android` 저장소, Android `com.zacolabs.catinroom`) 개인정보처리방침(한국어). 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다. Play Console 의 개인정보처리방침 URL 이 이 주소다. WAKY 방침을 따라 썼다: 타이머 · 꾸미기 설정은 기기 안에만 있고, 서버(zacolabs-backend)로는 앱 실행 API 의 사용자 키 · 기기·앱 정보 · 구독 정보를, Google 로는 Firebase Analytics(광고 ID 포함, 설정 › 사용 통계로 끈다) · Crashlytics 를 보낸다. 광고는 없다
 - `onemorefloor/privacy.html` — 옛 주소. 2026-10-18 앱 이름이 바뀌어 `dailysummit/privacy.html` 로 바로 넘긴다(이미 배포된 빌드·문서의 링크가 끊기지 않게 둔다)
 - `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
+  - `catcaptain_icon.png` · `catinroom_icon.png` · `8billion_icon.png` — 냥반장 · Cat in Room · 8 Billion 앱 아이콘 512px (`catcaptain-android` · `catinroom-android` `store/play/icon-512.png`, `onelife` `app/assets/branding/play-store-icon-512.png`)
   - `dayline_icon.png` — Dayline 앱 아이콘. 회사 소개의 카드와 Dayline 랜딩이 같이 쓴다 (`dayline-ios` `Assets.xcassets/AppIcon.appiconset/AppIcon.png` 를 512px 로 줄인 것)
   - `og-image-1200x630.png` — 공유 미리보기 그림(모든 언어 공용). `scripts/og-image.html` 을 크롬에서 1200×630 으로 찍은 것

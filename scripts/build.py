@@ -92,6 +92,15 @@ APP_LINK = "intent://open#Intent;scheme=waky;package=com.waky.android;end"
 DAYLINE_PLAY = dayline_landing.PLAY
 DAYLINE_APPLE = dayline_landing.APPLE
 DAYLINE_APP_LINK = dayline_landing.APP_LINK
+# 냥반장 · Cat in Room · 8 Billion 은 아직 스토어에 공개되지 않았다 (Play 비공개 테스트 · App Store 심사 전후).
+# 공개되면 주소를 넣는다 — 넣은 스토어의 버튼만 나오고, 둘 다 없으면 카드에 "출시 예정"이 나온다.
+# 냥반장은 한국에서만 서비스한다 — 한국어가 아닌 카드에는 "한국 전용"이 붙는다(i18n 의 catcaptain_kind).
+CATCAPTAIN_PLAY = None    # https://play.google.com/store/apps/details?id=com.zacolabs.catcaptain
+CATCAPTAIN_APPLE = None   # https://apps.apple.com/app/id6824216133
+CATINROOM_PLAY = None     # https://play.google.com/store/apps/details?id=com.zacolabs.catinroom
+CATINROOM_APPLE = None
+EIGHTBILLION_PLAY = None  # https://play.google.com/store/apps/details?id=com.zacolabs.onein8Billion
+EIGHTBILLION_APPLE = None
 DUIRE_KO = "https://www.duire.kr"
 DUIRE_EN = "https://www.duire.kr/en"  # 두이레는 한국어 · 영어뿐이라 나머지 언어는 영어로 보낸다
 # 스토어 브릿지 — 두이레가 만든 무료 도구 (Google Play · App Store 를 링크 하나로). 전용 도메인에 있고 두이레처럼 한국어 · 영어뿐이다.
@@ -242,6 +251,33 @@ def json_ld(t, code):
                 "operatingSystem": "Android, iOS",
                 "description": t["dayline_body"],
                 "url": SITE + dayline_landing.landing_path(code),
+            },
+        }, {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": t["catcaptain_name"],
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "Android, iOS",
+                "description": t["catcaptain_body"],
+            },
+        }, {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "Cat in Room",
+                "applicationCategory": "ProductivityApplication",
+                "operatingSystem": "Android, iOS",
+                "description": t["catinroom_body"],
+            },
+        }, {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "8 Billion",
+                "applicationCategory": "GameApplication",
+                "operatingSystem": "Android, iOS",
+                "description": t["eightbillion_body"],
             },
         }, {
             "@type": "Offer",
@@ -408,6 +444,48 @@ def page(langs, code, css):
             </article>
             <article class="card">
                 <div class="card-head">
+                    <img class="card-ico" src="/zacolabs-assets/catcaptain_icon.png" alt="{e(t["catcaptain_icon_alt"])}" width="52" height="52" />
+                    <div class="card-name">
+                        <h3>{e(t["catcaptain_name"])}</h3>
+                        <p class="kind">{e(t["catcaptain_kind"])}</p>
+                    </div>
+                </div>
+                <p class="card-title">{e(t["catcaptain_title"])}</p>
+                <p class="card-body">{e(t["catcaptain_body"])}</p>
+                <div class="card-actions">
+                    {store_badges(t, CATCAPTAIN_PLAY, CATCAPTAIN_APPLE)}
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-head">
+                    <img class="card-ico" src="/zacolabs-assets/catinroom_icon.png" alt="{e(t["catinroom_icon_alt"])}" width="52" height="52" />
+                    <div class="card-name">
+                        <h3>Cat in Room</h3>
+                        <p class="kind">{e(t["waky_kind"])}</p>
+                    </div>
+                </div>
+                <p class="card-title">{e(t["catinroom_title"])}</p>
+                <p class="card-body">{e(t["catinroom_body"])}</p>
+                <div class="card-actions">
+                    {store_badges(t, CATINROOM_PLAY, CATINROOM_APPLE)}
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-head">
+                    <img class="card-ico" src="/zacolabs-assets/8billion_icon.png" alt="{e(t["eightbillion_icon_alt"])}" width="52" height="52" />
+                    <div class="card-name">
+                        <h3>8 Billion</h3>
+                        <p class="kind">{e(t["eightbillion_kind"])}</p>
+                    </div>
+                </div>
+                <p class="card-title">{e(t["eightbillion_title"])}</p>
+                <p class="card-body">{e(t["eightbillion_body"])}</p>
+                <div class="card-actions">
+                    {store_badges(t, EIGHTBILLION_PLAY, EIGHTBILLION_APPLE)}
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-head">
                     <img class="card-ico" src="/zacolabs-assets/duire_icon.png" alt="{e(t["duire_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>{e(t["duire_name"])}</h3>
@@ -511,6 +589,9 @@ def llms(en):
 
 - [Waky]({WAKY_LANDING}/en/): {en["waky_ld"]} Free on iOS and Android.
 {dayline_landing.llms_links()}
+- {en["catcaptain_name"]} (냥반장): {en["catcaptain_body"]} For Android and iOS, in Korea only. Coming soon.
+- Cat in Room: {en["catinroom_title"]}. {en["catinroom_body"]} For Android and iOS. Coming soon.
+- 8 Billion: {en["eightbillion_body"]} For Android and iOS. Coming soon.
 - [{en["duire_ld_name"]}]({DUIRE_EN}): {en["duire_body"]}
 - [Store Bridge]({BRIDGE_EN}): A free tool by DUIRE that makes one short link for Google Play and the App Store, sending each visitor to the store for their device.
 
@@ -545,6 +626,27 @@ def llms_full(en):
 - App Store: {APPLE}
 
 {dayline_landing.llms_full()}
+## {en["catcaptain_name"]} (냥반장)
+
+{en["catcaptain_title"]}. {en["catcaptain_body"]}
+
+- Type: mobile app for iOS and Android, available in Korea only
+- Status: coming soon
+
+## Cat in Room
+
+{en["catinroom_title"]}. {en["catinroom_body"]}
+
+- Type: mobile app for iOS and Android
+- Status: coming soon
+
+## 8 Billion
+
+{en["eightbillion_title"]}. {en["eightbillion_body"]}
+
+- Type: mobile game for iOS and Android
+- Status: coming soon
+
 ## {en["duire_ld_name"]}
 
 {en["duire_body"]}
