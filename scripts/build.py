@@ -381,8 +381,8 @@ def page(langs, code, css):
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="{e(OG_IMAGE_ALT)}" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" href="/zacolabs-assets/logo.png" />
-<link rel="apple-touch-icon" href="/zacolabs-assets/logo.png" />
+<link rel="icon" href="/zacolabs-assets/logo-180.png" />
+<link rel="apple-touch-icon" href="/zacolabs-assets/logo-180.png" />
 <link rel="canonical" href="{url(code)}" />
 {alternates(langs)}
 {head_script(code)}<script type="application/ld+json">
@@ -399,7 +399,7 @@ def page(langs, code, css):
 <main>
     <div class="mark">
         <!-- Zaco Labs CI (waky-android resources/ci_512.png) -->
-        <img src="/zacolabs-assets/logo.png?v=20260723" alt="{e(t["logo_alt"])}" width="128" height="128" />
+        <img src="/zacolabs-assets/logo-256.webp" alt="{e(t["logo_alt"])}" width="128" height="128" fetchpriority="high" />
     </div>
 
     <h1 class="wordmark">Zaco Labs</h1>
@@ -416,7 +416,7 @@ def page(langs, code, css):
         <div class="cards">
             <article class="card">
                 <div class="card-head">
-                    <img class="card-ico" src="/zacolabs-assets/duire_icon.png" alt="{e(t["duire_icon_alt"])}" width="52" height="52" />
+                    <img class="card-ico" src="/zacolabs-assets/duire_icon-104.webp" loading="lazy" decoding="async" alt="{e(t["duire_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>{e(t["duire_name"])}</h3>
                         <p class="kind">{e(t["duire_kind"])}</p>
@@ -438,7 +438,7 @@ def page(langs, code, css):
             </article>
             <article class="card">
                 <div class="card-head">
-                    <img class="card-ico" src="/zacolabs-assets/app_icon.png" alt="{e(t["waky_icon_alt"])}" width="52" height="52" />
+                    <img class="card-ico" src="/zacolabs-assets/app_icon-104.webp" loading="lazy" decoding="async" alt="{e(t["waky_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>Waky</h3>
                         <p class="kind">{e(t["waky_kind"])}</p>
@@ -453,7 +453,7 @@ def page(langs, code, css):
             </article>
             <article class="card">
                 <div class="card-head">
-                    <img class="card-ico" src="/zacolabs-assets/dayline_icon.png" alt="{e(t["dayline_icon_alt"])}" width="52" height="52" />
+                    <img class="card-ico" src="/zacolabs-assets/dayline_icon-104.webp" loading="lazy" decoding="async" alt="{e(t["dayline_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>Dayline</h3>
                         <p class="kind">{e(t["waky_kind"])}</p>
@@ -468,7 +468,7 @@ def page(langs, code, css):
             </article>
             <article class="card">
                 <div class="card-head">
-                    <img class="card-ico" src="/zacolabs-assets/catcaptain_icon.png" alt="{e(t["catcaptain_icon_alt"])}" width="52" height="52" />
+                    <img class="card-ico" src="/zacolabs-assets/catcaptain_icon-104.webp" loading="lazy" decoding="async" alt="{e(t["catcaptain_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>{e(t["catcaptain_name"])}</h3>
                         <p class="kind">{e(t["catcaptain_kind"])}</p>
@@ -482,7 +482,7 @@ def page(langs, code, css):
             </article>
             <article class="card">
                 <div class="card-head">
-                    <img class="card-ico" src="/zacolabs-assets/catinroom_icon.png" alt="{e(t["catinroom_icon_alt"])}" width="52" height="52" />
+                    <img class="card-ico" src="/zacolabs-assets/catinroom_icon-104.webp" loading="lazy" decoding="async" alt="{e(t["catinroom_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>Cat in Room</h3>
                         <p class="kind">{e(t["waky_kind"])}</p>
@@ -496,7 +496,7 @@ def page(langs, code, css):
             </article>
             <article class="card">
                 <div class="card-head">
-                    <img class="card-ico" src="/zacolabs-assets/8billion_icon.png" alt="{e(t["eightbillion_icon_alt"])}" width="52" height="52" />
+                    <img class="card-ico" src="/zacolabs-assets/8billion_icon-104.webp" loading="lazy" decoding="async" alt="{e(t["eightbillion_icon_alt"])}" width="52" height="52" />
                     <div class="card-name">
                         <h3>8 Billion</h3>
                         <p class="kind">{e(t["eightbillion_kind"])}</p>

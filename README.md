@@ -3,6 +3,7 @@
 `https://zacolabs.github.io/` 도메인 맨 앞에 두어야 하는 파일과, 따로 저장소를 두지 않은 Dayline 의 랜딩 · 약관 페이지를 둔다. Waky 랜딩 페이지는 `zacolabs/waky-landing` 저장소(`/waky-landing/`)에 있다.
 
 - `app-ads.txt` — AdMob 이 스토어의 개발자 웹사이트 도메인 맨 앞에서만 찾는다. 게시자 `pub-7125409961311406`
+- `_config.yml` — GitHub Pages(Jekyll)가 공개하지 않을 파일. `scripts/` · `README.md` · `.claude/` 를 빼 둔다. 빼지 않으면 빌드 원본(`build.py`)과 제목 없는 약관 본문 조각(`scripts/dayline/*.html`)이 그대로 공개돼 검색에 중복 페이지로 잡힌다
 - `robots.txt` — 검색엔진은 도메인 맨 앞의 이 파일만 읽는다. 랜딩 사이트맵을 여기서 알린다
   - AI 검색 · 어시스턴트의 크롤러(GPTBot · ClaudeBot · PerplexityBot …)도 막지 않는다고 따로 적어 둔다. 모든 로봇을 허용하는 첫 규칙만으로도 허용이지만, 뜻을 밝혀 두는 것이다
 - `ae703324639d4cf68799e9db16dce1c0.txt` — IndexNow 키 파일. 페이지를 고친 뒤 `./scripts/indexnow.sh` 를 돌리면 Bing · 네이버 등에 다시 읽어 가라고 알린다 (배포가 끝난 뒤에 돌린다). 키는 waky-landing 과 같다
@@ -14,6 +15,7 @@
   - Dayline 자세히 보기는 그 언어의 랜딩(`/dayline/<언어>/`)으로 걸고, 그 언어의 랜딩이 아직 없으면 영어로 건다
   - Dayline 카드의 스토어 버튼은 랜딩과 같은 주소를 쓴다 (`dayline_landing.py` 의 `PLAY` · `APPLE_ID`). 주소가 있는 스토어의 버튼만 나온다
   - 냥반장 · Cat in Room · 8 Billion 카드는 아직 스토어에 공개되지 않아 버튼 자리에 "출시 예정"이 나온다. 8 Billion의 자세히 보기는 한국어·일본어·중국어 간체·번체는 해당 언어의 `/8billion/<언어>/`, 다른 언어는 영어 `/8billion/`로 연결한다. 냥반장 · Cat in Room은 아직 따로 랜딩이 없다. 공개되면 `build.py` 의 `CATCAPTAIN_PLAY` · `CATCAPTAIN_APPLE` · `CATINROOM_…` · `EIGHTBILLION_…` 에 주소를 넣는다 (주석에 예상 주소가 있다). 냥반장은 한국에서만 서비스해 한국어가 아닌 페이지에서는 이름을 Cat Captain 으로 쓰고 종류에 "한국 전용"을 붙인다(`catcaptain_kind`). 문구는 Cat in Room 이 App Store 등록정보의 부제 · 홍보 문구, 냥반장 · 8 Billion 은 스토어 등록정보(한국어 · 영어)를 옮긴 것이다
+  - 회사 소개의 로고와 제품 아이콘은 표시 크기의 두 배로 줄인 WebP(`zacolabs-assets/logo-256.webp`, `<이름>-104.webp`)를, 파비콘은 180px PNG(`logo-180.png`)를 쓴다. 원본 PNG 는 파비콘 · 구조화 데이터 · 다른 랜딩이 쓰므로 남겨 둔다. 아이콘을 바꾸면 `cwebp -q 85 -resize 104 104 <이름>.png -o <이름>-104.webp` 로 다시 만든다
   - 아이폰 사파리에서는 회사 소개 맨 위에 Waky 의 스마트 앱 배너(`apple-itunes-app`, `build.py` `APPLE_ID`)가 뜬다 — 앱이 없으면 [보기](App Store), 있으면 [열기](Waky). 배너는 카드가 아니라 페이지에 하나만 붙어 앱 하나만 고를 수 있고, Dayline 은 App Store 에 나오기 전이라 Waky 다. Dayline 랜딩에는 Dayline 의 배너가 있다
   - 안드로이드에서는 Waky · Dayline 카드와 Dayline 랜딩의 Google Play 버튼이 앱을 먼저 연다 — 버튼의 `data-app`(intent 주소, `build.py` `APP_LINK` · `dayline_landing.py` `APP_LINK`)을 페이지 끝의 스크립트(`dayline_landing.APP_LINK_SCRIPT`)가 주소로 바꾼다. 앱이 있으면 앱(`waky://open` · `dayline://today`)이 열리고, 없으면 브라우저가 Play 스토어로 보낸다. 아이폰의 App Store 버튼은 그대로 스토어로 간다 — 앱이 없으면 사파리가 "주소가 유효하지 않음" 창을 띄우는데, 스토어 버튼을 누르는 사람은 대개 앱이 없다
 - 서치 콘솔 · Bing 웹마스터 도구 · 네이버 서치어드바이저 확인 태그는 맨 앞(영어) 페이지에만 있다. Bing 태그는 둘이다: waky-landing 에 달려 있는 것과, 지금 쓰는 Bing 계정이 `/dayline/` 을 올릴 때 내준 것
