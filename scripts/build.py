@@ -96,8 +96,9 @@ DAYLINE_APP_LINK = dayline_landing.APP_LINK
 # 냥반장은 App Store 에 나왔고(2026-10-29) Play 는 아직이다. Cat in Room · 8 Billion 은 아직 스토어에 공개되지 않았다
 # (Play 비공개 테스트 · App Store 심사 전후). 공개되면 주소를 넣는다 — 넣은 스토어의 버튼만 나오고, 둘 다 없으면 카드에 "출시 예정"이 나온다.
 # 냥반장은 한국에서만 서비스한다 — 한국어가 아닌 카드에는 "한국 전용"이 붙는다(i18n 의 catcaptain_kind).
+# 한국 스토어에만 있어 App Store 주소에 /kr/ 를 넣는다 — 나라가 없는 주소는 한국 밖에서 404 다.
 CATCAPTAIN_PLAY = None    # https://play.google.com/store/apps/details?id=com.zacolabs.catcaptain
-CATCAPTAIN_APPLE = "https://apps.apple.com/app/id6824216133"
+CATCAPTAIN_APPLE = "https://apps.apple.com/kr/app/id6824216133"
 CATINROOM_PLAY = None     # https://play.google.com/store/apps/details?id=com.zacolabs.catinroom
 CATINROOM_APPLE = None
 EIGHTBILLION_PLAY = None  # https://play.google.com/store/apps/details?id=com.zacolabs.onein8Billion
@@ -501,12 +502,12 @@ def page(langs, code, css):
                         <h3>8 Billion</h3>
                         <p class="kind">{e(t["eightbillion_kind"])}</p>
                     </div>
+                    <a class="card-more" href="{eightbillion_landing.landing_path(code)}" target="_blank" rel="noopener">{e(t["learn_more"])}</a>
                 </div>
                 <p class="card-title">{e(t["eightbillion_title"])}</p>
                 <p class="card-body">{e(t["eightbillion_body"])}</p>
                 <div class="card-actions">
                     {store_badges(t, EIGHTBILLION_PLAY, EIGHTBILLION_APPLE)}
-                    <a class="card-more" href="{eightbillion_landing.landing_path(code)}" target="_blank" rel="noopener">{e(t["learn_more"])}</a>
                 </div>
             </article>
         </div>
