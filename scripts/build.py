@@ -353,7 +353,8 @@ def head_script(code):
 
 def page(langs, code, css):
     t = langs[code]
-    title = f"Zaco Labs — {t['tagline']}"
+    # 검색결과 제목은 60자 안쪽으로. 화면의 태그라인이 긴 언어는 i18n 의 title 을 짧게 따로 쓴다
+    title = f"Zaco Labs — {t['title']}"
     verify = ""
     if code == DEFAULT:
         verify = "".join(f'<meta name="google-site-verification" content="{v}" />\n' for v in VERIFY)

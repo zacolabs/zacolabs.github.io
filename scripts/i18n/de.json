@@ -7,7 +7,8 @@
   "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
   "waky_slug": "de",
   "tagline": "Ein Softwarestudio für kleine, aber solide Produkte",
-  "description": "Zaco Labs ist ein kleines Softwarestudio. Wir entwickeln Waky, eine Wecker-App mit Missionen; Dayline, ein automatisches Bewegungstagebuch; und DUIRE, einen Service für geschlossene Tests bei Google Play.",
+  "title": "Softwarestudio für kleine, solide Apps",
+  "description": "Zaco Labs ist ein Softwarestudio. Wir machen Waky, einen Wecker mit Missionen; Dayline, ein automatisches Bewegungstagebuch; und DUIRE für Google-Play-Tests.",
   "og_description": "Wir entwickeln Waky, eine Wecker-App mit Missionen; Dayline, ein automatisches Bewegungstagebuch; und DUIRE, einen Service für geschlossene Tests bei Google Play.",
   "org_description": "Wir entwickeln Software, die kleine Ärgernisse im Alltag und bei der Arbeit beseitigt.",
   "about": [
