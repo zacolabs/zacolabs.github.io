@@ -36,7 +36,8 @@ DEFAULT = "en"
 # 오른쪽에서 왼쪽으로 읽는 언어
 RTL = {"ar"}
 
-# 라이선스는 Waky 처럼 본문 머리(h1) 없이 목록부터 시작한다.
+# 라이선스는 Waky 처럼 본문 머리(h1) 없이 목록부터 시작한다. 다만 검색엔진 · 스크린리더가 읽을
+# 제목은 있어야 해서, 화면에는 보이지 않는 h1(visually-hidden)을 둔다.
 DOCS = ["privacy", "terms", "community", "licenses"]
 NO_HEADING = {"licenses"}
 # 언어마다 본문을 따로 두지 않고 틀 하나에 strings.json 의 문구를 채우는 문서
@@ -123,7 +124,8 @@ def body_of(doc, lang, strings):
 def page(doc, lang, css, strings, auto=False):
     title = strings[doc]
     body = body_of(doc, lang, strings)
-    heading = "" if doc in NO_HEADING else f"    <h1>{html.escape(title)}</h1>\n"
+    hidden = ' class="visually-hidden"' if doc in NO_HEADING else ""
+    heading = f"    <h1{hidden}>{html.escape(title)}</h1>\n"
     direction = ' dir="rtl"' if lang in RTL else ""
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{direction}>
