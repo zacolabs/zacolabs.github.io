@@ -1,0 +1,52 @@
+{
+  "title": "Alternatif Linimasa Google Maps | Dayline",
+  "description": "Linimasa Google Maps kini hanya ada di ponsel. Dayline adalah catatan perjalanan otomatis gratis yang menggambar tiap hari dan menyimpannya di perangkatmu.",
+  "crumb": "Alternatif Linimasa Google Maps",
+  "h1": "Mencari alternatif Linimasa Google Maps?",
+  "lede": "Linimasa Google Maps mengubah cara menyimpan riwayatmu. Jika kamu ingin catatan otomatis lain tentang ke mana saja kamu pergi setiap hari, berikut apa yang berubah, apa yang dilakukan Dayline, dan hal yang perlu diketahui sebelum beralih.",
+  "changed_title": "Apa yang berubah pada Linimasa Google Maps",
+  "changed": [
+    "Google Maps kini menyimpan Linimasa di setiap ponsel yang login, bukan secara online di Akun Google. Linimasa tidak lagi tersedia di Maps pada komputer, dan salinannya hanya disimpan di server Google jika kamu mengaktifkan cadangan terenkripsi.",
+    "Google meminta pengguna memilih apa yang ingin disimpan sebelum perubahan sampai ke akun mereka, dan riwayat yang tidak disimpan bisa terhapus. Karena itu banyak orang mencari aplikasi lain untuk mencatat hari-hari mereka."
+  ],
+  "glance_title": "Sekilas",
+  "glance_head": [
+    "",
+    "Linimasa Google Maps",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Tempat riwayat disimpan",
+      "Di ponsel, cadangan terenkripsi opsional",
+      "Di ponsel"
+    ],
+    [
+      "Akun",
+      "Akun Google",
+      "Tidak perlu"
+    ],
+    [
+      "Di komputer",
+      "Tidak tersedia",
+      "Tidak tersedia (hanya aplikasi)"
+    ],
+    [
+      "Harga",
+      "Gratis",
+      "Gratis, dengan satu iklan"
+    ]
+  ],
+  "glance_note": "Berdasarkan Bantuan Google Maps dan deskripsi Dayline.",
+  "how_title": "Cara Dayline menyimpan harimu",
+  "how_lede": "Dayline adalah catatan perjalanan otomatis untuk iOS dan Android buatan Zaco Labs.",
+  "more": "Selengkapnya tentang Dayline",
+  "limits_title": "Sebelum beralih",
+  "limits": [
+    "Dayline mencatat sejak hari kamu memasangnya.",
+    "Agar jalurmu tetap tergambar saat aplikasi ditutup, izin lokasi harus diatur ke “Selalu” (“Selalu izinkan” di Android).",
+    "Dayline gratis dan menampilkan satu iklan di bawah bilah tab."
+  ],
+  "sources_title": "Sumber",
+  "source_label": "Bantuan Google Maps: Mengelola Linimasa Google Maps"
+}

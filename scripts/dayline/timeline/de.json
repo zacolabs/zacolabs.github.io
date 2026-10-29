@@ -1,0 +1,52 @@
+{
+  "title": "Alternative zur Google Maps Zeitachse | Dayline",
+  "description": "Die Google Maps Zeitachse liegt jetzt nur auf dem Handy. Dayline ist ein kostenloses, automatisches Bewegungstagebuch, das jeden Tag auf dem Gerät speichert.",
+  "crumb": "Alternative zur Google Maps Zeitachse",
+  "h1": "Du suchst eine Alternative zur Google Maps Zeitachse?",
+  "lede": "Die Zeitachse von Google Maps speichert deinen Verlauf jetzt anders. Wenn du eine andere automatische Aufzeichnung deiner Wege suchst, findest du hier, was sich geändert hat, was Dayline macht und was du vor dem Wechsel wissen solltest.",
+  "changed_title": "Was sich bei der Google Maps Zeitachse geändert hat",
+  "changed": [
+    "Google Maps speichert die Zeitachse jetzt auf jedem angemeldeten Smartphone statt online in deinem Google-Konto. Auf dem Computer ist die Zeitachse in Maps nicht mehr verfügbar, und eine Kopie liegt nur dann auf Googles Servern, wenn du die verschlüsselte Sicherung einschaltest.",
+    "Google bat darum, vor der Umstellung des Kontos auszuwählen, was erhalten bleiben soll; nicht übernommener Verlauf konnte gelöscht werden. Deshalb suchen viele eine andere App, die ihre Tage festhält."
+  ],
+  "glance_title": "Auf einen Blick",
+  "glance_head": [
+    "",
+    "Google Maps Zeitachse",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Wo der Verlauf liegt",
+      "Auf dem Smartphone, verschlüsselte Sicherung optional",
+      "Auf dem Smartphone"
+    ],
+    [
+      "Konto",
+      "Google-Konto",
+      "Keins"
+    ],
+    [
+      "Am Computer",
+      "Nicht verfügbar",
+      "Nicht verfügbar (nur App)"
+    ],
+    [
+      "Preis",
+      "Kostenlos",
+      "Kostenlos, mit einer Anzeige"
+    ]
+  ],
+  "glance_note": "Nach der Google Maps-Hilfe und der Beschreibung von Dayline.",
+  "how_title": "Wie Dayline deine Tage festhält",
+  "how_lede": "Dayline ist ein automatisches Bewegungstagebuch für iOS und Android von Zaco Labs.",
+  "more": "Mehr über Dayline",
+  "limits_title": "Vor dem Wechsel",
+  "limits": [
+    "Dayline zeichnet ab dem Tag der Installation auf.",
+    "Damit dein Weg auch bei geschlossener App gezeichnet wird, muss der Standortzugriff auf „Immer“ stehen (unter Android „Immer zulassen“).",
+    "Dayline ist kostenlos; unter der Tableiste wird eine Anzeige eingeblendet."
+  ],
+  "sources_title": "Quellen",
+  "source_label": "Google Maps-Hilfe: Google Maps Zeitachse verwalten"
+}

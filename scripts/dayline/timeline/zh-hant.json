@@ -1,0 +1,52 @@
+{
+  "title": "Google 地圖時間軸替代 App | Dayline",
+  "description": "Google 地圖時間軸現在只儲存在手機上。Dayline 是免費的自動移動紀錄 App，把每天畫成一條線並儲存在你的裝置上。",
+  "crumb": "Google 地圖時間軸替代",
+  "h1": "在找 Google 地圖時間軸的替代 App 嗎？",
+  "lede": "Google 地圖時間軸改變了保存紀錄的方式。如果你想找另一款能自動記下每天去過哪裡的 App，這裡整理了有哪些變化、Dayline 怎麼做，以及換用之前需要知道的事。",
+  "changed_title": "Google 地圖時間軸有哪些變化",
+  "changed": [
+    "Google 地圖現在把時間軸儲存在每支已登入的手機上，而不是 Google 帳戶的線上儲存空間。電腦版 Google 地圖已無法使用時間軸，只有開啟加密備份時，Google 伺服器上才會保留副本。",
+    "在變更生效前，Google 提示使用者選擇要保留的紀錄，沒有保留的紀錄可能會被刪除。因此，很多人在尋找另一款能記下每一天的 App。"
+  ],
+  "glance_title": "一覽",
+  "glance_head": [
+    "",
+    "Google 地圖時間軸",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "紀錄儲存在哪裡",
+      "手機上（加密備份可選）",
+      "手機上"
+    ],
+    [
+      "帳戶",
+      "Google 帳戶",
+      "不需要"
+    ],
+    [
+      "在電腦上查看",
+      "不支援",
+      "不支援（僅限 App）"
+    ],
+    [
+      "價格",
+      "免費",
+      "免費，有一則廣告"
+    ]
+  ],
+  "glance_note": "根據 Google 地圖說明中心和 Dayline 的說明整理。",
+  "how_title": "Dayline 如何記下每一天",
+  "how_lede": "Dayline 是 Zaco Labs 為 iOS 和 Android 打造的自動移動紀錄 App。",
+  "more": "進一步了解 Dayline",
+  "limits_title": "換用之前",
+  "limits": [
+    "Dayline 從安裝當天開始記錄。",
+    "要在 App 關閉時也畫出路線，需要把位置權限設為「永遠」（Android 上為「一律允許」）。",
+    "Dayline 免費，分頁列下方會顯示一則廣告。"
+  ],
+  "sources_title": "資料來源",
+  "source_label": "Google 地圖說明中心：管理 Google 地圖時間軸"
+}

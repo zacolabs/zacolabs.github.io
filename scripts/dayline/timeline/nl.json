@@ -1,0 +1,52 @@
+{
+  "title": "Alternatief voor de Google Maps-tijdlijn | Dayline",
+  "description": "De Google Maps-tijdlijn staat nu alleen nog op je telefoon. Dayline is een gratis, automatisch logboek van je routes dat elke dag op je toestel bewaart.",
+  "crumb": "Alternatief voor de Google Maps-tijdlijn",
+  "h1": "Op zoek naar een alternatief voor de Google Maps-tijdlijn?",
+  "lede": "De tijdlijn van Google Maps bewaart je geschiedenis nu op een andere manier. Zoek je een ander automatisch logboek van waar je elke dag was, dan lees je hier wat er veranderde, wat Dayline doet en wat je moet weten voordat je overstapt.",
+  "changed_title": "Wat er veranderde aan de Google Maps-tijdlijn",
+  "changed": [
+    "Google Maps slaat je tijdlijn nu op elke ingelogde telefoon op in plaats van online in je Google-account. De tijdlijn is niet meer beschikbaar in Maps op een computer, en er staat alleen een kopie op de servers van Google als je de versleutelde back-up aanzet.",
+    "Google vroeg mensen te kiezen wat ze wilden bewaren voordat de wijziging hun account bereikte, en geschiedenis die niet werd bewaard kon worden verwijderd. Daarom zoeken veel mensen een andere app die hun dagen bijhoudt."
+  ],
+  "glance_title": "In één oogopslag",
+  "glance_head": [
+    "",
+    "Google Maps-tijdlijn",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Waar je geschiedenis staat",
+      "Op je telefoon, versleutelde back-up optioneel",
+      "Op je telefoon"
+    ],
+    [
+      "Account",
+      "Google-account",
+      "Geen"
+    ],
+    [
+      "Op een computer",
+      "Niet beschikbaar",
+      "Niet beschikbaar (alleen app)"
+    ],
+    [
+      "Prijs",
+      "Gratis",
+      "Gratis, met één advertentie"
+    ]
+  ],
+  "glance_note": "Op basis van Google Maps Help en de beschrijving van Dayline.",
+  "how_title": "Hoe Dayline je dagen bewaart",
+  "how_lede": "Dayline is een automatisch logboek van je routes voor iOS en Android, gemaakt door Zaco Labs.",
+  "more": "Meer over Dayline",
+  "limits_title": "Voordat je overstapt",
+  "limits": [
+    "Dayline registreert vanaf de dag dat je het installeert.",
+    "Om je route te tekenen terwijl de app gesloten is, moet de toegang tot je locatie op ‘Altijd’ staan (op Android ‘Altijd toestaan’).",
+    "Dayline is gratis en toont één advertentie onder de tabbalk."
+  ],
+  "sources_title": "Bronnen",
+  "source_label": "Google Maps Help: Je Google Maps-tijdlijn beheren"
+}

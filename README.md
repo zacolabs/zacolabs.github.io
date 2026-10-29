@@ -20,6 +20,10 @@
   - 안드로이드에서는 Waky · Dayline 카드와 Dayline 랜딩의 Google Play 버튼이 앱을 먼저 연다 — 버튼의 `data-app`(intent 주소, `build.py` `APP_LINK` · `dayline_landing.py` `APP_LINK`)을 페이지 끝의 스크립트(`dayline_landing.APP_LINK_SCRIPT`)가 주소로 바꾼다. 앱이 있으면 앱(`waky://open` · `dayline://today`)이 열리고, 없으면 브라우저가 Play 스토어로 보낸다. 아이폰의 App Store 버튼은 그대로 스토어로 간다 — 앱이 없으면 사파리가 "주소가 유효하지 않음" 창을 띄우는데, 스토어 버튼을 누르는 사람은 대개 앱이 없다
 - 서치 콘솔 · Bing 웹마스터 도구 · 네이버 서치어드바이저 확인 태그는 맨 앞(영어) 페이지에만 있다. Bing 태그는 둘이다: waky-landing 에 달려 있는 것과, 지금 쓰는 Bing 계정이 `/dayline/` 을 올릴 때 내준 것
 - 회사 소개의 구조화 데이터는 조직 · 사이트 · 페이지를 `@id` 로 이은 그래프 하나다 (`build.py` `json_ld`, Dayline 랜딩과 같은 `@id`). 구글은 검색결과의 사이트 이름을 도메인 맨 앞 페이지의 `WebSite` 에서만 읽는다 — 없으면 "GitHub" 로 나온다. 조직의 `sameAs`(유튜브 채널 · Play 개발자 페이지 · GitHub 조직)는 `build.py` 의 `SAME_AS`
+- `dayline/<언어>/google-timeline-alternative/` — Google 지도 타임라인 대안 페이지. **`scripts/dayline_timeline.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
+  - 이 페이지에만 있는 글은 `scripts/dayline/timeline/<언어>.json`. Dayline 의 기능 · FAQ · 스토어 버튼 · 모양은 랜딩의 것을 그대로 쓴다 — Dayline 설명을 고치면 랜딩 문구만 고친다
+  - Google 쪽 설명은 Google 지도 고객센터 "타임라인 관리"(support.google.com/maps/answer/6258979)에 적힌 것만 쓰고, 그 문서를 출처로 건다. Google 이 타임라인을 또 바꾸면 비교표 · "바뀐 것" 문단을 함께 고친다
+  - 제목 60자 · 설명 160자를 넘으면 빌드가 멈춘다. 랜딩 푸터의 링크 문구는 랜딩 i18n 의 `timeline_link`
 - `dayline/` — Dayline 의 이용 약관 · 개인정보 처리방침 · 커뮤니티 규칙 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
   - 커뮤니티 규칙(`community`)은 피드 "모두의 선"에 올려도 되는 것과 안 되는 것, 신고 · 차단, 고치기 · 지우기를 적은 글이다. 앱이 닉네임을 정하는 화면의 "커뮤니티 규칙 › 보기"로 이 주소(`/dayline/community.html?lang=…`)를 열고, 랜딩 아래쪽에서도 건다 (2026-10-09 에 더했다). 약관 · 방침과 같은 방식으로 언어마다 본문을 둔다
   - 약관 · 개인정보 처리방침의 본문은 `scripts/dayline/<문서>.<언어>.html`, 모양은 `scripts/dayline/style.css`. **이 본문이 기준이다** — 앱은 글을 따로 싣지 않고 이 주소를 연다. Waky 의 같은 페이지(`zacolabs-backend` `src/content/waky/legal`)에서 따와 Dayline 에 맞게 고친 것이라, 구조와 모양은 그쪽과 맞춘다

@@ -1,0 +1,52 @@
+{
+  "title": "Google Maps Timeline alternative | Dayline",
+  "description": "Google Maps Timeline now lives only on your phone. Dayline is a free, automatic travel log that draws each day as a line and keeps it on your device.",
+  "crumb": "Google Maps Timeline alternative",
+  "h1": "Looking for a Google Maps Timeline alternative?",
+  "lede": "Google Maps Timeline has changed how it keeps your history. If you want another automatic record of where you went each day, here is what changed, what Dayline does, and what to know before you switch.",
+  "changed_title": "What changed with Google Maps Timeline",
+  "changed": [
+    "Google Maps now saves your Timeline on each signed-in phone instead of in your Google account online. Timeline is no longer available in Maps on a computer, and a copy is kept on Google's servers only if you turn on encrypted backup.",
+    "Google asked people to choose what to keep before the change reached their account, and history that was not kept could be deleted. Many people are now looking for another app that keeps a record of their days."
+  ],
+  "glance_title": "At a glance",
+  "glance_head": [
+    "",
+    "Google Maps Timeline",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Where your history is kept",
+      "On your phone, with optional encrypted backup",
+      "On your phone"
+    ],
+    [
+      "Account",
+      "Google account",
+      "None"
+    ],
+    [
+      "On a computer",
+      "Not available",
+      "Not available (app only)"
+    ],
+    [
+      "Price",
+      "Free",
+      "Free, with one ad"
+    ]
+  ],
+  "glance_note": "Based on Google Maps Help and Dayline's own description.",
+  "how_title": "How Dayline keeps your days",
+  "how_lede": "Dayline is an automatic travel log for iOS and Android, made by Zaco Labs.",
+  "more": "More about Dayline",
+  "limits_title": "Before you switch",
+  "limits": [
+    "Dayline records from the day you install it.",
+    "To draw your path while the app is closed, location access has to be set to \"Always\" (\"Allow all the time\" on Android).",
+    "Dayline is free and shows one ad below the tab bar."
+  ],
+  "sources_title": "Sources",
+  "source_label": "Google Maps Help: Manage your Google Maps Timeline"
+}

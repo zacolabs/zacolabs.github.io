@@ -1,0 +1,52 @@
+{
+  "title": "Alternatywa dla Osi czasu Google Maps | Dayline",
+  "description": "Oś czasu Google Maps jest teraz tylko na telefonie. Dayline to bezpłatny, automatyczny dziennik tras, który rysuje każdy dzień i zapisuje go na urządzeniu.",
+  "crumb": "Alternatywa dla Osi czasu Google Maps",
+  "h1": "Szukasz alternatywy dla Osi czasu w Mapach Google?",
+  "lede": "Oś czasu w Mapach Google zmieniła sposób przechowywania historii. Jeśli chcesz innego automatycznego zapisu tego, gdzie byłeś każdego dnia, sprawdź, co się zmieniło, co robi Dayline i co warto wiedzieć przed zmianą.",
+  "changed_title": "Co się zmieniło w Osi czasu Map Google",
+  "changed": [
+    "Mapy Google zapisują teraz oś czasu na każdym zalogowanym telefonie zamiast online na koncie Google. Oś czasu nie jest już dostępna w Mapach na komputerze, a kopia trafia na serwery Google tylko wtedy, gdy włączysz zaszyfrowaną kopię zapasową.",
+    "Google prosił o wybranie, co zachować, zanim zmiana obejmie konto, a niezachowana historia mogła zostać usunięta. Dlatego wiele osób szuka innej aplikacji, która zapisze ich dni."
+  ],
+  "glance_title": "W skrócie",
+  "glance_head": [
+    "",
+    "Oś czasu Google Maps",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Gdzie jest historia",
+      "Na telefonie, zaszyfrowana kopia opcjonalnie",
+      "Na telefonie"
+    ],
+    [
+      "Konto",
+      "Konto Google",
+      "Brak"
+    ],
+    [
+      "Na komputerze",
+      "Niedostępna",
+      "Niedostępna (tylko aplikacja)"
+    ],
+    [
+      "Cena",
+      "Bezpłatnie",
+      "Bezpłatnie, z jedną reklamą"
+    ]
+  ],
+  "glance_note": "Na podstawie Pomocy Map Google i opisu Dayline.",
+  "how_title": "Jak Dayline zapisuje Twoje dni",
+  "how_lede": "Dayline to automatyczny dziennik tras na iOS i Androida od Zaco Labs.",
+  "more": "Więcej o Dayline",
+  "limits_title": "Zanim przejdziesz",
+  "limits": [
+    "Dayline zapisuje od dnia instalacji.",
+    "Aby trasa była rysowana przy zamkniętej aplikacji, dostęp do lokalizacji musi być ustawiony na „Zawsze” (na Androidzie „Zawsze zezwalaj”).",
+    "Dayline jest bezpłatna, a pod paskiem kart wyświetla się jedna reklama."
+  ],
+  "sources_title": "Źródła",
+  "source_label": "Pomoc Map Google: Zarządzanie osią czasu w Mapach Google"
+}

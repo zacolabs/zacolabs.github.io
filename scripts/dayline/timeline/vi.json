@@ -1,0 +1,52 @@
+{
+  "title": "Thay thế Dòng thời gian Google Maps | Dayline",
+  "description": "Dòng thời gian của Google Maps giờ chỉ lưu trên điện thoại. Dayline là nhật ký di chuyển tự động, miễn phí, vẽ mỗi ngày thành một đường và lưu trên máy bạn.",
+  "crumb": "Thay thế Dòng thời gian Google Maps",
+  "h1": "Bạn đang tìm ứng dụng thay thế Dòng thời gian của Google Maps?",
+  "lede": "Dòng thời gian của Google Maps đã thay đổi cách lưu lịch sử của bạn. Nếu bạn muốn một bản ghi tự động khác về những nơi đã đi mỗi ngày, đây là những gì đã thay đổi, Dayline làm gì và những điều cần biết trước khi chuyển.",
+  "changed_title": "Dòng thời gian của Google Maps đã thay đổi gì",
+  "changed": [
+    "Giờ đây Google Maps lưu Dòng thời gian trên từng điện thoại đã đăng nhập thay vì lưu trực tuyến trong Tài khoản Google. Dòng thời gian không còn trên Maps ở máy tính, và bản sao chỉ được giữ trên máy chủ của Google nếu bạn bật sao lưu được mã hóa.",
+    "Google đã đề nghị người dùng chọn dữ liệu muốn giữ trước khi thay đổi áp dụng cho tài khoản, và lịch sử không được giữ có thể bị xóa. Vì vậy nhiều người đang tìm một ứng dụng khác để ghi lại những ngày của mình."
+  ],
+  "glance_title": "Tóm tắt",
+  "glance_head": [
+    "",
+    "Dòng thời gian Google Maps",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Nơi lưu lịch sử",
+      "Trên điện thoại, sao lưu mã hóa tùy chọn",
+      "Trên điện thoại"
+    ],
+    [
+      "Tài khoản",
+      "Tài khoản Google",
+      "Không cần"
+    ],
+    [
+      "Trên máy tính",
+      "Không có",
+      "Không có (chỉ ứng dụng)"
+    ],
+    [
+      "Giá",
+      "Miễn phí",
+      "Miễn phí, có một quảng cáo"
+    ]
+  ],
+  "glance_note": "Dựa trên Trợ giúp Google Maps và mô tả của Dayline.",
+  "how_title": "Cách Dayline lưu lại ngày của bạn",
+  "how_lede": "Dayline là ứng dụng nhật ký di chuyển tự động cho iOS và Android do Zaco Labs làm.",
+  "more": "Tìm hiểu thêm về Dayline",
+  "limits_title": "Trước khi chuyển",
+  "limits": [
+    "Dayline ghi lại từ ngày bạn cài đặt.",
+    "Để vẽ con đường khi ứng dụng đã đóng, quyền truy cập vị trí cần đặt là “Luôn luôn” (trên Android là “Luôn cho phép”).",
+    "Dayline miễn phí và hiển thị một quảng cáo bên dưới thanh thẻ."
+  ],
+  "sources_title": "Nguồn",
+  "source_label": "Trợ giúp Google Maps: Quản lý Dòng thời gian trên Google Maps"
+}

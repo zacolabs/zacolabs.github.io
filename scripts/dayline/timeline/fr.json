@@ -1,0 +1,52 @@
+{
+  "title": "Alternative à la Timeline Google Maps | Dayline",
+  "description": "Vos trajets Google Maps ne sont plus que sur votre téléphone. Dayline est un journal de trajets automatique et gratuit qui garde chaque jour sur votre appareil.",
+  "crumb": "Alternative à la Timeline Google Maps",
+  "h1": "Vous cherchez une alternative à Vos trajets de Google Maps ?",
+  "lede": "Vos trajets (Timeline) de Google Maps a changé sa façon de garder votre historique. Si vous voulez un autre relevé automatique de vos déplacements, voici ce qui a changé, ce que fait Dayline et ce qu'il faut savoir avant de passer à autre chose.",
+  "changed_title": "Ce qui a changé dans Vos trajets de Google Maps",
+  "changed": [
+    "Google Maps enregistre désormais Vos trajets sur chaque téléphone connecté, et non plus en ligne dans votre compte Google. Vos trajets n'est plus disponible dans Maps sur ordinateur, et une copie n'est conservée sur les serveurs de Google que si vous activez la sauvegarde chiffrée.",
+    "Google a demandé de choisir quoi garder avant que le changement n'atteigne chaque compte, et l'historique non conservé pouvait être supprimé. Beaucoup de gens cherchent donc une autre app pour garder une trace de leurs journées."
+  ],
+  "glance_title": "En bref",
+  "glance_head": [
+    "",
+    "Vos trajets Google Maps",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Où l'historique est gardé",
+      "Sur votre téléphone, sauvegarde chiffrée en option",
+      "Sur votre téléphone"
+    ],
+    [
+      "Compte",
+      "Compte Google",
+      "Aucun"
+    ],
+    [
+      "Sur ordinateur",
+      "Non disponible",
+      "Non disponible (app uniquement)"
+    ],
+    [
+      "Prix",
+      "Gratuit",
+      "Gratuit, avec une publicité"
+    ]
+  ],
+  "glance_note": "D'après l'aide Google Maps et la description de Dayline.",
+  "how_title": "Comment Dayline garde vos journées",
+  "how_lede": "Dayline est un journal de trajets automatique pour iOS et Android, créé par Zaco Labs.",
+  "more": "En savoir plus sur Dayline",
+  "limits_title": "Avant de changer",
+  "limits": [
+    "Dayline enregistre à partir du jour où vous l'installez.",
+    "Pour tracer votre parcours quand l'app est fermée, l'accès à la localisation doit être réglé sur « Toujours » (« Toujours autoriser » sur Android).",
+    "Dayline est gratuite et affiche une seule publicité sous la barre d'onglets."
+  ],
+  "sources_title": "Sources",
+  "source_label": "Aide Google Maps : Gérer Vos trajets dans Google Maps"
+}

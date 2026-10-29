@@ -1,0 +1,52 @@
+{
+  "title": "Alternativ til Google Maps-tidslinje | Dayline",
+  "description": "Google Maps-tidslinjen ligger nu kun på din telefon. Dayline er en gratis, automatisk rutelog, der tegner hver dag som en linje og gemmer den på din enhed.",
+  "crumb": "Alternativ til Google Maps-tidslinje",
+  "h1": "Leder du efter et alternativ til Google Maps-tidslinjen?",
+  "lede": "Google Maps-tidslinjen har ændret, hvordan den gemmer din historik. Vil du have en anden automatisk log over, hvor du har været hver dag, kan du her læse, hvad der er ændret, hvad Dayline gør, og hvad du skal vide, før du skifter.",
+  "changed_title": "Det har ændret sig ved Google Maps-tidslinjen",
+  "changed": [
+    "Google Maps gemmer nu tidslinjen på hver telefon, du er logget ind på, i stedet for online på din Google-konto. Tidslinjen findes ikke længere i Maps på en computer, og der ligger kun en kopi på Googles servere, hvis du slår krypteret backup til.",
+    "Google bad folk vælge, hvad de ville beholde, før ændringen nåede deres konto, og historik, der ikke blev beholdt, kunne blive slettet. Derfor leder mange efter en anden app, der kan gemme deres dage."
+  ],
+  "glance_title": "Kort fortalt",
+  "glance_head": [
+    "",
+    "Google Maps-tidslinje",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Hvor historikken ligger",
+      "På telefonen, krypteret backup valgfrit",
+      "På telefonen"
+    ],
+    [
+      "Konto",
+      "Google-konto",
+      "Ingen"
+    ],
+    [
+      "På en computer",
+      "Ikke tilgængelig",
+      "Ikke tilgængelig (kun app)"
+    ],
+    [
+      "Pris",
+      "Gratis",
+      "Gratis, med én annonce"
+    ]
+  ],
+  "glance_note": "Ud fra Google Maps Hjælp og Daylines egen beskrivelse.",
+  "how_title": "Sådan gemmer Dayline dine dage",
+  "how_lede": "Dayline er en automatisk rutelog til iOS og Android, lavet af Zaco Labs.",
+  "more": "Mere om Dayline",
+  "limits_title": "Før du skifter",
+  "limits": [
+    "Dayline registrerer fra den dag, du installerer appen.",
+    "For at tegne din rute, mens appen er lukket, skal adgangen til lokalitet stå til “Altid” (“Tillad altid” på Android).",
+    "Dayline er gratis og viser én annonce under fanelinjen."
+  ],
+  "sources_title": "Kilder",
+  "source_label": "Google Maps Hjælp: Administrer din Google Maps-tidslinje"
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Alternativa à Linha do tempo do Google Maps | Dayline",
+  "description": "A Linha do tempo do Google Maps agora fica só no celular. O Dayline é um diário automático e gratuito de trajetos que guarda cada dia no seu aparelho.",
+  "crumb": "Alternativa à Linha do tempo do Google Maps",
+  "h1": "Procurando uma alternativa à Linha do tempo do Google Maps?",
+  "lede": "A Linha do tempo do Google Maps mudou a forma de guardar seu histórico. Se você quer outro registro automático de onde esteve a cada dia, veja o que mudou, o que o Dayline faz e o que saber antes de trocar.",
+  "changed_title": "O que mudou na Linha do tempo do Google Maps",
+  "changed": [
+    "Agora o Google Maps salva a Linha do tempo em cada celular conectado, e não mais on-line na sua Conta do Google. A Linha do tempo não está mais disponível no Maps no computador, e uma cópia só fica nos servidores do Google se você ativar o backup criptografado.",
+    "O Google pediu que cada pessoa escolhesse o que manter antes de a mudança chegar à conta, e o histórico não mantido podia ser excluído. Por isso, muita gente procura outro app que registre os seus dias."
+  ],
+  "glance_title": "Resumo",
+  "glance_head": [
+    "",
+    "Linha do tempo do Google Maps",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Onde o histórico fica",
+      "No celular, com backup criptografado opcional",
+      "No celular"
+    ],
+    [
+      "Conta",
+      "Conta do Google",
+      "Nenhuma"
+    ],
+    [
+      "No computador",
+      "Indisponível",
+      "Indisponível (só app)"
+    ],
+    [
+      "Preço",
+      "Grátis",
+      "Grátis, com um anúncio"
+    ]
+  ],
+  "glance_note": "Com base na Ajuda do Google Maps e na descrição do Dayline.",
+  "how_title": "Como o Dayline guarda seus dias",
+  "how_lede": "O Dayline é um diário automático de trajetos para iOS e Android, feito pela Zaco Labs.",
+  "more": "Saiba mais sobre o Dayline",
+  "limits_title": "Antes de trocar",
+  "limits": [
+    "O Dayline registra a partir do dia em que você o instala.",
+    "Para desenhar o trajeto com o app fechado, o acesso à localização precisa estar em “Sempre” (“Permitir o tempo todo” no Android).",
+    "O Dayline é gratuito e mostra um anúncio abaixo da barra de abas."
+  ],
+  "sources_title": "Fontes",
+  "source_label": "Ajuda do Google Maps: Gerenciar a Linha do tempo do Google Maps"
+}

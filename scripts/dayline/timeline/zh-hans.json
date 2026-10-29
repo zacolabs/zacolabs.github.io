@@ -1,0 +1,52 @@
+{
+  "title": "Google 地图时间轴替代应用 | Dayline",
+  "description": "Google 地图时间轴现在只保存在手机上。Dayline 是一款免费的自动出行记录应用，把每天画成一条线并保存在你的设备上。",
+  "crumb": "Google 地图时间轴替代",
+  "h1": "在找 Google 地图时间轴的替代应用吗？",
+  "lede": "Google 地图时间轴改变了保存记录的方式。如果你想找另一款能自动记下每天去过哪里的应用，这里整理了发生了什么变化、Dayline 怎么做，以及换用之前需要知道的事。",
+  "changed_title": "Google 地图时间轴有哪些变化",
+  "changed": [
+    "Google 地图现在把时间轴保存在每台已登录的手机上，而不是 Google 帐号的在线存储中。电脑版 Google 地图已无法使用时间轴，只有开启加密备份时，Google 服务器上才会保留副本。",
+    "在变更生效前，Google 提示用户选择要保留的记录，没有保留的记录可能会被删除。因此，很多人在寻找另一款能记下每一天的应用。"
+  ],
+  "glance_title": "一览",
+  "glance_head": [
+    "",
+    "Google 地图时间轴",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "记录保存在哪里",
+      "手机上（加密备份可选）",
+      "手机上"
+    ],
+    [
+      "帐号",
+      "Google 帐号",
+      "不需要"
+    ],
+    [
+      "在电脑上查看",
+      "不支持",
+      "不支持（仅限应用）"
+    ],
+    [
+      "价格",
+      "免费",
+      "免费，有一条广告"
+    ]
+  ],
+  "glance_note": "根据 Google 地图帮助中心和 Dayline 的说明整理。",
+  "how_title": "Dayline 如何记下每一天",
+  "how_lede": "Dayline 是 Zaco Labs 为 iOS 和 Android 打造的自动出行记录应用。",
+  "more": "进一步了解 Dayline",
+  "limits_title": "换用之前",
+  "limits": [
+    "Dayline 从安装当天开始记录。",
+    "要在应用关闭时也画出路线，需要把位置权限设为“始终”（Android 上为“始终允许”）。",
+    "Dayline 免费，标签栏下方会显示一条广告。"
+  ],
+  "sources_title": "来源",
+  "source_label": "Google 地图帮助：管理您的 Google 地图时间轴"
+}

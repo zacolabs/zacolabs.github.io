@@ -18,6 +18,7 @@ import os
 
 import dayline_landing
 import dayline_legal
+import dayline_timeline
 import eightbillion_landing
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -697,6 +698,7 @@ def main():
     print(f"built {len(ORDER)} pages")
     print(f"built {dayline_legal.build()} dayline legal pages")
     print(f"built {dayline_landing.build()} dayline landing pages")
+    print(f"built {dayline_timeline.build()} dayline timeline pages")
     print(f"built {eightbillion_landing.build()} 8 Billion landing pages")
 
 

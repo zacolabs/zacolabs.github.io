@@ -1,0 +1,52 @@
+{
+  "title": "Alternatibo sa Google Maps Timeline | Dayline",
+  "description": "Sa phone na lang naka-save ang Google Maps Timeline. Ang Dayline ay libreng awtomatikong tala ng biyahe na iginuguhit ang bawat araw at sine-save sa device mo.",
+  "crumb": "Alternatibo sa Google Maps Timeline",
+  "h1": "Naghahanap ng alternatibo sa Google Maps Timeline?",
+  "lede": "Binago ng Google Maps Timeline ang paraan ng pag-iingat sa history mo. Kung gusto mo ng ibang awtomatikong tala kung saan ka nagpunta bawat araw, narito kung ano ang nagbago, ano ang ginagawa ng Dayline, at ano ang dapat malaman bago lumipat.",
+  "changed_title": "Ano ang nagbago sa Google Maps Timeline",
+  "changed": [
+    "Sine-save na ngayon ng Google Maps ang Timeline sa bawat naka-sign in na phone sa halip na online sa Google Account mo. Hindi na available ang Timeline sa Maps sa computer, at may kopya lang sa mga server ng Google kung i-on mo ang naka-encrypt na backup.",
+    "Hiniling ng Google na piliin kung ano ang itatabi bago umabot ang pagbabago sa account, at puwedeng mabura ang history na hindi itinabi. Kaya maraming naghahanap ng ibang app na magtatala ng mga araw nila."
+  ],
+  "glance_title": "Sa isang tingin",
+  "glance_head": [
+    "",
+    "Google Maps Timeline",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Saan naka-save ang history",
+      "Sa phone, opsyonal ang naka-encrypt na backup",
+      "Sa phone"
+    ],
+    [
+      "Account",
+      "Google Account",
+      "Wala"
+    ],
+    [
+      "Sa computer",
+      "Hindi available",
+      "Hindi available (app lang)"
+    ],
+    [
+      "Presyo",
+      "Libre",
+      "Libre, may isang ad"
+    ]
+  ],
+  "glance_note": "Batay sa Google Maps Help at sa paglalarawan ng Dayline.",
+  "how_title": "Paano itinatala ng Dayline ang mga araw mo",
+  "how_lede": "Ang Dayline ay awtomatikong tala ng biyahe para sa iOS at Android, gawa ng Zaco Labs.",
+  "more": "Higit pa tungkol sa Dayline",
+  "limits_title": "Bago lumipat",
+  "limits": [
+    "Nagtatala ang Dayline mula sa araw na i-install mo ito.",
+    "Para maiguhit ang dinadaanan mo kahit nakasara ang app, kailangang naka-set sa “Always” ang pahintulot sa lokasyon (“Payagan sa lahat ng oras” sa Android).",
+    "Libre ang Dayline at nagpapakita ng isang ad sa ibaba ng tab bar."
+  ],
+  "sources_title": "Mga pinagmulan",
+  "source_label": "Google Maps Help: Pamahalaan ang iyong Google Maps Timeline"
+}

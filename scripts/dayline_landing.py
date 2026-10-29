@@ -503,6 +503,7 @@ def page(d, langs, css, legal):
 
 <footer class="site">
     <div class="wrap">
+        <div class="row"><a href="/dayline/{code}/google-timeline-alternative/">{e(d["timeline_link"])}</a></div>
         <div class="row"><a href="/dayline/privacy.{code}.html">{e(legal["privacy"])}</a> · <a href="/dayline/terms.{code}.html">{e(legal["terms"])}</a> · <a href="/dayline/community.{code}.html">{e(legal["community"])}</a></div>
         <div class="row"><a href="/">{e(d["about_link"])}</a> · <a href="mailto:zaco.labs@gmail.com">zaco.labs@gmail.com</a></div>
         <div class="row">© <span id="year">2026</span> Zaco Labs. {e(d["rights"])}</div>
@@ -609,10 +610,12 @@ def entry_page(langs):
 
 def llms_links():
     """llms.txt 의 Dayline 줄들. build.py 가 쓴다."""
+    import dayline_timeline
     d = load(DEFAULT)
     langs = [load(c) for c in codes() if c != DEFAULT]
     others = ", ".join(f'[{x["label"]}]({url(x["code"])})' for x in langs)
     return f"""- [Dayline]({url(DEFAULT)}): {d["app_description"]} Free on iOS and Android.
+{dayline_timeline.llms_link()}
 - [Dayline privacy policy]({SITE}/dayline/privacy.en.html): what Dayline collects and what never leaves the device
 - [Dayline terms of service]({SITE}/dayline/terms.en.html)
 - [Dayline community rules]({SITE}/dayline/community.en.html): what may be posted to the feed of days, reporting and blocking
@@ -659,11 +662,13 @@ def sitemap_urls(today):
     links = "\n".join(
         f'    <xhtml:link rel="alternate" hreflang="{x["hreflang"]}" href="{url(x["code"])}" />' for x in langs
     ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{url(DEFAULT)}" />'
-    return "\n".join(f'''  <url>
+    landing = "\n".join(f'''  <url>
     <loc>{url(x["code"])}</loc>
     <lastmod>{today}</lastmod>
 {links}
   </url>''' for x in langs)
+    import dayline_timeline  # 이 모듈을 가져다 쓰므로 여기서 가져온다
+    return landing + "\n" + dayline_timeline.sitemap_urls(today)
 
 
 def sitemap(today):

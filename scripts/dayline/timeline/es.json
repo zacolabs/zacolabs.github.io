@@ -1,0 +1,52 @@
+{
+  "title": "Alternativa a Cronología de Google Maps | Dayline",
+  "description": "Cronología de Google Maps ya solo se guarda en tu teléfono. Dayline es un registro de rutas automático y gratis que dibuja cada día y lo guarda en tu móvil.",
+  "crumb": "Alternativa a Cronología de Google Maps",
+  "h1": "¿Buscas una alternativa a Cronología de Google Maps?",
+  "lede": "Cronología de Google Maps cambió la forma de guardar tu historial. Si quieres otro registro automático de por dónde fuiste cada día, aquí tienes qué cambió, qué hace Dayline y qué saber antes de cambiar.",
+  "changed_title": "Qué cambió en Cronología de Google Maps",
+  "changed": [
+    "Google Maps ahora guarda tu Cronología en cada teléfono con sesión iniciada, en lugar de en tu cuenta de Google en línea. Cronología ya no está disponible en Maps desde un ordenador, y solo queda una copia en los servidores de Google si activas la copia de seguridad cifrada.",
+    "Google pidió elegir qué conservar antes de que el cambio llegara a cada cuenta, y el historial que no se conservó podía eliminarse. Por eso mucha gente busca otra app que guarde un registro de sus días."
+  ],
+  "glance_title": "De un vistazo",
+  "glance_head": [
+    "",
+    "Cronología de Google Maps",
+    "Dayline"
+  ],
+  "glance_rows": [
+    [
+      "Dónde se guarda el historial",
+      "En tu teléfono, con copia cifrada opcional",
+      "En tu teléfono"
+    ],
+    [
+      "Cuenta",
+      "Cuenta de Google",
+      "Ninguna"
+    ],
+    [
+      "En un ordenador",
+      "No disponible",
+      "No disponible (solo app)"
+    ],
+    [
+      "Precio",
+      "Gratis",
+      "Gratis, con un anuncio"
+    ]
+  ],
+  "glance_note": "Según la Ayuda de Google Maps y la descripción de Dayline.",
+  "how_title": "Cómo guarda Dayline tus días",
+  "how_lede": "Dayline es un registro automático de rutas para iOS y Android, creado por Zaco Labs.",
+  "more": "Más sobre Dayline",
+  "limits_title": "Antes de cambiar",
+  "limits": [
+    "Dayline registra desde el día en que la instalas.",
+    "Para dibujar tu recorrido con la app cerrada, el permiso de ubicación tiene que estar en «Siempre» («Permitir siempre» en Android).",
+    "Dayline es gratis y muestra un anuncio debajo de la barra de pestañas."
+  ],
+  "sources_title": "Fuentes",
+  "source_label": "Ayuda de Google Maps: Gestionar tu Cronología de Google Maps"
+}
