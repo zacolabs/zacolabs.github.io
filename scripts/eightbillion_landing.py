@@ -71,6 +71,15 @@ def page(code):
             {'@type': 'VideoGame', '@id': SITE + '/8billion/#app', 'name': '8 Billion: Another Life',
              'url': SITE + '/8billion/', 'description': t['description'], 'genre': 'Life simulation',
              'gamePlatform': ['iOS', 'Android'], 'inLanguage': list(LANG_TAGS.values()),
+             'applicationCategory': 'GameApplication', 'operatingSystem': 'Android, iOS',
+             'image': SITE + '/zacolabs-assets/8billion_icon.png', 'isAccessibleForFree': True,
+             # 무료로 시작하고, 광고를 보거나 프리미엄을 한 번 사서 세계를 연다 (FAQ 와 같다)
+             'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'},
+             'publisher': {'@id': SITE + '/#organization'}, 'author': {'@id': SITE + '/#organization'}},
+            # @id 는 한 페이지 안에서만 풀리므로, Dayline 랜딩처럼 조직 · 사이트 노드를 함께 싣는다
+            {'@type': 'Organization', '@id': SITE + '/#organization', 'name': 'Zaco Labs', 'url': SITE + '/',
+             'logo': {'@type': 'ImageObject', 'url': SITE + '/zacolabs-assets/logo.png'}, 'email': 'zaco.labs@gmail.com'},
+            {'@type': 'WebSite', '@id': SITE + '/#website', 'url': SITE + '/', 'name': 'Zaco Labs',
              'publisher': {'@id': SITE + '/#organization'}},
             {'@type': 'FAQPage', 'inLanguage': LANG_TAGS[code], 'mainEntity': [
                 {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}}
