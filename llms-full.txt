@@ -91,7 +91,8 @@ Write to zaco.labs@gmail.com. Zaco Labs, the makers of Dayline, read every messa
 A roll call for your neighborhood cats. Snap a stray cat on your walk and it recognizes whether it is one already in your collection. Check in each time you meet, and build a neighborhood cat collection with your neighbors.
 
 - Type: mobile app for iOS and Android, available in Korea only
-- Status: coming soon
+- App Store: https://apps.apple.com/app/id6824216133
+- Google Play: coming soon
 
 ## Cat in Room
 

@@ -93,11 +93,11 @@ APP_LINK = "intent://open#Intent;scheme=waky;package=com.waky.android;end"
 DAYLINE_PLAY = dayline_landing.PLAY
 DAYLINE_APPLE = dayline_landing.APPLE
 DAYLINE_APP_LINK = dayline_landing.APP_LINK
-# 냥반장 · Cat in Room · 8 Billion 은 아직 스토어에 공개되지 않았다 (Play 비공개 테스트 · App Store 심사 전후).
-# 공개되면 주소를 넣는다 — 넣은 스토어의 버튼만 나오고, 둘 다 없으면 카드에 "출시 예정"이 나온다.
+# 냥반장은 App Store 에 나왔고(2026-10-29) Play 는 아직이다. Cat in Room · 8 Billion 은 아직 스토어에 공개되지 않았다
+# (Play 비공개 테스트 · App Store 심사 전후). 공개되면 주소를 넣는다 — 넣은 스토어의 버튼만 나오고, 둘 다 없으면 카드에 "출시 예정"이 나온다.
 # 냥반장은 한국에서만 서비스한다 — 한국어가 아닌 카드에는 "한국 전용"이 붙는다(i18n 의 catcaptain_kind).
 CATCAPTAIN_PLAY = None    # https://play.google.com/store/apps/details?id=com.zacolabs.catcaptain
-CATCAPTAIN_APPLE = None   # https://apps.apple.com/app/id6824216133
+CATCAPTAIN_APPLE = "https://apps.apple.com/app/id6824216133"
 CATINROOM_PLAY = None     # https://play.google.com/store/apps/details?id=com.zacolabs.catinroom
 CATINROOM_APPLE = None
 EIGHTBILLION_PLAY = None  # https://play.google.com/store/apps/details?id=com.zacolabs.onein8Billion
@@ -593,7 +593,7 @@ def llms(en):
 
 - [Waky]({WAKY_LANDING}/en/): {en["waky_ld"]} Free on iOS and Android.
 {dayline_landing.llms_links()}
-- {en["catcaptain_name"]} (냥반장): {en["catcaptain_body"]} For Android and iOS, in Korea only. Coming soon.
+- {en["catcaptain_name"]} (냥반장): {en["catcaptain_body"]} In Korea only. [App Store]({CATCAPTAIN_APPLE}); Android coming soon.
 - Cat in Room: {en["catinroom_title"]}. {en["catinroom_body"]} For Android and iOS. Coming soon.
 - [8 Billion]({SITE}/8billion/): {en["eightbillion_body"]} For Android and iOS. Coming soon. [한국어]({SITE}/8billion/ko/). [日本語]({SITE}/8billion/ja/). [简体中文]({SITE}/8billion/zh-hans/). [繁體中文]({SITE}/8billion/zh-hant/). [Privacy policy]({SITE}/8billion/privacy.html).
 - [{en["duire_ld_name"]}]({DUIRE_EN}): {en["duire_body"]}
@@ -635,7 +635,8 @@ def llms_full(en):
 {en["catcaptain_title"]}. {en["catcaptain_body"]}
 
 - Type: mobile app for iOS and Android, available in Korea only
-- Status: coming soon
+- App Store: {CATCAPTAIN_APPLE}
+- Google Play: coming soon
 
 ## Cat in Room
 
