@@ -1,0 +1,5 @@
+# GitHub Pages(Jekyll)가 공개하지 않을 파일. 빌드 원본·문서·도구 설정은 사이트에 올리지 않는다.
+exclude:
+  - scripts
+  - README.md
+  - .claude
