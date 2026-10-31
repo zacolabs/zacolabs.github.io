@@ -7,6 +7,7 @@ i18n/<code>.json 의 문구로 영어는 /index.html, 다른 언어는 /<code>/i
 sitemap.xml 을 다시 쓴다. 문구는 JSON 에서, 모양은 style.css 에서만 고친다.
 Dayline 의 약관 · 개인정보 처리방침 · 라이선스 페이지(/dayline/)도 같이 만든다 — dayline_legal.py.
 Dayline 랜딩(/dayline/<언어>/)도 같이 만든다 — dayline_landing.py.
+냥반장 랜딩(/catcaptain/)과 공유 링크 페이지(/catcaptain/open/)도 같이 만든다 — catcaptain_landing.py.
 생성된 HTML 을 직접 고치면 다음 빌드에서 덮어써진다.
 
 언어 목록 · 이름 · 로케일 · Waky 한 줄 소개(h1)는 waky-landing(scripts/landing/i18n)과 맞춘다.
@@ -16,6 +17,7 @@ import html
 import json
 import os
 
+import catcaptain_landing
 import dayline_landing
 import dayline_legal
 import dayline_timeline
@@ -94,12 +96,13 @@ APP_LINK = "intent://open#Intent;scheme=waky;package=com.waky.android;end"
 DAYLINE_PLAY = dayline_landing.PLAY
 DAYLINE_APPLE = dayline_landing.APPLE
 DAYLINE_APP_LINK = dayline_landing.APP_LINK
-# 냥반장은 App Store 에 나왔고(2026-10-29) Play 는 아직이다. Cat in Room · 8 Billion 은 아직 스토어에 공개되지 않았다
-# (Play 비공개 테스트 · App Store 심사 전후). 공개되면 주소를 넣는다 — 넣은 스토어의 버튼만 나오고, 둘 다 없으면 카드에 "출시 예정"이 나온다.
+# 냥반장의 스토어 주소는 랜딩과 같이 쓴다 (catcaptain_landing.py) — App Store 에 나왔고(2026-10-29) Play 는 아직이다.
 # 냥반장은 한국에서만 서비스한다 — 한국어가 아닌 카드에는 "한국 전용"이 붙는다(i18n 의 catcaptain_kind).
-# 한국 스토어에만 있어 App Store 주소에 /kr/ 를 넣는다 — 나라가 없는 주소는 한국 밖에서 404 다.
-CATCAPTAIN_PLAY = None    # https://play.google.com/store/apps/details?id=com.zacolabs.catcaptain
-CATCAPTAIN_APPLE = "https://apps.apple.com/kr/app/id6824216133"
+CATCAPTAIN_PLAY = catcaptain_landing.PLAY
+CATCAPTAIN_APPLE = catcaptain_landing.APPLE
+CATCAPTAIN_APP_LINK = catcaptain_landing.APP_LINK
+# Cat in Room · 8 Billion 은 아직 스토어에 공개되지 않았다 (Play 비공개 테스트 · App Store 심사 전후).
+# 공개되면 주소를 넣는다 — 넣은 스토어의 버튼만 나오고, 둘 다 없으면 카드에 "출시 예정"이 나온다.
 CATINROOM_PLAY = None     # https://play.google.com/store/apps/details?id=com.zacolabs.catinroom
 CATINROOM_APPLE = None
 EIGHTBILLION_PLAY = None  # https://play.google.com/store/apps/details?id=com.zacolabs.onein8Billion
@@ -476,11 +479,12 @@ def page(langs, code, css):
                         <h3>{e(t["catcaptain_name"])}</h3>
                         <p class="kind">{e(t["catcaptain_kind"])}</p>
                     </div>
+                    <a class="card-more" href="{catcaptain_landing.PATH}" target="_blank" rel="noopener">{e(t["learn_more"])}</a>
                 </div>
                 <p class="card-title">{e(t["catcaptain_title"])}</p>
                 <p class="card-body">{e(t["catcaptain_body"])}</p>
                 <div class="card-actions">
-                    {store_badges(t, CATCAPTAIN_PLAY, CATCAPTAIN_APPLE)}
+                    {store_badges(t, CATCAPTAIN_PLAY, CATCAPTAIN_APPLE, CATCAPTAIN_APP_LINK)}
                 </div>
             </article>
             <article class="card">
@@ -579,6 +583,7 @@ def sitemap(langs):
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {urls}
 {dayline_landing.sitemap_urls(today)}
+{catcaptain_landing.sitemap_urls(today)}
 {eightbillion_landing.sitemap_urls(today)}
 </urlset>
 '''
@@ -596,7 +601,7 @@ def llms(en):
 
 - [Waky]({WAKY_LANDING}/en/): {en["waky_ld"]} Free on iOS and Android.
 {dayline_landing.llms_links()}
-- {en["catcaptain_name"]} (냥반장): {en["catcaptain_body"]} In Korea only. [App Store]({CATCAPTAIN_APPLE}); Android coming soon.
+- [{en["catcaptain_name"]} (냥반장)]({SITE}{catcaptain_landing.PATH}): {en["catcaptain_body"]} In Korea only; the page is in Korean. [App Store]({CATCAPTAIN_APPLE}); Android coming soon. [Privacy policy]({SITE}/catcaptain/privacy.html).
 - Cat in Room: {en["catinroom_title"]}. {en["catinroom_body"]} For Android and iOS. Coming soon.
 - [8 Billion]({SITE}/8billion/): {en["eightbillion_body"]} For Android and iOS. Coming soon. [한국어]({SITE}/8billion/ko/). [日本語]({SITE}/8billion/ja/). [简体中文]({SITE}/8billion/zh-hans/). [繁體中文]({SITE}/8billion/zh-hant/). [Privacy policy]({SITE}/8billion/privacy.html).
 - [{en["duire_ld_name"]}]({DUIRE_EN}): {en["duire_body"]}
@@ -638,6 +643,7 @@ def llms_full(en):
 {en["catcaptain_title"]}. {en["catcaptain_body"]}
 
 - Type: mobile app for iOS and Android, available in Korea only
+- Page (Korean): {SITE}{catcaptain_landing.PATH}
 - App Store: {CATCAPTAIN_APPLE}
 - Google Play: coming soon
 
@@ -700,6 +706,7 @@ def main():
     print(f"built {dayline_landing.build()} dayline landing pages")
     print(f"built {dayline_timeline.build()} dayline timeline pages")
     print(f"built {eightbillion_landing.build()} 8 Billion landing pages")
+    print(f"built {catcaptain_landing.build()} 냥반장 pages")
 
 
 if __name__ == "__main__":

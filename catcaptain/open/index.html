@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>냥반장에서 열기</title>
+<meta name="description" content="냥반장 앱에서 이어서 볼 수 있어요. 앱이 없으면 스토어에서 받아 주세요.">
+<meta name="theme-color" content="#faf6f1">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://zacolabs.github.io/catcaptain/">
+<link rel="icon" href="/zacolabs-assets/catcaptain_icon.png">
+<link rel="apple-touch-icon" href="/zacolabs-assets/catcaptain_icon.png">
+<link rel="stylesheet" href="/catcaptain/assets/style.css">
+<meta name="apple-itunes-app" content="app-id=6824216133">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="냥반장">
+<meta property="og:title" content="냥반장에서 열기">
+<meta property="og:description" content="냥반장 앱에서 이어서 볼 수 있어요. 앱이 없으면 스토어에서 받아 주세요.">
+<meta property="og:url" content="https://zacolabs.github.io/catcaptain/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://zacolabs.github.io/catcaptain/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="냥반장 — 동네 고양이, 찍으면 알아봐요">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+    window.CATCAPTAIN_TO = (function () {
+        var to = (new URLSearchParams(location.search).get('to') || '').replace(/^\/+/, '');
+        return /^[A-Za-z0-9][A-Za-z0-9\/_.~=&?%-]{0,199}$/.test(to) ? to : 'open';
+    })();
+    document.querySelector('meta[name="apple-itunes-app"]').setAttribute('content',
+        'app-id=6824216133, app-argument=catcaptain://' + window.CATCAPTAIN_TO);
+</script>
+</head>
+<body class="open-body">
+<main class="open-card">
+<img src="/zacolabs-assets/catcaptain_icon.png" alt="냥반장" width="96" height="96">
+<h1>냥반장 앱으로 이어서 볼게요</h1>
+<p id="open-msg">앱이 열리지 않으면 아래 버튼을 눌러 주세요.</p>
+<div class="open-actions">
+<a class="btn" id="open-app" href="catcaptain://open">앱에서 열기</a>
+<a class="btn line" id="store-apple" href="https://apps.apple.com/kr/app/id6824216133">App Store에서 받기</a>
+<span class="btn line soon" id="store-play" hidden>Google Play 출시 예정</span>
+</div>
+<a class="open-about" href="/catcaptain/">냥반장이 처음이라면 — 자세히 보기</a>
+</main>
+<script>
+    (function () {
+        var to = window.CATCAPTAIN_TO, deep = 'catcaptain://' + to;
+        var ua = navigator.userAgent;
+        var android = /Android/i.test(ua);
+        var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        var open = document.getElementById('open-app'), msg = document.getElementById('open-msg');
+        var apple = document.getElementById('store-apple'), play = document.getElementById('store-play');
+        if (android) {
+            // 앱이 있으면 앱이 열리고, 없으면 브라우저가 fallback 주소(Google Play, 아직 없으면 랜딩)로 간다
+            var intent = 'intent://' + to + '#Intent;scheme=catcaptain;package=com.zacolabs.catcaptain;S.browser_fallback_url='
+                + encodeURIComponent('https://zacolabs.github.io/catcaptain/') + ';end';
+            open.href = intent;
+            msg.textContent = "앱이 있으면 바로 열려요. 열리지 않으면 아래 버튼을 눌러 주세요.";
+            apple.hidden = true;
+            play.hidden = false;
+            location.href = intent;
+            return;
+        }
+        open.href = deep;
+        if (ios) {
+            // 시간이 지나면 App Store 로 보내는 방식은 쓰지 않는다 — 사파리가 "냥반장에서 열까요?"를 묻는 동안에도
+            // 페이지가 그대로 보여 앱이 있는데도 스토어로 가 버린다. 앱이 없으면 배너의 [보기]나 App Store 버튼으로 간다
+            msg.textContent = "아래 ‘앱에서 열기’를 누르거나, 화면 맨 위 배너의 ‘열기’를 눌러 주세요. 앱이 없으면 App Store에서 받아 주세요.";
+            return;
+        }
+        // 컴퓨터: 앱을 열 수 없으니 스토어만 보여 준다
+        msg.textContent = "휴대폰에서 이 링크를 열면 냥반장 앱으로 바로 이어져요.";
+        open.hidden = true;
+        play.hidden = false;
+    })();
+</script>
+</body>
+</html>
