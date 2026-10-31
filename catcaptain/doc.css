@@ -19,3 +19,5 @@ pre { white-space: pre-wrap; font: .8rem/1.6 ui-monospace, Menlo, monospace; col
 /* 앱 안에서 열 때 (?app): 앱 상단바에 제목이 있어 페이지 제목을 숨기고, 다른 문서로 가는 링크도 숨겨요 */
 .app h1, .app .links { display: none; }
 .app main { padding-top: .75rem; }
+/* 앱은 페이지를 둥근 흰 카드 안에 보여 줘요: 바탕을 비워 카드 색이 보이게 */
+.app body { background: transparent; }
