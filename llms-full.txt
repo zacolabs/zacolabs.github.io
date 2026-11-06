@@ -93,7 +93,7 @@ A roll call for your neighborhood cats. Snap a stray cat on your walk and it rec
 - Type: mobile app for iOS and Android, available in Korea only
 - Page (Korean): https://zacolabs.github.io/catcaptain/
 - App Store: https://apps.apple.com/kr/app/id6824216133
-- Google Play: coming soon
+- Google Play: https://play.google.com/store/apps/details?id=com.zacolabs.catcaptain
 
 ## Cat in Room
 

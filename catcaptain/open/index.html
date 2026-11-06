@@ -39,7 +39,7 @@
 <div class="open-actions">
 <a class="btn" id="open-app" href="catcaptain://open">앱에서 열기</a>
 <a class="btn line" id="store-apple" href="https://apps.apple.com/kr/app/id6824216133">App Store에서 받기</a>
-<span class="btn line soon" id="store-play" hidden>Google Play 출시 예정</span>
+<a class="btn line" id="store-play" href="https://play.google.com/store/apps/details?id=com.zacolabs.catcaptain" hidden>Google Play에서 받기</a>
 </div>
 <a class="open-about" href="/catcaptain/">냥반장이 처음이라면 — 자세히 보기</a>
 </main>
@@ -54,7 +54,7 @@
         if (android) {
             // 앱이 있으면 앱이 열리고, 없으면 브라우저가 fallback 주소(Google Play, 아직 없으면 랜딩)로 간다
             var intent = 'intent://' + to + '#Intent;scheme=catcaptain;package=com.zacolabs.catcaptain;S.browser_fallback_url='
-                + encodeURIComponent('https://zacolabs.github.io/catcaptain/') + ';end';
+                + encodeURIComponent('https://play.google.com/store/apps/details?id=com.zacolabs.catcaptain') + ';end';
             open.href = intent;
             msg.textContent = "앱이 있으면 바로 열려요. 열리지 않으면 아래 버튼을 눌러 주세요.";
             apple.hidden = true;

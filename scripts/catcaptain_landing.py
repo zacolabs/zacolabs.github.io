@@ -24,8 +24,9 @@ SCHEME = 'catcaptain'
 APPLE_ID = '6824216133'
 # 한국 스토어에만 있어 App Store 주소에 /kr/ 를 넣는다 — 나라가 없는 주소는 한국 밖에서 404 다.
 APPLE = f'https://apps.apple.com/kr/app/id{APPLE_ID}'
-# Play 는 아직 공개 전이다. 공개되면 주소를 넣는다 — 랜딩 · 회사 소개 카드에 Google Play 버튼이 나오고, 공유 링크가 앱이 없을 때 여기로 보낸다.
-PLAY = None  # f'https://play.google.com/store/apps/details?id={PACKAGE}'
+# Play 에도 공개됐다 — 랜딩 · 회사 소개 카드에 Google Play 버튼이 나오고, 공유 링크가 앱이 없을 때 여기로 보낸다.
+# None 으로 두면 Play 버튼 자리에 "출시 예정"이 나오고 공유 링크는 랜딩으로 보낸다.
+PLAY = f'https://play.google.com/store/apps/details?id={PACKAGE}'
 # 안드로이드에서 Google Play 버튼이 대신 여는 앱 실행 주소 (dayline_landing.APP_LINK_SCRIPT 가 바꾼다)
 APP_LINK = f'intent://open#Intent;scheme={SCHEME};package={PACKAGE};end'
 

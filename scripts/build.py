@@ -96,7 +96,7 @@ APP_LINK = "intent://open#Intent;scheme=waky;package=com.waky.android;end"
 DAYLINE_PLAY = dayline_landing.PLAY
 DAYLINE_APPLE = dayline_landing.APPLE
 DAYLINE_APP_LINK = dayline_landing.APP_LINK
-# 냥반장의 스토어 주소는 랜딩과 같이 쓴다 (catcaptain_landing.py) — App Store 에 나왔고(2026-10-29) Play 는 아직이다.
+# 냥반장의 스토어 주소는 랜딩과 같이 쓴다 (catcaptain_landing.py) — App Store · Google Play 모두에 나왔다.
 # 냥반장은 한국에서만 서비스한다 — 한국어가 아닌 카드에는 "한국 전용"이 붙는다(i18n 의 catcaptain_kind).
 CATCAPTAIN_PLAY = catcaptain_landing.PLAY
 CATCAPTAIN_APPLE = catcaptain_landing.APPLE
@@ -601,7 +601,7 @@ def llms(en):
 
 - [Waky]({WAKY_LANDING}/en/): {en["waky_ld"]} Free on iOS and Android.
 {dayline_landing.llms_links()}
-- [{en["catcaptain_name"]} (냥반장)]({SITE}{catcaptain_landing.PATH}): {en["catcaptain_body"]} In Korea only; the page is in Korean. [App Store]({CATCAPTAIN_APPLE}); Android coming soon. [Privacy policy]({SITE}/catcaptain/privacy.html).
+- [{en["catcaptain_name"]} (냥반장)]({SITE}{catcaptain_landing.PATH}): {en["catcaptain_body"]} In Korea only; the page is in Korean. [App Store]({CATCAPTAIN_APPLE}). [Google Play]({CATCAPTAIN_PLAY}). [Privacy policy]({SITE}/catcaptain/privacy.html).
 - Cat in Room: {en["catinroom_title"]}. {en["catinroom_body"]} For Android and iOS. Coming soon.
 - [8 Billion]({SITE}/8billion/): {en["eightbillion_body"]} For Android and iOS. Coming soon. [한국어]({SITE}/8billion/ko/). [日本語]({SITE}/8billion/ja/). [简体中文]({SITE}/8billion/zh-hans/). [繁體中文]({SITE}/8billion/zh-hant/). [Privacy policy]({SITE}/8billion/privacy.html).
 - [{en["duire_ld_name"]}]({DUIRE_EN}): {en["duire_body"]}
@@ -645,7 +645,7 @@ def llms_full(en):
 - Type: mobile app for iOS and Android, available in Korea only
 - Page (Korean): {SITE}{catcaptain_landing.PATH}
 - App Store: {CATCAPTAIN_APPLE}
-- Google Play: coming soon
+- Google Play: {CATCAPTAIN_PLAY}
 
 ## Cat in Room
 
