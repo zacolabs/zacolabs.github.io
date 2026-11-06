@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""GitHub 프로필 README (github.com/zacolabs) 생성기.
+"""이 저장소의 GitHub README (회사 · 제품 소개) 생성기. build.py 가 같이 돌린다.
 
-    python3 scripts/github_profile.py [출력 폴더, 기본 ../zacolabs]
+    python3 scripts/github_profile.py [출력 폴더, 기본 저장소 맨 앞]
 
-프로필에는 zacolabs/zacolabs 저장소의 README.md 하나만 보인다 — 방문자 언어로 바뀌지 않아서
-README.md 는 영어로 두고, 맨 위의 언어 줄에서 README.<언어>.md 로 보낸다.
+GitHub 는 방문자 언어로 README 를 바꾸지 않아서 README.md 는 영어로 두고, 맨 위의 언어 줄에서
+README.<언어>.md 로 보낸다. 빌드 · 운영 문서는 scripts/README.md 에 있다.
 문구는 회사 소개와 같은 scripts/i18n/<언어>.json 을, 스토어 · 랜딩 주소는 build.py 의 것을 쓴다.
 랜딩 본문을 옮기지 않고 짧은 소개와 링크만 둔다 (같은 글이 두 곳에 있으면 검색에서 서로 겨룬다).
 README 에만 쓰는 몇 마디는 아래 TEXT 에 있다 — 언어를 늘릴 때는 TEXT 에 그 언어를 더한다.
@@ -76,7 +76,7 @@ def readme(code):
                 stores(SITE + eightbillion_landing.landing_path(code), build.EIGHTBILLION_PLAY, build.EIGHTBILLION_APPLE)),
     ]
     about = "<br>\n".join(t["about"])
-    return f"""<!-- scripts/github_profile.py (zacolabs.github.io) 가 만든다 — 직접 고치지 말 것 -->
+    return f"""<!-- scripts/github_profile.py 가 만든다 — 직접 고치지 말 것 (빌드 문서: scripts/README.md) -->
 <p align="center">
   <img src="{ICON}/logo-256.webp" width="96" height="96" alt="{t['logo_alt']}">
 </p>
@@ -98,13 +98,13 @@ def readme(code):
 
 
 def main():
-    out = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.join(build.ROOT, "..", "zacolabs"))
+    out = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else build.ROOT)
     os.makedirs(out, exist_ok=True)
     for code in LANGS:
         with open(os.path.join(out, readme_name(code)), "w", encoding="utf-8") as f:
             f.write(readme(code))
-    print(f"wrote {len(LANGS)} READMEs to {out}")
+    return len(LANGS)
 
 
 if __name__ == "__main__":
-    main()
+    print(f"wrote {main()} READMEs")

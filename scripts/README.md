@@ -1,0 +1,82 @@
+# zacolabs.github.io — 빌드 · 운영 문서
+
+이 저장소 맨 앞의 `README.md` · `README.<언어>.md` 는 GitHub 에서 보이는 회사 · 제품 소개다(`scripts/github_profile.py` 가 만든다). 이 문서는 사이트를 만들고 고치는 법을 적는다.
+
+`https://zacolabs.github.io/` 도메인 맨 앞에 두어야 하는 파일과, 따로 저장소를 두지 않은 Dayline 의 랜딩 · 약관 페이지를 둔다. Waky 랜딩 페이지는 `zacolabs/waky-landing` 저장소(`/waky-landing/`)에 있다.
+
+- `app-ads.txt` — AdMob 이 스토어의 개발자 웹사이트 도메인 맨 앞에서만 찾는다. 게시자 `pub-7125409961311406`
+- `_config.yml` — GitHub Pages(Jekyll)가 공개하지 않을 파일. `scripts/` · `README.md` · `README.<언어>.md` · `.claude/` 를 빼 둔다. 빼지 않으면 빌드 원본(`build.py`)과 제목 없는 약관 본문 조각(`scripts/dayline/*.html`)이 그대로 공개돼 검색에 중복 페이지로 잡힌다
+- `robots.txt` — 검색엔진은 도메인 맨 앞의 이 파일만 읽는다. 랜딩 사이트맵을 여기서 알린다
+  - AI 검색 · 어시스턴트의 크롤러(GPTBot · ClaudeBot · PerplexityBot …)도 막지 않는다고 따로 적어 둔다. 모든 로봇을 허용하는 첫 규칙만으로도 허용이지만, 뜻을 밝혀 두는 것이다
+- `ae703324639d4cf68799e9db16dce1c0.txt` — IndexNow 키 파일. 페이지를 고친 뒤 `./scripts/indexnow.sh` 를 돌리면 Bing · 네이버 등에 다시 읽어 가라고 알린다 (배포가 끝난 뒤에 돌린다). 키는 waky-landing 과 같다
+- `llms.txt` · `llms-full.txt` — AI 검색 · 에이전트에게 주는 사이트 안내(llmstxt.org 형식)와, 링크를 따라가지 않아도 되게 본문을 편 것. 영어로 쓴다. **`scripts/build.py` 가 회사 소개와 Dayline 랜딩의 영어 문구로 만든다 — 직접 고치지 말 것**
+- `index.html` · `<언어>/index.html` — 회사 소개 페이지. **`scripts/build.py` 가 만든다 — 직접 고치지 말 것.** 영어는 도메인 맨 앞(`/`), 다른 17개 언어는 `/ko/` · `/ja/` … 에 둔다 (언어 목록은 waky-landing 과 같다). 옛 `/en/` 은 `/` 로 넘긴다
+  - 문구는 `scripts/i18n/<언어>.json`, 모양은 `scripts/style.css` 에서 고치고 `python3 scripts/build.py` 를 돌린다. `sitemap.xml` 도 같이 다시 쓴다
+  - `/` 로 온 사람의 언어: ① 오른쪽 위 언어 메뉴(두이레와 같은 모양)로 고른 언어(`localStorage` 의 `zacolabs-lang`) ② 없으면 접속 지역 — 정적 호스팅이라 IP 를 볼 수 없어 기기 시간대로 가린다(`build.py` `TZ_LANG`) ③ 모르면 영어. 검색 로봇은 옮기지 않는다
+  - Waky 자세히 보기는 그 언어 랜딩으로 건다. 두이레는 한국어 · 영어뿐이라 한국어가 아니면 `duire.kr/en` 으로 보낸다
+  - Dayline 자세히 보기는 그 언어의 랜딩(`/dayline/<언어>/`)으로 걸고, 그 언어의 랜딩이 아직 없으면 영어로 건다
+  - Dayline 카드의 스토어 버튼은 랜딩과 같은 주소를 쓴다 (`dayline_landing.py` 의 `PLAY` · `APPLE_ID`). 주소가 있는 스토어의 버튼만 나온다
+  - 냥반장 카드에는 Google Play · App Store 버튼이 나온다 — Google Play 버튼은 안드로이드에서 앱을 먼저 연다(`catcaptain://open`). Cat in Room · 8 Billion 카드는 아직 스토어에 공개되지 않아 버튼 자리에 "출시 예정"이 나온다. 8 Billion의 자세히 보기는 한국어·일본어·중국어 간체·번체는 해당 언어의 `/8billion/<언어>/`, 다른 언어는 영어 `/8billion/`로 연결한다. 냥반장의 자세히 보기는 모든 언어에서 한국어 랜딩 `/catcaptain/` 으로 건다. Cat in Room은 아직 따로 랜딩이 없다. 냥반장의 스토어 주소는 `catcaptain_landing.py` 의 `PLAY` · `APPLE` 에 있고, Cat in Room · 8 Billion 은 공개되면 `build.py` 의 `CATINROOM_…` · `EIGHTBILLION_…` 에 주소를 넣는다 (주석에 예상 주소가 있다). 냥반장은 한국에서만 서비스해 한국어가 아닌 페이지에서는 이름을 Cat Captain 으로 쓰고 종류에 "한국 전용"을 붙인다(`catcaptain_kind`). 문구는 Cat in Room 이 App Store 등록정보의 부제 · 홍보 문구, 냥반장 · 8 Billion 은 스토어 등록정보(한국어 · 영어)를 옮긴 것이다
+  - 회사 소개의 로고와 제품 아이콘은 표시 크기의 두 배로 줄인 WebP(`zacolabs-assets/logo-256.webp`, `<이름>-104.webp`)를, 파비콘은 180px PNG(`logo-180.png`)를 쓴다. 원본 PNG 는 파비콘 · 구조화 데이터 · 다른 랜딩이 쓰므로 남겨 둔다. 아이콘을 바꾸면 `cwebp -q 85 -resize 104 104 <이름>.png -o <이름>-104.webp` 로 다시 만든다
+  - 아이폰 사파리에서는 회사 소개 맨 위에 Waky 의 스마트 앱 배너(`apple-itunes-app`, `build.py` `APPLE_ID`)가 뜬다 — 앱이 없으면 [보기](App Store), 있으면 [열기](Waky). 배너는 카드가 아니라 페이지에 하나만 붙어 앱 하나만 고를 수 있고, Dayline 은 App Store 에 나오기 전이라 Waky 다. Dayline 랜딩에는 Dayline 의 배너가 있다
+  - 안드로이드에서는 Waky · Dayline 카드와 Dayline 랜딩의 Google Play 버튼이 앱을 먼저 연다 — 버튼의 `data-app`(intent 주소, `build.py` `APP_LINK` · `dayline_landing.py` `APP_LINK`)을 페이지 끝의 스크립트(`dayline_landing.APP_LINK_SCRIPT`)가 주소로 바꾼다. 앱이 있으면 앱(`waky://open` · `dayline://today`)이 열리고, 없으면 브라우저가 Play 스토어로 보낸다. 아이폰의 App Store 버튼은 그대로 스토어로 간다 — 앱이 없으면 사파리가 "주소가 유효하지 않음" 창을 띄우는데, 스토어 버튼을 누르는 사람은 대개 앱이 없다
+- 서치 콘솔 · Bing 웹마스터 도구 · 네이버 서치어드바이저 확인 태그는 맨 앞(영어) 페이지에만 있다. Bing 태그는 둘이다: waky-landing 에 달려 있는 것과, 지금 쓰는 Bing 계정이 `/dayline/` 을 올릴 때 내준 것
+- 회사 소개의 구조화 데이터는 조직 · 사이트 · 페이지를 `@id` 로 이은 그래프 하나다 (`build.py` `json_ld`, Dayline 랜딩과 같은 `@id`). 구글은 검색결과의 사이트 이름을 도메인 맨 앞 페이지의 `WebSite` 에서만 읽는다 — 없으면 "GitHub" 로 나온다. 조직의 `sameAs`(유튜브 채널 · Play 개발자 페이지 · GitHub 조직)는 `build.py` 의 `SAME_AS`
+- `dayline/<언어>/google-timeline-alternative/` — Google 지도 타임라인 대안 페이지. **`scripts/dayline_timeline.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
+  - 이 페이지에만 있는 글은 `scripts/dayline/timeline/<언어>.json`. Dayline 의 기능 · FAQ · 스토어 버튼 · 모양은 랜딩의 것을 그대로 쓴다 — Dayline 설명을 고치면 랜딩 문구만 고친다
+  - Google 쪽 설명은 Google 지도 고객센터 "타임라인 관리"(support.google.com/maps/answer/6258979)에 적힌 것만 쓰고, 그 문서를 출처로 건다. Google 이 타임라인을 또 바꾸면 비교표 · "바뀐 것" 문단을 함께 고친다
+  - 제목 60자 · 설명 160자를 넘으면 빌드가 멈춘다. 랜딩 푸터의 링크 문구는 랜딩 i18n 의 `timeline_link`
+- `dayline/` — Dayline 의 이용 약관 · 개인정보 처리방침 · 커뮤니티 규칙 · 오픈소스 라이선스. **`scripts/dayline_legal.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
+  - 커뮤니티 규칙(`community`)은 피드 "모두의 선"에 올려도 되는 것과 안 되는 것, 신고 · 차단, 고치기 · 지우기를 적은 글이다. 앱이 닉네임을 정하는 화면의 "커뮤니티 규칙 › 보기"로 이 주소(`/dayline/community.html?lang=…`)를 열고, 랜딩 아래쪽에서도 건다 (2026-10-09 에 더했다). 약관 · 방침과 같은 방식으로 언어마다 본문을 둔다
+  - 약관 · 개인정보 처리방침의 본문은 `scripts/dayline/<문서>.<언어>.html`, 모양은 `scripts/dayline/style.css`. **이 본문이 기준이다** — 앱은 글을 따로 싣지 않고 이 주소를 연다. Waky 의 같은 페이지(`zacolabs-backend` `src/content/waky/legal`)에서 따와 Dayline 에 맞게 고친 것이라, 구조와 모양은 그쪽과 맞춘다
+  - 라이선스는 언어마다 다른 글이 몇 줄뿐이라 본문 하나(`scripts/dayline/licenses.html`)의 `{{…}}` 자리에 `scripts/dayline/strings.json` 의 문구를 채운다. 문서 제목도 `strings.json` 에 있다
+  - 주소도 Waky 와 같다: `/dayline/privacy.html?lang=ko&theme=light` (`terms` · `licenses` 도 같다). `?lang=` → 브라우저 언어 → 영어 순으로 언어를 정하고, `theme` 이 없으면 다크다. 언어를 고정한 주소는 `/dayline/privacy.ko.html` · `privacy.zh-hans.html` 처럼 언어 태그를 소문자로 쓴다
+  - Waky 는 서버가 `?lang=` · `?theme=` 을 읽지만 여기는 정적 호스팅이라 페이지 안의 스크립트가 읽는다
+  - 검색엔진에는 언어 고정 주소를 대표 주소(canonical)로 알리고 18개 언어를 hreflang 으로 잇는다. 언어 자동 주소(`privacy.html`)는 영어 고정 주소와 본문이 같아 `privacy.en.html` 을 대표 주소로 알린다
+  - 언어는 Dayline 앱과 같은 18개. 앱은 `?lang=` 에 앱 언어 태그(`zh-Hans`, `fil` …)를 그대로 싣는다. 한국어가 원문이고 나머지는 번역이다 — 글을 고치면 한국어부터 고치고 18개를 함께 맞춘다. 언어를 늘릴 때는 `dayline_legal.py` 의 `LANGS`, `strings.json`, 본문 파일을 더한다
+  - 아랍어는 오른쪽에서 왼쪽으로 쓴다 (`dayline_legal.py` `RTL`)
+  - `zacolabs` 조직에 `dayline` 이라는 이름의 저장소로 Pages 를 켜면 이 주소와 겹친다
+- `dayline/index.html` · `dayline/<언어>/index.html` — Dayline 랜딩. **`scripts/dayline_landing.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
+  - 구성은 Waky 랜딩(`waky-landing` `scripts/landing/`)을 따른다: 히어로 · 기능 · 3컷 · FAQ · CTA. 모양은 앱의 것이다(`dayline-ios` `DesignSystem/PopLook.swift`): 검은 테두리와 오른쪽 아래로 떨어지는 딱딱한 그림자의 흰 카드, 크림색 격자 판, 숫자는 Do Hyeon. 앱의 노란 바탕은 페이지 전체에 깔면 너무 세서 페이지는 흰색으로 두고, 노랑은 앱 화면 안과 하단 버튼에만 쓴다. 앱에 다크 모드가 없듯 여기도 밝은 모양 하나다
+  - 숫자 글꼴은 Do Hyeon(SIL OFL)에서 숫자와 `km` 만 잘라 낸 `dayline/assets/fonts/dohyeon-numbers.woff2` (2.8KB). 다시 자를 때: `pyftsubset DoHyeon-Regular.ttf --text="0123456789.,kmi " --flavor=woff2` (fonttools · brotli 필요, 원본은 `dayline-ios` `Dayline/Resources/Fonts/`)
+  - 문구는 `scripts/dayline/landing/i18n/<언어>.json`, 모양은 `scripts/dayline/landing/style.css`. 언어 이름 · 로케일 · 글꼴은 회사 소개의 `scripts/i18n/<언어>.json` 에서 가져온다. 약관 링크의 글은 `scripts/dayline/strings.json` 의 문서 제목이다
+  - **문구 파일이 있는 언어만 만든다** (지금은 앱과 같은 18개 언어 모두). 한국어가 원문이고 나머지는 번역이다 — 앱의 말(탭 · 이동수단 · 권한 이름)은 스토어 등록정보(`listing.md`)와 앱의 문자열을 따른다. 언어를 더할 때는 `<언어>.json` 을 두고 `make_assets.py` 를 돌린 뒤 빌드한다 — hreflang · 언어 메뉴 · 사이트맵 · 진입 주소가 따라 늘어난다. 언어 코드는 회사 소개와 같다 (`ko` · `ja` · `zh-hans` …)
+  - `/dayline/` 로 온 사람의 언어: ① `?lang=`(앱 언어 태그 `zh-Hans` · `pt-BR`, 옛 코드 `kr` · `jp` · `in` · `tl` 도 받는다) ② 언어 메뉴로 고른 언어(`localStorage` 의 `zacolabs-lang`, 회사 소개와 같이 쓴다) ③ 브라우저 선호 언어 목록 ④ 영어
+  - 검색 · 공유 · AI 검색용 표기: 제목 · 설명 · canonical · hreflang · OG(언어별 그림, `og:locale:alternate`) · 트위터 카드 · `robots`(큰 그림 미리보기 허용) · 아이폰 사파리의 앱 배너(`apple-itunes-app`). 구조화 데이터는 조직 · 사이트 · 페이지 · 경로 · 앱 · FAQ 를 `@id` 로 이은 그래프 하나다. 별점 · 리뷰는 스토어에 생기기 전이라 넣지 않는다 — 없는 값을 지어 넣지 않는다
+  - `dayline/sitemap.xml` 은 서치 콘솔 · Bing 에 `/dayline/` 을 사이트로 따로 올렸을 때 내는 사이트맵이다 (그런 사이트에는 그 주소 아래의 사이트맵만 낼 수 있다). 도메인 맨 앞의 `sitemap.xml` 에도 같은 주소가 실린다. Bing 은 그 사이트의 소유를 이 페이지들의 `msvalidate.01` 태그로 확인한다
+  - `/dayline/` 진입 주소는 스크립트를 돌리지 않는 로봇도 읽게 영어 한 줄 소개와 언어 목록을 싣고, 영어 랜딩을 대표 주소(canonical)로 알린다
+  - 스토어 버튼: Play 는 패키지 이름(`com.zacolabs.dayline`)으로 주소를 만든다. App Store 는 번들 ID 로는 주소를 만들 수 없어, App Store Connect 의 Apple ID(앱 정보 → 일반 정보의 숫자)를 `dayline_landing.py` 의 `APPLE_ID` 에 둔다 — `None` 이면 App Store 버튼이 링크 없이 "출시 예정"으로 나온다
+  - 그림(`dayline/assets/illustration/hero.webp` · `step-1~3.webp`)은 Waky 랜딩과 같은 화풍의 먹선 그림이다. ChatGPT 의 이미지 생성으로, Waky 그림 한 장을 화풍 참고로 올려 같은 인물로 네 장을 이어 그렸다 — 다시 만드는 법은 `scripts/dayline/landing/art.py` 머리말. 글자가 없어 모든 언어 공용
+  - 그림에는 색이 없고, 색은 그 위에 얹는 선뿐이다: `art.py` 의 `TRAILS` 가 그림마다 지나온 길을 이동수단의 색으로, 앱처럼 검은 테두리를 둘러 그린다 (좌표는 그림을 1000x1000 으로 본 자리). 그림의 흰 종이는 크림색 판에 곱해 얹어 판의 색이 된다. 3번 컷은 전화기 화면에 그려져 있던 선을 격자 판으로 덮고 다시 그린다. 그림을 바꾸면 이 좌표를 발과 땅에 맞게 고친다
+  - 그림과 하루 화면의 선은 스크롤해서 화면에 들어올 때 그려진다 (`[data-inview]` 에 `.in` 이 붙는다). 스크립트가 없거나 기기가 움직임을 줄이라고 하면 처음부터 다 그려진 채다
+  - 기능 옆의 **하루 화면**은 그림 파일이 아니라 `dayline_landing.py` 의 `day_card` 가 HTML · SVG 로 그린다: 전화기 테두리 안에 앱의 노란 바탕과 카드 셋 — 거리, 격자 판 위의 선, 이동수단별 나눔(색 원 안의 아이콘 아래에 거리와 시간). 길과 거리는 스토어 그림 3번의 것이다. 화면에 들어오면 선이 구간 순서대로 그려지고, 그동안 거리가 0 에서부터 올라가고 막대와 이동수단이 따라 나온다. 카드 안의 글(`km` · 이동 시간, 화면 낭독기용 이동수단 이름)은 문구 파일의 `day` — 스토어 그림의 `text.js` 와 맞춘다. 이동수단 아이콘은 Tabler Icons(MIT)
+  - `dayline/assets/og-<언어>.png`(공유 미리보기)는 아직 앱의 이전 모양(어두운 바탕)이다 — 새 스토어 그래픽이 나오면 다시 만든다. 이 그림은 `scripts/dayline/landing/make_assets.py` 가 앱 저장소의 Play 피처 그래픽에서 만든다 (`dayline-android` 가 옆에 있어야 하고 Pillow 필요). 빌드는 이걸 돌리지 않는다
+- `dailycommit/` — Daily Commit 맥 앱(`daily.commit.dev` 저장소)이 쓰는 페이지. 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다
+  - `threads-callback.html` — 앱의 [Threads 로그인]이 돌아오는 곳. Threads 는 HTTPS 주소로만 돌려보내서 여기로 오고, 페이지가 `state` 앞의 포트(`<포트>-<난수>`)로 `http://127.0.0.1:<포트>/` 에 코드를 넘긴다. 이 주소가 Meta 앱(panchunstory)의 Threads 리디렉션 콜백 URL 에 등록돼 있어야 한다. 검색엔진에는 감춘다(`noindex`)
+  - `privacy.html` — Daily Commit 개인정보처리방침(영어 · 한국어). Meta 앱 검수에 내는 주소
+- `dailysummit/` — 오늘도 정상 iOS 앱(`dailysummit-ios` 저장소, 옛 이름 한층더)이 쓰는 페이지. 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다
+  - `privacy.html` — 오늘도 정상 개인정보 처리방침(한국어, 한국 출시만). 앱의 설정 > 개인정보 처리방침과 App Store Connect 의 개인정보 처리방침 URL 이 이 주소다. 걷기 기록(걸음 수)은 기기 안에만 있고, Firebase(Analytics · Crashlytics)로 보내는 사용 통계 · 오류 진단만 적는다
+- `catcaptain/index.html` — 냥반장 랜딩(한국어 하나, 한국에서만 서비스). `catcaptain/open/index.html` — 냥반장 앱이 공유하는 링크가 여는 페이지. **`scripts/catcaptain_landing.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다). 같은 폴더의 `privacy.html` · `terms.html` · `licenses.html` 은 손으로 쓴 문서라 빌드와 상관없다
+  - 문구는 `scripts/catcaptain/ko.json`, 모양은 `scripts/catcaptain/style.css`(색은 앱 · 스토어 그림의 것). 구성: 히어로(고양이 동그라미 · 출석 도장, 도장의 날짜는 그날) · 기능 다섯 · 이웃 · FAQ · 맺음. 구조화 데이터는 페이지 · 앱(`MobileApplication`) · FAQ, 아이폰 사파리에는 냥반장의 스마트 앱 배너가 뜬다
+  - 그림(`catcaptain/assets/`): 기능 그림은 App Store 스크린샷 2~6번의 카드 부분만 잘라 낸 것(제목은 페이지가 글로 쓴다), 고양이는 앱의 예시 고양이, 공유 미리보기 `og.jpg` 는 App Store 헤더 그림. `python3 scripts/catcaptain/prepare_assets.py ../catcaptain-android` 로 다시 만든다(Pillow 필요). 빌드는 이걸 돌리지 않는다
+  - **공유 링크**: 앱의 공유 주소는 `https://zacolabs.github.io/catcaptain/open/?to=<앱 경로>`(예: 털실 프로필 `?to=yarn/user/123`)이고, 페이지가 이를 앱 주소 `catcaptain://<앱 경로>` 로 바꾼다. 앱 경로는 글자 · 숫자 · `/ _ . ~ = & ? % -` 만 받고 아니면 `catcaptain://open` 이다
+    - 안드로이드: 열자마자 `intent://<앱 경로>#Intent;scheme=catcaptain;package=com.zacolabs.catcaptain;S.browser_fallback_url=…;end` 로 간다 — 앱이 있으면 앱이 그 화면을 열고, 없으면 브라우저가 Google Play 로 보낸다(`PLAY` 가 `None` 이면 랜딩으로). 저절로 열리지 않는 브라우저를 위해 [앱에서 열기] 버튼도 같은 주소다
+    - 아이폰: 사파리 맨 위에 스마트 앱 배너가 뜨고, `app-argument` 에 앱 주소를 붙여 앱이 있으면 [열기]가 그 화면으로, 없으면 [보기]가 App Store 로 간다. 앱이 없을 때 사파리가 "주소가 유효하지 않음" 창을 띄우지 않게 저절로 열지는 않고 [앱에서 열기] 버튼을 누를 때만 연다. 시간이 지나면 스토어로 보내는 방식도 쓰지 않는다 — 사파리가 "열까요?"를 묻는 동안 페이지가 그대로 보여 앱이 있는데도 스토어로 가 버린다. 배너가 뜨지 않는 카카오톡 같은 앱 속 브라우저에서는 두 버튼으로 고른다
+    - 컴퓨터: 휴대폰에서 열라는 말과 스토어 버튼만 보인다
+    - 검색엔진에는 감추고(`noindex`) 대표 주소는 랜딩이다. 미리보기(OG)는 페이지마다 같은 그림 · 글이다 — 정적 호스팅이라 공유한 프로필마다 다르게 만들 수 없다
+    - 앱이 해야 할 일: 안드로이드는 `catcaptain` 스킴의 intent-filter, 아이폰은 `CFBundleURLTypes` 에 `catcaptain` 을 넣고, 받은 주소의 경로(`yarn/user/<id>` …)로 화면을 연다. 공유하는 글의 주소를 스토어 주소 대신 이 링크로 바꾼다
+- `8billion/index.html` · `8billion/<언어>/index.html` — 8 Billion 마케팅 페이지(영어 · 한국어 · 일본어 · 중국어 간체 · 번체). **`scripts/eightbillion_landing.py`가 만든다 — 직접 고치지 말 것** (`build.py`가 같이 돌린다). 문구는 `scripts/8billion/<언어>.json`, 모양은 `scripts/8billion/style.css`. 앱 소스 `onelife`의 스토어 등록정보·팔레트·캐릭터를 바탕으로 출생, 일상, 선택, 11개 시대, 기록 보관함을 소개한다. `/8billion/`은 영어, `/8billion/ko/`·`ja/`·`zh-hans/`·`zh-hant/`는 각 언어이며 언어 메뉴에서 전환한다. 진입 주소 `/8billion/`은 저장된 선택(`localStorage`의 `8billion-lang`) → 브라우저 선호 언어 → 영어 순으로 표시한다. 중국어는 Hans/CN/SG를 간체, Hant/TW/HK/MO를 번체로 구분한다. 메뉴의 시스템 언어는 저장된 선택을 지우고 브라우저 언어로 돌아간다. 언어별 URL은 자동으로 이동하지 않아 그대로 공유할 수 있다. 명시적인 `?lang=`은 저장된 설정보다 우선하며, 검색 로봇은 자동으로 이동하지 않는다. 일본어·중국어 제목은 글자가 빠지지 않도록 기기의 기본 글꼴을 쓴다. 출시 전이라 스토어 링크는 아직 없다. 공개하면 랜딩의 출시 예정 표시도 실제 스토어 링크로 바꾼다.
+  - 그림과 Galmuri 서브셋 글꼴은 `8billion/assets/`에 둔다. `scripts/8billion/prepare_assets.py /path/to/onelife`로 다시 만든다(Pillow · fonttools · brotli 필요). 문구를 바꾼 뒤에는 글꼴도 다시 만든다. 일반 빌드는 추가 패키지나 `onelife` 저장소 없이 실행된다. 글꼴 라이선스는 `8billion/assets/OFL.txt`.
+  - canonical · hreflang · OG · 구조화 데이터 · 사이트맵 · AI 검색 안내를 같이 제공하며 개인정보처리방침은 기존 주소로 연결한다. 2100년까지는 통계/전망 기반, 그 이후는 상상한 미래로 구분한다(`onelife`의 `Era.isFiction` 기준).
+- `8billion/privacy.html` — 8 Billion(`onelife` 저장소, Android `com.zacolabs.onein8Billion`) 개인정보처리방침(영어 · 한국어). 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다. Play Console · App Store Connect 의 개인정보처리방침 URL 이 이 주소다. 계정 · 서버가 없어 게임 기록 · 실제 프로필 · 메모는 기기 안에만 있고, AdMob 보상형 광고(비개인화)가 Google 로 보내는 정보만 적는다
+- `catinroom/privacy.html` — Cat in Room(`catinroom-android` 저장소, Android `com.zacolabs.catinroom`) 개인정보처리방침(한국어). 손으로 쓴 정적 파일이고 빌드 스크립트와 상관없다. Play Console 의 개인정보처리방침 URL 이 이 주소다. WAKY 방침을 따라 썼다: 타이머 · 꾸미기 설정은 기기 안에만 있고, 서버(zacolabs-backend)로는 앱 실행 API 의 사용자 키 · 기기·앱 정보 · 구독 정보를, Google 로는 Firebase Analytics(광고 ID 포함, 설정 › 사용 통계로 끈다) · Crashlytics 를 보낸다. 광고는 없다
+- `onemorefloor/privacy.html` — 옛 주소. 2026-10-18 앱 이름이 바뀌어 `dailysummit/privacy.html` 로 바로 넘긴다(이미 배포된 빌드·문서의 링크가 끊기지 않게 둔다)
+- `README.md` · `README.ko.md` — GitHub 저장소 페이지(`github.com/zacolabs/zacolabs.github.io`)에 보이는 회사 · 제품 소개(영어 · 한국어). **`scripts/github_profile.py` 가 만든다 — 직접 고치지 말 것** (`build.py` 가 같이 돌린다)
+  - 계정 프로필 첫 화면(`github.com/zacolabs`)에는 계정 이름과 같은 저장소(`zacolabs/zacolabs`)의 README 만 뜬다. 그 저장소를 두지 않기로 해서 여기 둔다 — 프로필에서 이 저장소를 고정(Pin)하면 이름 · 설명이 카드로 보인다
+  - GitHub 는 방문자 언어로 README 를 바꾸지 않아 `README.md` 를 영어로 두고, 맨 위의 언어 줄에서 언어별 파일로 보낸다. 언어를 늘릴 때는 `github_profile.py` 의 `LANGS` · `TEXT` 에 더한다
+  - 이 빌드 · 운영 문서는 원래 맨 앞의 `README.md` 였고 2026-11-06 에 `scripts/README.md` 로 옮겼다
+  - 문구는 회사 소개의 `scripts/i18n/<언어>.json`, 주소는 `build.py` · 각 랜딩 생성기의 것이라 같이 바뀐다 — 문구나 스토어 주소를 고치면 이것도 다시 돌린다. 랜딩 본문은 옮기지 않고 짧은 소개와 링크만 둔다
+- `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
+  - `catcaptain_icon.png` · `catinroom_icon.png` · `8billion_icon.png` — 냥반장 · Cat in Room · 8 Billion 앱 아이콘 512px (`catcaptain-android` · `catinroom-android` `store/play/icon-512.png`, `onelife` `app/assets/branding/play-store-icon-512.png`)
+  - `dayline_icon.png` — Dayline 앱 아이콘. 회사 소개의 카드와 Dayline 랜딩이 같이 쓴다 (`dayline-ios` `Assets.xcassets/AppIcon.appiconset/AppIcon.png` 를 512px 로 줄인 것)
+  - `og-image-1200x630.png` — 공유 미리보기 그림(모든 언어 공용). `scripts/og-image.html` 을 크롬에서 1200×630 으로 찍은 것

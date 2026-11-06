@@ -8,6 +8,7 @@ sitemap.xml 을 다시 쓴다. 문구는 JSON 에서, 모양은 style.css 에서
 Dayline 의 약관 · 개인정보 처리방침 · 라이선스 페이지(/dayline/)도 같이 만든다 — dayline_legal.py.
 Dayline 랜딩(/dayline/<언어>/)도 같이 만든다 — dayline_landing.py.
 냥반장 랜딩(/catcaptain/)과 공유 링크 페이지(/catcaptain/open/)도 같이 만든다 — catcaptain_landing.py.
+GitHub 저장소 페이지의 소개 README(README.md · README.<언어>.md)도 같이 만든다 — github_profile.py.
 생성된 HTML 을 직접 고치면 다음 빌드에서 덮어써진다.
 
 언어 목록 · 이름 · 로케일 · Waky 한 줄 소개(h1)는 waky-landing(scripts/landing/i18n)과 맞춘다.
@@ -707,6 +708,8 @@ def main():
     print(f"built {dayline_timeline.build()} dayline timeline pages")
     print(f"built {eightbillion_landing.build()} 8 Billion landing pages")
     print(f"built {catcaptain_landing.build()} 냥반장 pages")
+    import github_profile  # github_profile 이 build 를 불러 맨 위에서 부르면 서로 물린다
+    print(f"built {github_profile.main()} GitHub READMEs")
 
 
 if __name__ == "__main__":
