@@ -77,6 +77,7 @@
   - 이 빌드 · 운영 문서는 원래 맨 앞의 `README.md` 였고 2026-11-06 에 `scripts/README.md` 로 옮겼다
   - 문구는 회사 소개의 `scripts/i18n/<언어>.json`, 주소는 `build.py` · 각 랜딩 생성기의 것이라 같이 바뀐다 — 문구나 스토어 주소를 고치면 이것도 다시 돌린다. 랜딩 본문은 옮기지 않고 짧은 소개와 링크만 둔다
 - `zacolabs-assets/` — `index.html` 이 쓰는 로고·앱 아이콘 (`waky-web/src/main/resources/zacolabs-assets/`)
+  - `duire_icon.png` — 두이레 아이콘 180px. 2026-11-04 에 바뀐 D 로켓 로고(`duire` `web/src/app/apple-icon.png`)를 그대로 쓴다. 회사 소개 카드 · GitHub README 는 이걸 줄인 `duire_icon-104.webp`
   - `catcaptain_icon.png` · `catinroom_icon.png` · `8billion_icon.png` — 냥반장 · Cat in Room · 8 Billion 앱 아이콘 512px (`catcaptain-android` · `catinroom-android` `store/play/icon-512.png`, `onelife` `app/assets/branding/play-store-icon-512.png`)
   - `dayline_icon.png` — Dayline 앱 아이콘. 회사 소개의 카드와 Dayline 랜딩이 같이 쓴다 (`dayline-ios` `Assets.xcassets/AppIcon.appiconset/AppIcon.png` 를 512px 로 줄인 것)
   - `og-image-1200x630.png` — 공유 미리보기 그림(모든 언어 공용). `scripts/og-image.html` 을 크롬에서 1200×630 으로 찍은 것
